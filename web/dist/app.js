@@ -42,7 +42,6 @@ function renderHUD(){
  const portions=state.stock.reduce((n,b)=>n+b.quantity,0);$('#stock-count').textContent=portions?portions+' portions to serve':"Kitchen’s warming up";
  $('#goal-dot').hidden=!GOALS.some(g=>!state.claimed.includes(g.id)&&state.stats[g.stat]>=g.target);$('#kitchen-count').textContent=state.stoves.length+' cooking stations';
  const access=entranceAccess(state);$('#entrance-status').dataset.warning=String(access.doorBlocked||access.blocked.length>0);$('#door-toggle').textContent=state.doorOpen?'Close café':'Open café';$('#door-toggle').setAttribute('aria-pressed',String(state.doorOpen));$('#entrance-status').textContent=access.doorBlocked?'Door blocked: move the furniture in front of the entrance.':access.blocked.length?'Blocked paths: keep the door, chairs, serving counters and sink connected.':state.doorOpen?'Café open':'Café closed · cooking continues';
- $('#sound').classList.toggle('music-on',!state.muted);$('#sound').setAttribute('aria-label',state.muted?'Turn music on':'Turn music off');
  if(state.stats.cooked>0)$('#chef-tip').textContent=portions?'Your guests are tucking in. Keep the next batch cooking!':'An empty counter is a lonely counter. Pick a recipe and fire up a stove.';
  if(levelOf(state)>lastLevel){toast('Level '+levelOf(state)+'! More questionable delicacies await.');renderPanel();}lastLevel=levelOf(state);
 }
@@ -112,7 +111,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  case 'done-zombie':selectZombie(null);break;case 'cancel-placement':case 'cancel-panel-placement':setPlacement(null);break;
  case 'place-tile':onPlace(Number($('#tile-x').value),Number($('#tile-y').value));break;
  case 'zoom-in':scene.setZoom(.12);break;case 'zoom-out':scene.setZoom(-.12);break;case 'zoom-reset':scene.setZoom(0);break;
- case 'settings':settings();break;case 'sound':case 'settings-sound':toggleMusic();break;case 'game-speed':case 'speed':case 'settings-speed':toggleSpeed();break;
+ case 'settings-sound':toggleMusic();break;case 'game-speed':case 'speed':case 'settings-speed':toggleSpeed();break;
  case 'close-modal':case 'back-game':closeDialog();break;case 'about':about();break;
  case 'rename':state.name=$('#name-input').value.trim()||'The Midnight Diner';after({ok:true,message:'Welcome to '+state.name+'.'});break;
  case 'copy-diagnostics':copyDiagnostics();break;case 'export-diagnostics':downloadDiagnostics();break;case 'export-save':exportSave();break;case 'import-save':$('#import-file').click();break;

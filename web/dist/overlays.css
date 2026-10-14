@@ -90,3 +90,21 @@ dialog{max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-
  dialog.store-modal{padding:12px;gap:6px}.store-header .eyebrow{display:none}.store-header h2{font-size:24px}
 }
 @media(max-width:360px){.game-speed-control svg{width:65px}.header-actions{gap:3px}.wallet{max-width:calc(100vw - 16px)}.coin-badge strong,.toxin-badge strong{font-size:17px}.kitchen{width:calc(100vw - 150px)}.station{flex-basis:150px}}
+@media(max-width:700px),(max-height:500px) and (orientation:landscape){dialog button,.header-actions .icon-button,.chat-toggle,.game-speed-control,#door-toggle{min-height:44px}.header-actions .icon-button{min-width:44px}.zoom-controls button{width:40px;height:40px}.original-nav button{width:44px}.original-nav #nav-options{font-size:9px}}
+
+/* Mobile HUD: balances and a compact speed button share the top row. */
+@media(max-width:700px),(max-height:500px) and (orientation:landscape){
+ .topbar{top:max(8px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right))}
+ .game-speed-control{width:48px;height:48px;min-height:48px;justify-content:center;padding:4px;font-size:16px}.game-speed-control svg{display:none}
+ .game-speed-control #game-speed-value{min-width:0}
+ .chat-toggle{position:fixed;top:calc(max(8px,env(safe-area-inset-top)) + 60px);right:max(8px,env(safe-area-inset-right))}
+ .guest-label{top:calc(max(8px,env(safe-area-inset-top)) + 60px)}
+ .wallet{max-width:calc(100vw - 80px);gap:6px;padding:6px 8px}.coin-badge strong,.toxin-badge strong{font-size:19px;letter-spacing:-1px}
+ .side-panel,.side-panel[data-panel='characters']{top:calc(max(8px,env(safe-area-inset-top)) + 112px);max-height:calc(100dvh - 194px - env(safe-area-inset-top))}.side-panel #panel-content{max-height:calc(100dvh - 209px - env(safe-area-inset-top))}
+ .placement-banner,#zombie-controls{top:122px}.toast-region{top:122px}
+}
+@media(max-width:360px){.wallet .xp-track{width:30px}.wallet .level-badge>div{display:none}.wallet .coin-badge strong,.wallet .toxin-badge strong{font-size:17px}}
+@media(max-height:500px) and (orientation:landscape){.chat-toggle{position:static}.side-panel,.side-panel[data-panel='characters'],#zombie-controls,.placement-banner,.toast-region{top:64px}.side-panel{max-height:calc(100dvh - 134px)}.side-panel #panel-content{max-height:calc(100dvh - 146px)}}
+
+/* Phones use the canvas pinch gesture; desktop retains zoom controls. */
+@media(max-width:700px),(max-height:500px) and (orientation:landscape){.zoom-controls{display:none}}
