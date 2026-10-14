@@ -1467,6 +1467,8 @@
   "./chat-codes.js",
   "./customer-rules.js",
   "./customer-selection.js",
+  "./decoration-ui.js",
+  "./decoration.js",
   "./diagnostics.js",
   "./human-forms.js",
   "./index.html",
@@ -1484,6 +1486,8 @@
   "./staff.js",
   "./starting-layout.js",
   "./styles.css",
+  "./surfaces.js",
+  "./toasts.js",
   "./visitors.js",
   "./walk-check.html",
   "./world.js"

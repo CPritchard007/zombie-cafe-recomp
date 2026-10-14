@@ -59,10 +59,11 @@
 <button id="nav-store" aria-label="Store"><img src="assets/original/ui/248.png" alt="Store"></button>
 <button id="nav-characters" aria-label="Character collection"><img src="assets/original/ui/249.png" alt="Zombies"></button>
 <button id="nav-goals" aria-label="Goals"><img src="assets/original/ui/250.png" alt="Orders"></button>
-<button id="nav-options" aria-label="Options"><img src="assets/original/title/7.png" alt="Options"></button>
+<button id="nav-options" aria-label="Options"><span>Options</span></button>
 </nav>
+<section id="decor-tools" aria-label="Café editing controls" hidden></section>
 <div id="zombie-controls" hidden><span>Zombie selected · Tap empty floor to move</span><button id="done-zombie">Done</button></div>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="toast" class="toast-region" role="region" aria-label="Notifications"></div>
 <dialog id="modal"><button class="dialog-close icon-button" id="close-modal" aria-label="Close dialog">×</button><div id="modal-body"></div></dialog>
 <dialog id="store-modal" class="store-modal" aria-labelledby="store-title"></dialog>
 <aside id="error-notice" role="alert" hidden><span id="error-summary"></span><button id="download-diagnostics">Download diagnostics</button><button id="dismiss-error" aria-label="Dismiss error">Dismiss</button><button onclick="location.reload()">Reload café</button></aside>

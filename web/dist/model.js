@@ -1,3 +1,4 @@
+import {validateSurfaces} from './surfaces.js';
 import {validateSeasonalEvent} from './seasonal-events.js';
 import {addXp,levelOf} from './progression.js';
 import {newStaffState,validateStaff} from './staff.js';
@@ -31,11 +32,26 @@ export const CATALOG=[
  {id:'fridge',name:'Steel refrigerator',sprite:375,cost:180,kind:'fridge',description:'For ingredients best left unidentified.'}
 ];
 export function configureOriginalCatalog(records){
- const kinds={0:'plant',1:'stove',2:'counter',3:'table',4:'chair',5:'wall',6:'wallArt',7:'floor',8:'fridge',9:'divider',11:'sink'};
+ const kinds={0:'plant',1:'stove',2:'counter',3:'table',4:'chair',5:'wall',6:'wallArt',7:'floor',8:'fridge',9:'divider',11:'sink',12:'expansion'};
  for(const r of records){
   const id='original-'+r.id;if(CATALOG.some(c=>c.id===id))continue;
-  CATALOG.push({id,originalId:r.id,name:r.name,sprite:'o'+r.sheet+'-'+r.sprites[0],sprites:r.sprites.map(n=>'o'+r.sheet+'-'+n),cost:r.price,premium:r.premium,kind:kinds[r.type]||'special',level:Math.max(1,r.field_28),description:r.description,type:r.type,original:true});
+  CATALOG.push({id,originalId:r.id,name:r.name,sprite:'o'+r.sheet+'-'+r.sprites[0],sprites:r.sprites.map(n=>'o'+r.sheet+'-'+n),width:r.width,height:r.depth,cost:r.price,premium:r.premium,kind:kinds[r.type]||'special',level:Math.max(1,r.field_28),description:r.description,type:r.type,original:true});
  }
+}
+// Expansion offers come from the recovered furniture catalog. Never shrink either edge.
+export function expansionStatus(s,item){
+ const size=cafeSize(s),offers=CATALOG.filter(c=>c.kind==='expansion'&&!c.premium&&c.width>=size.width&&c.height>=size.height&&(c.width>size.width||c.height>size.height)).sort((a,b)=>a.width*a.height-b.width*b.height);
+ if(!item||item.kind!=='expansion'||item.premium)return {ok:false,message:'Choose a coin expansion.'};
+ if(item.width<=size.width&&item.height<=size.height)return {ok:false,message:'Already expanded'};
+ if(offers[0]?.id!==item.id)return {ok:false,message:'Buy the next expansion first'};
+ if(item.level>levelOf(s))return {ok:false,message:'Locked'};
+ if(s.coins<item.cost)return {ok:false,message:'Need '+item.cost.toLocaleString()+' coins'};
+ return {ok:true,message:'Expand'};
+}
+export function expandCafe(s,itemId){
+ const item=CATALOG.find(c=>c.id===itemId),status=expansionStatus(s,item);if(!status.ok)return status;
+ s.coins-=item.cost;s.size={width:item.width,height:item.height};
+ return {ok:true,message:'Café expanded to '+item.width+'×'+item.height+'!'};
 }
 // Original orientation slots are SE, SW, NW, NE; matching pairs mirror their artwork.
 function rotationSprites(f){
@@ -76,6 +92,7 @@ export function applyStartingLayout(s){
  const preset=initialState();
  if(s.staff?.people?.length)preset.staff.people=s.staff.people.map(z=>({...newStaffState().people[0],id:z.id,completed:z.completed,...(z.zombieForm?{zombieForm:z.zombieForm,customerDataId:z.customerDataId}:{})}));
  for(const key of ['layoutVersion','size','originalSurfaces','floor','furniture','stoves','visitors','staff'])s[key]=preset[key];
+ delete s.floorTiles;delete s.wallTiles;delete s.wallDecor;
  delete s.wallSprite;delete s.floorChanged;delete s.wallChanged;
  s.lastTick=Date.now();return {ok:true,message:'Original starting layout restored. Your previous café is backed up on this device.'};
 }
@@ -119,6 +136,7 @@ export function place(s,itemId,x,y){
  const item=CATALOG.find(c=>c.id===itemId);
  if(!item)return {ok:false,message:'Choose some furniture first.'};
  if(item.original&&item.level>levelOf(s))return {ok:false,message:'Unlocks at level '+item.level+'.'};
+ if(item.kind==='expansion')return expandCafe(s,item.id);
  if(item.premium)return {ok:false,message:'Toxin purchases are not yet supported offline.'};
  if(['special','wallArt'].includes(item.kind))return {ok:false,message:'This item’s original behavior is not yet implemented.'};
  if(!canPlace(s,x,y)&&!['floor','wall'].includes(item.kind))return {ok:false,message:'Choose an empty tile inside the café.'};
@@ -134,16 +152,17 @@ export function validateSave(value,recipes){
  if(!value||value.version!==1)throw Error('This is not a compatible café save.');
  const s=structuredClone(value),finite=(n,min,max)=>Number.isFinite(n)&&n>=min&&n<=max;
  validateSeasonalEvent(s.seasonalEvent);
+ validateSurfaces(s,CATALOG);
  if(s.infectionTutorialComplete!==undefined&&typeof s.infectionTutorialComplete!=='boolean')throw Error('Invalid infection tutorial state.');
  if(s.pendingInfection&&(!Number.isInteger(s.pendingInfection.guestId)||!s.visitors?.people?.some(g=>g.id===s.pendingInfection.guestId)||!s.staff?.people?.some(z=>z.id===s.pendingInfection.staffId)))throw Error('Invalid pending infection.');
  if(s.speed===12)s.speed=5; // Migrate the former quick-shift setting to the new maximum.
  if(!finite(s.coins,0,1e9)||!finite(s.xp,0,1e8)||![0,1,2,3,4,5].includes(s.speed)||!([2,5,29,'o0-45'].includes(s.floor)||CATALOG.some(c=>c.kind==='floor'&&c.sprite===s.floor))||!finite(s.lastTick,0,Date.now()+86400000)||!finite(s.saleProgress,0,15)||!Number.isInteger(s.nextId)||s.nextId<100)throw Error('Invalid café values.');
- if(s.size!==undefined&&(!Number.isInteger(s.size.width)||!Number.isInteger(s.size.height)||s.size.width<4||s.size.height<4||s.size.width>8||s.size.height>8))throw Error('Invalid café dimensions.');
+ if(s.size!==undefined&&(!Number.isInteger(s.size.width)||!Number.isInteger(s.size.height)||s.size.width<4||s.size.height<4||s.size.width>16||s.size.height>15))throw Error('Invalid café dimensions.');
  if(s.originalSurfaces!==undefined&&typeof s.originalSurfaces!=='boolean')throw Error('Invalid café surfaces.');
  if(s.doorOpen===undefined)s.doorOpen=true;
  if(typeof s.doorOpen!=='boolean')throw Error('Invalid door state.');
  if(typeof s.name!=='string'||s.name.length>40||typeof s.muted!=='boolean')throw Error('Invalid café settings.');
- if(!Array.isArray(s.furniture)||s.furniture.length>64||!Array.isArray(s.stoves)||s.stoves.length>6||!s.stoves.length||!Array.isArray(s.stock)||s.stock.length>10000||!Array.isArray(s.claimed))throw Error('Invalid café layout.');
+ if(!Array.isArray(s.furniture)||s.furniture.length>cafeSize(s).width*cafeSize(s).height||!Array.isArray(s.stoves)||s.stoves.length>6||!s.stoves.length||!Array.isArray(s.stock)||s.stock.length>10000||!Array.isArray(s.claimed))throw Error('Invalid café layout.');
  if(s.wallSprite!==undefined&&!CATALOG.some(c=>c.kind==='wall'&&c.sprite===s.wallSprite))throw Error('Invalid wall.');
  if(s.toxin!==undefined&&!finite(s.toxin,0,1e9))throw Error('Invalid toxin balance.');
  const positions=new Set(),ids=new Set(),sprites=new Set([375,343,334,186,92,278,363,107,275,331,344,330,...STARTING_FURNITURE.map(f=>'o0-'+f[2]),...CATALOG.map(c=>c.sprite)]);

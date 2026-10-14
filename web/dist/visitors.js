@@ -130,18 +130,18 @@ export function advanceVisitors(s,seconds){
 export function validateVisitors(s,recipes){
  if(s.visitors===undefined)s.visitors=newVisitorState();migrateChairDirections(s);
  const v=s.visitors,num=(n,a,b)=>Number.isFinite(n)&&n>=a&&n<=b,int=(n,a,b)=>Number.isInteger(n)&&num(n,a,b),fail=()=>{throw Error('Invalid visitor state.');};
- if(!v||v.version!==1||!int(v.nextId,1,1e9)||!int(v.seed,0,4294967295)||!num(v.spawnIn,-.25,20)||!num(v.remainder,0,.25)||!num(v.rating,0,1)||!Array.isArray(v.people)||v.people.length>32||!Array.isArray(v.dirtyTables)||v.dirtyTables.length>64)fail();
+ if(!v||v.version!==1||!int(v.nextId,1,1e9)||!int(v.seed,0,4294967295)||!num(v.spawnIn,-.25,20)||!num(v.remainder,0,.25)||!num(v.rating,0,1)||!Array.isArray(v.people)||v.people.length>32||!Array.isArray(v.dirtyTables)||v.dirtyTables.length>cafeSize(s).width*cafeSize(s).height)fail();
  for(const k of ['arrived','happy','unhappy'])if(!int(v[k],0,1e9))fail();
  const ids=new Set(),tables=new Set(),phases=['approaching','passing','entering','entryPause','seating','waiting','served','eating','leaving'];
  for(const g of v.people){
-  if(!int(g.id,1,v.nextId-1)||ids.has(g.id)||!num(g.x,WALKWAY_START,WALKWAY_END)||!num(g.y,-1,GRID-1)||!int(g.variant,0,HUMAN_FORMS.length-1)||!phases.includes(g.phase)||!num(g.timer,0,60)||!num(g.t,0,1e10)||![WALKWAY_START,WALKWAY_END,-1,GRID].includes(g.exitX)||typeof g.north!=='boolean'||typeof g.flip!=='boolean'||typeof g.message!=='string'||g.message.length>60||!Array.isArray(g.path)||g.path.length>80)fail();ids.add(g.id);
+  if(!int(g.id,1,v.nextId-1)||ids.has(g.id)||!num(g.x,WALKWAY_START,WALKWAY_END)||!num(g.y,-1,cafeSize(s).height-1)||!int(g.variant,0,HUMAN_FORMS.length-1)||!phases.includes(g.phase)||!num(g.timer,0,60)||!num(g.t,0,1e10)||![WALKWAY_START,WALKWAY_END,-1,GRID].includes(g.exitX)||typeof g.north!=='boolean'||typeof g.flip!=='boolean'||typeof g.message!=='string'||g.message.length>60||!Array.isArray(g.path)||g.path.length>cafeSize(s).width*cafeSize(s).height+64)fail();ids.add(g.id);
   // Repair appearances from the brief unrestricted visitor build only.
   if(g.customerDataId===undefined&&g.variant>2){const appearance=chooseCustomer(1+Math.floor(s.xp/20),v.rating,((Math.imul(g.id,2654435761)>>>0)+.5)/4294967296);g.variant=appearance.variant;g.customerDataId=appearance.id;}
   if(g.customerDataId!==undefined&&(!Number.isInteger(g.customerDataId)||CUSTOMER_RULES[g.customerDataId]?.variant!==g.variant))fail();
-  if((g.x<0||g.x>GRID-1)&&g.y!==-1)fail();
+  if((g.x<0||g.x>cafeSize(s).width-1)&&g.y!==-1)fail();
   // Keep legacy visitors in place, but send their eventual exits down the extended path.
   if(g.exitX===-1)g.exitX=WALKWAY_START;else if(g.exitX===GRID)g.exitX=WALKWAY_END;
-  for(const p of g.path)if(!int(p.x,WALKWAY_START,WALKWAY_END)||!int(p.y,-1,GRID-1)||(!inside(p,s)&&!onSidewalk(p)))fail();
+  for(const p of g.path)if(!int(p.x,WALKWAY_START,WALKWAY_END)||!int(p.y,-1,cafeSize(s).height-1)||(!inside(p,s)&&!onSidewalk(p)))fail();
   if(g.chairId!==null&&(!s.furniture.some(f=>f.id===g.chairId&&f.kind==='chair')||!s.furniture.some(f=>f.id===g.tableId&&f.kind==='table')||tables.has(g.tableId)))fail();
   if(g.tableId)tables.add(g.tableId);
   if(['seating','waiting','served','eating'].includes(g.phase)&&!g.chairId)fail();

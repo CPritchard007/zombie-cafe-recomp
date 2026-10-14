@@ -25,7 +25,7 @@ Animations: `CCToon::Load` (002be830), `UpdateAnimation` (002bea12), `PrepareRen
 
 - The original characterData.bin table of gameplay identities, stats, abilities and recruitment rules has not been ported. The collection is currently an art browser; it does not unlock/hire all characters.
 - Original new-player layout, tutorial sequence, quest triggers, XP thresholds, staff energy, infection, work assignments, customer economy, spoiled food, raids/maps, orders and event rules remain to be ported. Existing three prototype goals and simplified café behavior are still present and must not be treated as original logic.
-- Toxin purchases, expansions, windows/wall placement, tombstones, ampoules, planters and special-object effects are deliberately unavailable where their original behavior has not been implemented. Their art/data is present. Wall rendering currently adapts original textures to the existing café geometry.
+- Toxin purchases, tombstones, ampoules, planters and special-object effects are deliberately unavailable where their original behavior has not been implemented. Their art/data is present. Wall rendering currently adapts original textures to the existing café geometry.
 - Furniture rotation uses the source orientation sprites and paired mirroring. Chairs cycle four seating directions, appliances with no back sprites cycle two, and identical-slot decor is fixed. Original ImageMap anchor points still need a faithful renderer port.
 - Original character-specific animation replacements are not yet assigned from characterData. The normal idle/walk set works, but special characters may require alternate actions and replacements.
 - Android binary saves and some backend contracts remain unsupported; see ../backend/CONTRACTS.md.
@@ -47,7 +47,7 @@ Next priority is porting `Cafe::createForNewPlayer`, `TutorialSystem`, and chara
 
 ## Outdoor terrain
 
-The exterior uses original furniture atlas regions 116 (grass), 117 (sidewalk), 118 (asphalt), and 121 (road stripe). Two intersecting streets sit behind the café walls, with sidewalks on both road edges and grass on the open front sides. Terrain covers the viewport at every zoom and is cached until the viewport changes. The layout is adapted to the current 8×8 café; the native world dimensions and expansion rules are not yet ported. Existing localStorage saves need no migration.
+The exterior uses original furniture atlas regions 116 (grass), 117 (sidewalk), 118 (asphalt), and 121 (road stripe). Two intersecting streets sit behind the café walls, with sidewalks on both road edges and grass on the open front sides. Terrain covers the viewport at every zoom and is cached until the viewport changes. The layout supports the starting café and catalog expansions through 16×15. Coin expansions use recovered sizes and prices, purchased in ascending size order with a confirmation dialog. Existing objects retain their coordinates. This is a web adaptation of the native expansion preview flow; toxin alternatives are not exposed. Existing localStorage saves need no migration.
 
 ## Entrance rules
 

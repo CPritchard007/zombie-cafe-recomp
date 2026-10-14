@@ -1,3 +1,4 @@
+import {floorSprite,wallSprite,wallDecor,validFloor,validWall} from './surfaces.js';
 import {reportError} from './diagnostics.js';
 import {createFurnitureAssets,createFoodAssets} from './assets.js';
 import {startingFloor,startingWall,STARTING_WINDOWS} from './starting-layout.js';
@@ -40,13 +41,13 @@ export class CafeScene {
   this.resize=new ResizeObserver(()=>this.fit());this.resize.observe(canvas);this.fit();
   canvas.addEventListener('pointermove',e=>{this.hover=this.cellAt(e);canvas.style.cursor=this.placement?'crosshair':this.dragging?'grabbing':this.hit(e)?'pointer':'grab';});
   canvas.addEventListener('pointerleave',()=>{this.hover=null;});
-  canvas.addEventListener('click',e=>{if(this.suppressClick){this.suppressClick=false;return;}const cell=this.cellAt(e);if(this.placement)this.onPlace(cell.x,cell.y);else{const hit=this.hit(e);if(hit?.id==='door')this.onDoor();else this.onSelect(hit?.id||null,cell);}});
+  canvas.addEventListener('click',e=>this.handleClick(e));
   canvas.style.touchAction='none';
   const point=e=>{const r=canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};};
   const pinch=()=>{const [a,b]=[...this.pointers.values()];return a&&b?{distance:Math.hypot(a.x-b.x,a.y-b.y),x:(a.x+b.x)/2,y:(a.y+b.y)/2}:null;};
-  canvas.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;if(!this.pointers.size){this.dragStart=point(e);this.dragging=false;this.suppressClick=false;this.targetZoom=this.zoom;}this.pointers.set(e.pointerId,point(e));canvas.setPointerCapture(e.pointerId);this.pinch=pinch();if(this.pinch)this.suppressClick=true;});
-  canvas.addEventListener('pointermove',e=>{if(!this.pointers.has(e.pointerId))return;const previous=this.pointers.get(e.pointerId),current=point(e);this.pointers.set(e.pointerId,current);const next=pinch();if(next&&this.pinch){this.zoomAt(this.zoom*next.distance/Math.max(1,this.pinch.distance),this.pinch);this.pan.x+=next.x-this.pinch.x;this.pan.y+=next.y-this.pinch.y;this.targetZoom=this.zoom;this.suppressClick=true;this.hover=null;}else if(!next&&!this.pinch){if(this.dragging){this.panBy(current.x-previous.x,current.y-previous.y);}else if(Math.hypot(current.x-this.dragStart.x,current.y-this.dragStart.y)>6){this.dragging=true;this.panBy(current.x-this.dragStart.x,current.y-this.dragStart.y);}if(this.dragging){this.suppressClick=true;this.hover=null;canvas.style.cursor='grabbing';}}this.pinch=next;});
-  const end=e=>{this.pointers.delete(e.pointerId);this.pinch=pinch();if(!this.pointers.size){this.dragging=false;canvas.style.cursor=this.placement?'crosshair':'grab';this.onView();}else this.dragStart=[...this.pointers.values()][0];};
+  canvas.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;if(!this.pointers.size){this.dragStart=point(e);this.dragging=false;this.suppressClick=false;this.targetZoom=this.zoom;}this.pointers.set(e.pointerId,point(e));canvas.setPointerCapture(e.pointerId);this.pinch=pinch();clearTimeout(this.holdTimer);if(this.pinch){this.suppressClick=true;this.editGesture=false;}else{this.editGesture=false;this.holdTimer=setTimeout(()=>{if(!this.dragging&&this.pointers.size===1&&!this.editDrag){this.onEdit?.(this.editHit(e));this.editGesture=true;this.suppressClick=true;}},500);}});
+  canvas.addEventListener('pointermove',e=>{if(!this.pointers.has(e.pointerId))return;const previous=this.pointers.get(e.pointerId),current=point(e);this.pointers.set(e.pointerId,current);const next=pinch();if(Math.hypot(current.x-this.dragStart.x,current.y-this.dragStart.y)>6)clearTimeout(this.holdTimer);if(!next&&this.editing&&this.editDrag){if(Math.hypot(current.x-this.dragStart.x,current.y-this.dragStart.y)>6||this.editGesture){this.onEditPoint?.(this.editHit(e));this.editGesture=true;this.suppressClick=true;}return;}if(next&&this.pinch){this.zoomAt(this.zoom*next.distance/Math.max(1,this.pinch.distance),this.pinch);this.pan.x+=next.x-this.pinch.x;this.pan.y+=next.y-this.pinch.y;this.targetZoom=this.zoom;this.suppressClick=true;this.hover=null;}else if(!next&&!this.pinch){if(this.dragging){this.panBy(current.x-previous.x,current.y-previous.y);}else if(Math.hypot(current.x-this.dragStart.x,current.y-this.dragStart.y)>6){this.dragging=true;this.panBy(current.x-this.dragStart.x,current.y-this.dragStart.y);}if(this.dragging){this.suppressClick=true;this.hover=null;canvas.style.cursor='grabbing';}}this.pinch=next;});
+  const end=e=>{clearTimeout(this.holdTimer);if(e.type==='pointerup'&&this.editGesture)this.onEditDrop?.(e);this.editGesture=false;this.pointers.delete(e.pointerId);this.pinch=pinch();if(!this.pointers.size){this.dragging=false;canvas.style.cursor=this.placement?'crosshair':'grab';this.onView();}else this.dragStart=[...this.pointers.values()][0];};
   canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end);
   canvas.addEventListener('wheel',e=>{e.preventDefault();const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?this.height:1);this.zoomAnchor=point(e);this.targetZoom=clampZoom(this.targetZoom*Math.exp(-delta*(e.ctrlKey ? .008 : .002)));clearTimeout(this.zoomSave);this.zoomSave=setTimeout(()=>this.onView(),250);},{passive:false});
   this.frame=this.frame.bind(this);requestAnimationFrame(this.frame);
@@ -55,7 +56,30 @@ export class CafeScene {
  get scale(){return Math.min(this.width/870,this.height/710)*this.zoom;}
  worldPoint(e){const r=this.canvas.getBoundingClientRect(),s=this.scale;return {x:(e.clientX-r.left-this.width/2-this.pan.x)/s,y:(e.clientY-r.top-this.height/2-9-this.pan.y)/s+180};}
  cellAt(e){const p=this.worldPoint(e);return uniso(p.x,p.y);}
- hit(e){const p=this.worldPoint(e);return [...this.hitboxes].reverse().find(b=>p.x>=b.x&&p.x<=b.x+b.w&&p.y>=b.y&&p.y<=b.y+b.h);}
+ handleClick(e){
+  if(this.suppressClick){this.suppressClick=false;return;}
+  if(this.editing){this.onEditPoint?.(this.editHit(e));return;}
+  const cell=this.cellAt(e);if(this.placement){this.onPlace(cell.x,cell.y);return;}
+  const hit=this.hit(e);
+  if(hit?.id==='door'){this.onDoor();return;}
+  if(!hit){const target=this.editHit(e);if(target?.kind==='wall'){this.onEdit?.(target);return;}}
+  this.onSelect(hit?.id||null,cell);
+ }
+ hit(e){
+  const p=this.worldPoint(e),contains=b=>p.x>=b.x&&p.x<=b.x+b.w&&p.y>=b.y&&p.y<=b.y+b.h;
+  // Broad character/furniture rectangles must not swallow wall decorations.
+  const wallIds=new Set(wallDecor(this.state).map(f=>f.id));
+  return this.hitboxes.find(b=>wallIds.has(b.id)&&contains(b))||[...this.hitboxes].reverse().find(contains);
+ }
+ editHit(e){
+  const p=this.worldPoint(e),cell=this.cellAt(e),floor=validFloor(this.state,cell.x,cell.y)?cell:null;
+  let wall=null;
+  for(const side of ['left','right']){const index=Math.round((side==='left'?-p.x:p.x)/(W/2)-.5);if(!validWall(this.state,side,index))continue;const anchor=side==='left'?iso(-.5,index):iso(index,-.5),base=anchor.y+(p.x-anchor.x)*(side==='left'?-H/W:H/W);if(Math.abs(p.x-anchor.x)<=W/4&&p.y>=base-138&&p.y<=base+H/4){wall={side,index};break;}}
+  const hit=this.hit(e),f=hit&&(this.state.furniture.find(f=>f.id===hit.id)||wallDecor(this.state).find(f=>f.id===hit.id));
+  if(f)return {id:f.id,kind:f.kind,cell:floor,wall:f.kind==='wallArt'?{side:f.side,index:f.index}:wall};
+  if(wall)return {kind:'wall',...wall,wall,cell:floor};
+  return floor?{kind:'floor',...floor,cell:floor,wall:null}:null;
+ }
  panBy(dx,dy){this.pan.x=Math.max(-4000,Math.min(4000,this.pan.x+dx));this.pan.y=Math.max(-4000,Math.min(4000,this.pan.y+dy));}
  zoomAt(value,anchor={x:this.width/2,y:this.height/2+9}){const next=clampZoom(value),ratio=next/this.zoom;this.pan.x=anchor.x-this.width/2-(anchor.x-this.width/2-this.pan.x)*ratio;this.pan.y=anchor.y-this.height/2-9-(anchor.y-this.height/2-9-this.pan.y)*ratio;this.zoom=next;}
  setZoom(delta){this.zoomAnchor={x:this.width/2,y:this.height/2+9};this.targetZoom=delta===0?1:clampZoom(this.targetZoom*Math.exp(delta));if(delta===0)this.pan={x:0,y:0};}
@@ -104,12 +128,12 @@ export class CafeScene {
   this.poly([top,right,[right[0],right[1]-138],[top[0],top[1]-138]],'#e4dec2','#9ba285');
   // Each original wall sprite includes its isometric slope and distressed plaster.
   for(const side of ['left','right'])for(let i=(side==='left'?height:width)-1;i>=0;i--){
-   const sprite=this.state.wallSprite||(this.state.originalSurfaces?'o0-'+startingWall(side,i):'o0-66'),img=this.assets.furniture[sprite];
+   const sprite=wallSprite(this.editState||this.state,side,i),img=this.assets.furniture[sprite];
    if(img){const p=side==='left'?iso(-.5,i):iso(i,-.5),w=W/2+1,h=img.height/img.width*w;c.save();c.translate(p.x,p.y+H/4);if(side==='right')c.scale(-1,1);c.drawImage(img,-w/2,-h,w,h);c.restore();}
   }
-  if(this.state.originalSurfaces){for(const f of STARTING_WINDOWS){const img=this.assets.furniture['o0-267'],p=iso(-.5,f.y);if(img)c.drawImage(img,p.x-23,p.y-104,46,75);}}
-  else {const p=iso(-.5,3);this.poly([[p.x-40,p.y-30],[p.x+40,p.y-78],[p.x+40,p.y-123],[p.x-40,p.y-75]],'#637c77','#f4ebcc',5);}
-  for(let d=0;d<width+height-1;d++)for(let x=0;x<width;x++){const y=d-x;if(y<0||y>=height)continue;const p=iso(x,y),id=this.state.originalSurfaces&&!this.state.floorChanged?'o0-'+startingFloor(x,y):this.state.floor,img=this.assets.furniture[id];if(img)c.drawImage(img,p.x-W/2,p.y-H/2,W+1,H+1);if(this.placement)this.diamond(x,y,'#f9ffe10b','#61795138');}
+  const wallBoxes=[];
+  for(const f of wallDecor(this.editState||this.state)){const img=this.assets.furniture[f.sprite],p=f.side==='left'?iso(-.5,f.index):iso(f.index,-.5);if(!img)continue;const w=46,h=img.height/img.width*w;c.save();c.translate(p.x,p.y-29);if(f.side==='right')c.scale(-1,1);c.drawImage(img,-w/2,-h,w,h);c.restore();const box={id:f.id,x:p.x-w/2,y:p.y-29-h,w,h};wallBoxes.push(box);if(this.selected===f.id){c.strokeStyle='#d3f294';c.lineWidth=2;c.strokeRect(box.x-2,box.y-2,w+4,h+4);}}
+  for(let d=0;d<width+height-1;d++)for(let x=0;x<width;x++){const y=d-x;if(y<0||y>=height)continue;const p=iso(x,y),id=floorSprite(this.editState||this.state,x,y),img=this.assets.furniture[id];if(img)c.drawImage(img,p.x-W/2,p.y-H/2,W+1,H+1);if(this.placement||this.editing)this.diamond(x,y,'#f9ffe10b','#61795138');}
   // Original door art on the NE wall, directly adjoining the pavement.
   const dp=iso(ENTRANCE.x,-.5),doorImage=this.assets.furniture['o0-122'];
   // The source door faces the opposite wall. Mirror it and preserve its
@@ -128,8 +152,9 @@ export class CafeScene {
   this.label(dp.x,dp.y-136,this.state.doorOpen?'OPEN':'CLOSED');
   const doorBox={id:'door',x:dp.x-32,y:dp.y-145,w:64,h:162};
   if(this.placement&&this.hover){const {x,y}=this.hover;if(x>=0&&y>=0&&x<cafeSize(this.state).width&&y<cafeSize(this.state).height){const valid=canPlace(this.state,x,y,this.placement.moveId);this.diamond(x,y,valid?'#d2eb8199':'#e4a085bb',valid?'#66843a':'#aa5b45');const f=this.placement.moveId?this.state.furniture.find(f=>f.id===this.placement.moveId):CATALOG.find(f=>f.id===this.placement.itemId);if(f){const art=furniturePose(f);this.sprite(art.sprite,x,y,.78,art.flip,.6);}}}
+  if(this.editing&&this.editTarget){const t=this.editTarget,color=t.valid===false?'#e67465':'#d3f294';if(Number.isInteger(t.x)&&Number.isInteger(t.y))this.diamond(t.x,t.y,color+'55',color);else if(t.side){const p=t.side==='left'?iso(-.5,t.index):iso(t.index,-.5),slope=t.side==='left'?-1:1;c.strokeStyle=color;c.lineWidth=3;this.poly([[p.x-W/4,p.y-slope*H/4],[p.x+W/4,p.y+slope*H/4],[p.x+W/4,p.y+slope*H/4-138],[p.x-W/4,p.y-slope*H/4-138]],color+'33',color,3);}}
   const directed=this.state.staff?.people.find(z=>z.id===this.selectedZombie);if(directed?.manualTarget)this.diamond(directed.manualTarget.x,directed.manualTarget.y,'#ddef9344','#a9d349');
-  const entities=sceneEntities(this.state.furniture,this.guests);this.hitboxes=[doorBox];
+  const entities=sceneEntities((this.editState||this.state).furniture,this.guests);this.hitboxes=[...wallBoxes,doorBox];
   for(const e of entities){if(e.type==='furniture'){const f=e.f,p=iso(f.x,f.y);if(this.selected===f.id)this.diamond(f.x,f.y,'#ddef93aa','#688345');c.fillStyle='#22351b18';c.beginPath();c.ellipse(p.x,p.y+13,28,10,0,0,7);c.fill();const art=furniturePose(f),box=this.sprite(art.sprite,f.x,f.y,.78,art.flip);if(box)this.hitboxes.push({...box,id:f.id});if(f.kind==='table'){const diner=this.state.visitors?.people.find(g=>g.tableId===f.id&&g.meal),dirty=this.state.visitors?.dirtyTables.some(d=>d.tableId===f.id);if(diner||dirty){const plate=this.foodArt(diner?.meal?.recipeId);if(plate&&box){const rect=tablePlateRect(box,plate);c.drawImage(plate,rect.x,rect.y,rect.w,rect.h);}}}
     if(f.kind==='counter'){const batches=this.state.stock.filter(b=>b.counterId===f.id);if(batches.length){const plate=this.foodArt(batches[0].recipeId);if(plate&&box){const rect=tablePlateRect(box,plate,44);c.drawImage(plate,rect.x,rect.y,rect.w,rect.h);}this.label(p.x,p.y-84,batches.reduce((n,b)=>n+b.quantity,0)+' portions');}}
     if(f.kind==='stove'){const job=this.state.stoves.find(st=>st.id===f.id)?.job;if(job){if(job.remaining<=0){this.label(p.x,p.y-113,'READY FOR PICKUP','#e8f5b9','#425b2e');}else{this.label(p.x,p.y-113,'COOKING','#fbf4d6','#8b7447');if(!this.reduced){c.strokeStyle='#ffffffaa';c.lineWidth=3;for(let i=0;i<3;i++){const t=(time/1000+i*.8)%2;c.beginPath();c.moveTo(p.x-13+i*12,p.y-74-t*15);c.quadraticCurveTo(p.x-24+i*12,p.y-88-t*15,p.x-12+i*12,p.y-97-t*15);c.stroke();}}}}}
@@ -149,6 +174,7 @@ export class CafeScene {
 export function startupFurniture(state){
  const ids=new Set(['o0-116','o0-117','o0-118','o0-121','o0-122','o0-123','o0-119','o0-66',state.floor??2]);
  if(state.wallSprite)ids.add(state.wallSprite);
+ for(const sprite of [...Object.values(state.floorTiles||{}),...Object.values(state.wallTiles||{}),...wallDecor(state).map(f=>f.sprite)])ids.add(sprite);
  if(state.originalSurfaces){ids.add('o0-267');const {width,height}=cafeSize(state);for(let x=0;x<width;x++)for(let y=0;y<height;y++)ids.add('o0-'+startingFloor(x,y));for(let i=0;i<Math.max(width,height);i++)for(const side of ['left','right'])ids.add('o0-'+startingWall(side,i));}
  for(const f of state.furniture||[])ids.add(furniturePose(f).sprite);
  return [...ids];
