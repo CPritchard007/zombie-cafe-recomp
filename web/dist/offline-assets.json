@@ -1471,6 +1471,7 @@
   "./decoration.js",
   "./diagnostics.js",
   "./fridge.js",
+  "./game-input.js",
   "./human-forms.js",
   "./index.html",
   "./infection-rules.js",

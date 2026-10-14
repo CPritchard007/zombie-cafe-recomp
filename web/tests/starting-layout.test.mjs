@@ -1,3 +1,4 @@
+import {installGameInput} from '../dist/game-input.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -39,12 +40,14 @@ test('dragging and pinching never select or place furniture, while a tap still s
   const handlers={},canvas={style:{},getContext:()=>({}),getBoundingClientRect:()=>({left:0,top:0,width:900,height:700}),setPointerCapture(){},addEventListener(n,f){(handlers[n]??=[]).push(f);}};
   let selected=0,placed=0,remembered=0;
   const scene=new CafeScene(canvas,initialState(),{},()=>selected++,()=>placed++,()=>{},()=>{},()=>remembered++);
-  const event=(name,id,x,y)=>{for(const f of handlers[name]||[])f({pointerId:id,clientX:x,clientY:y,button:0,pointerType:'touch'});};
+  const browserHandlers={};installGameInput({addEventListener:(name,fn)=>browserHandlers[name]=fn});
+  const event=(name,id,x,y)=>{const e={pointerId:id,clientX:x,clientY:y,button:0,pointerType:'touch',target:canvas,cancelable:true,preventDefault(){this.defaultPrevented=true;}};for(const f of handlers[name]||[])f(e);browserHandlers[name]?.(e);};
   event('pointerdown',1,300,300);event('pointermove',1,304,302);assert.deepEqual(scene.pan,{x:0,y:0});event('pointermove',1,420,350);event('pointerup',1,420,350);event('click',1,420,350);
   assert.deepEqual(scene.pan,{x:120,y:50});assert.equal(selected,0);assert.equal(remembered,1);
   scene.placement={itemId:'chair'};event('pointerdown',1,300,300);event('pointermove',1,400,300);event('pointerup',1,400,300);event('click',1,400,300);assert.equal(placed,0);scene.placement=null;
   event('pointerdown',1,300,300);event('pointerdown',2,400,300);event('pointermove',2,500,300);assert.equal(scene.zoom,2);event('pointerup',2,500,300);event('pointerup',1,300,300);event('click',1,300,300);assert.equal(selected,0);
   event('pointerdown',1,300,300);event('pointerup',1,300,300);event('click',1,300,300);assert.equal(selected,1);
+  for(const ctrlKey of [false,true]){const before=scene.targetZoom,e={deltaY:10,deltaMode:0,ctrlKey,clientX:350,clientY:300,target:canvas,cancelable:true,preventDefault(){this.defaultPrevented=true;}};handlers.wheel[0](e);browserHandlers.wheel(e);assert(e.defaultPrevented);assert(scene.targetZoom<before);clearTimeout(scene.zoomSave);}
  }finally{names.forEach((n,i)=>{if(saved[i]===undefined)delete globalThis[n];else globalThis[n]=saved[i];});}
 });
 test('normal pan and zoom reuse the terrain cache rather than rebuilding it every frame',()=>{
