@@ -1,3 +1,4 @@
+import {recipeUnlocked,validateFridge} from './fridge.js';
 import {validateSurfaces} from './surfaces.js';
 import {validateSeasonalEvent} from './seasonal-events.js';
 import {addXp,levelOf} from './progression.js';
@@ -115,7 +116,7 @@ export function startCooking(s,stoveId,recipe,now=Date.now()){
  reconcile(s,now);const stove=s.stoves.find(x=>x.id===stoveId);
  if(!stove)return {ok:false,message:'Choose a cooking station.'};
  if(stove.job)return {ok:false,message:'This stove already has a batch on it.'};
- if(Math.max(1,recipe.field_0x16)>levelOf(s))return {ok:false,message:'Reach level '+recipe.field_0x16+' to unlock this recipe.'};
+ if(!recipeUnlocked(s,recipe))return {ok:false,message:'Reach level '+recipe.field_0x16+' to unlock this recipe.'};
  if(s.coins<recipe.baseCost)return {ok:false,message:'Not enough coins for these ingredients.'};
  s.coins-=recipe.baseCost;const total=recipe.cookMinutes*60;stove.job={recipeId:recipe.id,remaining:total,total,output:recipeOutput(recipe)};
  return {ok:true,message:recipe.name+' is on the stove.'};
@@ -152,6 +153,7 @@ export function validateSave(value,recipes){
  if(!value||value.version!==1)throw Error('This is not a compatible café save.');
  const s=structuredClone(value),finite=(n,min,max)=>Number.isFinite(n)&&n>=min&&n<=max;
  validateSeasonalEvent(s.seasonalEvent);
+ validateFridge(s,recipes);
  validateSurfaces(s,CATALOG);
  if(s.infectionTutorialComplete!==undefined&&typeof s.infectionTutorialComplete!=='boolean')throw Error('Invalid infection tutorial state.');
  if(s.pendingInfection&&(!Number.isInteger(s.pendingInfection.guestId)||!s.visitors?.people?.some(g=>g.id===s.pendingInfection.guestId)||!s.staff?.people?.some(z=>z.id===s.pendingInfection.staffId)))throw Error('Invalid pending infection.');
