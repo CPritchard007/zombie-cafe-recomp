@@ -62,7 +62,7 @@ function spawn(s){
  v.spawnIn=r.maxInterval+(r.minInterval-r.maxInterval)*v.rating+(random(v)*2-1)*r.intervalVariance;
  if(v.people.length>=32)return;
  const diner=s.doorOpen!==false&&random(v)*256<r.minVisit+(r.maxVisit-r.minVisit)*v.rating;
- const appearance=chooseCustomer(1+Math.floor(s.xp/20),v.rating,random(v));
+ const appearance=chooseCustomer(1+Math.floor(s.xp/20),v.rating,random(v),s.seasonalEvent);
  const g={id:v.nextId++,x:side,y:-1,variant:appearance.variant,customerDataId:appearance.id,phase:diner?'approaching':'passing',timer:0,path:[],chairId:null,tableId:null,meal:null,exitX:side===WALKWAY_START?WALKWAY_END:WALKWAY_START,t:0,north:false,flip:false,message:''};
  v.people.push(g);route(s,g,diner?DOORSTEP:{x:g.exitX,y:-1});
 }
