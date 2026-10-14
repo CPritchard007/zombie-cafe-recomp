@@ -131,7 +131,7 @@ $('#chat-form').addEventListener('submit',event=>{
  const message=chatInput.value.trim();
  if(!message){chatInput.focus();return;}
  const result=applyChatCode(state,message);
- if(result){save();renderHUD();appendChatMessage('Café',result.message);}
+ if(result){appendChatMessage('Game','Cheat activated! '+result.message);save();renderHUD();}
  else appendChatMessage('You',message);
  chatInput.value='';chatInput.focus();
 });
