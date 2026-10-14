@@ -1,6 +1,11 @@
 import {startSeasonalEvent} from './seasonal-events.js';
 // Hidden codes are matched only after submission; never expose suggestions.
 const codes=new Map([
+ ['herecomesthemoney',state=>{
+  const before=state.coins;
+  state.coins=Math.min(1e9,before+500);
+  return {message:`Added $${state.coins-before}.`};
+ }],
  ['trickortreat',(state,now)=>startSeasonalEvent(state,'halloween',now)],
  ['seasonseatings',(state,now)=>startSeasonalEvent(state,'christmas',now)],
  ['loveatfirstbite',(state,now)=>startSeasonalEvent(state,'valentines',now)],
