@@ -1,3 +1,4 @@
+import {cafeDoor,entrance} from './world.js';
 import {CATALOG,move,levelOf} from './model.js';
 import {wallDecor,canPlaceWallDecor,validFloor,validWall,floorSprite,wallSprite,floorKey,wallKey} from './surfaces.js';
 export function decorItem(s,id){return s.furniture.find(f=>f.id===id)||wallDecor(s).find(f=>f.id===id);}
@@ -53,4 +54,17 @@ export function moveSurface(s,selection,target){
  const key=p=>isFloor?floorKey(p.x,p.y):wallKey(p.side,p.index),sprite=p=>isFloor?floorSprite(s,p.x,p.y):wallSprite(s,p.side,p.index),field=isFloor?'floorTiles':'wallTiles';
  s[field]={...s[field],[key(selection)]:sprite(target),[key(target)]:sprite(selection)};
  return {ok:true,message:'Surface finishes swapped.'};
+}
+
+export function doorDestination(s,target){
+ if(!target||!validWall(s,target.side,target.index))return false;
+ const cell=entrance({...s,door:target});
+ return !wallDecor(s).some(f=>f.side===target.side&&f.index===target.index)&&!s.furniture.some(f=>f.x===cell.x&&f.y===cell.y);
+}
+export function moveDoor(s,target){
+ if(!doorDestination(s,target))return {ok:false,message:'Choose a wall section with no decoration and a clear floor tile inside.'};
+ if(s.visitors.people.some(g=>(g.x>-1&&g.x<0)||(g.y>-1&&g.y<0)))return {ok:false,message:'Wait for the customer to finish crossing the doorway.'};
+ s.door={side:target.side,index:target.index};
+ for(const g of s.visitors.people)if(['approaching','entering','leaving'].includes(g.phase)){g.path=[];if(g.phase==='entering'&&(g.x<0||g.y<0))g.phase='approaching';}
+ return {ok:true,message:'Door moved. Customers will use the new entrance.'};
 }

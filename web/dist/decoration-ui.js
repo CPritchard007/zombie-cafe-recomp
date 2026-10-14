@@ -1,5 +1,6 @@
+import {cafeDoor} from './world.js';
 import {CATALOG,furnitureRotation,rotateFurniture,place,canPlace} from './model.js';
-import {decorItem,saleOffer,sellDecoration,placeWallDecoration,applySurfacePaint,applyDecorationMove,moveSurface} from './decoration.js';
+import {doorDestination,moveDoor,decorItem,saleOffer,sellDecoration,placeWallDecoration,applySurfacePaint,applyDecorationMove,moveSurface} from './decoration.js';
 import {wallDecor,canPlaceWallDecor,floorSprite,wallSprite,floorKey,wallKey} from './surfaces.js';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
@@ -14,7 +15,8 @@ export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
  function itemName(f){return CATALOG.find(c=>c.id===f?.catalogId)?.name||f?.kind||'Item';}
  function preview(){
   const s=state(),view={...s};scene.editTarget=target;
-  if(operation==='reset'){const isFloor=selection.kind==='floor',field=isFloor?'floorTiles':'wallTiles';view[field]={...s[field],[isFloor?floorKey(selection.x,selection.y):wallKey(selection.side,selection.index)]:isFloor?'o0-45':'o0-66'};
+  if(operation==='door'&&target){view.door={...target};
+  }else if(operation==='reset'){const isFloor=selection.kind==='floor',field=isFloor?'floorTiles':'wallTiles';view[field]={...s[field],[isFloor?floorKey(selection.x,selection.y):wallKey(selection.side,selection.index)]:isFloor?'o0-45':'o0-66'};
   }else if(operation==='paint'){
    const field=item.kind==='floor'?'floorTiles':'wallTiles';view[field]={...s[field],...Object.fromEntries([...targets].map(([key])=>[key,item.sprite]))};
   }else if(operation==='move'&&draft&&target){
@@ -31,7 +33,9 @@ export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
   if(!operation){select(p);return;}
   if(operation==='reset')return;
   const s=state();
-  if(operation==='paint'){
+  if(operation==='door'){
+   if(!p.wall)return;target=doorDestination(s,p.wall)?p.wall:null;scene.editTarget={...p.wall,valid:!!target};if(target)preview();else scene.editState=null;render();return;
+  }else if(operation==='paint'){
    const dest=item.kind==='floor'?p.cell:p.wall;if(!dest)return;
    const key=item.kind==='floor'?floorKey(dest.x,dest.y):wallKey(dest.side,dest.index);
    if((item.kind==='floor'?floorSprite(s,dest.x,dest.y):wallSprite(s,dest.side,dest.index))===item.sprite)return;
@@ -51,7 +55,8 @@ export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
  function render(){
   const f=selection?.id&&decorItem(state(),selection.id),surface=selection&&['floor','wall'].includes(selection.kind);
   let text='Tap an item, floor tile, or wall section to edit. Hold an item to move it.';
-  if(operation==='paint')text=`${item.name} · ${targets.size} selected · ${targets.size*item.cost} coins. Tap or drag across ${item.kind==='floor'?'tiles':'wall sections'}.`;
+  if(operation==='door')text='Move door. Choose a clear wall section, then Apply.';
+  else if(operation==='paint')text=`${item.name} · ${targets.size} selected · ${targets.size*item.cost} coins. Tap or drag across ${item.kind==='floor'?'tiles':'wall sections'}.`;
   else if(operation==='buy')text=`Place ${item.name} · ${item.cost} coins. Choose ${item.kind==='wallArt'?'a wall section':'an empty tile'}.`;
   else if(operation==='move')text=`Move ${itemName(draft)}. Drag or tap a new spot, then Apply. Drag to Store to sell.`;
   else if(operation==='reset')text='Remove this finish and restore the plain surface?';
@@ -64,11 +69,13 @@ export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
  function beginMove(){const f=decorItem(state(),selection?.id);if(!f)return;clear();draft=structuredClone(f);operation='move';target=f.kind==='wallArt'?{side:f.side,index:f.index}:{x:f.x,y:f.y};scene.editDrag=true;preview();render();}
  function apply(){
   const s=state();let result;
-  if(operation==='paint')result=applySurfacePaint(s,item,[...targets.values()]);
+  if(operation==='door')result=moveDoor(s,target);
+  else if(operation==='paint')result=applySurfacePaint(s,item,[...targets.values()]);
   else if(operation==='buy')result=item.kind==='wallArt'?placeWallDecoration(s,item,target?.side,target?.index):place(s,item.id,target?.x,target?.y);
   else if(operation==='move')result=applyDecorationMove(s,draft.id,target,draft);
   else if(operation==='swap')result=moveSurface(s,selection,target);
-  else if(operation==='reset'){const isFloor=selection.kind==='floor',field=isFloor?'floorTiles':'wallTiles';s[field]={...s[field],[isFloor?floorKey(selection.x,selection.y):wallKey(selection.side,selection.index)]:isFloor?'o0-45':'o0-66'};result={ok:true,message:'Finish removed. Plain surface restored.'};}
+  else if(operation==='door'&&target){view.door={...target};
+  }else if(operation==='reset'){const isFloor=selection.kind==='floor',field=isFloor?'floorTiles':'wallTiles';s[field]={...s[field],[isFloor?floorKey(selection.x,selection.y):wallKey(selection.side,selection.index)]:isFloor?'o0-45':'o0-66'};result={ok:true,message:'Finish removed. Plain surface restored.'};}
   if(!result)return;
   if(result.ok){clear();selection=null;scene.selected=null;onCommit(result);}else onMessage(result.message);
   render();
@@ -90,7 +97,7 @@ export function createDecorationUI({scene,getState,onCommit,onMessage,onStart}){
   if(action==='confirm-sale'){const result=sellDecoration(state(),selection.id);if(result.ok){selection=null;scene.selected=null;onCommit(result);}else onMessage(result.message);render();return;}
   if(action==='store'){clear();render();document.querySelector('#nav-store').click();}
  });
- scene.onEdit=p=>{select(p);if(p?.id)beginMove();};scene.onEditPoint=point;
+ scene.onEdit=p=>{select(p);if(p?.id==='door'){operation='door';target={...cafeDoor(state())};scene.editDrag=true;preview();render();}else if(p?.id)beginMove();};scene.onEditPoint=point;
  document.addEventListener('keydown',e=>{if(!scene.editing||e.defaultPrevented||e.target.closest('input,textarea,select,[contenteditable]')||document.querySelector('dialog[open]'))return;
   if(e.key==='Escape'){e.preventDefault();if(operation){clear();render();}else close();}
  });

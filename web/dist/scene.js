@@ -2,7 +2,7 @@ import {floorSprite,wallSprite,wallDecor,validFloor,validWall} from './surfaces.
 import {reportError} from './diagnostics.js';
 import {createFurnitureAssets,createFoodAssets} from './assets.js';
 import {startingFloor,startingWall,STARTING_WINDOWS} from './starting-layout.js';
-import {cafeSize,clampZoom} from './world.js';
+import {cafeSize,clampZoom,cafeDoor} from './world.js';
 import {visitorPath,visitorRenderPose} from './visitors.js';
 import {loadCharacters,drawCharacter,facingForMovement,createAnimationPlayer} from './characters.js';
 import {GRID,ENTRANCE,DOORSTEP,entranceAccess,canPlace,furniturePose,CATALOG} from './model.js';
@@ -17,10 +17,19 @@ export function outdoorTile(x,y){
  return {sprite:'o0-116',flip:false};
 }
 // Furniture and indoor characters share tile depth; floors draw before this pass.
-export function sceneEntities(furniture,guests){
+export function sceneEntities(furniture,guests,size){
  const rest=furniture.map(f=>({type:'furniture',f,depth:f.x+f.y}));
- for(const g of guests)if(g.y>=-.5)rest.push({type:'guest',g,depth:g.x+g.y+.1});
+ for(const g of guests)if(g.y>=-.5&&g.x>=-.5)rest.push({type:'guest',g,depth:g.x+g.y+.1});
+ if(size)for(const side of ['left','right'])for(let index=0;index<(side==='left'?size.height:size.width);index++)rest.push({type:'wall',side,index,depth:index-.5});
  return rest.sort((a,b)=>a.depth-b.depth);
+}
+// Wall artwork includes an eight-pixel side lip (72px image, 64px face).
+// Keep the near edge on the tile boundary and extend the far edge over the
+// preceding section. Centering/squeezing the full image exposes every old lip.
+export function wallImageRect(img){
+ // Bleed past the lip: exact edge contact leaves a filtered hairline at fractional zoom.
+ const faceWidth=W/2,overlap=faceWidth*8/64+1.5;
+ return {x:-faceWidth/2,y:-img.height/img.width*(faceWidth+1),w:faceWidth+overlap,h:img.height/img.width*(faceWidth+1)};
 }
 // Center the dish footprint on the isometric top, excluding furniture legs.
 // Recipe art includes food/steam above the plate: anchor the plate near its base,
@@ -52,7 +61,7 @@ export class CafeScene {
   canvas.addEventListener('wheel',e=>{e.preventDefault();const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?this.height:1);this.zoomAnchor=point(e);this.targetZoom=clampZoom(this.targetZoom*Math.exp(-delta*(e.ctrlKey ? .008 : .002)));clearTimeout(this.zoomSave);this.zoomSave=setTimeout(()=>this.onView(),250);},{passive:false});
   this.frame=this.frame.bind(this);requestAnimationFrame(this.frame);
  }
- fit(){const r=this.canvas.getBoundingClientRect();this.width=r.width;this.height=r.height;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=r.width*dpr;this.canvas.height=r.height*dpr;this.dpr=dpr;}
+ fit(){const r=this.canvas.getBoundingClientRect();if(this.width&&this.height){const ratio=Math.min(r.width/870,r.height/710)/Math.min(this.width/870,this.height/710);this.pan={x:this.pan.x*ratio,y:this.pan.y*ratio};}this.width=r.width;this.height=r.height;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=r.width*dpr;this.canvas.height=r.height*dpr;this.dpr=dpr;}
  get scale(){return Math.min(this.width/870,this.height/710)*this.zoom;}
  worldPoint(e){const r=this.canvas.getBoundingClientRect(),s=this.scale;return {x:(e.clientX-r.left-this.width/2-this.pan.x)/s,y:(e.clientY-r.top-this.height/2-9-this.pan.y)/s+180};}
  cellAt(e){const p=this.worldPoint(e);return uniso(p.x,p.y);}
@@ -76,6 +85,7 @@ export class CafeScene {
   let wall=null;
   for(const side of ['left','right']){const index=Math.round((side==='left'?-p.x:p.x)/(W/2)-.5);if(!validWall(this.state,side,index))continue;const anchor=side==='left'?iso(-.5,index):iso(index,-.5),base=anchor.y+(p.x-anchor.x)*(side==='left'?-H/W:H/W);if(Math.abs(p.x-anchor.x)<=W/4&&p.y>=base-138&&p.y<=base+H/4){wall={side,index};break;}}
   const hit=this.hit(e),f=hit&&(this.state.furniture.find(f=>f.id===hit.id)||wallDecor(this.state).find(f=>f.id===hit.id));
+  if(hit?.id==='door')return {id:'door',kind:'door',wall:{...cafeDoor(this.state)},cell:floor};
   if(f)return {id:f.id,kind:f.kind,cell:floor,wall:f.kind==='wallArt'?{side:f.side,index:f.index}:wall};
   if(wall)return {kind:'wall',...wall,wall,cell:floor};
   return floor?{kind:'floor',...floor,cell:floor,wall:null}:null;
@@ -98,7 +108,7 @@ export class CafeScene {
  }
  frame(time){try{const dt=Math.min(.06,(time-this.last)/1000||0);this.last=time;if(!document.hidden){this.onTick();this.updateZoom(dt);this.animateGuests(dt);this.draw(time);}requestAnimationFrame(this.frame);}catch(error){reportError(error,'scene rendering stopped; reload to retry');}}
  foodArt(id){return this.assets.food?.(id)||this.assets.furniture['o0-119'];}
- drawGuest(g){const animation=(this.animationPlayer??=createAnimationPlayer()).sample(g),c=this.ctx;const p=iso(g.x,g.y);if(!g.staff)this.hitboxes.push({id:'customer-'+g.id,x:p.x-20,y:p.y-78,w:40,h:96});if(g.staff){this.hitboxes.push({id:g.id,x:p.x-22,y:p.y-82,w:44,h:104});if(this.selectedZombie===g.id)this.diamond(g.x,g.y,'#ddef9366','#a9d349');}const seated=['waiting','served','eating'].includes(g.phase),bounce=this.reduced||seated?0:Math.sin(g.t*8)*1.6*(g.moving?1:.2);c.fillStyle='#1e32182b';c.beginPath();c.ellipse(p.x,p.y+14*guestGroundOffset(g.y),15,6,0,0,7);c.fill();c.save();c.translate(p.x,p.y+18*guestGroundOffset(g.y)+bounce);c.scale(animation.flip?-1:1,1);const characterAssets=this.assets.characters,forms=characterAssets.catalog.forms,human=g.staff?characterAssets.zombie?.(g.zombieForm,g.customerDataId):characterAssets.human?.(g.variant),form=human?.form||forms.find(f=>f.name===(g.staff?'chef-zombie':'generic-human'));drawCharacter(c,human?.assets||characterAssets,form,animation.clip,animation.seconds,0,0,.19,false,{loop:animation.loop,prop:animation.prop?this.foodArt(g.batch?.recipeId??g.carrying?.recipeId??(['serve','returnFood','dropBatch'].includes(g.action?.phase)?g.action.recipeId:undefined)):null});c.restore();if(g.phase==='waiting')this.label(p.x,p.y-89,g.timer<15?'Hungry!':'Waiting for food');else if(g.phase==='eating')this.label(p.x,p.y-89,'Eating');else if(g.message)this.label(p.x,p.y-89,g.message);else if(g.staff){const labels={stove:'Collecting cooked batch',collectBatch:'Collecting cooked batch',batchCounter:'Taking food to counter',dropBatch:'Stocking counter',counter:'Collecting food',pickup:'Collecting food',deliver:'Serving',serve:'Serving',table:'Clearing table',clear:'Clearing table',sink:'Taking dishes to sink',wash:'Washing dishes',returnCounter:'Returning food',returnFood:'Returning food'};if(labels[g.taskPhase]||g.batch||g.carrying||g.dishes)this.label(p.x,p.y-89,labels[g.taskPhase]||(g.carrying?'Serving':'Taking dishes to sink'));}}
+ drawGuest(g){const animation=(this.animationPlayer??=createAnimationPlayer()).sample(g),c=this.ctx;const p=iso(g.x,g.y);if(!g.staff)this.hitboxes.push({id:'customer-'+g.id,x:p.x-20,y:p.y-78,w:40,h:96});if(g.staff){this.hitboxes.push({id:g.id,x:p.x-22,y:p.y-82,w:44,h:104});if(this.selectedZombie===g.id)this.diamond(g.x,g.y,'#ddef9366','#a9d349');}const seated=['waiting','served','eating'].includes(g.phase),bounce=this.reduced||seated?0:Math.sin(g.t*8)*1.6*(g.moving?1:.2);c.fillStyle='#1e32182b';c.beginPath();c.ellipse(p.x,p.y+14*guestGroundOffset(Math.min(g.x,g.y)),15,6,0,0,7);c.fill();c.save();c.translate(p.x,p.y+18*guestGroundOffset(Math.min(g.x,g.y))+bounce);c.scale(animation.flip?-1:1,1);const characterAssets=this.assets.characters,forms=characterAssets.catalog.forms,human=g.staff?characterAssets.zombie?.(g.zombieForm,g.customerDataId):characterAssets.human?.(g.variant),form=human?.form||forms.find(f=>f.name===(g.staff?'chef-zombie':'generic-human'));drawCharacter(c,human?.assets||characterAssets,form,animation.clip,animation.seconds,0,0,.19,false,{loop:animation.loop,prop:animation.prop?this.foodArt(g.batch?.recipeId??g.carrying?.recipeId??(['serve','returnFood','dropBatch'].includes(g.action?.phase)?g.action.recipeId:undefined)):null});c.restore();if(g.phase==='waiting')this.label(p.x,p.y-89,g.timer<15?'Hungry!':'Waiting for food');else if(g.phase==='eating')this.label(p.x,p.y-89,'Eating');else if(g.message)this.label(p.x,p.y-89,g.message);else if(g.staff){const labels={stove:'Collecting cooked batch',collectBatch:'Collecting cooked batch',batchCounter:'Taking food to counter',dropBatch:'Stocking counter',counter:'Collecting food',pickup:'Collecting food',deliver:'Serving',serve:'Serving',table:'Clearing table',clear:'Clearing table',sink:'Taking dishes to sink',wash:'Washing dishes',returnCounter:'Returning food',returnFood:'Returning food'};if(labels[g.taskPhase]||g.batch||g.carrying||g.dishes)this.label(p.x,p.y-89,labels[g.taskPhase]||(g.carrying?'Serving':'Taking dishes to sink'));}}
  paintTerrain(c){const t=this.terrainBounds;c.save();c.translate(this.width/2+this.pan.x,this.height/2+9+this.pan.y);c.scale(this.scale,this.scale);c.translate(0,-180);c.drawImage(this.terrain,t.left,t.top,t.width,t.height);c.restore();}
  drawOutdoors(){
   // Cache an oversized world-space patch, so dragging/zooming transforms one image.
@@ -116,6 +126,20 @@ export class CafeScene {
   this.paintTerrain(this.ctx);
  }
 
+ // CafeWall::draw draws its attached decoration before the next depth-sorted object.
+ drawWall(state,side,index){
+  const c=this.ctx,p=side==='left'?iso(-.5,index):iso(index,-.5),slope=side==='left'?-1:1;
+  const img=this.assets.furniture[wallSprite(state,side,index)];
+  if(img){const r=wallImageRect(img);c.save();c.translate(p.x,p.y+H/4);if(side==='right')c.scale(-1,1);if(index===0){c.beginPath();c.rect(-W/4,-1000,W/2,2000);c.clip();}const shear=-H/W+(40/64)*(r.h/img.height)/(r.w/img.width);c.transform(1,shear,0,1,0,-r.x*shear);c.drawImage(img,r.x,r.y,r.w,r.h);c.restore();}
+  else this.poly([[p.x-W/4,p.y-slope*H/4],[p.x+W/4,p.y+slope*H/4],[p.x+W/4,p.y+slope*H/4-138],[p.x-W/4,p.y-slope*H/4-138]],side==='left'?'#bdc7a2':'#e4dec2');
+  for(const f of wallDecor(state).filter(f=>f.side===side&&f.index===index)){
+   const img=this.assets.furniture[f.sprite];if(!img)continue;
+   const w=46,h=img.height/img.width*w;c.save();c.translate(p.x,p.y-29);if(side==='right')c.scale(-1,1);c.drawImage(img,-w/2,-h,w,h);c.restore();
+   const box={id:f.id,x:p.x-w/2,y:p.y-29-h,w,h};this.hitboxes.push(box);
+   if(this.selected===f.id){c.strokeStyle='#d3f294';c.lineWidth=2;c.strokeRect(box.x-2,box.y-2,w+4,h+4);}
+  }
+ }
+
  draw(time){const c=this.ctx,s=this.scale;c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);
   this.drawOutdoors();
   c.translate(this.width/2+this.pan.x,this.height/2+9+this.pan.y);c.scale(s,s);c.translate(0,-180);
@@ -124,44 +148,38 @@ export class CafeScene {
   this.poly([top,right,bottom,left],'#c7ceb7','#bbc5aa');
   this.poly([left,bottom,[bottom[0],bottom[1]+12],[left[0],left[1]+12]],'#8b9578');
   this.poly([bottom,right,[right[0],right[1]+12],[bottom[0],bottom[1]+12]],'#a5ae8f');
-  this.poly([left,top,[top[0],top[1]-138],[left[0],left[1]-138]],'#bdc7a2','#849170');
-  this.poly([top,right,[right[0],right[1]-138],[top[0],top[1]-138]],'#e4dec2','#9ba285');
-  // Each original wall sprite includes its isometric slope and distressed plaster.
-  for(const side of ['left','right'])for(let i=(side==='left'?height:width)-1;i>=0;i--){
-   const sprite=wallSprite(this.editState||this.state,side,i),img=this.assets.furniture[sprite];
-   if(img){const p=side==='left'?iso(-.5,i):iso(i,-.5),w=W/2+1,h=img.height/img.width*w;c.save();c.translate(p.x,p.y+H/4);if(side==='right')c.scale(-1,1);c.drawImage(img,-w/2,-h,w,h);c.restore();}
-  }
-  const wallBoxes=[];
-  for(const f of wallDecor(this.editState||this.state)){const img=this.assets.furniture[f.sprite],p=f.side==='left'?iso(-.5,f.index):iso(f.index,-.5);if(!img)continue;const w=46,h=img.height/img.width*w;c.save();c.translate(p.x,p.y-29);if(f.side==='right')c.scale(-1,1);c.drawImage(img,-w/2,-h,w,h);c.restore();const box={id:f.id,x:p.x-w/2,y:p.y-29-h,w,h};wallBoxes.push(box);if(this.selected===f.id){c.strokeStyle='#d3f294';c.lineWidth=2;c.strokeRect(box.x-2,box.y-2,w+4,h+4);}}
   for(let d=0;d<width+height-1;d++)for(let x=0;x<width;x++){const y=d-x;if(y<0||y>=height)continue;const p=iso(x,y),id=floorSprite(this.editState||this.state,x,y),img=this.assets.furniture[id];if(img)c.drawImage(img,p.x-W/2,p.y-H/2,W+1,H+1);if(this.placement||this.editing)this.diamond(x,y,'#f9ffe10b','#61795138');}
   // Original door art on the NE wall, directly adjoining the pavement.
-  const dp=iso(ENTRANCE.x,-.5),doorImage=this.assets.furniture['o0-122'];
+  const door=cafeDoor(this.editState||this.state),doorLeft=door.side==='left',dp=doorLeft?iso(-.5,door.index):iso(door.index,-.5),doorImage=this.assets.furniture['o0-122'];
   // The source door faces the opposite wall. Mirror it and preserve its
   // native 66:207 aspect ratio; its bottom corners are y=207 and y=167.
-  const doorScale=.65,doorHalf=33*doorScale,doorSlope=doorHalf*H/W;
+  const doorScale=.65,doorHalf=33*doorScale,doorSlope=doorHalf*H/W*(doorLeft?-1:1);
   const opening=[[dp.x-doorHalf,dp.y-doorSlope-108],[dp.x+doorHalf,dp.y+doorSlope-108],[dp.x+doorHalf,dp.y+doorSlope],[dp.x-doorHalf,dp.y-doorSlope]];
+  const drawDoor=()=>{
   // Cut through every wall/sign layer to the actual exterior at these screen pixels.
   // Reuse the terrain cache in screen coordinates so the pavement/road texture lines up.
   c.save();this.poly(opening);c.clip();
   c.save();c.setTransform(this.dpr,0,0,this.dpr,0,0);this.paintTerrain(c);c.restore();
   c.restore();this.poly(opening,null,'#c3c9c5',3);
-  c.save();c.translate(dp.x,dp.y);c.scale(-doorScale,doorScale);
+  c.save();c.translate(dp.x,dp.y);c.scale(doorLeft?doorScale:-doorScale,doorScale);
   if(!this.state.doorOpen&&doorImage)c.drawImage(doorImage,-33,-187);
   else {const back=this.assets.furniture['o0-123'];if(back)c.drawImage(back,-33,-147);}
   c.restore();
   this.label(dp.x,dp.y-136,this.state.doorOpen?'OPEN':'CLOSED');
-  const doorBox={id:'door',x:dp.x-32,y:dp.y-145,w:64,h:162};
+
+  };
   if(this.placement&&this.hover){const {x,y}=this.hover;if(x>=0&&y>=0&&x<cafeSize(this.state).width&&y<cafeSize(this.state).height){const valid=canPlace(this.state,x,y,this.placement.moveId);this.diamond(x,y,valid?'#d2eb8199':'#e4a085bb',valid?'#66843a':'#aa5b45');const f=this.placement.moveId?this.state.furniture.find(f=>f.id===this.placement.moveId):CATALOG.find(f=>f.id===this.placement.itemId);if(f){const art=furniturePose(f);this.sprite(art.sprite,x,y,.78,art.flip,.6);}}}
-  if(this.editing&&this.editTarget){const t=this.editTarget,color=t.valid===false?'#e67465':'#d3f294';if(Number.isInteger(t.x)&&Number.isInteger(t.y))this.diamond(t.x,t.y,color+'55',color);else if(t.side){const p=t.side==='left'?iso(-.5,t.index):iso(t.index,-.5),slope=t.side==='left'?-1:1;c.strokeStyle=color;c.lineWidth=3;this.poly([[p.x-W/4,p.y-slope*H/4],[p.x+W/4,p.y+slope*H/4],[p.x+W/4,p.y+slope*H/4-138],[p.x-W/4,p.y-slope*H/4-138]],color+'33',color,3);}}
+
   const directed=this.state.staff?.people.find(z=>z.id===this.selectedZombie);if(directed?.manualTarget)this.diamond(directed.manualTarget.x,directed.manualTarget.y,'#ddef9344','#a9d349');
-  const entities=sceneEntities((this.editState||this.state).furniture,this.guests);this.hitboxes=[...wallBoxes,doorBox];
-  for(const e of entities){if(e.type==='furniture'){const f=e.f,p=iso(f.x,f.y);if(this.selected===f.id)this.diamond(f.x,f.y,'#ddef93aa','#688345');c.fillStyle='#22351b18';c.beginPath();c.ellipse(p.x,p.y+13,28,10,0,0,7);c.fill();const art=furniturePose(f),box=this.sprite(art.sprite,f.x,f.y,.78,art.flip);if(box)this.hitboxes.push({...box,id:f.id});if(f.kind==='table'){const diner=this.state.visitors?.people.find(g=>g.tableId===f.id&&g.meal),dirty=this.state.visitors?.dirtyTables.some(d=>d.tableId===f.id);if(diner||dirty){const plate=this.foodArt(diner?.meal?.recipeId);if(plate&&box){const rect=tablePlateRect(box,plate);c.drawImage(plate,rect.x,rect.y,rect.w,rect.h);}}}
+  const drawingState=this.editState||this.state,entities=sceneEntities(drawingState.furniture,this.guests,{width,height});this.hitboxes=[];
+  for(const e of entities){if(e.type==='wall'){this.drawWall(drawingState,e.side,e.index);if(e.side===door.side&&e.index===door.index){drawDoor();this.hitboxes.push({id:'door',x:dp.x-32,y:dp.y-145,w:64,h:162});}}else if(e.type==='furniture'){const f=e.f,p=iso(f.x,f.y);if(this.selected===f.id)this.diamond(f.x,f.y,'#ddef93aa','#688345');c.fillStyle='#22351b18';c.beginPath();c.ellipse(p.x,p.y+13,28,10,0,0,7);c.fill();const art=furniturePose(f),box=this.sprite(art.sprite,f.x,f.y,.78,art.flip);if(box)this.hitboxes.push({...box,id:f.id});if(f.kind==='table'){const diner=this.state.visitors?.people.find(g=>g.tableId===f.id&&g.meal),dirty=this.state.visitors?.dirtyTables.some(d=>d.tableId===f.id);if(diner||dirty){const plate=this.foodArt(diner?.meal?.recipeId);if(plate&&box){const rect=tablePlateRect(box,plate);c.drawImage(plate,rect.x,rect.y,rect.w,rect.h);}}}
     if(f.kind==='counter'){const batches=this.state.stock.filter(b=>b.counterId===f.id);if(batches.length){const plate=this.foodArt(batches[0].recipeId);if(plate&&box){const rect=tablePlateRect(box,plate,44);c.drawImage(plate,rect.x,rect.y,rect.w,rect.h);}this.label(p.x,p.y-84,batches.reduce((n,b)=>n+b.quantity,0)+' portions');}}
     if(f.kind==='stove'){const job=this.state.stoves.find(st=>st.id===f.id)?.job;if(job){if(job.remaining<=0){this.label(p.x,p.y-113,'READY FOR PICKUP','#e8f5b9','#425b2e');}else{this.label(p.x,p.y-113,'COOKING','#fbf4d6','#8b7447');if(!this.reduced){c.strokeStyle='#ffffffaa';c.lineWidth=3;for(let i=0;i<3;i++){const t=(time/1000+i*.8)%2;c.beginPath();c.moveTo(p.x-13+i*12,p.y-74-t*15);c.quadraticCurveTo(p.x-24+i*12,p.y-88-t*15,p.x-12+i*12,p.y-97-t*15);c.stroke();}}}}}
    }else{this.drawGuest(e.g);}}
 
+  if(this.editing&&this.editTarget){const t=this.editTarget,color=t.valid===false?'#e67465':'#d3f294';if(Number.isInteger(t.x)&&Number.isInteger(t.y))this.diamond(t.x,t.y,color+'55',color);else if(t.side){const p=t.side==='left'?iso(-.5,t.index):iso(t.index,-.5),slope=t.side==='left'?-1:1;c.strokeStyle=color;c.lineWidth=3;this.poly([[p.x-W/4,p.y-slope*H/4],[p.x+W/4,p.y+slope*H/4],[p.x+W/4,p.y+slope*H/4-138],[p.x-W/4,p.y-slope*H/4-138]],color+'33',color,3);}}
   // Outdoor visitors remain above floors, but the walls still hide them.
-  const outside=this.guests.filter(g=>g.y<-.5).sort((a,b)=>(a.x+a.y)-(b.x+b.y));
+  const outside=this.guests.filter(g=>g.y<-.5||g.x<-.5).sort((a,b)=>(a.x+a.y)-(b.x+b.y));
   if(outside.length){
    c.save();c.beginPath();c.rect(-100000,-100000,200000,200000);
    for(const wall of [[left,top,[top[0],top[1]-138],[left[0],left[1]-138]],[top,right,[right[0],right[1]-138],[top[0],top[1]-138]]]){c.moveTo(...wall[0]);for(const p of wall.slice(1))c.lineTo(...p);c.closePath();}

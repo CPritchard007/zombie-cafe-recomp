@@ -6,11 +6,11 @@ import {newStaffState,validateStaff} from './staff.js';
 import {STARTING_SIZE,STARTING_FURNITURE} from './starting-layout.js';
 import {advanceVisitors,newVisitorState,migrateChairDirections,validateVisitors,chairTable} from './visitors.js';
 export const SAVE_KEY='zombie-cafe.web.v1';
-import {GRID,cafeSize,ENTRANCE,DOORSTEP} from './world.js';
+import {GRID,cafeSize,ENTRANCE,DOORSTEP,entrance} from './world.js';
 export {GRID,cafeSize,ENTRANCE,DOORSTEP} from './world.js';
 const neighbors=({x,y})=>[{x:x+1,y},{x:x-1,y},{x,y:y+1},{x,y:y-1}];
 export function entranceAccess(s){
- const occupied=new Set(s.furniture.map(f=>f.x+','+f.y)),reachable=new Set(),queue=[ENTRANCE];
+ const occupied=new Set(s.furniture.map(f=>f.x+','+f.y)),reachable=new Set(),queue=[entrance(s)];
  while(queue.length){const p=queue.shift(),key=p.x+','+p.y;if(p.x<0||p.y<0||p.x>=cafeSize(s).width||p.y>=cafeSize(s).height||occupied.has(key)||reachable.has(key))continue;reachable.add(key);queue.push(...neighbors(p));}
  const accessible=f=>neighbors(f).some(p=>reachable.has(p.x+','+p.y));
  const chairs=s.furniture.filter(f=>f.kind==='chair'),counters=s.furniture.filter(f=>f.kind==='counter');
@@ -94,7 +94,7 @@ export function applyStartingLayout(s){
  if(s.staff?.people?.length)preset.staff.people=s.staff.people.map(z=>({...newStaffState().people[0],id:z.id,completed:z.completed,...(z.zombieForm?{zombieForm:z.zombieForm,customerDataId:z.customerDataId}:{})}));
  for(const key of ['layoutVersion','size','originalSurfaces','floor','furniture','stoves','visitors','staff'])s[key]=preset[key];
  delete s.floorTiles;delete s.wallTiles;delete s.wallDecor;
- delete s.wallSprite;delete s.floorChanged;delete s.wallChanged;
+ delete s.door;delete s.wallSprite;delete s.floorChanged;delete s.wallChanged;
  s.lastTick=Date.now();return {ok:true,message:'Original starting layout restored. Your previous café is backed up on this device.'};
 }
 
@@ -154,6 +154,7 @@ export function validateSave(value,recipes){
  const s=structuredClone(value),finite=(n,min,max)=>Number.isFinite(n)&&n>=min&&n<=max;
  validateSeasonalEvent(s.seasonalEvent);
  validateFridge(s,recipes);
+ if(s.door!==undefined&&(!s.door||!['left','right'].includes(s.door.side)||!Number.isInteger(s.door.index)||s.door.index<0||s.door.index>=(s.door.side==='left'?cafeSize(s).height:cafeSize(s).width)))throw Error('Invalid café door.');
  validateSurfaces(s,CATALOG);
  if(s.infectionTutorialComplete!==undefined&&typeof s.infectionTutorialComplete!=='boolean')throw Error('Invalid infection tutorial state.');
  if(s.pendingInfection&&(!Number.isInteger(s.pendingInfection.guestId)||!s.visitors?.people?.some(g=>g.id===s.pendingInfection.guestId)||!s.staff?.people?.some(z=>z.id===s.pendingInfection.staffId)))throw Error('Invalid pending infection.');

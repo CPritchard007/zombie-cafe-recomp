@@ -31,7 +31,7 @@ document.addEventListener('click',event=>{const button=event.target.closest('but
 const format=n=>Math.round(n).toLocaleString();
 function duration(seconds){if(!Number.isFinite(seconds))return 'Paused';seconds=Math.max(0,Math.ceil(seconds));if(seconds>=3600)return Math.floor(seconds/3600)+'h '+Math.floor(seconds%3600/60)+'m';if(seconds>=60)return Math.floor(seconds/60)+'m '+(seconds%60?seconds%60+'s':'');return seconds+'s';}
 const toast=createToasts($('#toast'));
-function saveView(){if(!offline||!scene)return;offline.saveView({tab,filter,search,selectedStove,zoom:scene.targetZoom,pan:scene.pan,catalog:catalogPreferences});}
+function saveView(){if(!offline||!scene)return;offline.saveView({tab,filter,search,selectedStove,zoom:scene.targetZoom,pan:scene.pan,viewport:{width:scene.width,height:scene.height},catalog:catalogPreferences});}
 function save(){if(saveBlocked){$('#save-status').textContent='Automatic saving stopped · see diagnostics';return;}try{offline.save(state);saveView();saveError=false;$('#save-status').textContent='Saved on this device';}catch(error){reportError(error,'save');if(!saveError)toast('Could not save the café. Export a backup and diagnostics from Options.');saveError=true;$('#save-status').textContent='Not saved · export from Settings';}}
 function after(result){if(result?.message)toast(result.message);save();renderHUD();renderStations();renderPanel();refreshModal();}
 function switchTab(name){$('.side-panel').hidden=false;$('.side-panel').dataset.panel=name;tab=name;document.querySelectorAll('[data-tab]').forEach(b=>{b.setAttribute('aria-selected',b.dataset.tab===name);b.tabIndex=b.dataset.tab===name?0:-1;});$('#panel-content').setAttribute('aria-labelledby','tab-'+name);renderPanel();}
@@ -106,7 +106,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  case 'enter-cafe':$('#original-title').hidden=true;resumeMusic();break;
  case 'home-screen':decor.close();setChatOpen(false);$('#original-title').hidden=false;break;
  case 'nav-recipes':decor.close();switchTab('recipes');break;
- case 'expand-cafe':decor.close();selectZombie(null);tab='store';$('.side-panel').hidden=true;catalog.openExpansions();break;
  case 'nav-store':case 'nav-characters':decor.close();tab=b.id==='nav-store'?'store':'characters';$('.side-panel').hidden=tab==='store';$('.side-panel').dataset.panel=tab;catalog.open(tab);break;
  case 'nav-goals':decor.close();switchTab('goals');break;
  case 'nav-options':case 'title-options':settings();break;
@@ -169,7 +168,7 @@ async function boot(){try{
  const view=offline.loadView();tab=view.tab;filter=view.filter;search=view.search;catalogPreferences=view.catalog||{};
  const away=reconcile(state);lastLevel=levelOf(state);selectedStove=state.stoves.find(s=>!s.job)?.id||state.stoves[0].id;
  $('#original-load-status').textContent='Loading furniture and characters…';
- scene=new CafeScene($('#world'),state,await loadSceneAssets(state,recipes),onSelect,onPlace,()=>after(setCafeOpen(state,!state.doorOpen)),tick,saveView);scene.zoom=scene.targetZoom=view.zoom;scene.pan=view.pan;
+ scene=new CafeScene($('#world'),state,await loadSceneAssets(state,recipes),onSelect,onPlace,()=>after(setCafeOpen(state,!state.doorOpen)),tick,saveView);const sameViewport=view.viewport&&Math.abs(view.viewport.width-scene.width)<80&&Math.abs(view.viewport.height-scene.height)<160;scene.zoom=scene.targetZoom=sameViewport?view.zoom:1;scene.pan=sameViewport?view.pan:{x:0,y:0};
  if(state.stoves.some(s=>s.id===view.selectedStove))selectedStove=view.selectedStove;
  catalog=createCatalog({container:$('#panel-content'),storeDialog:$('#store-modal'),assets:scene.assets,getState:()=>state,onClose:()=>{$('.side-panel').hidden=true;},onBuy:item=>{catalog.closeStore();if(item.kind==='expansion'){decor.close();modalRecipe=null;const size=cafeSize(state);openDialog(`<span class="eyebrow">ROOM TO GROW</span><h2>Expand your café</h2><p>${size.width}×${size.height} → ${item.width}×${item.height} tiles</p><p>Add ${item.width*item.height-size.width*size.height} floor tiles for ${item.cost.toLocaleString()} coins. Your furniture and wall decorations stay in place.</p><button class="button lime full" data-expand="${item.id}">Expand · ${item.cost.toLocaleString()} coins</button><button class="button full" id="back-game">Cancel</button>`);}else decor.buy(item);},preferences:catalogPreferences,onRemember:value=>{catalogPreferences=value;save();}});
  decor=createDecorationUI({scene,getState:()=>state,onCommit:after,onMessage:toast,onStart:()=>{selectZombie(null);placement=null;scene.placement=null;$('#placement-banner').hidden=true;$('.side-panel').hidden=true;}});
