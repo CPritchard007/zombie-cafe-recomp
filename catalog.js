@@ -61,7 +61,7 @@ export function createCatalog({container,storeDialog,assets,getState,onBuy,onClo
   const viewport=storeDialog.querySelector('.store-viewport'),state=getState();
   storeColumns=Math.max(1,Math.floor((viewport.clientWidth+12)/182));
   const range=virtualRange(storeList.length,storeColumns,viewport.scrollTop,viewport.clientHeight,rowHeight);
-  storeDialog.querySelector('.catalog-count').textContent=`${storeList.length} items · ${state.coins} coins · ${state.toxin||0} toxin`;
+  storeDialog.querySelector('.catalog-count').textContent=`${category==='12'?'Café '+(state.size?.width||8)+'×'+(state.size?.height||8)+' · ':''}${storeList.length} items · ${state.coins} coins · ${state.toxin||0} toxin`;
   storeDialog.querySelector('.store-spacer').style.height=range.height+'px';
   storeDialog.querySelector('.store-empty').hidden=storeList.length>0;
   const signature=[range.start,range.end,storeColumns,state.coins,state.size?.width,state.size?.height,levelOf(state)].join(':');if(signature===storeRange)return;storeRange=signature;
@@ -70,7 +70,7 @@ export function createCatalog({container,storeDialog,assets,getState,onBuy,onClo
   layer.innerHTML=storeList.slice(range.start,range.end).map((c,n)=>{const locked=c.level>levelOf(state),unsupported=c.kind==='special',expansion=c.kind==='expansion'?expansionStatus(state,c):null,unavailable=expansion?!expansion.ok:locked||c.premium||unsupported||c.cost>state.coins;return `<article class="catalog-card" role="listitem" aria-posinset="${range.start+n+1}" aria-setsize="${storeList.length}" tabindex="0" data-store-index="${range.start+n}"><img src="${furnitureImage(c)}" alt="" loading="lazy" decoding="async"><strong title="${esc(c.name)}">${esc(c.name)}</strong><p>${c.cost} ${c.premium?'toxin':'coins'} · Level ${c.level}</p><p class="store-rotation">${['chair','table','stove','counter','fridge','plant','lamp','divider','sink'].includes(c.kind)?furnitureRotation(c).count===1?'Fixed orientation':furnitureRotation(c).count+' rotation directions':''}</p><button data-store-buy="${c.id}" aria-label="Buy ${esc(c.name)}" ${unavailable?'disabled':''}>${expansion?esc(expansion.message):locked?'Locked':c.premium?'Toxin unavailable':unsupported?'Not yet implemented':'Buy'}</button></article>`;}).join('');
   if(focus!==undefined)layer.querySelector(`[data-store-index="${focus}"]`)?.focus({preventScroll:true});
  }
- return {open,closeStore,refresh:()=>{if(storeDialog.open){storeRange='';drawStore();}}};
+ return {open,openExpansions:()=>{query='';category='12';storeScroll=0;remember();return open('store');},closeStore,refresh:()=>{if(storeDialog.open){storeRange='';drawStore();}}};
 }
 
 // Fixed-height rows keep layout stable while only visible rows plus overscan exist in the DOM.

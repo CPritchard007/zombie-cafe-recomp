@@ -1470,6 +1470,7 @@
   "./decoration-ui.js",
   "./decoration.js",
   "./diagnostics.js",
+  "./fridge.js",
   "./human-forms.js",
   "./index.html",
   "./infection-rules.js",

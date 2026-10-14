@@ -58,3 +58,7 @@ body{overflow:hidden}.world-wrap{position:fixed;inset:0;width:100vw;height:100dv
 .field input,.field select,.catalog-filter input,.catalog-filter select,.store-modal .catalog-filter input,.store-modal .catalog-filter select,.search-field input,.tile-picker select,.chat-form input{background:var(--board-deep);color:var(--chalk);border:1px solid #7c896d;border-radius:0}.chat-form input::placeholder,.search-field input::placeholder,.catalog-filter input::placeholder{color:#b2bba5}.chat-messages strong{color:var(--chalk-accent)}#chat-close{color:var(--chalk-muted)}.setting-row{border-color:var(--chalk-line)}dialog::backdrop,dialog.store-modal::backdrop{background:#10170dc2;backdrop-filter:blur(3px)}
 .toast-region .toast:hover,.toast-region .toast:focus-within{background:#304338;border-color:var(--chalk-accent)}
 #entrance-status[data-warning="true"],#error-notice{background:#3f3026;color:#ffe9c4;border:2px solid #a98253;border-radius:0}#error-notice button{background:#503d30;color:#ffe9c4;border:1px solid #a98253;border-radius:0}
+
+.fridge-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-height:48dvh;overflow:auto;margin:16px 0}.fridge-list .catalog-card img{height:80px;object-fit:contain}.fridge-list .empty-state{grid-column:1/-1}
+
+#expand-cafe{background:var(--board);color:var(--chalk);border:2px solid var(--board-frame);border-radius:0;white-space:nowrap}#expand-cafe:hover{background:#3a4a3b}
