@@ -5,7 +5,8 @@ root=Path(__file__).resolve().parents[1]/'web/dist'
 def runtime_file(path):
  return path.is_file() and not any(part.startswith('.') for part in path.relative_to(root).parts)
 
-core={'./','./index.html','./assets/recipes.json','./assets/original/furniture-data.json','./assets/thunder.ttf'}
+core={'./','./index.html','./assets/recipes.json','./assets/original/furniture-data.json','./assets/thunder.ttf','./site.webmanifest'}
+core.update('./'+str(p.relative_to(root)) for p in (root/'assets/metadata').glob('*') if runtime_file(p) and p.name!='icon-source.png')
 core.update('./'+p.name for p in root.iterdir() if runtime_file(p) and p.suffix in ('.js','.css') and p.name!='sw.js')
 core.update('./'+str(p.relative_to(root)) for p in (root/'assets/startup').glob('*') if runtime_file(p))
 for p in [root/'index.html',*root.glob('*.css')]:

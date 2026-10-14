@@ -1,0 +1,4 @@
+Icon: recovered/android/res/drawable/game_icon.png, referenced by android:icon in the original APK manifest. Original is 72×72; web sizes are resized copies, not newly drawn artwork.
+Thumbnail: original title screen, composed from web/dist/assets/original/title/0.png and title/2.png using the game title-stage positioning. The complete 4:3 artwork is preserved within a 1200×630 frame. This is title-screen art, not a gameplay screenshot or advertisement.
+Rebuild with: python3 scripts/prepare_metadata_assets.py
+No AI-generated imagery is used.
