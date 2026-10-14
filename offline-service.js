@@ -17,7 +17,7 @@ export function respond(path,{method='GET',now=Date.now()}={}) {
 // Web saves deliberately use a separate protocol from Android binary game states.
 export const VIEW_KEY='zombie-cafe.view.v1';
 export function normalizeView(value={}){
- return {tab:['recipes','decorate','goals','store','characters'].includes(value?.tab)?value.tab:'recipes',
+ return {...(Number.isFinite(value?.viewport?.width)&&Number.isFinite(value?.viewport?.height)?{viewport:{width:Math.max(1,value.viewport.width),height:Math.max(1,value.viewport.height)}}:{}),tab:['recipes','decorate','goals','store','characters'].includes(value?.tab)?value.tab:'recipes',
  filter:value?.filter==='all'?'all':'foryou',search:typeof value?.search==='string'?value.search.slice(0,100):'',
  pan:{x:Number.isFinite(value?.pan?.x)?Math.max(-4000,Math.min(4000,value.pan.x)):0,y:Number.isFinite(value?.pan?.y)?Math.max(-4000,Math.min(4000,value.pan.y)):0},
  zoom:Number.isFinite(value?.zoom)?clampZoom(value.zoom):1,

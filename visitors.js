@@ -3,14 +3,14 @@ import {chooseCustomer} from './customer-selection.js';
 import {CUSTOMER_RULES} from './customer-rules.js';
 import {HUMAN_FORMS} from './human-forms.js';
 import {ensureStaff,advanceStaff} from './staff.js';
-import {GRID,cafeSize,ENTRANCE,DOORSTEP} from './world.js';
+import {GRID,cafeSize,entrance,doorstep} from './world.js';
 import {facingForMovement} from './characters.js';
 // Millisecond constants decoded by scripts/export_visitor_rules.py (reports/visitor-constants.json).
 export const VISITOR_RULES=Object.freeze({waitForFood:60,foodPause:2,eatTime:30,minInterval:4.5,maxInterval:18,intervalVariance:1,minVisit:211,maxVisit:238,entryPause:1,entryVariance:.8,ratingGain:.005,ratingLoss:.006});
 const STEP=.25,SPEED=.9,adj=p=>[{x:p.x+1,y:p.y},{x:p.x-1,y:p.y},{x:p.x,y:p.y+1},{x:p.x,y:p.y-1}],key=p=>p.x+','+p.y;
 // Continue the pavement well beyond the café/view instead of spawning at its corners.
 export const WALKWAY_START=-24,WALKWAY_END=GRID+24;
-const onSidewalk=p=>p.y===-1&&p.x>=WALKWAY_START&&p.x<=WALKWAY_END;
+const onSidewalk=p=>(p.y===-1&&p.x>=WALKWAY_START&&p.x<=WALKWAY_END)||(p.x===-1&&p.y>=-1&&p.y<=WALKWAY_END);
 const inside=(p,s)=>p.x>=0&&p.y>=0&&p.x<cafeSize(s).width&&p.y<cafeSize(s).height;
 const at=(a,b)=>Math.abs(a.x-b.x)+Math.abs(a.y-b.y)<1e-7;
 export function newVisitorState(){return {version:1,people:[],nextId:1,seed:17391,spawnIn:1,remainder:0,rating:.5,dirtyTables:[],arrived:0,happy:0,unhappy:0};}
@@ -21,7 +21,7 @@ export function visitorPath(s,from,to,seatId=null){
  for(let i=0;i<queue.length;i++){const path=queue[i],p=path.at(-1);if(at(p,to))return path.slice(1);
   for(const n of adj(p)){
    if((!inside(n,s)&&!onSidewalk(n))||blocked.has(key(n))||seen.has(key(n)))continue;
-   if(inside(p,s)!==inside(n,s)&&!(at(p,ENTRANCE)&&at(n,DOORSTEP)||at(p,DOORSTEP)&&at(n,ENTRANCE)))continue;
+   if(inside(p,s)!==inside(n,s)&&!(at(p,entrance(s))&&at(n,doorstep(s))||at(p,doorstep(s))&&at(n,entrance(s))))continue;
    if(!inside(p,s)&&inside(n,s)&&s.doorOpen===false)continue;
    seen.add(key(n));queue.push([...path,n]);
   }
@@ -50,7 +50,7 @@ function seats(s,g){
 function moveAlong(s,g,seconds){
  let distance=SPEED*seconds;
  while(g.path.length&&distance>0){const p=g.path[0];
-  if(s.furniture.some(f=>at(f,p)&&f.id!==g.chairId)||g.y<0&&p.y>=0&&s.doorOpen===false){g.path=[];return false;}
+  if(s.furniture.some(f=>at(f,p)&&f.id!==g.chairId)||!inside(g,s)&&inside(p,s)&&s.doorOpen===false){g.path=[];return false;}
   const dx=p.x-g.x,dy=p.y-g.y,length=Math.hypot(dx,dy);Object.assign(g,facingForMovement(dx,dy,g));
   if(length<=distance){g.x=p.x;g.y=p.y;g.path.shift();distance-=length;}else{g.x+=dx/length*distance;g.y+=dy/length*distance;distance=0;}
   renderStep.get(s.visitors)?.get(g.id)?.points.push({x:g.x,y:g.y});
@@ -64,7 +64,7 @@ function spawn(s){
  const diner=s.doorOpen!==false&&random(v)*256<r.minVisit+(r.maxVisit-r.minVisit)*v.rating;
  const appearance=chooseCustomer(1+Math.floor(s.xp/20),v.rating,random(v),s.seasonalEvent);
  const g={id:v.nextId++,x:side,y:-1,variant:appearance.variant,customerDataId:appearance.id,phase:diner?'approaching':'passing',timer:0,path:[],chairId:null,tableId:null,meal:null,exitX:side===WALKWAY_START?WALKWAY_END:WALKWAY_START,t:0,north:false,flip:false,message:''};
- v.people.push(g);route(s,g,diner?DOORSTEP:{x:g.exitX,y:-1});
+ v.people.push(g);route(s,g,diner?doorstep(s):{x:g.exitX,y:-1});
 }
 function step(s){
  for(const stove of s.stoves)if(stove.job)stove.job.remaining=Math.max(0,stove.job.remaining-STEP);
@@ -81,7 +81,7 @@ function step(s){
   switch(g.phase){
    case 'passing':if(at(g,{x:g.exitX,y:-1}))g.phase='gone';else route(s,g,{x:g.exitX,y:-1});break;
    case 'approaching':
-    if(route(s,g,ENTRANCE)){g.phase='entering';}else leave(s,g,'Door blocked');break;
+    if(route(s,g,entrance(s))){g.phase='entering';}else leave(s,g,'Door blocked');break;
    case 'entering':g.phase='entryPause';g.timer=r.entryPause+(random(v)*2-1)*r.entryVariance;v.arrived++;break;
    case 'entryPause':if(!g.timer){const seat=seats(s,g)[0];if(!seat){leave(s,g,'No seat');break;}g.chairId=seat.c.id;g.tableId=seat.t.id;g.path=seat.path;g.phase='seating';}break;
    case 'seating':{const c=s.furniture.find(f=>f.id===g.chairId),t=c&&chairTable(s,c);if(!c||!at(c,g)){leave(s,g,'Path blocked');break;}Object.assign(g,facingForMovement(t.x-c.x,t.y-c.y,g));g.phase='waiting';g.timer=r.waitForFood;break;}
@@ -134,14 +134,14 @@ export function validateVisitors(s,recipes){
  for(const k of ['arrived','happy','unhappy'])if(!int(v[k],0,1e9))fail();
  const ids=new Set(),tables=new Set(),phases=['approaching','passing','entering','entryPause','seating','waiting','served','eating','leaving'];
  for(const g of v.people){
-  if(!int(g.id,1,v.nextId-1)||ids.has(g.id)||!num(g.x,WALKWAY_START,WALKWAY_END)||!num(g.y,-1,cafeSize(s).height-1)||!int(g.variant,0,HUMAN_FORMS.length-1)||!phases.includes(g.phase)||!num(g.timer,0,60)||!num(g.t,0,1e10)||![WALKWAY_START,WALKWAY_END,-1,GRID].includes(g.exitX)||typeof g.north!=='boolean'||typeof g.flip!=='boolean'||typeof g.message!=='string'||g.message.length>60||!Array.isArray(g.path)||g.path.length>cafeSize(s).width*cafeSize(s).height+64)fail();ids.add(g.id);
+  if(!int(g.id,1,v.nextId-1)||ids.has(g.id)||!num(g.x,WALKWAY_START,WALKWAY_END)||!num(g.y,-1,WALKWAY_END)||!int(g.variant,0,HUMAN_FORMS.length-1)||!phases.includes(g.phase)||!num(g.timer,0,60)||!num(g.t,0,1e10)||![WALKWAY_START,WALKWAY_END,-1,GRID].includes(g.exitX)||typeof g.north!=='boolean'||typeof g.flip!=='boolean'||typeof g.message!=='string'||g.message.length>60||!Array.isArray(g.path)||g.path.length>cafeSize(s).width*cafeSize(s).height+64)fail();ids.add(g.id);
   // Repair appearances from the brief unrestricted visitor build only.
   if(g.customerDataId===undefined&&g.variant>2){const appearance=chooseCustomer(1+Math.floor(s.xp/20),v.rating,((Math.imul(g.id,2654435761)>>>0)+.5)/4294967296);g.variant=appearance.variant;g.customerDataId=appearance.id;}
   if(g.customerDataId!==undefined&&(!Number.isInteger(g.customerDataId)||CUSTOMER_RULES[g.customerDataId]?.variant!==g.variant))fail();
-  if((g.x<0||g.x>cafeSize(s).width-1)&&g.y!==-1)fail();
+  if(!inside(g,s)&&!onSidewalk(g)&&!(g.x>=-1&&g.x<=0&&g.y===doorstep(s).y&&s.door?.side==='left')&&!(g.y>=-1&&g.y<=0&&g.x===doorstep(s).x&&s.door?.side!=='left'))fail();
   // Keep legacy visitors in place, but send their eventual exits down the extended path.
   if(g.exitX===-1)g.exitX=WALKWAY_START;else if(g.exitX===GRID)g.exitX=WALKWAY_END;
-  for(const p of g.path)if(!int(p.x,WALKWAY_START,WALKWAY_END)||!int(p.y,-1,cafeSize(s).height-1)||(!inside(p,s)&&!onSidewalk(p)))fail();
+  for(const p of g.path)if(!int(p.x,WALKWAY_START,WALKWAY_END)||!int(p.y,-1,WALKWAY_END)||(!inside(p,s)&&!onSidewalk(p)))fail();
   if(g.chairId!==null&&(!s.furniture.some(f=>f.id===g.chairId&&f.kind==='chair')||!s.furniture.some(f=>f.id===g.tableId&&f.kind==='table')||tables.has(g.tableId)))fail();
   if(g.tableId)tables.add(g.tableId);
   if(['seating','waiting','served','eating'].includes(g.phase)&&!g.chairId)fail();
