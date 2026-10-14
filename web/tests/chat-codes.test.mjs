@@ -3,6 +3,18 @@ import assert from 'node:assert/strict';
 import {applyChatCode} from '../dist/chat-codes.js';
 import {initialState,validateSave} from '../dist/model.js';
 
+test('money code adds $500, persists, and respects the balance limit',()=>{
+ const state=initialState(),before=state.coins;
+ assert.equal(applyChatCode(state,'herecomesthemoney').message,'Added $500.');
+ assert.equal(state.coins,before+500);
+ assert.equal(validateSave(JSON.parse(JSON.stringify(state)),[]).coins,before+500);
+ applyChatCode(state,' /HERECOMESTHEMONEY ');
+ assert.equal(state.coins,before+1000);
+ state.coins=1e9-100;
+ assert.equal(applyChatCode(state,'herecomesthemoney').message,'Added $100.');
+ assert.equal(validateSave(state,[]).coins,1e9);
+});
+
 test('hidden vial code adds to the balance and survives save validation',()=>{
  const state=initialState();state.toxin=25;
  assert.equal(applyChatCode(state,'utterlyvile').message,'Added 150 toxin vials.');
