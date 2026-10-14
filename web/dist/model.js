@@ -1,3 +1,4 @@
+import {validateSeasonalEvent} from './seasonal-events.js';
 import {addXp,levelOf} from './progression.js';
 import {newStaffState,validateStaff} from './staff.js';
 import {STARTING_SIZE,STARTING_FURNITURE} from './starting-layout.js';
@@ -132,6 +133,7 @@ export function claim(s,id){const g=GOALS.find(g=>g.id===id);if(!g||s.claimed.in
 export function validateSave(value,recipes){
  if(!value||value.version!==1)throw Error('This is not a compatible café save.');
  const s=structuredClone(value),finite=(n,min,max)=>Number.isFinite(n)&&n>=min&&n<=max;
+ validateSeasonalEvent(s.seasonalEvent);
  if(s.infectionTutorialComplete!==undefined&&typeof s.infectionTutorialComplete!=='boolean')throw Error('Invalid infection tutorial state.');
  if(s.pendingInfection&&(!Number.isInteger(s.pendingInfection.guestId)||!s.visitors?.people?.some(g=>g.id===s.pendingInfection.guestId)||!s.staff?.people?.some(z=>z.id===s.pendingInfection.staffId)))throw Error('Invalid pending infection.');
  if(s.speed===12)s.speed=5; // Migrate the former quick-shift setting to the new maximum.

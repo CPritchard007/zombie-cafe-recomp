@@ -1479,6 +1479,7 @@
   "./overlays.css",
   "./progression.js",
   "./scene.js",
+  "./seasonal-events.js",
   "./site.webmanifest",
   "./staff.js",
   "./starting-layout.js",
