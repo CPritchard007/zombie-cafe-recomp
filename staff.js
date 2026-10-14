@@ -162,13 +162,13 @@ export function validateStaff(s,recipes){
  if(!staff||staff.version!==1||!Number.isInteger(staff.seed)||!num(staff.seed,0,4294967295)||!Array.isArray(staff.people)||staff.people.length>32)fail();
  for(const z of staff.people){
   if(z.zombieForm!==undefined&&(!Number.isInteger(z.customerDataId)||INFECTION_RULES[z.customerDataId]?.form!==z.zombieForm))fail();
-  if(typeof z.id!=='string'||!/^zombie-\d+$/.test(z.id)||ids.has(z.id)||z.variant!==3||!num(z.x,0,7)||!num(z.y,0,7)||!num(z.t,0,1e10)||!phases.includes(z.phase)||!num(z.timer,0,10)||!Number.isInteger(z.completed)||!num(z.completed,0,1e9)||typeof z.north!=='boolean'||typeof z.flip!=='boolean'||typeof z.dishes!=='boolean'||typeof z.message!=='string'||z.message.length>60||!Array.isArray(z.path)||z.path.length>80)fail();ids.add(z.id);
+  if(typeof z.id!=='string'||!/^zombie-\d+$/.test(z.id)||ids.has(z.id)||z.variant!==3||!num(z.x,0,cafeSize(s).width-1)||!num(z.y,0,cafeSize(s).height-1)||!num(z.t,0,1e10)||!phases.includes(z.phase)||!num(z.timer,0,10)||!Number.isInteger(z.completed)||!num(z.completed,0,1e9)||typeof z.north!=='boolean'||typeof z.flip!=='boolean'||typeof z.dishes!=='boolean'||typeof z.message!=='string'||z.message.length>60||!Array.isArray(z.path)||z.path.length>cafeSize(s).width*cafeSize(s).height)fail();ids.add(z.id);
   if(z.action&&(!['pickup','serve','clear','wash','returnFood','collectBatch','dropBatch'].includes(z.action.phase)||!num(z.action.startedAt,0,z.t)||typeof z.action.north!=='boolean'||typeof z.action.flip!=='boolean'))fail();
   if(z.manualTarget&&(!Number.isInteger(z.manualTarget.x)||!Number.isInteger(z.manualTarget.y)||!num(z.manualTarget.x,0,cafeSize(s).width-1)||!num(z.manualTarget.y,0,cafeSize(s).height-1)))fail();
   if(z.action?.recipeId!==undefined&&!recipes.some(r=>r.id===z.action.recipeId))fail();
   if(z.targetId!==null&&(typeof z.targetId!=='string'||!/^f\d+$/.test(z.targetId)))fail();
   if(z.guestId!==null&&(!Number.isInteger(z.guestId)||!num(z.guestId,1,1e9)))fail();
-  for(const p of z.path)if(!Number.isInteger(p.x)||!Number.isInteger(p.y)||!num(p.x,0,7)||!num(p.y,0,7))fail();
+  for(const p of z.path)if(!Number.isInteger(p.x)||!Number.isInteger(p.y)||!num(p.x,0,cafeSize(s).width-1)||!num(p.y,0,cafeSize(s).height-1))fail();
   if(z.carrying){const r=recipes.find(r=>r.id===z.carrying.recipeId);if(!r||r.baseSellPrice!==z.carrying.price)fail();}
   if(z.deliveryCounterId!=null&&(typeof z.deliveryCounterId!=='string'||!/^f\d+$/.test(z.deliveryCounterId)))fail();
   if(z.batch){const r=recipes.find(r=>r.id===z.batch.recipeId);if(!r||r.baseServings!==z.batch.quantity||r.baseSellPrice!==z.batch.price||r.baseXp!==z.batch.xp)fail();}
