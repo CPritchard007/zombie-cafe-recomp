@@ -141,6 +141,7 @@ document.addEventListener('input',()=>{if(state)save();});
 boot();
 // Wait until gameplay assets are ready before downloading the offline collection.
 function startOfflineCache(){if(!('serviceWorker' in navigator))return;
+ window.addEventListener('online',()=>navigator.serviceWorker.controller?.postMessage('cache-game'));
  navigator.serviceWorker.addEventListener('message',event=>{if(event.data==='offline-ready')$('#save-status').textContent='Saved on this device · offline ready';else if(event.data?.type==='cache-error')reportError(new Error(event.data.message),'offline cache');else if(event.data==='cache-ready')event.source?.postMessage('cache-game');});
  navigator.serviceWorker.register('./sw.js').then(registration=>{if(!registration.installing)registration.active?.postMessage('cache-game');}).catch(error=>reportError(error,'offline cache registration'));
 }
