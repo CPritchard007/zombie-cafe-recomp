@@ -1,4 +1,4 @@
-const CACHE='zombie-cafe-offline-v60';
+const CACHE='zombie-cafe-offline-v61';
 let caching;
 async function cacheError(error){for(const client of await self.clients.matchAll())client.postMessage({type:'cache-error',message:error?.message||String(error)});}
 async function coreCache(){const cache=await caches.open(CACHE),paths=await fetch('./offline-core.json').then(r=>r.json());await Promise.all(paths.map(async path=>{const response=await fetch(path);if(!response.ok)throw Error('Missing '+path);await cache.put(path,response);}));}

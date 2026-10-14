@@ -83,6 +83,7 @@
   "./assets/thunder.ttf",
   "./catalog.js",
   "./characters.js",
+  "./chat-codes.js",
   "./customer-rules.js",
   "./customer-selection.js",
   "./diagnostics.js",
