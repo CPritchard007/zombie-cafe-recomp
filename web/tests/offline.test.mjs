@@ -36,7 +36,12 @@ test('web service preserves existing saves and rejects invalid replacement',()=>
 test('offline cache manifest includes every runtime asset and every entry exists',async()=>{
  const root=new URL('../dist/',import.meta.url);const paths=JSON.parse(await readFile(new URL('offline-assets.json',root)));
  for(const p of ['app.js','model.js','scene.js','offline-service.js','styles.css','assets/recipes.json'])assert.ok(paths.includes('./'+p));
- for(const p of paths)await readFile(new URL(p==='./'?'index.html':p,root));
+ for(const manifest of ['offline-assets.json','offline-core.json']){
+  for(const p of JSON.parse(await readFile(new URL(manifest,root)))){
+   assert(!p.replace(/^\.\//,'').split('/').some(part=>part.startsWith('.')),manifest+' contains hidden file: '+p);
+   await readFile(new URL(p==='./'?'index.html':p,root));
+  }
+ }
 });
 test('local storage restores game memory and view preferences across service instances',()=>{
  const values=new Map(),storage={getItem:k=>values.get(k),setItem:(k,v)=>values.set(k,v)};
