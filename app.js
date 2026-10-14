@@ -1,3 +1,4 @@
+import {installGameInput} from './game-input.js';
 import {fridgeAction,recipeUnlocked,FRIDGE_CAPACITY} from './fridge.js';
 import {createToasts} from './toasts.js';
 import {createDecorationUI} from './decoration-ui.js';
@@ -181,6 +182,7 @@ async function boot(){try{
  }catch(error){saveBlocked=true;reportError(error,'startup');$('#original-load-status').textContent='Could not load the café: '+error.message+'. Reload to retry.';$('#scene-loading').innerHTML='<div style="text-align:center;padding:25px">The kitchen couldn’t open.<br><small style="font:12px system-ui">'+esc(error.message)+'</small><br><button class="button" onclick="location.reload()" style="margin-top:16px">Try again</button></div>';console.error(error);}}
 document.addEventListener('click',()=>{if(state)save();});
 document.addEventListener('input',()=>{if(state)save();});
+installGameInput();
 boot();
 // Wait until gameplay assets are ready before downloading the offline collection.
 function startOfflineCache(){if(!('serviceWorker' in navigator))return;

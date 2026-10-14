@@ -108,3 +108,11 @@ dialog{max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-
 
 /* Phones use the canvas pinch gesture; desktop retains zoom controls. */
 @media(max-width:700px),(max-height:500px) and (orientation:landscape){.zoom-controls{display:none}}
+
+/* Keep touch gestures in the game; panels retain native scrolling. */
+html,body{overscroll-behavior:none;touch-action:pan-x pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#world{touch-action:none}
+button,a{touch-action:manipulation}
+img{pointer-events:none;-webkit-user-drag:none;user-select:none}
+input,textarea,select,[contenteditable]:not([contenteditable="false"]),#chat-messages{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+.side-panel #panel-content,.store-viewport,.chat-messages,.stations,dialog,#decor-tools{overscroll-behavior:contain}
