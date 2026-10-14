@@ -1,0 +1,7 @@
+{
+  "source": "ZombieCafe-JP-English-v0.1.apk",
+  "furniture": "furniture.cct.mid and furnitureOffsets.bin.mid",
+  "recipes": "foodData.bin.mid and recipeImages.cct.mid",
+  "characters": "Original character parts assembled in temporary web rigs. Native animation is not yet ported.",
+  "rights": "Original assets belong to their respective owners."
+}
