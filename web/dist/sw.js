@@ -1,15 +1,30 @@
-const CACHE='zombie-cafe-offline-v57';
+const CACHE='zombie-cafe-offline-v58';
 let caching;
 async function cacheError(error){for(const client of await self.clients.matchAll())client.postMessage({type:'cache-error',message:error?.message||String(error)});}
 async function coreCache(){const cache=await caches.open(CACHE),paths=await fetch('./offline-core.json').then(r=>r.json());await Promise.all(paths.map(async path=>{const response=await fetch(path);if(!response.ok)throw Error('Missing '+path);await cache.put(path,response);}));}
 function cacheGame(){return caching||(caching=fillCache().finally(()=>{caching=null;}));}
+async function fetchAsset(path){
+ let failure;
+ for(let attempt=0;attempt<3;attempt++){
+  try{
+   const response=await fetch(path,{priority:'low',...(attempt?{cache:'reload'}:{})});
+   if(!response.ok)throw Error('HTTP '+response.status+' '+response.statusText);
+   return response;
+  }catch(error){failure=error;if(attempt<2)await new Promise(resolve=>setTimeout(resolve,250*4**attempt));}
+ }
+ throw failure;
+}
 async function fillCache(){
- const cache=await caches.open(CACHE),manifest=await fetch('./offline-assets.json').then(r=>r.json());
- // Two background downloads at a time; never redownload a complete pack on each visit.
- let cursor=0;
- async function next(){while(cursor<manifest.length){const path=manifest[cursor++];if(await cache.match(path))continue;try{const response=await fetch(path,{priority:'low'});if(response.ok)await cache.put(path,response);else throw Error(path);}catch(error){await cacheError(new Error('Could not cache '+path+': '+error.message));return false;}}return true;}
- const results=await Promise.all([next(),next()]);
- if(results.every(Boolean))for(const client of await self.clients.matchAll())client.postMessage('offline-ready');
+ const cache=await caches.open(CACHE),manifest=await (await fetchAsset('./offline-assets.json')).json();
+ // Keep two download workers running even if one asset remains unavailable.
+ let cursor=0;const failures=[];
+ async function next(){while(cursor<manifest.length){const path=manifest[cursor++];if(await cache.match(path))continue;
+  try{await cache.put(path,await fetchAsset(path));}
+  catch(error){failures.push(path+': '+error.message);}
+ }}
+ await Promise.all([next(),next()]);
+ if(failures.length){await cacheError(new Error('Offline download incomplete ('+failures.length+' files). '+failures.slice(0,5).join('; ')+'. Reload or reconnect to retry.'));return;}
+ for(const client of await self.clients.matchAll())client.postMessage('offline-ready');
 }
 self.addEventListener('install',event=>event.waitUntil(coreCache().then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
