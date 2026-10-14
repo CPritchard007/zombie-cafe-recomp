@@ -1,3 +1,4 @@
+import {applyChatCode} from './chat-codes.js';
 import {infectionOffer,infectCustomer} from './infection.js';
 import {moveStaff} from './staff.js';
 import {visitorPath} from './visitors.js';
@@ -87,10 +88,12 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  if(b.dataset.move){setPlacement({moveId:b.dataset.move});return;}if(b.dataset.rotate){const f=state.furniture.find(f=>f.id===b.dataset.rotate);if(f)after(rotateFurniture(f));return;}
  if(b.dataset.floor){state.floor=Number(b.dataset.floor);state.floorChanged=true;after({ok:true,message:'A fresh look, on the house.'});return;}if(b.dataset.claim){after(claim(state,b.dataset.claim));return;}
  switch(b.id){
+ case 'chat-toggle':setChatOpen($('#chat').hidden);break;
+ case 'chat-close':setChatOpen(false);break;
  case 'door-toggle':after(setCafeOpen(state,!state.doorOpen));break;
  case 'panel-close':$('.side-panel').hidden=true;break;
  case 'enter-cafe':$('#original-title').hidden=true;resumeMusic();break;
- case 'home-screen':$('#original-title').hidden=false;break;
+ case 'home-screen':setChatOpen(false);$('#original-title').hidden=false;break;
  case 'nav-recipes':switchTab('recipes');break;
  case 'nav-store':case 'nav-characters':tab=b.id==='nav-store'?'store':'characters';$('.side-panel').hidden=tab==='store';$('.side-panel').dataset.panel=tab;catalog.open(tab);break;
  case 'nav-goals':switchTab('goals');break;
@@ -112,23 +115,33 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
 document.addEventListener('input',e=>{if(e.target.id==='recipe-search'){search=e.target.value;renderRecipeGrid();}});
 document.addEventListener('change',async e=>{if(e.target.id==='import-file'&&e.target.files[0]){const file=e.target.files[0];try{if(file.size>2e6)throw Error('The save file is too large.');const incoming=validateSave(JSON.parse(await file.text()),recipes);modalRecipe=null;openDialog('<div class="eyebrow">CAFÉ BACKUP FOUND</div><h2>Restore this café?</h2><p>This will replace your current browser progress with '+esc(incoming.name)+'.</p><div class="settings-actions"><button class="button secondary" id="keep-cafe">Cancel</button><button class="button lime" id="confirm-import">Restore café</button></div>');$('#confirm-import').onclick=()=>{state=incoming;saveBlocked=false;simulationFailed=false;reconcile(state);$('#music').pause();resumeMusic();scene.state=state;selectedStove=state.stoves[0].id;selectedFurniture=null;lastLevel=levelOf(state);setPlacement(null);closeDialog();switchTab('recipes');after({ok:true,message:'Café restored. Welcome back!'});};}catch(err){reportError(err,'import save');toast('Could not import save: '+err.message);}}});
 const chatInput=$('#chat-input'),chatMessages=$('#chat-messages');
+function setChatOpen(open){
+ $('#chat').hidden=!open;$('#chat-toggle').setAttribute('aria-expanded',String(open));
+ (open?chatInput:$('#world')).focus({preventScroll:true});
+}
+function appendChatMessage(name,message){
+ $('#chat-empty')?.remove();
+ const entry=document.createElement('p'),author=document.createElement('strong');
+ author.textContent=name+': ';entry.append(author,document.createTextNode(message));chatMessages.append(entry);
+ while(chatMessages.children.length>100)chatMessages.firstElementChild.remove();
+ chatMessages.scrollTop=chatMessages.scrollHeight;
+}
 $('#chat-form').addEventListener('submit',event=>{
  event.preventDefault();
  const message=chatInput.value.trim();
  if(!message){chatInput.focus();return;}
- $('#chat-empty')?.remove();
- const entry=document.createElement('p'),author=document.createElement('strong');
- author.textContent='You: ';entry.append(author,document.createTextNode(message));chatMessages.append(entry);
- while(chatMessages.children.length>100)chatMessages.firstElementChild.remove();
- chatMessages.scrollTop=chatMessages.scrollHeight;chatInput.value='';chatInput.focus();
+ const result=applyChatCode(state,message);
+ if(result){save();renderHUD();appendChatMessage('Café',result.message);}
+ else appendChatMessage('You',message);
+ chatInput.value='';chatInput.focus();
 });
 document.addEventListener('keydown',e=>{
  if(e.defaultPrevented||e.isComposing)return;
  if(e.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"])')){
-  if(e.target===chatInput&&e.key==='Escape'){e.preventDefault();$('#world').focus({preventScroll:true});}
+  if(e.target===chatInput&&e.key==='Escape'){e.preventDefault();setChatOpen(false);}
   return;
  }
- if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!document.querySelector('dialog[open]')&&$('#original-title').hidden&&$('#original-loading').hidden){e.preventDefault();chatInput.focus({preventScroll:true});return;}
+ if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!document.querySelector('dialog[open]')&&$('#original-title').hidden&&$('#original-loading').hidden){e.preventDefault();setChatOpen(true);return;}
  if(selectedZombie){if(e.key==='Escape'){selectZombie(null);return;}if(e.target.id==='world'){const z=state.staff.people.find(z=>z.id===selectedZombie),p=scene.hover||{x:Math.round(z.x),y:Math.round(z.y)},d={ArrowRight:[1,0],ArrowLeft:[-1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];if(d){e.preventDefault();scene.hover={x:Math.max(0,Math.min(cafeSize(state).width-1,p.x+d[0])),y:Math.max(0,Math.min(cafeSize(state).height-1,p.y+d[1]))};toast('Column '+(scene.hover.x+1)+', row '+(scene.hover.y+1)+'. Enter to move zombie.');return;}if(e.key==='Enter'){e.preventDefault();directZombie(p);return;}}}if(e.key==='Escape'&&placement)setPlacement(null);if(e.target.matches('[role=tab]')&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const tabs=['recipes','decorate','goals'];switchTab(tabs[(tabs.indexOf(tab)+(e.key==='ArrowRight'?1:2))%3]);$('#tab-'+tab).focus();}if(e.target.id==='world'&&placement){let p=scene.hover||{x:0,y:7};const keys={ArrowRight:[1,0],ArrowLeft:[-1,0],ArrowUp:[0,-1],ArrowDown:[0,1]};if(keys[e.key]){e.preventDefault();p={x:Math.max(0,Math.min(7,p.x+keys[e.key][0])),y:Math.max(0,Math.min(7,p.y+keys[e.key][1]))};scene.hover=p;toast('Column '+(p.x+1)+', row '+(p.y+1)+'. Press Enter to place.');}if(e.key==='Enter'){e.preventDefault();onPlace(p.x,p.y);}}});
 $('#modal').addEventListener('close',()=>{modalRecipe=null;});
 document.addEventListener('visibilitychange',()=>{if(state){tick();save();}});window.addEventListener('pagehide',()=>{if(state)save();});
