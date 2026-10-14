@@ -1,0 +1,19 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 000bfa16 Vector<Furniture*>::Vector */
+
+/* Vector<Furniture*>::Vector() */
+
+Vector<Furniture*> * __thiscall Vector<Furniture*>::Vector(Vector<Furniture*> *this)
+
+{
+  void *__s;
+  
+  *(undefined4 *)this = 10;
+  __s = operator_new__(0x28);
+  *(void **)(this + 8) = __s;
+  memset(__s,0,*(int *)this << 2);
+  *(undefined4 *)(this + 4) = 0xffffffff;
+  return this;
+}
+
+

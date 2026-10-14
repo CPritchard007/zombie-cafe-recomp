@@ -1,0 +1,37 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002aba50 CCColor::LerpRGB */
+
+/* CCColor::LerpRGB(unsigned int, unsigned int, float) */
+
+void CCColor::LerpRGB(uint param_1,uint param_2,float param_3)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 in_r2;
+  
+  uVar1 = __floatunsisf(param_1 & 0xff);
+  uVar2 = __floatunsisf(param_1 >> 8 & 0xff);
+  uVar3 = __floatunsisf(param_1 >> 0x10 & 0xff);
+  uVar4 = __floatunsisf(param_2 & 0xff);
+  uVar4 = __subsf3(uVar4,uVar1);
+  uVar4 = __mulsf3(uVar4,in_r2);
+  __addsf3(uVar1,uVar4);
+  uVar1 = __fixunssfsi();
+  uVar4 = __floatunsisf(param_2 >> 8 & 0xff);
+  uVar4 = __subsf3(uVar4,uVar2);
+  uVar4 = __mulsf3(uVar4,in_r2);
+  __addsf3(uVar2,uVar4);
+  uVar2 = __fixunssfsi();
+  uVar4 = __floatunsisf(param_2 >> 0x10 & 0xff);
+  uVar4 = __subsf3(uVar4,uVar3);
+  uVar4 = __mulsf3(uVar4,in_r2);
+  __addsf3(uVar3,uVar4);
+  uVar3 = __fixunssfsi();
+  FUN_002ab86c(uVar1,uVar2,uVar3,0xff);
+  return;
+}
+
+

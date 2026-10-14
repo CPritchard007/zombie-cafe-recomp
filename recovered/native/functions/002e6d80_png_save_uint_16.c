@@ -1,0 +1,12 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002e6d80 png_save_uint_16 */
+
+void png_save_uint_16(undefined1 *param_1,undefined4 param_2)
+
+{
+  *param_1 = (char)((uint)param_2 >> 8);
+  param_1[1] = (char)param_2;
+  return;
+}
+
+

@@ -1,0 +1,33 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 00104d36 EquipInfoDialog::QueueMessage::QueueMessage */
+
+/* EquipInfoDialog::QueueMessage::QueueMessage(String, String, String, void (*)(void*), void*) */
+
+QueueMessage * __thiscall
+EquipInfoDialog::QueueMessage::QueueMessage
+          (QueueMessage *this,String *param_2,String *param_3,String *param_4,undefined4 param_5,
+          undefined4 param_6)
+
+{
+  String aSStack_30 [8];
+  String aSStack_28 [8];
+  String aSStack_20 [12];
+  
+  String::String((String *)this);
+  String::String((String *)(this + 8));
+  String::String((String *)(this + 0x10));
+  String::String(aSStack_30,param_2);
+  String::operator=((String *)this,aSStack_30);
+  String::~String(aSStack_30);
+  String::String(aSStack_28,param_3);
+  String::operator=((String *)(this + 8),aSStack_28);
+  String::~String(aSStack_28);
+  String::String(aSStack_20,param_4);
+  String::operator=((String *)(this + 0x10),aSStack_20);
+  String::~String(aSStack_20);
+  *(undefined4 *)(this + 0x18) = param_5;
+  *(undefined4 *)(this + 0x1c) = param_6;
+  return this;
+}
+
+

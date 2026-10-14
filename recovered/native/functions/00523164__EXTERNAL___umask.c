@@ -1,0 +1,14 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 00523164 <EXTERNAL>::umask */
+
+/* WARNING: Control flow encountered bad instruction data */
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+__mode_t umask(__mode_t __mask)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+

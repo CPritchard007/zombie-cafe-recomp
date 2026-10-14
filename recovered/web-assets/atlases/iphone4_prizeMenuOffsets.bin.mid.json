@@ -1,0 +1,85 @@
+{
+  "source": "assets/images/iphone4_prizeMenuOffsets.bin.mid",
+  "version": 1,
+  "count": 11,
+  "entries": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "width": 373,
+      "height": 74
+    },
+    {
+      "index": 1,
+      "x": 0,
+      "y": 74,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 2,
+      "x": 80,
+      "y": 74,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 3,
+      "x": 160,
+      "y": 74,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 4,
+      "x": 240,
+      "y": 74,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 5,
+      "x": 320,
+      "y": 74,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 154,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 7,
+      "x": 80,
+      "y": 154,
+      "width": 80,
+      "height": 80
+    },
+    {
+      "index": 8,
+      "x": 240,
+      "y": 154,
+      "width": 123,
+      "height": 45
+    },
+    {
+      "index": 9,
+      "x": 241,
+      "y": 200,
+      "width": 123,
+      "height": 45
+    },
+    {
+      "index": 10,
+      "x": 160,
+      "y": 154,
+      "width": 80,
+      "height": 80
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

@@ -1,0 +1,14 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002ea510 std::overflow_error::~overflow_error */
+
+/* std::overflow_error::~overflow_error() */
+
+overflow_error * __thiscall std::overflow_error::~overflow_error(overflow_error *this)
+
+{
+  ~overflow_error(this);
+  operator_delete(this);
+  return this;
+}
+
+

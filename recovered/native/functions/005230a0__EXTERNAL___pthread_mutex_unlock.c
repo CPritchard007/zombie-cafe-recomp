@@ -1,0 +1,14 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 005230a0 <EXTERNAL>::pthread_mutex_unlock */
+
+/* WARNING: Control flow encountered bad instruction data */
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+int pthread_mutex_unlock(pthread_mutex_t *__mutex)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+

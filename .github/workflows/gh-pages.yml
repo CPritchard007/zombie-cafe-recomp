@@ -1,0 +1,66 @@
+name: Publish Zombie Cafe
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript
+        run: npm --prefix web run check
+      - name: Test game
+        run: npm --prefix web test
+      - name: Prepare static site
+        run: |
+          python3 scripts/update_offline_manifest.py
+          touch web/dist/.nojekyll
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: web/dist
+          include-hidden-files: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  publish:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: public
+      - name: Publish static files to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: public
+          enable_jekyll: false
+      # Deploy explicitly: a GITHUB_TOKEN branch push does not trigger a Pages build.
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

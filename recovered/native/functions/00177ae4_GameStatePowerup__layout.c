@@ -1,0 +1,157 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 00177ae4 GameStatePowerup::layout */
+
+/* GameStatePowerup::layout() */
+
+void __thiscall GameStatePowerup::layout(GameStatePowerup *this)
+
+{
+  short sVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  uint uVar5;
+  code *pcVar6;
+  int iVar7;
+  int iVar8;
+  int *piVar9;
+  undefined4 uVar10;
+  
+  iVar8 = DAT_00177ec0;
+  (**(code **)(**(int **)(this + 0x14) + 0x18))
+            (*(int **)(this + 0x14),*(int *)(*(int *)(this + 0xc) + 0x10) >> 0x10,
+             (int)(short)*(int *)(*(int *)(this + 0xc) + 0x10));
+  iVar8 = iVar8 + 0x177b0a;
+  FUN_00177ad2(*(undefined4 *)(this + 0x98),*(undefined4 *)(*(int *)(this + 0xc) + 0x14));
+  piVar9 = *(int **)(this + 0x9c);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  sVar1 = *(short *)(*(int *)(this + 0xc) + 0x16);
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x14),*(undefined4 *)(this + DAT_00177ec4));
+  uVar3 = __fixsfsi();
+  (*pcVar6)(piVar9,(int)sVar1,uVar3);
+  piVar9 = *(int **)(this + 0xa0);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  sVar1 = *(short *)(*(int *)(this + 0xc) + 0x16);
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x2c),*(undefined4 *)(this + DAT_00177ec4));
+  uVar3 = __fixsfsi();
+  (*pcVar6)(piVar9,(int)sVar1,uVar3);
+  piVar9 = *(int **)(this + 0xa4);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar2 = SmDev();
+  uVar3 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x44));
+  __mulsf3(uVar3,*(undefined4 *)(this + 0x530));
+  uVar3 = __fixsfsi();
+  iVar2 = SmDev();
+  uVar10 = *(undefined4 *)(this + DAT_00177ec4);
+  uVar4 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x5c));
+  uVar4 = __mulsf3(uVar4,uVar10);
+  uVar10 = __divsf3(DAT_00177ec8,uVar10);
+  __addsf3(uVar4,uVar10);
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0xb0);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar7 = *(int *)(*(int *)(this + 0x14) + 0xc);
+  iVar2 = SmDev();
+  uVar3 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x74));
+  __mulsf3(uVar3,*(undefined4 *)(this + DAT_00177ec4));
+  uVar3 = __fixsfsi();
+  (*pcVar6)(piVar9,iVar7 / 2,uVar3);
+  piVar9 = *(int **)(this + 0xa8);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  uVar3 = __floatsisf(-*(int *)(*(int *)(this + 0x14) + 0xc));
+  uVar3 = __mulsf3(uVar3,0x3e800000);
+  __addsf3(uVar3,0x3f800000);
+  uVar3 = __fixsfsi();
+  iVar2 = SmDev();
+  uVar4 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x5c));
+  __mulsf3(uVar4,*(undefined4 *)(this + DAT_00177ec4));
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0xac);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  uVar3 = __floatsisf(*(undefined4 *)(*(int *)(this + 0x14) + 0xc));
+  uVar3 = __mulsf3(uVar3,DAT_00177ecc);
+  __subsf3(uVar3,0x3f800000);
+  uVar3 = __fixsfsi();
+  iVar2 = SmDev();
+  uVar4 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x5c));
+  iVar8 = DAT_00177ed0;
+  __mulsf3(uVar4,*(undefined4 *)(this + DAT_00177ec4));
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0xf4);
+  iVar8 = iVar8 + 0x177cb6;
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0xc),*(undefined4 *)(this + 0x530));
+  uVar3 = __fixsfsi();
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x24),*(undefined4 *)(this + DAT_00177ec4));
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0xfc);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0xc),*(undefined4 *)(this + 0x530));
+  uVar3 = __fixsfsi();
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x3c),*(undefined4 *)(this + DAT_00177ec4));
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0xfc);
+  (**(code **)(*piVar9 + 0x20))(piVar9,0);
+  piVar9 = *(int **)(this + 0xf0);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar2 = SmDev();
+  uVar3 = __fixsfsi(*(undefined4 *)(iVar2 * 4 + *(int *)(DAT_00177ed4 + 0x177d5c)));
+  iVar2 = SmDev();
+  uVar4 = __fixsfsi(*(undefined4 *)(iVar2 * 4 + *(int *)(DAT_00177ed8 + 0x177d70)));
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  iVar2 = DAT_00177edc;
+  (**(code **)(**(int **)(this + 0xe4) + 0x20))(*(int **)(this + 0xe4),0);
+  FUN_00177ad2(*(undefined4 *)(this + iVar2),*(undefined4 *)(*(int *)(this + 0xc) + 0x14));
+  ConfirmDialog::layout();
+  FUN_00177ad2(*(undefined4 *)(this + DAT_00177ee0),*(undefined4 *)(*(int *)(this + 0xc) + 0x14));
+  NoticeDialog::layout();
+  FUN_00177ad2(*(undefined4 *)(this + 0x528),*(undefined4 *)(*(int *)(this + 0xc) + 0x14));
+  PUResultDialog::layout(*(PUResultDialog **)(this + 0x528));
+  piVar9 = *(int **)(this + 0xf8);
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar7 = *(int *)(*(int *)(this + 0x14) + 0xc);
+  iVar2 = SmDev();
+  uVar3 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x54));
+  __mulsf3(uVar3,*(undefined4 *)(this + DAT_00177ec4));
+  uVar3 = __fixsfsi();
+  (*pcVar6)(piVar9,iVar7 / 2,uVar3);
+  piVar9 = *(int **)(this + 0xf8);
+  (**(code **)(*piVar9 + 0x20))(piVar9,1);
+  piVar9 = *(int **)(this + 0x104);
+  iVar7 = DAT_00177ee4 + 0x177e1a;
+  pcVar6 = *(code **)(*piVar9 + 0x14);
+  iVar2 = SmDev();
+  uVar3 = __floatsisf(*(undefined4 *)(iVar8 + iVar2 * 4 + 0x6c));
+  __mulsf3(uVar3,*(undefined4 *)(this + 0x530));
+  uVar3 = __fixsfsi();
+  iVar8 = SmDev();
+  uVar4 = __floatsisf(*(undefined4 *)(iVar7 + iVar8 * 4 + 4));
+  __mulsf3(uVar4,*(undefined4 *)(this + DAT_00177ec4));
+  uVar4 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar3,uVar4);
+  piVar9 = *(int **)(this + 0x490);
+  pcVar6 = *(code **)(*piVar9 + 0xc);
+  uVar3 = __floatsisf(*(undefined4 *)(*(int *)(this + 0x14) + 0xc));
+  iVar8 = SmDev();
+  uVar4 = __mulsf3(*(undefined4 *)(iVar7 + iVar8 * 4 + 0x1c),*(undefined4 *)(this + 0x530));
+  __addsf3(uVar3,uVar4);
+  iVar8 = __fixsfsi();
+  iVar2 = SmDev();
+  __mulsf3(*(undefined4 *)(iVar7 + iVar2 * 4 + 0x34),*(undefined4 *)(this + DAT_00177ec4));
+  uVar5 = __fixsfsi();
+  (*pcVar6)(piVar9,uVar5 & 0xffff | iVar8 << 0x10);
+  return;
+}
+
+

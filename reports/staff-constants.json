@@ -1,0 +1,10 @@
+{
+  "RestTask_ZZZ_INTERVAL": {
+    "offset": 6438,
+    "value": 20000
+  },
+  "ServeTask_SERVE_TIME": {
+    "offset": 6442,
+    "value": 350
+  }
+}

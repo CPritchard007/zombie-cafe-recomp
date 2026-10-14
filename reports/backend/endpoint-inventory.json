@@ -1,0 +1,955 @@
+[
+  {
+    "literal": "%s/%s_%s.php?hiveid=%s&udid=%s&device_id=%s&cc=%s&v=%s&lvl=%u&mc=%u&sc=%u&xp=%u&vip=%d%s",
+    "elf_file_offset": "0x31f1bb",
+    "references": [
+      "recovered/native/functions/000b6f3c_MALTAHoover__send.c"
+    ]
+  },
+  {
+    "literal": "%s/rank_%s.php?udid=%s&device_id=%s&cc=%s&v=%s&lvl=%u&mc=%u&sc=%u&xp=%u&vip=%d&appcode=%s%s",
+    "elf_file_offset": "0x31f29f",
+    "references": [
+      "recovered/native/functions/000b70ec_MALTAHoover__sendRanking.c"
+    ]
+  },
+  {
+    "literal": "http://bijin.dau.bij-service.com/malta_dau.php",
+    "elf_file_offset": "0x31f504",
+    "references": [
+      "recovered/native/functions/000b72f0_MALTAHoover__sendDailyActiveUsers.c"
+    ]
+  },
+  {
+    "literal": "http://bijin.beh.bij-service.com/azcjp",
+    "elf_file_offset": "0x320669",
+    "references": [
+      "recovered/native/functions/0013c134_FUN_0013c134.c",
+      "recovered/native/functions/001c53c0_GameStatePrizeMenu__sendMaltaLog_PEX.c",
+      "recovered/native/functions/00201c80_CompleteOrder__tick.c",
+      "recovered/native/functions/0011c024_GameStateCafe__onReviveConfirmed.c",
+      "recovered/native/functions/0013ef76_FUN_0013ef76.c",
+      "recovered/native/functions/001aed2c_GameStateEventRaid2Menu__sendEventRaid2ReopenLog.c",
+      "recovered/native/functions/0011bbd8_GameStateCafe__sendFlowerZomibeStartLog.c",
+      "recovered/native/functions/00256128_TombstoneCommandBar__rechargeTombstone.c",
+      "recovered/native/functions/000cb138_CharacterCommandBar__healConfirmed.c",
+      "recovered/native/functions/0011b30c_GameStateCafe__sendCookingBonusLog.c",
+      "recovered/native/functions/0012d276_FUN_0012d276.c",
+      "recovered/native/functions/001941b4_GameStateDoJo__buyConfirmed.c",
+      "recovered/native/functions/0013efb0_FUN_0013efb0.c",
+      "recovered/native/functions/0013efc4_FUN_0013efc4.c",
+      "recovered/native/functions/0011b1f4_GameStateCafe__sendTutorialLog.c",
+      "recovered/native/functions/00202254_CookingOrder__finish.c",
+      "recovered/native/functions/0012d150_FUN_0012d150.c",
+      "recovered/native/functions/0017ec7c_GameStateRaid__onHealConfirmed.c",
+      "recovered/native/functions/0010d61c_GameStateAmpouleRaid__sendMalta.c",
+      "recovered/native/functions/0023ec14_ZombieCafe__sendPlaySecLog.c",
+      "recovered/native/functions/0024fbe8_ZombieCafe__GiveBoughtToxin.c",
+      "recovered/native/functions/00166b74_GameStateMap__onReOpenHero.c",
+      "recovered/native/functions/00167504_GameStateMap__onReOpen.c",
+      "recovered/native/functions/001845dc_GameStateRaid__layoutState.c",
+      "recovered/native/functions/00123710_GameStateCafe__completeStorePurchase.c",
+      "recovered/native/functions/000bc4b0_BuyToxinDialog__DlcPurchaseSuccess.c",
+      "recovered/native/functions/000e72a0_CookCommandBar__finishDish.c",
+      "recovered/native/functions/001c0e44_GameStateWeekRaidMenu__sendWeekRaidReopenLog.c",
+      "recovered/native/functions/00294758_GameStateSpecialSale__sendMalta.c",
+      "recovered/native/functions/00112e38_GameStateAmpouleRaidMenu__sendAmpouleRaidReopenLog.c",
+      "recovered/native/functions/00136984_GameStateColosseum__sendMalta.c",
+      "recovered/native/functions/001b5c80_GameStateEventRaid3__sendMalta.c",
+      "recovered/native/functions/0019ef88_GameStateEventRaid__sendMalta.c",
+      "recovered/native/functions/00118d38_GameStateCafe__onHealConfirmed.c",
+      "recovered/native/functions/002472fc_L_DlcPurchaseSuccess.c",
+      "recovered/native/functions/0017827c_GameStatePowerup__sendSacrificeLog.c",
+      "recovered/native/functions/0017eef8_GameStateRaid__continueYes.c",
+      "recovered/native/functions/001a523c_GameStateEventRaidMenu__sendEventRaidReopenLog.c",
+      "recovered/native/functions/001e736c_LotteryDialog__recordCram.c",
+      "recovered/native/functions/001702f8_GameStateMeetLocker__buyConfirmed.c",
+      "recovered/native/functions/001c18fc_GameStateWeekRaidMenu__sendMaltaLog_CafeMember.c",
+      "recovered/native/functions/0012d24a_FUN_0012d24a.c",
+      "recovered/native/functions/001fdf78_ObjectiveSystem__completeSetProgress.c",
+      "recovered/native/functions/0019faf4_GameStateEventRaid__sendEventRaidResult.c",
+      "recovered/native/functions/001539d8_GameStateGatya__sendMaltaLog.c",
+      "recovered/native/functions/00131f10_GameStateChooseChef__buyConfirmed.c",
+      "recovered/native/functions/0013efb8_FUN_0013efb8.c",
+      "recovered/native/functions/001bb174_GameStateEventRaid3Menu__sendEventRaid3ReopenLog.c",
+      "recovered/native/functions/001aa214_GameStateEventRaid2__sendMalta.c",
+      "recovered/native/functions/0012d0d6_FUN_0012d0d6.c",
+      "recovered/native/functions/0012d0be_FUN_0012d0be.c",
+      "recovered/native/functions/0012d0ca_FUN_0012d0ca.c",
+      "recovered/native/functions/0010ddec_GameStateAmpouleRaid__sendAmpouleRaidResult.c",
+      "recovered/native/functions/00240be0_ZombieCafe__getFbId.c",
+      "recovered/native/functions/0019ceac_GameStateEarlyBird__earlyBirdBuySuccess.c",
+      "recovered/native/functions/001a5450_GameStateEventRaidMenu__sendMaltaLog_CafeMember.c",
+      "recovered/native/functions/0012d28e_FUN_0012d28e.c",
+      "recovered/native/functions/0011c8e0_GameStateCafe__sendMalta.c",
+      "recovered/native/functions/0018f6a4_GameStateSurvivalMenu__sendSurvivalReopenLog.c",
+      "recovered/native/functions/0018c8dc_GameStateRoulette__buyConfirmed.c",
+      "recovered/native/functions/0012cdb4_GameStateCafe__tick.c",
+      "recovered/native/functions/001b02e4_GameStateEventRaid2Menu__sendMaltaLog_CafeMember.c",
+      "recovered/native/functions/0024f88c_ZombieCafe__GiveBoughtHCO.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/raid_ampoule.html",
+    "elf_file_offset": "0x321fdc",
+    "references": [
+      "recovered/native/functions/00112d94_GameStateAmpouleRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://reward.bij-promo.com/app/GetEventValue.php",
+    "elf_file_offset": "0x322ad1",
+    "references": [
+      "recovered/native/functions/0011bd2c_GameStateCafe__getEventValue.c"
+    ]
+  },
+  {
+    "literal": "http://reward.bij-promo.com/app/GotEventValue.php",
+    "elf_file_offset": "0x322b3a",
+    "references": [
+      "recovered/native/functions/0011c7fc_GameStateCafe__gotEventValue.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/submitButcher.php",
+    "elf_file_offset": "0x32457a",
+    "references": [
+      "recovered/native/functions/0013685c_GameStateColosseum__sendResult.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/html/gatya/",
+    "elf_file_offset": "0x324dab",
+    "references": [
+      "recovered/native/functions/0015300c_GameStateGatya__setLineupWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://www.beeline-i.info/noticeAndroid/ZombieCafe/jp/v170/notice.php",
+    "elf_file_offset": "0x32567d",
+    "references": [
+      "recovered/native/functions/002b740c_CCServer__GetWebViewSetting.c",
+      "recovered/native/functions/00162980_GameStateMainMenu__tick.c",
+      "recovered/native/functions/00161af8_GameStateMainMenu__init.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-games.com/zc/pages/index.php?appcode=azcjp&appver=%s&hid=%s&nn=%s&udid=%s",
+    "elf_file_offset": "0x325a05",
+    "references": [
+      "recovered/native/functions/00162980_GameStateMainMenu__tick.c"
+    ]
+  },
+  {
+    "literal": "http://www.beeline-i.info/moregames-android",
+    "elf_file_offset": "0x325b2c",
+    "references": [
+      "recovered/native/functions/00162980_GameStateMainMenu__tick.c"
+    ]
+  },
+  {
+    "literal": "http://inapp.bij-promo.com:10080/azcjp/aux/inapptransaction/setPresent.php?hive=%s&f=azcjp&t=ahwjp&eveid=2&kind=3&iid=0&val=50000&ud=%s&ou=%s&uuid=%s&appver=%s&lvl=%d&mc=%d&sc=%d",
+    "elf_file_offset": "0x3266e5",
+    "references": [
+      "recovered/native/functions/0017fa64_GameStateRaid__sendPresentGift.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/getCurrentEvent.php",
+    "elf_file_offset": "0x327164",
+    "references": [
+      "recovered/native/functions/0018f1d0_GameStateSurvivalMenu__loadSurvivalInfo.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/getBonusCount.php",
+    "elf_file_offset": "0x3271b8",
+    "references": [
+      "recovered/native/functions/0018f270_GameStateSurvivalMenu__loadSurvivalGiftInfo.c",
+      "recovered/native/functions/0018f304_GameStateSurvivalMenu__requestGetGift.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/getBonus.php",
+    "elf_file_offset": "0x3271fd",
+    "references": [
+      "recovered/native/functions/0018f304_GameStateSurvivalMenu__requestGetGift.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/gotBonus.php",
+    "elf_file_offset": "0x327250",
+    "references": [
+      "recovered/native/functions/0018f39c_GameStateSurvivalMenu__requestGotGift.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-games.com/zc/pages/survival.php",
+    "elf_file_offset": "0x3272d1",
+    "references": [
+      "recovered/native/functions/0018f484_GameStateSurvivalMenu__setRankingWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/contents/survival.html",
+    "elf_file_offset": "0x327304",
+    "references": [
+      "recovered/native/functions/0018f51c_GameStateSurvivalMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://eb.bij-games.com/zombie_EB/av1700/EB_Sales.data",
+    "elf_file_offset": "0x327970",
+    "references": [
+      "recovered/native/functions/0019a330_GameStateEarlyBird__updateEarlyBirdData.c"
+    ]
+  },
+  {
+    "literal": "http://eb.bij-games.com/zombie_EB/av1700/record.php",
+    "elf_file_offset": "0x327abd",
+    "references": [
+      "recovered/native/functions/0019a4d8_GameStateEarlyBird__buyEarlyBird.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Sleep.html",
+    "elf_file_offset": "0x327dab",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/India.html",
+    "elf_file_offset": "0x327df2",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Rockman.html",
+    "elf_file_offset": "0x327e39",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Vampire.html",
+    "elf_file_offset": "0x327e82",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Monster.html",
+    "elf_file_offset": "0x327ecb",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Shirayuki.html",
+    "elf_file_offset": "0x327f14",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Vampire2.html",
+    "elf_file_offset": "0x327f5f",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/DMC4.html",
+    "elf_file_offset": "0x327fa9",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Momotaro.html",
+    "elf_file_offset": "0x327fef",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Ryokan.html",
+    "elf_file_offset": "0x328039",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/CatBoots.html",
+    "elf_file_offset": "0x328081",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Fakehato.html",
+    "elf_file_offset": "0x3280cb",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/halloween.html",
+    "elf_file_offset": "0x328115",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/voiceidol.html",
+    "elf_file_offset": "0x328160",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/orochi.html",
+    "elf_file_offset": "0x3281ab",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/shinobi.html",
+    "elf_file_offset": "0x3281f3",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/shishin.html",
+    "elf_file_offset": "0x32823c",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/robot.html",
+    "elf_file_offset": "0x328285",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/panda.html",
+    "elf_file_offset": "0x3282cc",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Rockmanx.html",
+    "elf_file_offset": "0x328313",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/Ultraz.html",
+    "elf_file_offset": "0x32835d",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/kokeshi.html",
+    "elf_file_offset": "0x3283a5",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/godfes.html",
+    "elf_file_offset": "0x3283ee",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/shituji.html",
+    "elf_file_offset": "0x328436",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/capcomcafe.html",
+    "elf_file_offset": "0x32847f",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/fiveyear.html",
+    "elf_file_offset": "0x3284cb",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/robot2.html",
+    "elf_file_offset": "0x328515",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/abcdefg.html",
+    "elf_file_offset": "0x32855d",
+    "references": [
+      "recovered/native/functions/001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-service.com/app/setEventPoint.php",
+    "elf_file_offset": "0x328c10",
+    "references": [
+      "recovered/native/functions/001b5b2c_GameStateEventRaid3__sendResult.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-service.com/display/ranking.php",
+    "elf_file_offset": "0x328cd2",
+    "references": [
+      "recovered/native/functions/001bb048_GameStateEventRaid3Menu__setRankingWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/contents/survival_3year.html",
+    "elf_file_offset": "0x328d05",
+    "references": [
+      "recovered/native/functions/001bb0d0_GameStateEventRaid3Menu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-service.com/app/getEventInfo.php",
+    "elf_file_offset": "0x328dcd",
+    "references": [
+      "recovered/native/functions/001bb898_GameStateEventRaid3Menu__loadInfo.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/azcjp/html/eventw/",
+    "elf_file_offset": "0x3290ca",
+    "references": [
+      "recovered/native/functions/001c0d7c_GameStateWeekRaidMenu__setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://transfer.jive.bij-cram01.com/app/setTransfer.php",
+    "elf_file_offset": "0x329cc9",
+    "references": [
+      "recovered/native/functions/001cd788_GameStateChangeHard__setTransferInfo.c"
+    ]
+  },
+  {
+    "literal": "http://transfer.jive.bij-cram01.com/app/getTransfer.php",
+    "elf_file_offset": "0x329d2b",
+    "references": [
+      "recovered/native/functions/001cd820_GameStateChangeHard__getTransferInfo.c"
+    ]
+  },
+  {
+    "literal": "http://transfer.jive.bij-cram01.com/app/gotTransfer.php",
+    "elf_file_offset": "0x329d99",
+    "references": [
+      "recovered/native/functions/001cd990_GameStateChangeHard__gotTransferInfo.c"
+    ]
+  },
+  {
+    "literal": "http://transfer.jive.bij-cram01.com/app/clearTransfer.php",
+    "elf_file_offset": "0x329dd1",
+    "references": [
+      "recovered/native/functions/001cda30_GameStateChangeHard__clearTransferInfo.c"
+    ]
+  },
+  {
+    "literal": "http://transfer.jive.bij-cram01.com/app/logTransfer.php",
+    "elf_file_offset": "0x329e37",
+    "references": [
+      "recovered/native/functions/001cdc8c_GameStateChangeHard__logTransferInfo.c"
+    ]
+  },
+  {
+    "literal": "http://zombiecafe.capcomcanada.com/updater/%s",
+    "elf_file_offset": "0x32db29",
+    "references": [
+      "recovered/native/functions/00234a90_UpdateGame__paint.c"
+    ]
+  },
+  {
+    "literal": "http://zc-ad.bij-games.com/v170/lottery.php",
+    "elf_file_offset": "0x32f3c5",
+    "references": [
+      "recovered/native/functions/0023d1f4_ZombieCafe__loadlottery.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_douzou.html",
+    "elf_file_offset": "0x32fc93",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_summon.html",
+    "elf_file_offset": "0x32fce4",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_makaimura2.html",
+    "elf_file_offset": "0x32fd35",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_black.html",
+    "elf_file_offset": "0x32fd8a",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_marching.html",
+    "elf_file_offset": "0x32fdda",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_sea.html",
+    "elf_file_offset": "0x32fe2d",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_bon.html",
+    "elf_file_offset": "0x32fe7b",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_4year.html",
+    "elf_file_offset": "0x32fec9",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_youkai2015.html",
+    "elf_file_offset": "0x32ff19",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_vampire3.html",
+    "elf_file_offset": "0x32ff6e",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_xmas2015.html",
+    "elf_file_offset": "0x32ffc1",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_urasima.html",
+    "elf_file_offset": "0x330014",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_newyear.html",
+    "elf_file_offset": "0x330066",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_cinderella.html",
+    "elf_file_offset": "0x3300b8",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_zeus.html",
+    "elf_file_offset": "0x33010d",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_rockmanx.html",
+    "elf_file_offset": "0x33015c",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_ixa.html",
+    "elf_file_offset": "0x3301af",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_shitihuku.html",
+    "elf_file_offset": "0x3301fd",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_kerberos.html",
+    "elf_file_offset": "0x330251",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_hukkoku.html",
+    "elf_file_offset": "0x3302a4",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_inoshika.html",
+    "elf_file_offset": "0x3302f6",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_capcomfes.html",
+    "elf_file_offset": "0x330349",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_angel.html",
+    "elf_file_offset": "0x33039d",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_5year.html",
+    "elf_file_offset": "0x3303ed",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_halloween.html",
+    "elf_file_offset": "0x33043d",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://zc.minigames.bij-games01.com/survival/izcjp/contents/survival_error.html",
+    "elf_file_offset": "0x330491",
+    "references": [
+      "recovered/native/functions/00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-games.com/socials/zc/fraud.php",
+    "elf_file_offset": "0x330522",
+    "references": [
+      "recovered/native/functions/002407e0_ZombieCafe__sendToxinCheat.c"
+    ]
+  },
+  {
+    "literal": "http://zc-ad.bij-games.com/v170/jpfiles/getEntry.php",
+    "elf_file_offset": "0x330574",
+    "references": [
+      "recovered/native/functions/002408cc_ZombieCafe__loadGetEntryInfo.c"
+    ]
+  },
+  {
+    "literal": "http://vip.bij-games.com:10080/pco/zombie/azcjp/v170/getGameInfo.php",
+    "elf_file_offset": "0x3305dc",
+    "references": [
+      "recovered/native/functions/00240980_ZombieCafe__getGameInfo.c"
+    ]
+  },
+  {
+    "literal": "http://zombiecafe.capcomcanada.com/x",
+    "elf_file_offset": "0x332b0c",
+    "references": []
+  },
+  {
+    "literal": "http://zc-ad.bij-games.com/v170",
+    "elf_file_offset": "0x332b31",
+    "references": []
+  },
+  {
+    "literal": "http://zc-ad.bij-games.com/v170/getUpdateBonus2.php",
+    "elf_file_offset": "0x332ed1",
+    "references": []
+  },
+  {
+    "literal": "%s/gotgifts_support.php?%s&h=%s",
+    "elf_file_offset": "0x33a776",
+    "references": [
+      "recovered/native/functions/002b4178_FUN_002b4178.c"
+    ]
+  },
+  {
+    "literal": "%s/gotgifts.php?%s&h=%s",
+    "elf_file_offset": "0x33a796",
+    "references": [
+      "recovered/native/functions/002b4178_FUN_002b4178.c"
+    ]
+  },
+  {
+    "literal": "%s/settoken.php?%s&h=%s",
+    "elf_file_offset": "0x33a858",
+    "references": [
+      "recovered/native/functions/002b4ba0_CCServer__SetPushToken.c"
+    ]
+  },
+  {
+    "literal": "%s/savegamestate.php?%s&h=%s",
+    "elf_file_offset": "0x33a8f8",
+    "references": [
+      "recovered/native/functions/002b5180_CCServer__SaveMyGameState.c",
+      "recovered/native/functions/002b5024_CCServer__SaveBadGameState.c",
+      "recovered/native/functions/002b4e04_CCServer__SaveMyLinkedGameState.c"
+    ]
+  },
+  {
+    "literal": "%s/givegift.php?%s&h=%s",
+    "elf_file_offset": "0x33ab10",
+    "references": [
+      "recovered/native/functions/002b5478_CCServer__SendGiftByUniqueId2.c",
+      "recovered/native/functions/002b5610_CCServer__SendGiftByUniqueId.c"
+    ]
+  },
+  {
+    "literal": "%s/versioncheck.php?v=%s&app=%s",
+    "elf_file_offset": "0x33af38",
+    "references": [
+      "recovered/native/functions/002b61d4_CCServer__VersionCheck.c"
+    ]
+  },
+  {
+    "literal": "%s/getmetadata.php?v=%d",
+    "elf_file_offset": "0x33af9d",
+    "references": [
+      "recovered/native/functions/002b6284_CCServer__RetrieveMetaDataForFriends.c"
+    ]
+  },
+  {
+    "literal": "%s/getspecialmetadata.php?v=%d&k=%s",
+    "elf_file_offset": "0x33b03c",
+    "references": [
+      "recovered/native/functions/002b63d0_CCServer__RetrieveSpecialMetaData.c"
+    ]
+  },
+  {
+    "literal": "%s/getmetadata.php?v=%d&u0=%s",
+    "elf_file_offset": "0x33b084",
+    "references": [
+      "recovered/native/functions/002b6504_CCServer__RetrieveMetaDataForUniqueId.c"
+    ]
+  },
+  {
+    "literal": "%s/glinfo.php?v=%d&u=%s",
+    "elf_file_offset": "0x33b0b1",
+    "references": [
+      "recovered/native/functions/002b676c_CCServer__GetLinkedGamestateInfo.c"
+    ]
+  },
+  {
+    "literal": "%s/getspecialgamestate.php?v=%d&u=%s",
+    "elf_file_offset": "0x33b0f3",
+    "references": [
+      "recovered/native/functions/002b6848_CCServer__RetrieveSpecialGamestate.c"
+    ]
+  },
+  {
+    "literal": "%s/getgamestate.php?v=%d&u=%s",
+    "elf_file_offset": "0x33b136",
+    "references": [
+      "recovered/native/functions/002b6914_CCServer__RetrieveGameStateForUniqueId.c"
+    ]
+  },
+  {
+    "literal": "%s/getsng.php?v=%d&gv=%d&u=%s",
+    "elf_file_offset": "0x33b154",
+    "references": [
+      "recovered/native/functions/002b6914_CCServer__RetrieveGameStateForUniqueId.c"
+    ]
+  },
+  {
+    "literal": "%s/getrandomgamestate.php?v=%d",
+    "elf_file_offset": "0x33b1ff",
+    "references": [
+      "recovered/native/functions/002b6a60_CCServer__RetrieveRandomGameState.c"
+    ]
+  },
+  {
+    "literal": "%s/getgifts_support.php?v=%d&udid=%s",
+    "elf_file_offset": "0x33b2ae",
+    "references": [
+      "recovered/native/functions/002b6cd0_CCServer__RetrieveMyGifts.c"
+    ]
+  },
+  {
+    "literal": "%s/getgifts.php?v=%d&udid=%s",
+    "elf_file_offset": "0x33b2d3",
+    "references": [
+      "recovered/native/functions/002b6cd0_CCServer__RetrieveMyGifts.c"
+    ]
+  },
+  {
+    "literal": "%s/getgifts_support.php?v=%d",
+    "elf_file_offset": "0x33b2f0",
+    "references": [
+      "recovered/native/functions/002b6cd0_CCServer__RetrieveMyGifts.c"
+    ]
+  },
+  {
+    "literal": "%s/getgifts.php?v=%d",
+    "elf_file_offset": "0x33b30d",
+    "references": [
+      "recovered/native/functions/002b6cd0_CCServer__RetrieveMyGifts.c"
+    ]
+  },
+  {
+    "literal": "%s/getgamestate_hiveid.php?v=%d&udid=%s&hiveid=%s",
+    "elf_file_offset": "0x33b465",
+    "references": [
+      "recovered/native/functions/002b7108_CCServer__RetrieveGameStateForHiveid.c"
+    ]
+  },
+  {
+    "literal": "%s/getgamestate_udid.php?v=%d&udid=%s",
+    "elf_file_offset": "0x33b4d5",
+    "references": [
+      "recovered/native/functions/002b71ec_CCServer__RetrieveMyGameState.c"
+    ]
+  },
+  {
+    "literal": "%s/do/purchaseConfirm.php?uid=%s&v=%d",
+    "elf_file_offset": "0x33b51b",
+    "references": [
+      "recovered/native/functions/002b72b8_CCServer__GetBuyToxin.c"
+    ]
+  },
+  {
+    "literal": "%s/playcheck.php",
+    "elf_file_offset": "0x33b56e",
+    "references": [
+      "recovered/native/functions/002b735c_CCServer__BootCheck.c"
+    ]
+  },
+  {
+    "literal": "http://www.beeline-i.info/noticeAndroid/ZombieCafe/jp/v170",
+    "elf_file_offset": "0x33b5b7",
+    "references": [
+      "recovered/native/functions/002b740c_CCServer__GetWebViewSetting.c"
+    ]
+  },
+  {
+    "literal": "http://vip.bij-games.com:10080/rank/getRankjson_index.php?udid=%s&fbid=%s&appver=%d&lvl=%d&mc=%d&sc=%d&ch=%d&ou=%s&oid=%s&vid=%s&adid=%s&hiveid=%s&appname=%s",
+    "elf_file_offset": "0x33b605",
+    "references": [
+      "recovered/native/functions/002b74b8_CCServer__UserRank.c"
+    ]
+  },
+  {
+    "literal": "http://azcjp.jive.bij-cram01.com/index.php?seq=CHECK&appname=azcjp&im=%s&aid=%s&ud=%s&appver=%d",
+    "elf_file_offset": "0x33b89f",
+    "references": [
+      "recovered/native/functions/002b7e94_CCServer__GetNickName.c"
+    ]
+  },
+  {
+    "literal": "http://azcjp.jive.bij-cram01.com/index.php",
+    "elf_file_offset": "0x33b8ff",
+    "references": [
+      "recovered/native/functions/002b7e94_CCServer__GetNickName.c"
+    ]
+  },
+  {
+    "literal": "http://inapp.bij-promo.com:10080",
+    "elf_file_offset": "0x33bd25",
+    "references": [
+      "recovered/native/functions/002b86d0_CCServer__requestGetEventGifts.c",
+      "recovered/native/functions/002b8510_L_GetEventGiftDataSuccessSub.c"
+    ]
+  },
+  {
+    "literal": "http://ranking.bij-service.com",
+    "elf_file_offset": "0x33bf07",
+    "references": [
+      "recovered/native/functions/002b87c4_L_GetRankingGiftDataSuccessSub.c",
+      "recovered/native/functions/002ba1ec_CCServer__requestGetRankingGifts.c"
+    ]
+  },
+  {
+    "literal": "%s/gettimestamp.php",
+    "elf_file_offset": "0x33cd2d",
+    "references": [
+      "recovered/native/functions/002ba0fc_CCServer__GetServerTime.c"
+    ]
+  },
+  {
+    "literal": "%s/savegamestate_hiveid.php?%s&h=%s",
+    "elf_file_offset": "0x33d1bf",
+    "references": [
+      "recovered/native/functions/002bab28_CCServer__ChangeHardSaveMyGameState.c"
+    ]
+  },
+  {
+    "literal": "http://zc-ad.bij-games.com/FBIcon.png",
+    "elf_file_offset": "0x33d26f",
+    "references": [
+      "recovered/native/functions/002bae20_CCFacebook__PostStoryWithImage.c"
+    ]
+  },
+  {
+    "literal": "http://cram.capcomcanada.com/CRAMServer/ccad.php?%s&h=%s",
+    "elf_file_offset": "0x33d7a2",
+    "references": [
+      "recovered/native/functions/002c1310_L_SendAnalyticsDataNew.c"
+    ]
+  },
+  {
+    "literal": "http://cram.capcomcanada.com/CRAMServer/CRAMCCMKTServer.php",
+    "elf_file_offset": "0x33d8ac",
+    "references": [
+      "recovered/native/functions/002c17c0_L_CreateRequestString.c"
+    ]
+  },
+  {
+    "literal": "http://cram.capcomcanada.com/rategame.php?app=%s",
+    "elf_file_offset": "0x33db25",
+    "references": [
+      "recovered/native/functions/002c1d34_FUN_002c1d34.c"
+    ]
+  }
+]

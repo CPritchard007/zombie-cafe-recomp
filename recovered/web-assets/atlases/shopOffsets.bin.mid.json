@@ -1,0 +1,169 @@
+{
+  "source": "assets/images/shopOffsets.bin.mid",
+  "version": 1,
+  "count": 23,
+  "entries": [
+    {
+      "index": 0,
+      "x": 1,
+      "y": 1,
+      "width": 130,
+      "height": 140
+    },
+    {
+      "index": 1,
+      "x": 133,
+      "y": 1,
+      "width": 130,
+      "height": 140
+    },
+    {
+      "index": 2,
+      "x": 265,
+      "y": 1,
+      "width": 130,
+      "height": 140
+    },
+    {
+      "index": 3,
+      "x": 397,
+      "y": 1,
+      "width": 130,
+      "height": 140
+    },
+    {
+      "index": 4,
+      "x": 529,
+      "y": 1,
+      "width": 90,
+      "height": 104
+    },
+    {
+      "index": 5,
+      "x": 621,
+      "y": 1,
+      "width": 90,
+      "height": 104
+    },
+    {
+      "index": 6,
+      "x": 713,
+      "y": 1,
+      "width": 90,
+      "height": 104
+    },
+    {
+      "index": 7,
+      "x": 805,
+      "y": 1,
+      "width": 90,
+      "height": 104
+    },
+    {
+      "index": 8,
+      "x": 1,
+      "y": 143,
+      "width": 140,
+      "height": 140
+    },
+    {
+      "index": 9,
+      "x": 143,
+      "y": 143,
+      "width": 140,
+      "height": 140
+    },
+    {
+      "index": 10,
+      "x": 285,
+      "y": 143,
+      "width": 140,
+      "height": 142
+    },
+    {
+      "index": 11,
+      "x": 427,
+      "y": 143,
+      "width": 140,
+      "height": 140
+    },
+    {
+      "index": 12,
+      "x": 569,
+      "y": 143,
+      "width": 140,
+      "height": 140
+    },
+    {
+      "index": 13,
+      "x": 711,
+      "y": 143,
+      "width": 140,
+      "height": 140
+    },
+    {
+      "index": 14,
+      "x": 853,
+      "y": 143,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 15,
+      "x": 1,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 16,
+      "x": 113,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 17,
+      "x": 225,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 18,
+      "x": 337,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 19,
+      "x": 449,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 20,
+      "x": 561,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 21,
+      "x": 673,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    },
+    {
+      "index": 22,
+      "x": 785,
+      "y": 287,
+      "width": 110,
+      "height": 30
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "source": "assets/images/characterParts.cct.mid",
+    "png": "textures/characterParts.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/characterParts2.cct.mid",
+    "png": "textures/characterParts2.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/characterParts3.cct.mid",
+    "png": "textures/characterParts3.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/characterParts4.cct.mid",
+    "png": "textures/characterParts4.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/characterParts5.cct.mid",
+    "png": "textures/characterParts5.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/furniture.cct.mid",
+    "png": "textures/furniture.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/furniture2.cct.mid",
+    "png": "textures/furniture2.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/furniture3.cct.mid",
+    "png": "textures/furniture3.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/iphone4_gatyaImages.cct.mid",
+    "png": "textures/iphone4_gatyaImages.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/iphone4_prizeMenuImages.cct.mid",
+    "png": "textures/iphone4_prizeMenuImages.png",
+    "width": 512,
+    "height": 256,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/mapTiles.cct.mid",
+    "png": "textures/mapTiles.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/recipeImages.cct.mid",
+    "png": "textures/recipeImages.png",
+    "width": 2048,
+    "height": 2048,
+    "format": "RGBA4444"
+  },
+  {
+    "source": "assets/images/shopImages.cct.mid",
+    "png": "textures/shopImages.png",
+    "width": 1024,
+    "height": 512,
+    "format": "RGBA4444"
+  }
+]

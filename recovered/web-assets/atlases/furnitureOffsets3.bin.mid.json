@@ -1,0 +1,78 @@
+{
+  "source": "assets/images/furnitureOffsets3.bin.mid",
+  "version": 2,
+  "count": 5,
+  "entries": [
+    {
+      "index": 0,
+      "x": 40,
+      "y": 227,
+      "width": 1,
+      "height": 1,
+      "name": "000-empty.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "x": 101,
+      "y": 1,
+      "width": 93,
+      "height": 252,
+      "name": "001-greekColumn.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "x": 1,
+      "y": 99,
+      "width": 79,
+      "height": 127,
+      "name": "002-HWA.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "x": 1,
+      "y": 1,
+      "width": 99,
+      "height": 97,
+      "name": "003-HWB.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "x": 1,
+      "y": 227,
+      "width": 38,
+      "height": 33,
+      "name": "004-HWC.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

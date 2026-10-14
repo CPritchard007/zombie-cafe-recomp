@@ -1,0 +1,66 @@
+package com.google.android.gms.wallet;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+import java.util.ArrayList;
+
+/* loaded from: /Users/curtispritchard/Workspace/recomp/zombie-cafe/recovered/apk/classes.dex */
+public final class MaskedWalletRequest implements SafeParcelable {
+    public static final Parcelable.Creator CREATOR = new l();
+
+    /* renamed from: a, reason: collision with root package name */
+    String f569a;
+    boolean b;
+    boolean c;
+    boolean d;
+    String e;
+    String f;
+    String g;
+    Cart h;
+    boolean i;
+    boolean j;
+    CountrySpecification[] k;
+    boolean l;
+    boolean m;
+    ArrayList n;
+    private final int o;
+
+    MaskedWalletRequest() {
+        this.o = 3;
+        this.l = true;
+        this.m = true;
+    }
+
+    MaskedWalletRequest(int i, String str, boolean z, boolean z2, boolean z3, String str2, String str3, String str4, Cart cart, boolean z4, boolean z5, CountrySpecification[] countrySpecificationArr, boolean z6, boolean z7, ArrayList arrayList) {
+        this.o = i;
+        this.f569a = str;
+        this.b = z;
+        this.c = z2;
+        this.d = z3;
+        this.e = str2;
+        this.f = str3;
+        this.g = str4;
+        this.h = cart;
+        this.i = z4;
+        this.j = z5;
+        this.k = countrySpecificationArr;
+        this.l = z6;
+        this.m = z7;
+        this.n = arrayList;
+    }
+
+    public int a() {
+        return this.o;
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int i) {
+        l.a(this, parcel, i);
+    }
+}

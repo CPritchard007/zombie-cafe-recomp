@@ -1,0 +1,28 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002ee9bc FUN_002ee9bc */
+
+uint FUN_002ee9bc(uint *param_1)
+
+{
+  char cVar1;
+  uint uVar2;
+  
+  if ((char)param_1[2] == '\0') {
+    if (*(char *)((int)param_1 + 9) == '\0') {
+      return 0xb0;
+    }
+    *(char *)((int)param_1 + 9) = *(char *)((int)param_1 + 9) + -1;
+    *param_1 = *(uint *)param_1[1];
+    param_1[1] = (uint)((uint *)param_1[1] + 1);
+    cVar1 = '\x03';
+  }
+  else {
+    cVar1 = (char)param_1[2] + -1;
+  }
+  *(char *)(param_1 + 2) = cVar1;
+  uVar2 = *param_1;
+  *param_1 = uVar2 << 8;
+  return uVar2 >> 0x18;
+}
+
+

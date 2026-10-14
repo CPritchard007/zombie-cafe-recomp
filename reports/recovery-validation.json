@@ -1,0 +1,12 @@
+{
+  "original_apk_sha256": "8a9a77163bc571b77899e254103ccb373155ec29fe76899e7d1bf254b78a1e07",
+  "original_entries": 551,
+  "java_files": 1357,
+  "smali_files": 1702,
+  "preserved_assets_and_libraries": 393,
+  "mismatches": [],
+  "png_integrity_checks": 13,
+  "atlas_count_checks": 19,
+  "recipe_count": 234,
+  "runtime_tested": false
+}

@@ -1,0 +1,12 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002ea474 std::__Named_exception::what */
+
+/* std::__Named_exception::what() const */
+
+undefined4 __thiscall std::__Named_exception::what(__Named_exception *this)
+
+{
+  return *(undefined4 *)(this + 0x104);
+}
+
+

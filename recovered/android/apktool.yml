@@ -1,0 +1,25 @@
+version: 2.11.1
+apkFileName: ZombieCafe-JP-English-v0.1.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 10
+  targetSdkVersion: 24
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 78
+  versionName: ZombieCafeAndroid 1.7.0
+sharedLibrary: false
+sparseResources: false
+compactEntries: false
+doNotCompress:
+- arsc
+- mid
+- ogg
+- png
+- assets/images/recipeBookImageMap.bin

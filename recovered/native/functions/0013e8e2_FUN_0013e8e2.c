@@ -1,0 +1,22 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 0013e8e2 FUN_0013e8e2 */
+
+void FUN_0013e8e2(uint param_1)
+
+{
+  int unaff_r4;
+  NoticeDialog *pNVar1;
+  
+  if (param_1 < 0xa5) {
+    FUN_0013f800();
+  }
+  pNVar1 = *(NoticeDialog **)(unaff_r4 + 0x1b0);
+  Vector<String>::elementAt((int)&stack0x000001a4);
+  Vector<String>::elementAt((int)&stack0x000001ac);
+  NoticeDialog::show(pNVar1,&stack0x000001a4,&stack0x000001ac);
+  String::~String((String *)&stack0x000001ac);
+  FUN_0013efb0(&stack0x000001a4);
+  return;
+}
+
+

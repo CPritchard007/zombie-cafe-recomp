@@ -1,0 +1,12 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002ea2b0 FUN_002ea2b0 */
+
+void * FUN_002ea2b0(void *param_1)
+
+{
+  FUN_002ea298();
+  operator_delete(param_1);
+  return param_1;
+}
+
+

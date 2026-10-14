@@ -1,0 +1,5692 @@
+{
+  "source": "assets/images/furnitureOffsets.bin.mid",
+  "version": 2,
+  "count": 406,
+  "entries": [
+    {
+      "index": 0,
+      "x": 1,
+      "y": 253,
+      "width": 72,
+      "height": 251,
+      "name": "000-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "x": 1,
+      "y": 505,
+      "width": 72,
+      "height": 251,
+      "name": "001-wall2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "x": 366,
+      "y": 1127,
+      "width": 122,
+      "height": 77,
+      "name": "002-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "x": 1113,
+      "y": 974,
+      "width": 121,
+      "height": 76,
+      "name": "003-sand_01.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "x": 914,
+      "y": 1021,
+      "width": 121,
+      "height": 76,
+      "name": "004-sand_00.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "x": 1859,
+      "y": 656,
+      "width": 122,
+      "height": 77,
+      "name": "005-black and white tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "x": 791,
+      "y": 1091,
+      "width": 121,
+      "height": 76,
+      "name": "006-sand_02.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "x": 1510,
+      "y": 268,
+      "width": 123,
+      "height": 79,
+      "name": "007-board_deco3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "x": 1366,
+      "y": 288,
+      "width": 123,
+      "height": 79,
+      "name": "008-board_deco2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "x": 1,
+      "y": 757,
+      "width": 72,
+      "height": 251,
+      "name": "009-brick wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "x": 1240,
+      "y": 321,
+      "width": 123,
+      "height": 79,
+      "name": "010-board_deco.PNG",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "x": 1859,
+      "y": 734,
+      "width": 122,
+      "height": 77,
+      "name": "011-carpet.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "x": 1115,
+      "y": 338,
+      "width": 123,
+      "height": 79,
+      "name": "012-grass_rock.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "x": 658,
+      "y": 1793,
+      "width": 72,
+      "height": 248,
+      "name": "013-halaven-Wall3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "x": 1734,
+      "y": 736,
+      "width": 122,
+      "height": 77,
+      "name": "014-floortoron.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "x": 1,
+      "y": 1,
+      "width": 73,
+      "height": 251,
+      "name": "015-walltoron.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "x": 1857,
+      "y": 812,
+      "width": 122,
+      "height": 77,
+      "name": "016-blueseat1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "x": 1609,
+      "y": 737,
+      "width": 122,
+      "height": 77,
+      "name": "017-blueseat2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "x": 1485,
+      "y": 748,
+      "width": 122,
+      "height": 77,
+      "name": "018-blueseat3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "x": 1361,
+      "y": 768,
+      "width": 122,
+      "height": 77,
+      "name": "019-blueseat4.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "x": 1237,
+      "y": 801,
+      "width": 122,
+      "height": 77,
+      "name": "020-blueseat5.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "x": 1113,
+      "y": 818,
+      "width": 122,
+      "height": 77,
+      "name": "021-redseat.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "x": 1,
+      "y": 1009,
+      "width": 72,
+      "height": 251,
+      "name": "022-wallfantasy2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "x": 1,
+      "y": 1261,
+      "width": 72,
+      "height": 251,
+      "name": "023-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "x": 947,
+      "y": 429,
+      "width": 123,
+      "height": 79,
+      "name": "024-floor stain.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "x": 1,
+      "y": 1513,
+      "width": 72,
+      "height": 251,
+      "name": "025-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "x": 1,
+      "y": 1765,
+      "width": 72,
+      "height": 251,
+      "name": "026-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "x": 74,
+      "y": 253,
+      "width": 72,
+      "height": 251,
+      "name": "027-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "x": 75,
+      "y": 1,
+      "width": 72,
+      "height": 251,
+      "name": "028-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 29,
+      "x": 1732,
+      "y": 814,
+      "width": 122,
+      "height": 77,
+      "name": "029-grey and white tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 30,
+      "x": 1385,
+      "y": 126,
+      "width": 124,
+      "height": 80,
+      "name": "030-hardwood-floor-2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 31,
+      "x": 1636,
+      "y": 94,
+      "width": 124,
+      "height": 80,
+      "name": "031-hardwood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 32,
+      "x": 1761,
+      "y": 94,
+      "width": 124,
+      "height": 80,
+      "name": "032-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 33,
+      "x": 1886,
+      "y": 94,
+      "width": 124,
+      "height": 80,
+      "name": "033-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 34,
+      "x": 1636,
+      "y": 175,
+      "width": 124,
+      "height": 80,
+      "name": "034-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 35,
+      "x": 1510,
+      "y": 187,
+      "width": 124,
+      "height": 80,
+      "name": "035-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 36,
+      "x": 1385,
+      "y": 207,
+      "width": 124,
+      "height": 80,
+      "name": "036-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 37,
+      "x": 793,
+      "y": 459,
+      "width": 123,
+      "height": 79,
+      "name": "037-loose-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 38,
+      "x": 1241,
+      "y": 240,
+      "width": 124,
+      "height": 80,
+      "name": "038-wood-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 39,
+      "x": 668,
+      "y": 422,
+      "width": 124,
+      "height": 79,
+      "name": "039-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 40,
+      "x": 1608,
+      "y": 815,
+      "width": 122,
+      "height": 77,
+      "name": "040-marble tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 41,
+      "x": 74,
+      "y": 505,
+      "width": 72,
+      "height": 251,
+      "name": "041-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 42,
+      "x": 1115,
+      "y": 257,
+      "width": 124,
+      "height": 80,
+      "name": "042-onsen-floor.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 43,
+      "x": 74,
+      "y": 757,
+      "width": 72,
+      "height": 251,
+      "name": "043-totan_Wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 44,
+      "x": 74,
+      "y": 1009,
+      "width": 72,
+      "height": 251,
+      "name": "044-Wall_HW.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 45,
+      "x": 668,
+      "y": 502,
+      "width": 123,
+      "height": 79,
+      "name": "045-plain tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 46,
+      "x": 490,
+      "y": 670,
+      "width": 123,
+      "height": 79,
+      "name": "046-tile_HW.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 47,
+      "x": 366,
+      "y": 690,
+      "width": 123,
+      "height": 79,
+      "name": "047-block4 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 48,
+      "x": 1759,
+      "y": 256,
+      "width": 123,
+      "height": 79,
+      "name": "048-ground tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 49,
+      "x": 1883,
+      "y": 256,
+      "width": 123,
+      "height": 79,
+      "name": "049-ground2 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 50,
+      "x": 1759,
+      "y": 336,
+      "width": 123,
+      "height": 79,
+      "name": "050-block1 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 51,
+      "x": 1883,
+      "y": 336,
+      "width": 123,
+      "height": 79,
+      "name": "051-block2 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 52,
+      "x": 74,
+      "y": 1261,
+      "width": 72,
+      "height": 251,
+      "name": "052-block3 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 53,
+      "x": 705,
+      "y": 1560,
+      "width": 72,
+      "height": 227,
+      "name": "053-graveyard Wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 54,
+      "x": 949,
+      "y": 348,
+      "width": 124,
+      "height": 80,
+      "name": "054-seatile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 55,
+      "x": 74,
+      "y": 1513,
+      "width": 72,
+      "height": 251,
+      "name": "055-seawall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 56,
+      "x": 796,
+      "y": 378,
+      "width": 124,
+      "height": 80,
+      "name": "056-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 57,
+      "x": 477,
+      "y": 1311,
+      "width": 72,
+      "height": 250,
+      "name": "057-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 58,
+      "x": 74,
+      "y": 1765,
+      "width": 72,
+      "height": 251,
+      "name": "058-Wall_clock.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 59,
+      "x": 1,
+      "y": 2020,
+      "width": 1,
+      "height": 1,
+      "name": "059-Wall_clock.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 60,
+      "x": 1634,
+      "y": 337,
+      "width": 123,
+      "height": 79,
+      "name": "060-Rockmantile1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 61,
+      "x": 512,
+      "y": 1793,
+      "width": 72,
+      "height": 249,
+      "name": "061-Rockmanwall1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 62,
+      "x": 1490,
+      "y": 348,
+      "width": 123,
+      "height": 79,
+      "name": "062-Rockmantile2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 63,
+      "x": 1484,
+      "y": 826,
+      "width": 122,
+      "height": 77,
+      "name": "063-two tone brown tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 64,
+      "x": 147,
+      "y": 253,
+      "width": 72,
+      "height": 251,
+      "name": "064-Rockmanwall2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 65,
+      "x": 1761,
+      "y": 175,
+      "width": 123,
+      "height": 80,
+      "name": "065-Rockmantile3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 66,
+      "x": 148,
+      "y": 1,
+      "width": 72,
+      "height": 251,
+      "name": "066-Wall_Generic.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 67,
+      "x": 147,
+      "y": 505,
+      "width": 72,
+      "height": 251,
+      "name": "067-wallpaper2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 68,
+      "x": 147,
+      "y": 757,
+      "width": 72,
+      "height": 251,
+      "name": "068-wallpaper.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 69,
+      "x": 585,
+      "y": 1793,
+      "width": 72,
+      "height": 249,
+      "name": "069-Rockmanwall3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 70,
+      "x": 147,
+      "y": 1009,
+      "width": 72,
+      "height": 251,
+      "name": "070-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 71,
+      "x": 1885,
+      "y": 175,
+      "width": 123,
+      "height": 80,
+      "name": "071-tilel.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 72,
+      "x": 147,
+      "y": 1261,
+      "width": 72,
+      "height": 251,
+      "name": "072-wood wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 73,
+      "x": 1635,
+      "y": 256,
+      "width": 123,
+      "height": 80,
+      "name": "073-tilel.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 74,
+      "x": 147,
+      "y": 1513,
+      "width": 72,
+      "height": 251,
+      "name": "074-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 75,
+      "x": 147,
+      "y": 1765,
+      "width": 72,
+      "height": 251,
+      "name": "075-wa_tatamiC.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 76,
+      "x": 1,
+      "y": 2020,
+      "width": 1,
+      "height": 1,
+      "name": "076-wa_tatamiD.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 77,
+      "x": 1309,
+      "y": 1921,
+      "width": 56,
+      "height": 125,
+      "name": "077-atm machine.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 78,
+      "x": 1352,
+      "y": 1109,
+      "width": 110,
+      "height": 161,
+      "name": "078-arcade-cabinet-frame-2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 79,
+      "x": 1260,
+      "y": 121,
+      "width": 124,
+      "height": 118,
+      "name": "079-Tex-Mex Table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 80,
+      "x": 1230,
+      "y": 1144,
+      "width": 110,
+      "height": 161,
+      "name": "080-arcade cabinet frame 2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 81,
+      "x": 1341,
+      "y": 1271,
+      "width": 108,
+      "height": 152,
+      "name": "081-white_fridge.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 82,
+      "x": 1600,
+      "y": 1089,
+      "width": 112,
+      "height": 132,
+      "name": "082-white_stove.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 83,
+      "x": 1113,
+      "y": 1160,
+      "width": 109,
+      "height": 151,
+      "name": "083-Dirty_fridge.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 84,
+      "x": 1848,
+      "y": 1108,
+      "width": 113,
+      "height": 133,
+      "name": "084-Dirty_stove.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 85,
+      "x": 1795,
+      "y": 1844,
+      "width": 56,
+      "height": 77,
+      "name": "085-Neon_sign_Left.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 86,
+      "x": 1933,
+      "y": 1812,
+      "width": 62,
+      "height": 78,
+      "name": "086-Neon_sign_Right.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 87,
+      "x": 1737,
+      "y": 1752,
+      "width": 62,
+      "height": 66,
+      "name": "087-pot.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 88,
+      "x": 1364,
+      "y": 368,
+      "width": 123,
+      "height": 79,
+      "name": "088-grass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 89,
+      "x": 1376,
+      "y": 1741,
+      "width": 47,
+      "height": 158,
+      "name": "089-standing lamp blue.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 90,
+      "x": 1504,
+      "y": 1735,
+      "width": 47,
+      "height": 158,
+      "name": "090-standing lamp red.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 91,
+      "x": 994,
+      "y": 1889,
+      "width": 47,
+      "height": 158,
+      "name": "091-standing lamp yellow.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 92,
+      "x": 1036,
+      "y": 1061,
+      "width": 76,
+      "height": 159,
+      "name": "092-large potted plant.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 93,
+      "x": 428,
+      "y": 1566,
+      "width": 51,
+      "height": 46,
+      "name": "093-italian wall lamp.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 94,
+      "x": 913,
+      "y": 1098,
+      "width": 115,
+      "height": 222,
+      "name": "094-vending machine.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 95,
+      "x": 723,
+      "y": 1311,
+      "width": 64,
+      "height": 148,
+      "name": "095-potted bamboo.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 96,
+      "x": 1386,
+      "y": 1,
+      "width": 124,
+      "height": 124,
+      "name": "096-dirty sink (no grime).png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 97,
+      "x": 366,
+      "y": 1205,
+      "width": 57,
+      "height": 104,
+      "name": "097-Pub_Chair_Front.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 98,
+      "x": 1674,
+      "y": 1410,
+      "width": 89,
+      "height": 145,
+      "name": "098-exotic fish tank frame 2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 99,
+      "x": 1111,
+      "y": 1468,
+      "width": 92,
+      "height": 144,
+      "name": "099-fish tank frame 2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 100,
+      "x": 1870,
+      "y": 1749,
+      "width": 62,
+      "height": 80,
+      "name": "100-BookShelf.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 101,
+      "x": 1360,
+      "y": 846,
+      "width": 122,
+      "height": 77,
+      "name": "101-Floor_Pub.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 102,
+      "x": 904,
+      "y": 1427,
+      "width": 50,
+      "height": 88,
+      "name": "102-asian chair back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 103,
+      "x": 903,
+      "y": 1516,
+      "width": 50,
+      "height": 88,
+      "name": "103-classic wooden chair back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 104,
+      "x": 1071,
+      "y": 1656,
+      "width": 50,
+      "height": 88,
+      "name": "104-diner chair turqoise back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 105,
+      "x": 1243,
+      "y": 1675,
+      "width": 50,
+      "height": 88,
+      "name": "105-generic chair NEW back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 106,
+      "x": 1243,
+      "y": 1764,
+      "width": 50,
+      "height": 88,
+      "name": "106-mexican chair back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 107,
+      "x": 1235,
+      "y": 1035,
+      "width": 116,
+      "height": 108,
+      "name": "107-diner table turquoise.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 108,
+      "x": 1186,
+      "y": 1683,
+      "width": 56,
+      "height": 59,
+      "name": "108-Burnt Pot.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 109,
+      "x": 1373,
+      "y": 1900,
+      "width": 50,
+      "height": 88,
+      "name": "109-diner-chair-red-back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 110,
+      "x": 527,
+      "y": 152,
+      "width": 141,
+      "height": 123,
+      "name": "110-10k.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 111,
+      "x": 1117,
+      "y": 1,
+      "width": 142,
+      "height": 136,
+      "name": "111-50k.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 112,
+      "x": 679,
+      "y": 111,
+      "width": 141,
+      "height": 128,
+      "name": "112-250k.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 113,
+      "x": 528,
+      "y": 1,
+      "width": 150,
+      "height": 150,
+      "name": "113-1M.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 114,
+      "x": 1803,
+      "y": 1509,
+      "width": 89,
+      "height": 96,
+      "name": "114-Circle Table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 115,
+      "x": 1513,
+      "y": 1587,
+      "width": 86,
+      "height": 66,
+      "name": "115-plate.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 116,
+      "x": 1239,
+      "y": 401,
+      "width": 123,
+      "height": 79,
+      "name": "116-grass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 117,
+      "x": 1114,
+      "y": 418,
+      "width": 123,
+      "height": 79,
+      "name": "117-sidewalk.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 118,
+      "x": 917,
+      "y": 509,
+      "width": 123,
+      "height": 79,
+      "name": "118-road.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 119,
+      "x": 1133,
+      "y": 1743,
+      "width": 56,
+      "height": 41,
+      "name": "119-Dirty_Plate.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 120,
+      "x": 367,
+      "y": 1,
+      "width": 160,
+      "height": 100,
+      "name": "120-tileCover.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 121,
+      "x": 792,
+      "y": 539,
+      "width": 123,
+      "height": 79,
+      "name": "121-roadStripe.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 122,
+      "x": 1608,
+      "y": 1808,
+      "width": 66,
+      "height": 207,
+      "name": "122-doorClosed.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 123,
+      "x": 513,
+      "y": 102,
+      "width": 13,
+      "height": 169,
+      "name": "123-door_back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 124,
+      "x": 1803,
+      "y": 1509,
+      "width": 89,
+      "height": 96,
+      "name": "124-Circle Table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 125,
+      "x": 367,
+      "y": 102,
+      "width": 145,
+      "height": 109,
+      "name": "125-7x8.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 126,
+      "x": 367,
+      "y": 212,
+      "width": 145,
+      "height": 109,
+      "name": "126-8x9.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 127,
+      "x": 679,
+      "y": 1,
+      "width": 145,
+      "height": 109,
+      "name": "127-9x10.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 128,
+      "x": 825,
+      "y": 1,
+      "width": 145,
+      "height": 109,
+      "name": "128-10x11.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 129,
+      "x": 971,
+      "y": 1,
+      "width": 145,
+      "height": 109,
+      "name": "129-11x12.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 130,
+      "x": 623,
+      "y": 1416,
+      "width": 70,
+      "height": 143,
+      "name": "130-Lattice Divider.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 131,
+      "x": 949,
+      "y": 231,
+      "width": 124,
+      "height": 116,
+      "name": "131-Bar.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 132,
+      "x": 613,
+      "y": 1067,
+      "width": 54,
+      "height": 118,
+      "name": "132-Asian Poster Left.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 133,
+      "x": 594,
+      "y": 1562,
+      "width": 54,
+      "height": 112,
+      "name": "133-Asian Poster Right.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 134,
+      "x": 614,
+      "y": 831,
+      "width": 53,
+      "height": 117,
+      "name": "134-Beer Poster Left.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 135,
+      "x": 605,
+      "y": 1675,
+      "width": 55,
+      "height": 114,
+      "name": "135-Beer Poster Right.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 136,
+      "x": 649,
+      "y": 1560,
+      "width": 55,
+      "height": 114,
+      "name": "136-Painting Left.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 137,
+      "x": 614,
+      "y": 949,
+      "width": 53,
+      "height": 117,
+      "name": "137-Hippie Posters2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 138,
+      "x": 220,
+      "y": 253,
+      "width": 72,
+      "height": 251,
+      "name": "138-dirtyWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 139,
+      "x": 221,
+      "y": 1,
+      "width": 72,
+      "height": 251,
+      "name": "139-dirtyWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 140,
+      "x": 220,
+      "y": 505,
+      "width": 72,
+      "height": 251,
+      "name": "140-dirtyWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 141,
+      "x": 220,
+      "y": 757,
+      "width": 72,
+      "height": 251,
+      "name": "141-dirtyWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 142,
+      "x": 220,
+      "y": 1009,
+      "width": 72,
+      "height": 251,
+      "name": "142-dirtyWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 143,
+      "x": 220,
+      "y": 1261,
+      "width": 72,
+      "height": 251,
+      "name": "143-wall_maroonstain1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 144,
+      "x": 220,
+      "y": 1513,
+      "width": 72,
+      "height": 251,
+      "name": "144-wall_maroonstain2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 145,
+      "x": 668,
+      "y": 582,
+      "width": 123,
+      "height": 79,
+      "name": "145-tile_vomitstain7.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 146,
+      "x": 1758,
+      "y": 416,
+      "width": 123,
+      "height": 79,
+      "name": "146-tile_vomitstain5.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 147,
+      "x": 1882,
+      "y": 416,
+      "width": 123,
+      "height": 79,
+      "name": "147-tile_vomitstain4.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 148,
+      "x": 1614,
+      "y": 417,
+      "width": 123,
+      "height": 79,
+      "name": "148-tile_vomitstain3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 149,
+      "x": 1488,
+      "y": 428,
+      "width": 123,
+      "height": 79,
+      "name": "149-tile_vomitstain2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 150,
+      "x": 1363,
+      "y": 448,
+      "width": 123,
+      "height": 79,
+      "name": "150-tile_vomitstain1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 151,
+      "x": 1238,
+      "y": 481,
+      "width": 123,
+      "height": 79,
+      "name": "151-tile_maroonstain2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 152,
+      "x": 1113,
+      "y": 498,
+      "width": 123,
+      "height": 79,
+      "name": "152-tile_maroonstain1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 153,
+      "x": 916,
+      "y": 589,
+      "width": 123,
+      "height": 79,
+      "name": "153-tile_greesestain4.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 154,
+      "x": 792,
+      "y": 619,
+      "width": 123,
+      "height": 79,
+      "name": "154-tile_greesestain3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 155,
+      "x": 668,
+      "y": 662,
+      "width": 123,
+      "height": 79,
+      "name": "155-tile_greesestain2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 156,
+      "x": 490,
+      "y": 750,
+      "width": 123,
+      "height": 79,
+      "name": "156-tile_greesestain1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 157,
+      "x": 366,
+      "y": 770,
+      "width": 123,
+      "height": 79,
+      "name": "157-tile_greenstain2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 158,
+      "x": 490,
+      "y": 830,
+      "width": 123,
+      "height": 79,
+      "name": "158-tile_greenstain1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 159,
+      "x": 366,
+      "y": 850,
+      "width": 123,
+      "height": 79,
+      "name": "159-dirtyTile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 160,
+      "x": 916,
+      "y": 669,
+      "width": 123,
+      "height": 79,
+      "name": "160-tile12.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 161,
+      "x": 792,
+      "y": 699,
+      "width": 123,
+      "height": 79,
+      "name": "161-dirtyTile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 162,
+      "x": 668,
+      "y": 742,
+      "width": 123,
+      "height": 79,
+      "name": "162-dirtyTile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 163,
+      "x": 916,
+      "y": 749,
+      "width": 123,
+      "height": 79,
+      "name": "163-grass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 164,
+      "x": 792,
+      "y": 779,
+      "width": 123,
+      "height": 79,
+      "name": "164-grass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 165,
+      "x": 668,
+      "y": 822,
+      "width": 123,
+      "height": 79,
+      "name": "165-sidewalkCurb.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 166,
+      "x": 490,
+      "y": 910,
+      "width": 123,
+      "height": 79,
+      "name": "166-sidewalkCorner.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 167,
+      "x": 639,
+      "y": 276,
+      "width": 28,
+      "height": 53,
+      "name": "167-asian chair back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 168,
+      "x": 1074,
+      "y": 359,
+      "width": 39,
+      "height": 52,
+      "name": "168-asian chair back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 169,
+      "x": 639,
+      "y": 330,
+      "width": 28,
+      "height": 53,
+      "name": "169-classic wooden chair back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 170,
+      "x": 1074,
+      "y": 412,
+      "width": 39,
+      "height": 52,
+      "name": "170-classic wooden chair back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 171,
+      "x": 639,
+      "y": 384,
+      "width": 28,
+      "height": 53,
+      "name": "171-generic chair back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 172,
+      "x": 2007,
+      "y": 270,
+      "width": 39,
+      "height": 52,
+      "name": "172-generic chair back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 173,
+      "x": 1086,
+      "y": 155,
+      "width": 28,
+      "height": 53,
+      "name": "173-mexican chair back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 174,
+      "x": 2007,
+      "y": 323,
+      "width": 39,
+      "height": 52,
+      "name": "174-mexican chair back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 175,
+      "x": 1086,
+      "y": 209,
+      "width": 28,
+      "height": 53,
+      "name": "175-diner chair back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 176,
+      "x": 2007,
+      "y": 376,
+      "width": 39,
+      "height": 52,
+      "name": "176-diner chair back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 177,
+      "x": 2011,
+      "y": 107,
+      "width": 28,
+      "height": 53,
+      "name": "177-diner chair back turquoise_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 178,
+      "x": 1723,
+      "y": 1556,
+      "width": 39,
+      "height": 52,
+      "name": "178-diner chair back turquoise_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 179,
+      "x": 2011,
+      "y": 161,
+      "width": 28,
+      "height": 53,
+      "name": "179-diner stool back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 180,
+      "x": 1723,
+      "y": 1609,
+      "width": 39,
+      "height": 52,
+      "name": "180-diner stool back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 181,
+      "x": 2011,
+      "y": 161,
+      "width": 28,
+      "height": 53,
+      "name": "181-diner stool back turquoise_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 182,
+      "x": 819,
+      "y": 1459,
+      "width": 39,
+      "height": 52,
+      "name": "182-diner stool back turquoise_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 183,
+      "x": 1789,
+      "y": 1943,
+      "width": 49,
+      "height": 83,
+      "name": "183-diner stool back .png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 184,
+      "x": 1839,
+      "y": 1943,
+      "width": 49,
+      "height": 83,
+      "name": "184-diner stool back turquoise.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 185,
+      "x": 1764,
+      "y": 1410,
+      "width": 38,
+      "height": 53,
+      "name": "185-diner clock.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 186,
+      "x": 668,
+      "y": 902,
+      "width": 122,
+      "height": 117,
+      "name": "186-Marble_Serving Counter.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 187,
+      "x": 220,
+      "y": 1765,
+      "width": 72,
+      "height": 251,
+      "name": "187-Wall_diner.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 188,
+      "x": 366,
+      "y": 1675,
+      "width": 53,
+      "height": 117,
+      "name": "188-Sign_TodaysSpecials_Right.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 189,
+      "x": 420,
+      "y": 1675,
+      "width": 53,
+      "height": 117,
+      "name": "189-Sign_TodaysSpecials_Left.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 190,
+      "x": 1042,
+      "y": 1566,
+      "width": 68,
+      "height": 89,
+      "name": "190-TrashBin_Red.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 191,
+      "x": 955,
+      "y": 1556,
+      "width": 57,
+      "height": 131,
+      "name": "191-ControlPanel_One _MdScience.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 192,
+      "x": 1013,
+      "y": 1656,
+      "width": 57,
+      "height": 131,
+      "name": "192-ControlPanel_Three _MdScience.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 193,
+      "x": 1090,
+      "y": 1900,
+      "width": 57,
+      "height": 131,
+      "name": "193-ControlPanel_Two _MdScience.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 194,
+      "x": 1236,
+      "y": 879,
+      "width": 122,
+      "height": 77,
+      "name": "194-Floor_MdScience.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 195,
+      "x": 1217,
+      "y": 1436,
+      "width": 94,
+      "height": 141,
+      "name": "195-MdScience_Cabinet_One.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 196,
+      "x": 1329,
+      "y": 1424,
+      "width": 95,
+      "height": 168,
+      "name": "196-MdScience_Cabinet_Two.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 197,
+      "x": 2009,
+      "y": 215,
+      "width": 38,
+      "height": 54,
+      "name": "197-MdScience_Chair_Back_B.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 198,
+      "x": 1764,
+      "y": 1464,
+      "width": 38,
+      "height": 50,
+      "name": "198-MdScience_Chair_Back_A.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 199,
+      "x": 1061,
+      "y": 1793,
+      "width": 61,
+      "height": 92,
+      "name": "199-MdScience_Chair_Front.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 200,
+      "x": 792,
+      "y": 859,
+      "width": 122,
+      "height": 119,
+      "name": "200-MdScience_Serving Counter.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 201,
+      "x": 915,
+      "y": 909,
+      "width": 122,
+      "height": 111,
+      "name": "201-MdScience_Table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 202,
+      "x": 293,
+      "y": 253,
+      "width": 72,
+      "height": 251,
+      "name": "202-Wall_MdScience.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 203,
+      "x": 1675,
+      "y": 1943,
+      "width": 57,
+      "height": 88,
+      "name": "203-MdScience_Chair_FullBack.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 204,
+      "x": 490,
+      "y": 990,
+      "width": 122,
+      "height": 116,
+      "name": "204-Pooltable.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 205,
+      "x": 366,
+      "y": 568,
+      "width": 123,
+      "height": 121,
+      "name": "205-Pub_Serving Counter.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 206,
+      "x": 1359,
+      "y": 1002,
+      "width": 117,
+      "height": 106,
+      "name": "206-Pub_Table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 207,
+      "x": 1986,
+      "y": 518,
+      "width": 61,
+      "height": 134,
+      "name": "207-Pub_Window_Right.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 208,
+      "x": 1939,
+      "y": 1722,
+      "width": 62,
+      "height": 89,
+      "name": "208-StoneWindow.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 209,
+      "x": 623,
+      "y": 1254,
+      "width": 43,
+      "height": 161,
+      "name": "209-TiffanyLamp_One.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 210,
+      "x": 439,
+      "y": 1793,
+      "width": 72,
+      "height": 250,
+      "name": "210-wa_wallA.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 211,
+      "x": 550,
+      "y": 1311,
+      "width": 72,
+      "height": 250,
+      "name": "211-wa_wallB.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 212,
+      "x": 1802,
+      "y": 1606,
+      "width": 68,
+      "height": 89,
+      "name": "212-TrashBin_Green.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 213,
+      "x": 294,
+      "y": 1,
+      "width": 72,
+      "height": 251,
+      "name": "213-Wall_pub.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 214,
+      "x": 293,
+      "y": 505,
+      "width": 72,
+      "height": 251,
+      "name": "214-Wall_stone.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 215,
+      "x": 668,
+      "y": 1020,
+      "width": 122,
+      "height": 78,
+      "name": "215-wa_tatamiA.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 216,
+      "x": 489,
+      "y": 1107,
+      "width": 122,
+      "height": 78,
+      "name": "216-wa_tatamiB.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 217,
+      "x": 366,
+      "y": 930,
+      "width": 123,
+      "height": 79,
+      "name": "217-road06.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 218,
+      "x": 1738,
+      "y": 496,
+      "width": 123,
+      "height": 79,
+      "name": "218-road07.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 219,
+      "x": 293,
+      "y": 757,
+      "width": 72,
+      "height": 251,
+      "name": "219-skywall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 220,
+      "x": 1612,
+      "y": 497,
+      "width": 123,
+      "height": 79,
+      "name": "220-road08.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 221,
+      "x": 921,
+      "y": 378,
+      "width": 25,
+      "height": 51,
+      "name": "221-Wall sconce.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 222,
+      "x": 811,
+      "y": 1900,
+      "width": 48,
+      "height": 146,
+      "name": "222-Fancy Window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 223,
+      "x": 1487,
+      "y": 508,
+      "width": 123,
+      "height": 79,
+      "name": "223-betterBeachBlanketTile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 224,
+      "x": 1362,
+      "y": 528,
+      "width": 123,
+      "height": 79,
+      "name": "224-LeafTileGreen.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 225,
+      "x": 1237,
+      "y": 561,
+      "width": 123,
+      "height": 79,
+      "name": "225-LeafTileRed.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 226,
+      "x": 1113,
+      "y": 896,
+      "width": 122,
+      "height": 77,
+      "name": "226-Tile_BlackandWhite.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 227,
+      "x": 1855,
+      "y": 890,
+      "width": 122,
+      "height": 77,
+      "name": "227-Tile_MetalandGlass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 228,
+      "x": 1731,
+      "y": 892,
+      "width": 122,
+      "height": 77,
+      "name": "228-Tile_WhiteandGlass.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 229,
+      "x": 1113,
+      "y": 578,
+      "width": 123,
+      "height": 79,
+      "name": "229-rococo-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 230,
+      "x": 293,
+      "y": 1009,
+      "width": 72,
+      "height": 251,
+      "name": "230-rococol_diner.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 231,
+      "x": 1862,
+      "y": 496,
+      "width": 123,
+      "height": 79,
+      "name": "231-rococo-tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 232,
+      "x": 1736,
+      "y": 576,
+      "width": 123,
+      "height": 79,
+      "name": "232-block4 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 233,
+      "x": 1611,
+      "y": 577,
+      "width": 123,
+      "height": 79,
+      "name": "233-ground tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 234,
+      "x": 1486,
+      "y": 588,
+      "width": 123,
+      "height": 79,
+      "name": "234-ground2 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 235,
+      "x": 1361,
+      "y": 608,
+      "width": 123,
+      "height": 79,
+      "name": "235-block1 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 236,
+      "x": 1237,
+      "y": 641,
+      "width": 123,
+      "height": 79,
+      "name": "236-block2 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 237,
+      "x": 1113,
+      "y": 658,
+      "width": 123,
+      "height": 79,
+      "name": "237-block3 tile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 238,
+      "x": 293,
+      "y": 1261,
+      "width": 72,
+      "height": 251,
+      "name": "238-graveyard Wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 239,
+      "x": 293,
+      "y": 1513,
+      "width": 72,
+      "height": 251,
+      "name": "239-graveyardgate Wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 240,
+      "x": 1860,
+      "y": 576,
+      "width": 123,
+      "height": 79,
+      "name": "240-HW_flooring.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 241,
+      "x": 293,
+      "y": 1765,
+      "width": 72,
+      "height": 251,
+      "name": "241-HW_Wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 242,
+      "x": 1040,
+      "y": 809,
+      "width": 72,
+      "height": 251,
+      "name": "242-glasswall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 243,
+      "x": 1607,
+      "y": 893,
+      "width": 122,
+      "height": 77,
+      "name": "243-watertile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 244,
+      "x": 1483,
+      "y": 904,
+      "width": 122,
+      "height": 77,
+      "name": "244-grasstile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 245,
+      "x": 1359,
+      "y": 924,
+      "width": 122,
+      "height": 77,
+      "name": "245-Sandtile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 246,
+      "x": 1236,
+      "y": 957,
+      "width": 122,
+      "height": 77,
+      "name": "246-Stairstile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 247,
+      "x": 1735,
+      "y": 656,
+      "width": 123,
+      "height": 79,
+      "name": "247-snowtile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 248,
+      "x": 1610,
+      "y": 657,
+      "width": 123,
+      "height": 79,
+      "name": "248-MedievalTile.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 249,
+      "x": 366,
+      "y": 1793,
+      "width": 72,
+      "height": 251,
+      "name": "249-StoneWall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 250,
+      "x": 1041,
+      "y": 557,
+      "width": 71,
+      "height": 251,
+      "name": "250-garden-wood-outerwall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 251,
+      "x": 1485,
+      "y": 668,
+      "width": 123,
+      "height": 79,
+      "name": "251-road01.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 252,
+      "x": 1361,
+      "y": 688,
+      "width": 123,
+      "height": 79,
+      "name": "252-road02.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 253,
+      "x": 1237,
+      "y": 721,
+      "width": 123,
+      "height": 79,
+      "name": "253-road03.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 254,
+      "x": 1113,
+      "y": 738,
+      "width": 123,
+      "height": 79,
+      "name": "254-road04.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 255,
+      "x": 916,
+      "y": 829,
+      "width": 123,
+      "height": 79,
+      "name": "255-road05.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 256,
+      "x": 788,
+      "y": 1340,
+      "width": 71,
+      "height": 118,
+      "name": "256-garden-wood-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 257,
+      "x": 474,
+      "y": 1674,
+      "width": 76,
+      "height": 118,
+      "name": "257-garden-wood-wall2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 258,
+      "x": 618,
+      "y": 438,
+      "width": 49,
+      "height": 101,
+      "name": "258-Guitar Flipped.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 259,
+      "x": 532,
+      "y": 1562,
+      "width": 61,
+      "height": 110,
+      "name": "259-Hanging Plant.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 260,
+      "x": 614,
+      "y": 679,
+      "width": 53,
+      "height": 151,
+      "name": "260-TiffanyLamp_Three.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 261,
+      "x": 1190,
+      "y": 1743,
+      "width": 52,
+      "height": 166,
+      "name": "261-TiffanyLamp_Two.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 262,
+      "x": 428,
+      "y": 1311,
+      "width": 48,
+      "height": 115,
+      "name": "262-brick lined window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 263,
+      "x": 1260,
+      "y": 1,
+      "width": 125,
+      "height": 119,
+      "name": "263-(italian) table w table cloth.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 264,
+      "x": 957,
+      "y": 111,
+      "width": 128,
+      "height": 119,
+      "name": "264-asain table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 265,
+      "x": 667,
+      "y": 1311,
+      "width": 55,
+      "height": 100,
+      "name": "265-asian chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 266,
+      "x": 1086,
+      "y": 111,
+      "width": 29,
+      "height": 43,
+      "name": "266-asian wall lamp.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 267,
+      "x": 1863,
+      "y": 1830,
+      "width": 56,
+      "height": 78,
+      "name": "267-boarded up window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 268,
+      "x": 1113,
+      "y": 1312,
+      "width": 103,
+      "height": 155,
+      "name": "268-bonzai tree.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 269,
+      "x": 1204,
+      "y": 1578,
+      "width": 90,
+      "height": 96,
+      "name": "269-booze rack.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 270,
+      "x": 429,
+      "y": 1481,
+      "width": 44,
+      "height": 71,
+      "name": "270-candelabra.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 271,
+      "x": 731,
+      "y": 1793,
+      "width": 55,
+      "height": 100,
+      "name": "271-classic wooden chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 272,
+      "x": 1737,
+      "y": 1819,
+      "width": 57,
+      "height": 80,
+      "name": "272-Chair_Spindle_Back_Together.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 273,
+      "x": 1753,
+      "y": 1662,
+      "width": 48,
+      "height": 64,
+      "name": "273-dart board.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 274,
+      "x": 901,
+      "y": 1605,
+      "width": 53,
+      "height": 59,
+      "name": "274-dead plant.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 275,
+      "x": 787,
+      "y": 1793,
+      "width": 55,
+      "height": 100,
+      "name": "275-diner chair turqoise.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 276,
+      "x": 2006,
+      "y": 429,
+      "width": 41,
+      "height": 88,
+      "name": "276-diner stool turqoise.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 277,
+      "x": 1148,
+      "y": 1884,
+      "width": 41,
+      "height": 88,
+      "name": "277-diner stool.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 278,
+      "x": 1113,
+      "y": 1051,
+      "width": 116,
+      "height": 108,
+      "name": "278-diner table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 279,
+      "x": 1243,
+      "y": 1853,
+      "width": 52,
+      "height": 56,
+      "name": "279-diner wall lamp.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 280,
+      "x": 513,
+      "y": 276,
+      "width": 125,
+      "height": 122,
+      "name": "280-dirty sink.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 281,
+      "x": 1973,
+      "y": 971,
+      "width": 74,
+      "height": 142,
+      "name": "281-divider.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 282,
+      "x": 1699,
+      "y": 1298,
+      "width": 103,
+      "height": 111,
+      "name": "282-fooseball table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 283,
+      "x": 1982,
+      "y": 714,
+      "width": 65,
+      "height": 143,
+      "name": "283-fountain frame 1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 284,
+      "x": 1733,
+      "y": 1900,
+      "width": 55,
+      "height": 86,
+      "name": "284-Chair_Spindle_Front.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 285,
+      "x": 843,
+      "y": 1793,
+      "width": 55,
+      "height": 100,
+      "name": "285-generic chair NEW.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 286,
+      "x": 616,
+      "y": 540,
+      "width": 51,
+      "height": 138,
+      "name": "286-hat-coat rack.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 287,
+      "x": 1823,
+      "y": 1242,
+      "width": 103,
+      "height": 148,
+      "name": "287-jukebox.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 288,
+      "x": 731,
+      "y": 1900,
+      "width": 79,
+      "height": 146,
+      "name": "288-Large potted plant-tree.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 289,
+      "x": 1483,
+      "y": 1896,
+      "width": 58,
+      "height": 149,
+      "name": "289-large window with blinds.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 290,
+      "x": 955,
+      "y": 1427,
+      "width": 58,
+      "height": 128,
+      "name": "290-large window with curtains.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 291,
+      "x": 1008,
+      "y": 1793,
+      "width": 52,
+      "height": 93,
+      "name": "291-maitre d stand BACK.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 292,
+      "x": 669,
+      "y": 240,
+      "width": 126,
+      "height": 181,
+      "name": "292-TV.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 293,
+      "x": 760,
+      "y": 1460,
+      "width": 58,
+      "height": 98,
+      "name": "293-maitre d stand.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 294,
+      "x": 1511,
+      "y": 1,
+      "width": 124,
+      "height": 92,
+      "name": "294-onsen1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 295,
+      "x": 1636,
+      "y": 1,
+      "width": 124,
+      "height": 92,
+      "name": "295-onsen2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 296,
+      "x": 1761,
+      "y": 1,
+      "width": 124,
+      "height": 92,
+      "name": "296-onsen3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 297,
+      "x": 1886,
+      "y": 1,
+      "width": 124,
+      "height": 92,
+      "name": "297-onsen4.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 298,
+      "x": 1511,
+      "y": 94,
+      "width": 124,
+      "height": 92,
+      "name": "298-onsen5.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 299,
+      "x": 899,
+      "y": 1793,
+      "width": 55,
+      "height": 100,
+      "name": "299-mexican chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 300,
+      "x": 366,
+      "y": 1427,
+      "width": 62,
+      "height": 135,
+      "name": "300-mexican curtains.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 301,
+      "x": 366,
+      "y": 322,
+      "width": 125,
+      "height": 122,
+      "name": "301-plain serving counter.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 302,
+      "x": 778,
+      "y": 1559,
+      "width": 78,
+      "height": 69,
+      "name": "302-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 303,
+      "x": 1969,
+      "y": 1583,
+      "width": 70,
+      "height": 80,
+      "name": "303-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 304,
+      "x": 1123,
+      "y": 1613,
+      "width": 76,
+      "height": 69,
+      "name": "304-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 305,
+      "x": 1424,
+      "y": 1661,
+      "width": 80,
+      "height": 69,
+      "name": "305-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 306,
+      "x": 1425,
+      "y": 1580,
+      "width": 87,
+      "height": 80,
+      "name": "306-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 307,
+      "x": 1296,
+      "y": 1851,
+      "width": 76,
+      "height": 69,
+      "name": "307-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 308,
+      "x": 1295,
+      "y": 1593,
+      "width": 83,
+      "height": 69,
+      "name": "308-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 309,
+      "x": 1600,
+      "y": 1645,
+      "width": 83,
+      "height": 80,
+      "name": "309-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 310,
+      "x": 1893,
+      "y": 1513,
+      "width": 76,
+      "height": 69,
+      "name": "310-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 311,
+      "x": 428,
+      "y": 1613,
+      "width": 73,
+      "height": 60,
+      "name": "311-woodfence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 312,
+      "x": 1871,
+      "y": 1664,
+      "width": 67,
+      "height": 84,
+      "name": "312-woodfence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 313,
+      "x": 1802,
+      "y": 1696,
+      "width": 67,
+      "height": 84,
+      "name": "313-woodfence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 314,
+      "x": 489,
+      "y": 1186,
+      "width": 50,
+      "height": 67,
+      "name": "314-animal.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 315,
+      "x": 1148,
+      "y": 1973,
+      "width": 75,
+      "height": 70,
+      "name": "315-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 316,
+      "x": 1513,
+      "y": 1654,
+      "width": 83,
+      "height": 80,
+      "name": "316-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 317,
+      "x": 1970,
+      "y": 1513,
+      "width": 76,
+      "height": 69,
+      "name": "317-animalchair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 318,
+      "x": 668,
+      "y": 1099,
+      "width": 121,
+      "height": 60,
+      "name": "318-woodfence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 319,
+      "x": 821,
+      "y": 111,
+      "width": 135,
+      "height": 84,
+      "name": "319-woodfence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 320,
+      "x": 1,
+      "y": 2020,
+      "width": 1,
+      "height": 1,
+      "name": "320-dummy.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 321,
+      "x": 1675,
+      "y": 1808,
+      "width": 61,
+      "height": 80,
+      "name": "321-animalTable.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 322,
+      "x": 1116,
+      "y": 138,
+      "width": 124,
+      "height": 118,
+      "name": "322-plain table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 323,
+      "x": 1542,
+      "y": 1894,
+      "width": 65,
+      "height": 130,
+      "name": "323-potted cactus.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 324,
+      "x": 1074,
+      "y": 263,
+      "width": 40,
+      "height": 95,
+      "name": "324-rounded steel window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 325,
+      "x": 1071,
+      "y": 465,
+      "width": 41,
+      "height": 91,
+      "name": "325-Pub_Chair_Back_B.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 326,
+      "x": 429,
+      "y": 1427,
+      "width": 47,
+      "height": 53,
+      "name": "326-Pub_Chair_Back_A.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 327,
+      "x": 917,
+      "y": 459,
+      "width": 28,
+      "height": 42,
+      "name": "327-Chair_Spindle_Back_B.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 328,
+      "x": 661,
+      "y": 1675,
+      "width": 43,
+      "height": 46,
+      "name": "328-Chair_Spindle_Back_A.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 329,
+      "x": 1295,
+      "y": 1663,
+      "width": 80,
+      "height": 129,
+      "name": "329-slot machine arm up.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 330,
+      "x": 1893,
+      "y": 1583,
+      "width": 75,
+      "height": 80,
+      "name": "330-small potted plant 2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 331,
+      "x": 1608,
+      "y": 1726,
+      "width": 68,
+      "height": 81,
+      "name": "331-small potted plant.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 332,
+      "x": 1123,
+      "y": 1793,
+      "width": 60,
+      "height": 90,
+      "name": "332-small window with curtains.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 333,
+      "x": 955,
+      "y": 1793,
+      "width": 52,
+      "height": 95,
+      "name": "333-small window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 334,
+      "x": 492,
+      "y": 399,
+      "width": 125,
+      "height": 122,
+      "name": "334-stainless steel serving counter.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 335,
+      "x": 1,
+      "y": 2017,
+      "width": 2,
+      "height": 2,
+      "name": "335-atlas.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 336,
+      "x": 1223,
+      "y": 1306,
+      "width": 105,
+      "height": 129,
+      "name": "336-trojan.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 337,
+      "x": 1606,
+      "y": 971,
+      "width": 117,
+      "height": 117,
+      "name": "337-tablecloth.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 338,
+      "x": 366,
+      "y": 445,
+      "width": 125,
+      "height": 122,
+      "name": "338-stainless steel sink CLEAN.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 339,
+      "x": 694,
+      "y": 1460,
+      "width": 65,
+      "height": 99,
+      "name": "339-Pub_Chair_Back_Together.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 340,
+      "x": 1684,
+      "y": 1662,
+      "width": 68,
+      "height": 89,
+      "name": "340-TrashBin_Red.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 341,
+      "x": 1029,
+      "y": 1221,
+      "width": 83,
+      "height": 155,
+      "name": "341-booklac.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 342,
+      "x": 1547,
+      "y": 1425,
+      "width": 88,
+      "height": 161,
+      "name": "342-ｔｖ.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 343,
+      "x": 1477,
+      "y": 1100,
+      "width": 111,
+      "height": 131,
+      "name": "343-stainless steel stove_revision.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 344,
+      "x": 1042,
+      "y": 1887,
+      "width": 47,
+      "height": 158,
+      "name": "344-standing lamp.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 345,
+      "x": 623,
+      "y": 1186,
+      "width": 44,
+      "height": 67,
+      "name": "345-steer skull.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 346,
+      "x": 1980,
+      "y": 858,
+      "width": 67,
+      "height": 112,
+      "name": "346-velvet rope divider.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 347,
+      "x": 1996,
+      "y": 1812,
+      "width": 50,
+      "height": 77,
+      "name": "347-wagon wheel.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 348,
+      "x": 1482,
+      "y": 982,
+      "width": 117,
+      "height": 117,
+      "name": "348-white tablecloth.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 349,
+      "x": 904,
+      "y": 1321,
+      "width": 109,
+      "height": 105,
+      "name": "349-Rockman_table1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 350,
+      "x": 1713,
+      "y": 1192,
+      "width": 109,
+      "height": 105,
+      "name": "350-Rockman_table2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 351,
+      "x": 1589,
+      "y": 1222,
+      "width": 109,
+      "height": 105,
+      "name": "351-Rockman_table3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 352,
+      "x": 1803,
+      "y": 1391,
+      "width": 100,
+      "height": 117,
+      "name": "352-Rockman_scrap1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 353,
+      "x": 492,
+      "y": 522,
+      "width": 123,
+      "height": 147,
+      "name": "353-Rockman_scrap2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 354,
+      "x": 1636,
+      "y": 1556,
+      "width": 86,
+      "height": 88,
+      "name": "354-Rockman_Rush.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 355,
+      "x": 1,
+      "y": 2017,
+      "width": 2,
+      "height": 2,
+      "name": "355-Rockman_pillar.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 356,
+      "x": 1190,
+      "y": 1910,
+      "width": 62,
+      "height": 62,
+      "name": "356-Rockman_chair1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 357,
+      "x": 501,
+      "y": 1254,
+      "width": 71,
+      "height": 56,
+      "name": "357-Rockman_chair2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 358,
+      "x": 1294,
+      "y": 1793,
+      "width": 64,
+      "height": 57,
+      "name": "358-Rockman_chair3.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 359,
+      "x": 1463,
+      "y": 1232,
+      "width": 109,
+      "height": 105,
+      "name": "359-table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 360,
+      "x": 1573,
+      "y": 1328,
+      "width": 100,
+      "height": 96,
+      "name": "360-table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 361,
+      "x": 1379,
+      "y": 1659,
+      "width": 44,
+      "height": 81,
+      "name": "361-wine rack.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 362,
+      "x": 551,
+      "y": 1675,
+      "width": 53,
+      "height": 117,
+      "name": "362-Hippie Posters1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 363,
+      "x": 945,
+      "y": 1688,
+      "width": 55,
+      "height": 100,
+      "name": "363-diner-chair-red.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 364,
+      "x": 788,
+      "y": 1168,
+      "width": 115,
+      "height": 171,
+      "name": "364-wall.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 365,
+      "x": 366,
+      "y": 1010,
+      "width": 122,
+      "height": 116,
+      "name": "365-table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 366,
+      "x": 860,
+      "y": 1900,
+      "width": 66,
+      "height": 140,
+      "name": "366-wall_fence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 367,
+      "x": 1424,
+      "y": 1896,
+      "width": 58,
+      "height": 151,
+      "name": "367-hata.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 368,
+      "x": 1962,
+      "y": 1114,
+      "width": 85,
+      "height": 80,
+      "name": "368-katana.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 369,
+      "x": 1984,
+      "y": 653,
+      "width": 63,
+      "height": 60,
+      "name": "369-chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 370,
+      "x": 1122,
+      "y": 1683,
+      "width": 63,
+      "height": 59,
+      "name": "370-chair_back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 371,
+      "x": 424,
+      "y": 1205,
+      "width": 50,
+      "height": 47,
+      "name": "371-chair_back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 372,
+      "x": 1450,
+      "y": 1413,
+      "width": 96,
+      "height": 166,
+      "name": "372-statue.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 373,
+      "x": 1927,
+      "y": 1364,
+      "width": 103,
+      "height": 148,
+      "name": "373-jukebox.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 374,
+      "x": 778,
+      "y": 1629,
+      "width": 77,
+      "height": 131,
+      "name": "374-toxic barrell.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 375,
+      "x": 668,
+      "y": 1160,
+      "width": 119,
+      "height": 150,
+      "name": "375-stainless steel fridge.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 376,
+      "x": 927,
+      "y": 1900,
+      "width": 66,
+      "height": 140,
+      "name": "376-wall_fence.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 377,
+      "x": 1800,
+      "y": 1781,
+      "width": 62,
+      "height": 62,
+      "name": "377-Rockman_chairback1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 378,
+      "x": 1675,
+      "y": 1891,
+      "width": 50,
+      "height": 50,
+      "name": "378-Rockman_chairback2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 379,
+      "x": 424,
+      "y": 1254,
+      "width": 76,
+      "height": 56,
+      "name": "379-Rockman_chairback1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 380,
+      "x": 1071,
+      "y": 1745,
+      "width": 61,
+      "height": 45,
+      "name": "380-Rockman_chairback2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 381,
+      "x": 1939,
+      "y": 1664,
+      "width": 64,
+      "height": 57,
+      "name": "381-Rockman_chairback1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 382,
+      "x": 480,
+      "y": 1566,
+      "width": 51,
+      "height": 46,
+      "name": "382-Rockman_chairback2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 383,
+      "x": 1450,
+      "y": 1338,
+      "width": 99,
+      "height": 74,
+      "name": "383-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 384,
+      "x": 1730,
+      "y": 970,
+      "width": 117,
+      "height": 221,
+      "name": "384-table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 385,
+      "x": 860,
+      "y": 1340,
+      "width": 43,
+      "height": 126,
+      "name": "385-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 386,
+      "x": 859,
+      "y": 1467,
+      "width": 43,
+      "height": 126,
+      "name": "386-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 387,
+      "x": 857,
+      "y": 1594,
+      "width": 43,
+      "height": 126,
+      "name": "387-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 388,
+      "x": 901,
+      "y": 1665,
+      "width": 43,
+      "height": 126,
+      "name": "388-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 389,
+      "x": 1552,
+      "y": 1735,
+      "width": 55,
+      "height": 125,
+      "name": "389-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 390,
+      "x": 1253,
+      "y": 1921,
+      "width": 55,
+      "height": 126,
+      "name": "390-balloon.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 391,
+      "x": 821,
+      "y": 196,
+      "width": 127,
+      "height": 181,
+      "name": "391-stove.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 392,
+      "x": 1764,
+      "y": 1515,
+      "width": 37,
+      "height": 108,
+      "name": "392-sword.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 393,
+      "x": 1854,
+      "y": 968,
+      "width": 118,
+      "height": 139,
+      "name": "393-box.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 394,
+      "x": 791,
+      "y": 979,
+      "width": 122,
+      "height": 111,
+      "name": "394-table.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 395,
+      "x": 366,
+      "y": 1311,
+      "width": 61,
+      "height": 115,
+      "name": "395-chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 396,
+      "x": 366,
+      "y": 1566,
+      "width": 61,
+      "height": 107,
+      "name": "396-chair_back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 397,
+      "x": 573,
+      "y": 1186,
+      "width": 49,
+      "height": 85,
+      "name": "397-chair_back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 398,
+      "x": 1996,
+      "y": 1890,
+      "width": 50,
+      "height": 52,
+      "name": "398-chair_back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 399,
+      "x": 1,
+      "y": 2017,
+      "width": 2,
+      "height": 2,
+      "name": "399-dummy.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 400,
+      "x": 2011,
+      "y": 1,
+      "width": 34,
+      "height": 105,
+      "name": "400-window.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 401,
+      "x": 1379,
+      "y": 1593,
+      "width": 45,
+      "height": 65,
+      "name": "401-map.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 402,
+      "x": 1962,
+      "y": 1195,
+      "width": 84,
+      "height": 168,
+      "name": "402-chair.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 403,
+      "x": 1424,
+      "y": 1731,
+      "width": 79,
+      "height": 164,
+      "name": "403-chair_back.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 404,
+      "x": 1014,
+      "y": 1377,
+      "width": 96,
+      "height": 188,
+      "name": "404-chair_back_1.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 405,
+      "x": 1366,
+      "y": 1989,
+      "width": 55,
+      "height": 52,
+      "name": "405-chair_back_2.png",
+      "extra": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

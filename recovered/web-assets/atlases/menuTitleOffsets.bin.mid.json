@@ -1,0 +1,71 @@
+{
+  "source": "assets/images/menuTitleOffsets.bin.mid",
+  "version": 1,
+  "count": 9,
+  "entries": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "index": 1,
+      "x": 1025,
+      "y": 0,
+      "width": 553,
+      "height": 481
+    },
+    {
+      "index": 2,
+      "x": 1025,
+      "y": 481,
+      "width": 553,
+      "height": 481
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 879,
+      "width": 704,
+      "height": 84
+    },
+    {
+      "index": 4,
+      "x": 919,
+      "y": 879,
+      "width": 101,
+      "height": 26
+    },
+    {
+      "index": 5,
+      "x": 704,
+      "y": 879,
+      "width": 215,
+      "height": 26
+    },
+    {
+      "index": 6,
+      "x": 814,
+      "y": 905,
+      "width": 63,
+      "height": 28
+    },
+    {
+      "index": 7,
+      "x": 705,
+      "y": 905,
+      "width": 108,
+      "height": 30
+    },
+    {
+      "index": 8,
+      "x": 0,
+      "y": 768,
+      "width": 1024,
+      "height": 111
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

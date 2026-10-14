@@ -1,0 +1,116 @@
+[
+  {
+    "source": "characterOffsets.bin.mid",
+    "json": "atlases/characterOffsets.bin.mid.json",
+    "count": 18846,
+    "version": 2
+  },
+  {
+    "source": "characterOffsets2.bin.mid",
+    "json": "atlases/characterOffsets2.bin.mid.json",
+    "count": 14742,
+    "version": 2
+  },
+  {
+    "source": "characterOffsets3.bin.mid",
+    "json": "atlases/characterOffsets3.bin.mid.json",
+    "count": 9774,
+    "version": 2
+  },
+  {
+    "source": "characterOffsets4.bin.mid",
+    "json": "atlases/characterOffsets4.bin.mid.json",
+    "count": 9396,
+    "version": 2
+  },
+  {
+    "source": "characterOffsets5.bin.mid",
+    "json": "atlases/characterOffsets5.bin.mid.json",
+    "count": 4050,
+    "version": 2
+  },
+  {
+    "source": "dialogOffsets.bin.mid",
+    "json": "atlases/dialogOffsets.bin.mid.json",
+    "count": 14,
+    "version": 1
+  },
+  {
+    "source": "furnitureOffsets.bin.mid",
+    "json": "atlases/furnitureOffsets.bin.mid.json",
+    "count": 406,
+    "version": 2
+  },
+  {
+    "source": "furnitureOffsets2.bin.mid",
+    "json": "atlases/furnitureOffsets2.bin.mid.json",
+    "count": 382,
+    "version": 2
+  },
+  {
+    "source": "furnitureOffsets3.bin.mid",
+    "json": "atlases/furnitureOffsets3.bin.mid.json",
+    "count": 5,
+    "version": 2
+  },
+  {
+    "source": "ingameUiOffsets.bin.mid",
+    "json": "atlases/ingameUiOffsets.bin.mid.json",
+    "count": 290,
+    "version": 1
+  },
+  {
+    "source": "iphone4_gatyaOffsets.bin",
+    "json": "atlases/iphone4_gatyaOffsets.bin.json",
+    "count": 47,
+    "version": 1
+  },
+  {
+    "source": "iphone4_prizeMenuOffsets.bin.mid",
+    "json": "atlases/iphone4_prizeMenuOffsets.bin.mid.json",
+    "count": 11,
+    "version": 1
+  },
+  {
+    "source": "mapTilesOffsets.mid",
+    "json": "atlases/mapTilesOffsets.mid.json",
+    "count": 44,
+    "version": 1
+  },
+  {
+    "source": "menuOffsets.bin.mid",
+    "json": "atlases/menuOffsets.bin.mid.json",
+    "count": 53,
+    "version": 1
+  },
+  {
+    "source": "menuTitleOffsets.bin.mid",
+    "json": "atlases/menuTitleOffsets.bin.mid.json",
+    "count": 9,
+    "version": 1
+  },
+  {
+    "source": "recipeOffsets.bin",
+    "json": "atlases/recipeOffsets.bin.json",
+    "count": 237,
+    "version": 2
+  },
+  {
+    "source": "recipeOffsets.bin.mid",
+    "json": "atlases/recipeOffsets.bin.mid.json",
+    "count": 237,
+    "version": 2
+  },
+  {
+    "source": "shopOffsets.bin.mid",
+    "json": "atlases/shopOffsets.bin.mid.json",
+    "count": 23,
+    "version": 1
+  },
+  {
+    "source": "zcImagesOffsets.bin.mid",
+    "json": "atlases/zcImagesOffsets.bin.mid.json",
+    "count": 114,
+    "version": 1
+  }
+]

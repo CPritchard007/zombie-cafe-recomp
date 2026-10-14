@@ -1,0 +1,192 @@
+[
+  {
+    "atlas": "furnitureOffsets.bin.mid",
+    "texture": "recovered/web-assets/textures/furniture.png",
+    "entries": 406,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "furnitureOffsets2.bin.mid",
+    "texture": "recovered/web-assets/textures/furniture2.png",
+    "entries": 382,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "furnitureOffsets3.bin.mid",
+    "texture": "recovered/web-assets/textures/furniture3.png",
+    "entries": 5,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "characterOffsets.bin.mid",
+    "texture": "recovered/web-assets/textures/characterParts.png",
+    "entries": 18846,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "characterOffsets2.bin.mid",
+    "texture": "recovered/web-assets/textures/characterParts2.png",
+    "entries": 14742,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "characterOffsets3.bin.mid",
+    "texture": "recovered/web-assets/textures/characterParts3.png",
+    "entries": 9774,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "characterOffsets4.bin.mid",
+    "texture": "recovered/web-assets/textures/characterParts4.png",
+    "entries": 9396,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "characterOffsets5.bin.mid",
+    "texture": "recovered/web-assets/textures/characterParts5.png",
+    "entries": 4050,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "recipeOffsets.bin.mid",
+    "texture": "recovered/web-assets/textures/recipeImages.png",
+    "entries": 237,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "recipeOffsets.bin",
+    "texture": "recovered/web-assets/textures/recipeImages.png",
+    "entries": 237,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "mapTilesOffsets.mid",
+    "texture": "recovered/web-assets/textures/mapTiles.png",
+    "entries": 44,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "shopOffsets.bin.mid",
+    "texture": "recovered/web-assets/textures/shopImages.png",
+    "entries": 23,
+    "outOfBounds": [],
+    "dimensions": [
+      1024,
+      512
+    ]
+  },
+  {
+    "atlas": "iphone4_gatyaOffsets.bin",
+    "texture": "recovered/web-assets/textures/iphone4_gatyaImages.png",
+    "entries": 47,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "iphone4_prizeMenuOffsets.bin.mid",
+    "texture": "recovered/web-assets/textures/iphone4_prizeMenuImages.png",
+    "entries": 11,
+    "outOfBounds": [],
+    "dimensions": [
+      512,
+      256
+    ]
+  },
+  {
+    "atlas": "dialogOffsets.bin.mid",
+    "texture": "recovered/apk/assets/images/dialogImages.png",
+    "entries": 14,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      512
+    ]
+  },
+  {
+    "atlas": "ingameUiOffsets.bin.mid",
+    "texture": "recovered/apk/assets/images/ingameUiImages.png",
+    "entries": 290,
+    "outOfBounds": [],
+    "dimensions": [
+      1024,
+      2048
+    ]
+  },
+  {
+    "atlas": "menuOffsets.bin.mid",
+    "texture": "recovered/apk/assets/images/menuimages.png",
+    "entries": 53,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  },
+  {
+    "atlas": "menuTitleOffsets.bin.mid",
+    "texture": "recovered/apk/assets/images/menutitleimages.png",
+    "entries": 9,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      1024
+    ]
+  },
+  {
+    "atlas": "zcImagesOffsets.bin.mid",
+    "texture": "recovered/apk/assets/images/zcImages.png",
+    "entries": 114,
+    "outOfBounds": [],
+    "dimensions": [
+      2048,
+      2048
+    ]
+  }
+]

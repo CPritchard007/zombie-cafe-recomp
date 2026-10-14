@@ -1,0 +1,6788 @@
+{
+  "recipe_deserializer_spot_check": true,
+  "exported_code_symbol_addresses": 6412,
+  "missing_exported_code_addresses": [],
+  "export_complete": true,
+  "function_count": 8670,
+  "successful": 8670,
+  "failed": 0,
+  "files_with_pseudocode_warnings": 1273,
+  "failures": [],
+  "warning_files": [
+    {
+      "address": "000b4950",
+      "name": "<EXTERNAL>::clock_gettime",
+      "file": "000b4950__EXTERNAL___clock_gettime.c"
+    },
+    {
+      "address": "000b4980",
+      "name": "<EXTERNAL>::malloc",
+      "file": "000b4980__EXTERNAL___malloc.c"
+    },
+    {
+      "address": "000b498c",
+      "name": "<EXTERNAL>::free",
+      "file": "000b498c__EXTERNAL___free.c"
+    },
+    {
+      "address": "000b4998",
+      "name": "<EXTERNAL>::sprintf",
+      "file": "000b4998__EXTERNAL___sprintf.c"
+    },
+    {
+      "address": "000b49b0",
+      "name": "<EXTERNAL>::memset",
+      "file": "000b49b0__EXTERNAL___memset.c"
+    },
+    {
+      "address": "000b49bc",
+      "name": "<EXTERNAL>::memcpy",
+      "file": "000b49bc__EXTERNAL___memcpy.c"
+    },
+    {
+      "address": "000b49c8",
+      "name": "<EXTERNAL>::snprintf",
+      "file": "000b49c8__EXTERNAL___snprintf.c"
+    },
+    {
+      "address": "000b49d4",
+      "name": "<EXTERNAL>::strtok",
+      "file": "000b49d4__EXTERNAL___strtok.c"
+    },
+    {
+      "address": "000b49e0",
+      "name": "<EXTERNAL>::strncpy",
+      "file": "000b49e0__EXTERNAL___strncpy.c"
+    },
+    {
+      "address": "000b49ec",
+      "name": "<EXTERNAL>::strcpy",
+      "file": "000b49ec__EXTERNAL___strcpy.c"
+    },
+    {
+      "address": "000b49f8",
+      "name": "<EXTERNAL>::strncmp",
+      "file": "000b49f8__EXTERNAL___strncmp.c"
+    },
+    {
+      "address": "000b4a04",
+      "name": "<EXTERNAL>::strcmp",
+      "file": "000b4a04__EXTERNAL___strcmp.c"
+    },
+    {
+      "address": "000b4a10",
+      "name": "<EXTERNAL>::roundf",
+      "file": "000b4a10__EXTERNAL___roundf.c"
+    },
+    {
+      "address": "000b4a28",
+      "name": "<EXTERNAL>::memmove",
+      "file": "000b4a28__EXTERNAL___memmove.c"
+    },
+    {
+      "address": "000b4a34",
+      "name": "<EXTERNAL>::floorf",
+      "file": "000b4a34__EXTERNAL___floorf.c"
+    },
+    {
+      "address": "000b4a40",
+      "name": "<EXTERNAL>::sqrtf",
+      "file": "000b4a40__EXTERNAL___sqrtf.c"
+    },
+    {
+      "address": "000b4a4c",
+      "name": "<EXTERNAL>::printf",
+      "file": "000b4a4c__EXTERNAL___printf.c"
+    },
+    {
+      "address": "000b4a58",
+      "name": "<EXTERNAL>::lrand48",
+      "file": "000b4a58__EXTERNAL___lrand48.c"
+    },
+    {
+      "address": "000b4a64",
+      "name": "<EXTERNAL>::puts",
+      "file": "000b4a64__EXTERNAL___puts.c"
+    },
+    {
+      "address": "000b4a94",
+      "name": "<EXTERNAL>::ceilf",
+      "file": "000b4a94__EXTERNAL___ceilf.c"
+    },
+    {
+      "address": "000b4aa0",
+      "name": "<EXTERNAL>::strtod",
+      "file": "000b4aa0__EXTERNAL___strtod.c"
+    },
+    {
+      "address": "000b4aac",
+      "name": "<EXTERNAL>::powf",
+      "file": "000b4aac__EXTERNAL___powf.c"
+    },
+    {
+      "address": "000b4ab8",
+      "name": "<EXTERNAL>::strcat",
+      "file": "000b4ab8__EXTERNAL___strcat.c"
+    },
+    {
+      "address": "000b4ac4",
+      "name": "<EXTERNAL>::strlen",
+      "file": "000b4ac4__EXTERNAL___strlen.c"
+    },
+    {
+      "address": "000b4ad0",
+      "name": "<EXTERNAL>::calloc",
+      "file": "000b4ad0__EXTERNAL___calloc.c"
+    },
+    {
+      "address": "000b4adc",
+      "name": "<EXTERNAL>::pthread_mutex_destroy",
+      "file": "000b4adc__EXTERNAL___pthread_mutex_destroy.c"
+    },
+    {
+      "address": "000b4ae8",
+      "name": "<EXTERNAL>::pthread_cond_destroy",
+      "file": "000b4ae8__EXTERNAL___pthread_cond_destroy.c"
+    },
+    {
+      "address": "000b4af4",
+      "name": "<EXTERNAL>::pthread_mutex_lock",
+      "file": "000b4af4__EXTERNAL___pthread_mutex_lock.c"
+    },
+    {
+      "address": "000b4b00",
+      "name": "<EXTERNAL>::pthread_cond_signal",
+      "file": "000b4b00__EXTERNAL___pthread_cond_signal.c"
+    },
+    {
+      "address": "000b4b0c",
+      "name": "<EXTERNAL>::pthread_mutex_unlock",
+      "file": "000b4b0c__EXTERNAL___pthread_mutex_unlock.c"
+    },
+    {
+      "address": "000b4b18",
+      "name": "<EXTERNAL>::pthread_cond_wait",
+      "file": "000b4b18__EXTERNAL___pthread_cond_wait.c"
+    },
+    {
+      "address": "000b4b24",
+      "name": "<EXTERNAL>::pthread_cond_timedwait",
+      "file": "000b4b24__EXTERNAL___pthread_cond_timedwait.c"
+    },
+    {
+      "address": "000b4b30",
+      "name": "<EXTERNAL>::pthread_mutex_init",
+      "file": "000b4b30__EXTERNAL___pthread_mutex_init.c"
+    },
+    {
+      "address": "000b4b3c",
+      "name": "<EXTERNAL>::pthread_cond_init",
+      "file": "000b4b3c__EXTERNAL___pthread_cond_init.c"
+    },
+    {
+      "address": "000b4b48",
+      "name": "<EXTERNAL>::strncat",
+      "file": "000b4b48__EXTERNAL___strncat.c"
+    },
+    {
+      "address": "000b4b54",
+      "name": "<EXTERNAL>::strstr",
+      "file": "000b4b54__EXTERNAL___strstr.c"
+    },
+    {
+      "address": "000b4b60",
+      "name": "<EXTERNAL>::strchr",
+      "file": "000b4b60__EXTERNAL___strchr.c"
+    },
+    {
+      "address": "000b4b6c",
+      "name": "<EXTERNAL>::atoi",
+      "file": "000b4b6c__EXTERNAL___atoi.c"
+    },
+    {
+      "address": "000b4b84",
+      "name": "<EXTERNAL>::vsnprintf",
+      "file": "000b4b84__EXTERNAL___vsnprintf.c"
+    },
+    {
+      "address": "000b4b90",
+      "name": "<EXTERNAL>::strtol",
+      "file": "000b4b90__EXTERNAL___strtol.c"
+    },
+    {
+      "address": "000b4ba8",
+      "name": "<EXTERNAL>::memcmp",
+      "file": "000b4ba8__EXTERNAL___memcmp.c"
+    },
+    {
+      "address": "000b4bc0",
+      "name": "<EXTERNAL>::pthread_mutex_trylock",
+      "file": "000b4bc0__EXTERNAL___pthread_mutex_trylock.c"
+    },
+    {
+      "address": "000b4bcc",
+      "name": "<EXTERNAL>::geteuid",
+      "file": "000b4bcc__EXTERNAL___geteuid.c"
+    },
+    {
+      "address": "000b4bd8",
+      "name": "<EXTERNAL>::fchown",
+      "file": "000b4bd8__EXTERNAL___fchown.c"
+    },
+    {
+      "address": "000b4be4",
+      "name": "<EXTERNAL>::open",
+      "file": "000b4be4__EXTERNAL___open.c"
+    },
+    {
+      "address": "000b4bf0",
+      "name": "<EXTERNAL>::lseek",
+      "file": "000b4bf0__EXTERNAL___lseek.c"
+    },
+    {
+      "address": "000b4bfc",
+      "name": "<EXTERNAL>::gettimeofday",
+      "file": "000b4bfc__EXTERNAL___gettimeofday.c"
+    },
+    {
+      "address": "000b4c08",
+      "name": "<EXTERNAL>::sleep",
+      "file": "000b4c08__EXTERNAL___sleep.c"
+    },
+    {
+      "address": "000b4c2c",
+      "name": "<EXTERNAL>::pthread_mutexattr_init",
+      "file": "000b4c2c__EXTERNAL___pthread_mutexattr_init.c"
+    },
+    {
+      "address": "000b4c38",
+      "name": "<EXTERNAL>::pthread_mutexattr_settype",
+      "file": "000b4c38__EXTERNAL___pthread_mutexattr_settype.c"
+    },
+    {
+      "address": "000b4c44",
+      "name": "<EXTERNAL>::pthread_mutexattr_destroy",
+      "file": "000b4c44__EXTERNAL___pthread_mutexattr_destroy.c"
+    },
+    {
+      "address": "000b4c50",
+      "name": "<EXTERNAL>::utimes",
+      "file": "000b4c50__EXTERNAL___utimes.c"
+    },
+    {
+      "address": "000b4c5c",
+      "name": "<EXTERNAL>::localtime",
+      "file": "000b4c5c__EXTERNAL___localtime.c"
+    },
+    {
+      "address": "000b4c68",
+      "name": "<EXTERNAL>::realloc",
+      "file": "000b4c68__EXTERNAL___realloc.c"
+    },
+    {
+      "address": "000b4c74",
+      "name": "<EXTERNAL>::munmap",
+      "file": "000b4c74__EXTERNAL___munmap.c"
+    },
+    {
+      "address": "000b4c80",
+      "name": "<EXTERNAL>::time",
+      "file": "000b4c80__EXTERNAL___time.c"
+    },
+    {
+      "address": "000b4c8c",
+      "name": "<EXTERNAL>::getpid",
+      "file": "000b4c8c__EXTERNAL___getpid.c"
+    },
+    {
+      "address": "000b4c98",
+      "name": "<EXTERNAL>::fsync",
+      "file": "000b4c98__EXTERNAL___fsync.c"
+    },
+    {
+      "address": "000b4cb0",
+      "name": "<EXTERNAL>::mmap",
+      "file": "000b4cb0__EXTERNAL___mmap.c"
+    },
+    {
+      "address": "000b4cbc",
+      "name": "<EXTERNAL>::getenv",
+      "file": "000b4cbc__EXTERNAL___getenv.c"
+    },
+    {
+      "address": "000b4cc8",
+      "name": "<EXTERNAL>::close",
+      "file": "000b4cc8__EXTERNAL___close.c"
+    },
+    {
+      "address": "000b4cd4",
+      "name": "<EXTERNAL>::access",
+      "file": "000b4cd4__EXTERNAL___access.c"
+    },
+    {
+      "address": "000b4ce0",
+      "name": "<EXTERNAL>::getcwd",
+      "file": "000b4ce0__EXTERNAL___getcwd.c"
+    },
+    {
+      "address": "000b4cec",
+      "name": "<EXTERNAL>::stat",
+      "file": "000b4cec__EXTERNAL___stat.c"
+    },
+    {
+      "address": "000b4cf8",
+      "name": "<EXTERNAL>::fstat",
+      "file": "000b4cf8__EXTERNAL___fstat.c"
+    },
+    {
+      "address": "000b4d04",
+      "name": "<EXTERNAL>::ftruncate",
+      "file": "000b4d04__EXTERNAL___ftruncate.c"
+    },
+    {
+      "address": "000b4d10",
+      "name": "<EXTERNAL>::fcntl",
+      "file": "000b4d10__EXTERNAL___fcntl.c"
+    },
+    {
+      "address": "000b4d1c",
+      "name": "<EXTERNAL>::read",
+      "file": "000b4d1c__EXTERNAL___read.c"
+    },
+    {
+      "address": "000b4d28",
+      "name": "<EXTERNAL>::write",
+      "file": "000b4d28__EXTERNAL___write.c"
+    },
+    {
+      "address": "000b4d34",
+      "name": "<EXTERNAL>::unlink",
+      "file": "000b4d34__EXTERNAL___unlink.c"
+    },
+    {
+      "address": "000b4d40",
+      "name": "<EXTERNAL>::mkdir",
+      "file": "000b4d40__EXTERNAL___mkdir.c"
+    },
+    {
+      "address": "000b4d4c",
+      "name": "<EXTERNAL>::rmdir",
+      "file": "000b4d4c__EXTERNAL___rmdir.c"
+    },
+    {
+      "address": "000b4d58",
+      "name": "<EXTERNAL>::umask",
+      "file": "000b4d58__EXTERNAL___umask.c"
+    },
+    {
+      "address": "000b4e0c",
+      "name": "<EXTERNAL>::sinf",
+      "file": "000b4e0c__EXTERNAL___sinf.c"
+    },
+    {
+      "address": "000b4e18",
+      "name": "<EXTERNAL>::cosf",
+      "file": "000b4e18__EXTERNAL___cosf.c"
+    },
+    {
+      "address": "000b4e54",
+      "name": "<EXTERNAL>::strftime",
+      "file": "000b4e54__EXTERNAL___strftime.c"
+    },
+    {
+      "address": "000b4e6c",
+      "name": "<EXTERNAL>::cos",
+      "file": "000b4e6c__EXTERNAL___cos.c"
+    },
+    {
+      "address": "000b4e78",
+      "name": "<EXTERNAL>::sin",
+      "file": "000b4e78__EXTERNAL___sin.c"
+    },
+    {
+      "address": "000b4e84",
+      "name": "<EXTERNAL>::strdup",
+      "file": "000b4e84__EXTERNAL___strdup.c"
+    },
+    {
+      "address": "000b4e90",
+      "name": "<EXTERNAL>::fprintf",
+      "file": "000b4e90__EXTERNAL___fprintf.c"
+    },
+    {
+      "address": "000b4e9c",
+      "name": "<EXTERNAL>::qsort",
+      "file": "000b4e9c__EXTERNAL___qsort.c"
+    },
+    {
+      "address": "000b4ea8",
+      "name": "<EXTERNAL>::fclose",
+      "file": "000b4ea8__EXTERNAL___fclose.c"
+    },
+    {
+      "address": "000b4eb4",
+      "name": "<EXTERNAL>::fopen",
+      "file": "000b4eb4__EXTERNAL___fopen.c"
+    },
+    {
+      "address": "000b4ec0",
+      "name": "<EXTERNAL>::fread",
+      "file": "000b4ec0__EXTERNAL___fread.c"
+    },
+    {
+      "address": "000b4ecc",
+      "name": "<EXTERNAL>::getc",
+      "file": "000b4ecc__EXTERNAL___getc.c"
+    },
+    {
+      "address": "000b4ed8",
+      "name": "<EXTERNAL>::fwrite",
+      "file": "000b4ed8__EXTERNAL___fwrite.c"
+    },
+    {
+      "address": "000b4ee4",
+      "name": "<EXTERNAL>::fseek",
+      "file": "000b4ee4__EXTERNAL___fseek.c"
+    },
+    {
+      "address": "000b4ef0",
+      "name": "<EXTERNAL>::ftell",
+      "file": "000b4ef0__EXTERNAL___ftell.c"
+    },
+    {
+      "address": "000b4efc",
+      "name": "<EXTERNAL>::remove",
+      "file": "000b4efc__EXTERNAL___remove.c"
+    },
+    {
+      "address": "000b4f08",
+      "name": "<EXTERNAL>::rename",
+      "file": "000b4f08__EXTERNAL___rename.c"
+    },
+    {
+      "address": "000b4f14",
+      "name": "<EXTERNAL>::exit",
+      "file": "000b4f14__EXTERNAL___exit.c"
+    },
+    {
+      "address": "000b4f5c",
+      "name": "<EXTERNAL>::sqrt",
+      "file": "000b4f5c__EXTERNAL___sqrt.c"
+    },
+    {
+      "address": "000b4f68",
+      "name": "<EXTERNAL>::tan",
+      "file": "000b4f68__EXTERNAL___tan.c"
+    },
+    {
+      "address": "000b516c",
+      "name": "<EXTERNAL>::setjmp",
+      "file": "000b516c__EXTERNAL___setjmp.c"
+    },
+    {
+      "address": "000b51e4",
+      "name": "<EXTERNAL>::longjmp",
+      "file": "000b51e4__EXTERNAL___longjmp.c"
+    },
+    {
+      "address": "000b51f0",
+      "name": "<EXTERNAL>::acos",
+      "file": "000b51f0__EXTERNAL___acos.c"
+    },
+    {
+      "address": "000b51fc",
+      "name": "<EXTERNAL>::srand48",
+      "file": "000b51fc__EXTERNAL___srand48.c"
+    },
+    {
+      "address": "000b5208",
+      "name": "<EXTERNAL>::putchar",
+      "file": "000b5208__EXTERNAL___putchar.c"
+    },
+    {
+      "address": "000b5214",
+      "name": "<EXTERNAL>::pow",
+      "file": "000b5214__EXTERNAL___pow.c"
+    },
+    {
+      "address": "000b522c",
+      "name": "<EXTERNAL>::sscanf",
+      "file": "000b522c__EXTERNAL___sscanf.c"
+    },
+    {
+      "address": "000b5238",
+      "name": "<EXTERNAL>::mktemp",
+      "file": "000b5238__EXTERNAL___mktemp.c"
+    },
+    {
+      "address": "000b525c",
+      "name": "<EXTERNAL>::frexp",
+      "file": "000b525c__EXTERNAL___frexp.c"
+    },
+    {
+      "address": "000b5268",
+      "name": "<EXTERNAL>::modf",
+      "file": "000b5268__EXTERNAL___modf.c"
+    },
+    {
+      "address": "000b5274",
+      "name": "<EXTERNAL>::floor",
+      "file": "000b5274__EXTERNAL___floor.c"
+    },
+    {
+      "address": "000b528c",
+      "name": "<EXTERNAL>::fputc",
+      "file": "000b528c__EXTERNAL___fputc.c"
+    },
+    {
+      "address": "000b5298",
+      "name": "<EXTERNAL>::abort",
+      "file": "000b5298__EXTERNAL___abort.c"
+    },
+    {
+      "address": "000b52a4",
+      "name": "<EXTERNAL>::strerror",
+      "file": "000b52a4__EXTERNAL___strerror.c"
+    },
+    {
+      "address": "000b52b0",
+      "name": "<EXTERNAL>::fflush",
+      "file": "000b52b0__EXTERNAL___fflush.c"
+    },
+    {
+      "address": "000b52bc",
+      "name": "<EXTERNAL>::gmtime",
+      "file": "000b52bc__EXTERNAL___gmtime.c"
+    },
+    {
+      "address": "000b52f8",
+      "name": "<EXTERNAL>::pthread_key_delete",
+      "file": "000b52f8__EXTERNAL___pthread_key_delete.c"
+    },
+    {
+      "address": "000b5304",
+      "name": "<EXTERNAL>::pthread_getspecific",
+      "file": "000b5304__EXTERNAL___pthread_getspecific.c"
+    },
+    {
+      "address": "000b5310",
+      "name": "<EXTERNAL>::pthread_setspecific",
+      "file": "000b5310__EXTERNAL___pthread_setspecific.c"
+    },
+    {
+      "address": "000b531c",
+      "name": "<EXTERNAL>::pthread_key_create",
+      "file": "000b531c__EXTERNAL___pthread_key_create.c"
+    },
+    {
+      "address": "000b5334",
+      "name": "<EXTERNAL>::pthread_cond_broadcast",
+      "file": "000b5334__EXTERNAL___pthread_cond_broadcast.c"
+    },
+    {
+      "address": "000b5340",
+      "name": "<EXTERNAL>::raise",
+      "file": "000b5340__EXTERNAL___raise.c"
+    },
+    {
+      "address": "000b53a0",
+      "name": "L_CurrentTimeMillis",
+      "file": "000b53a0_L_CurrentTimeMillis.c"
+    },
+    {
+      "address": "000b59e0",
+      "name": "Java_com_capcom_zombiecafeandroidJP_NetworkTaskPost_NewRequestServerCallback",
+      "file": "000b59e0_Java_com_capcom_zombiecafeandroidJP_NetworkTaskPost_NewRequestServerCallback.c"
+    },
+    {
+      "address": "000b5a6c",
+      "name": "Java_com_capcom_zombiecafeandroidJP_URLManager_NewRequestServerCallback",
+      "file": "000b5a6c_Java_com_capcom_zombiecafeandroidJP_URLManager_NewRequestServerCallback.c"
+    },
+    {
+      "address": "000b5b58",
+      "name": "Java_com_capcom_zombiecafeandroidJP_NetworkTask_NewRequestServerCallback",
+      "file": "000b5b58_Java_com_capcom_zombiecafeandroidJP_NetworkTask_NewRequestServerCallback.c"
+    },
+    {
+      "address": "000b5d10",
+      "name": "Java_com_capcom_zombiecafeandroidJP_CapcomFacebook_sendFriendInfo",
+      "file": "000b5d10_Java_com_capcom_zombiecafeandroidJP_CapcomFacebook_sendFriendInfo.c"
+    },
+    {
+      "address": "000b5f6c",
+      "name": "Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_ConfirmToAliveNative",
+      "file": "000b5f6c_Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_ConfirmToAliveNative.c"
+    },
+    {
+      "address": "000b60f4",
+      "name": "Java_com_capcom_zombiecafeandroidJP_SoundManager_setEnabled",
+      "file": "000b60f4_Java_com_capcom_zombiecafeandroidJP_SoundManager_setEnabled.c"
+    },
+    {
+      "address": "000b6354",
+      "name": "Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_EventGetGiftParse",
+      "file": "000b6354_Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_EventGetGiftParse.c"
+    },
+    {
+      "address": "000b64e4",
+      "name": "Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_RankingGetGiftParse",
+      "file": "000b64e4_Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_RankingGetGiftParse.c"
+    },
+    {
+      "address": "000b67cc",
+      "name": "Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_getUserFbId",
+      "file": "000b67cc_Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_getUserFbId.c"
+    },
+    {
+      "address": "000b6878",
+      "name": "Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_GetEntryParse",
+      "file": "000b6878_Java_com_capcom_zombiecafeandroidJP_ZombieCafeAndroid_GetEntryParse.c"
+    },
+    {
+      "address": "000b6f3c",
+      "name": "MALTAHoover::send",
+      "file": "000b6f3c_MALTAHoover__send.c"
+    },
+    {
+      "address": "000b70ec",
+      "name": "MALTAHoover::sendRanking",
+      "file": "000b70ec_MALTAHoover__sendRanking.c"
+    },
+    {
+      "address": "000b72f0",
+      "name": "MALTAHoover::sendDailyActiveUsers",
+      "file": "000b72f0_MALTAHoover__sendDailyActiveUsers.c"
+    },
+    {
+      "address": "000b96e4",
+      "name": "AmpouleRaidRewardScreen::AmpouleRaidRewardScreen",
+      "file": "000b96e4_AmpouleRaidRewardScreen__AmpouleRaidRewardScreen.c"
+    },
+    {
+      "address": "000b9fd4",
+      "name": "AmpouleRaidRewardScreen::~AmpouleRaidRewardScreen",
+      "file": "000b9fd4_AmpouleRaidRewardScreen___AmpouleRaidRewardScreen.c"
+    },
+    {
+      "address": "000bba00",
+      "name": "FUN_000bba00",
+      "file": "000bba00_FUN_000bba00.c"
+    },
+    {
+      "address": "000bc4b0",
+      "name": "BuyToxinDialog::DlcPurchaseSuccess",
+      "file": "000bc4b0_BuyToxinDialog__DlcPurchaseSuccess.c"
+    },
+    {
+      "address": "000bc8b0",
+      "name": "BuyToxinDialog::initContents",
+      "file": "000bc8b0_BuyToxinDialog__initContents.c"
+    },
+    {
+      "address": "000bd06e",
+      "name": "FUN_000bd06e",
+      "file": "000bd06e_FUN_000bd06e.c"
+    },
+    {
+      "address": "000bdabe",
+      "name": "FUN_000bdabe",
+      "file": "000bdabe_FUN_000bdabe.c"
+    },
+    {
+      "address": "000bdc54",
+      "name": "BuyToxinDialog::refreshReturned",
+      "file": "000bdc54_BuyToxinDialog__refreshReturned.c"
+    },
+    {
+      "address": "000bee30",
+      "name": "Cafe::getNextTile",
+      "file": "000bee30_Cafe__getNextTile.c"
+    },
+    {
+      "address": "000c1b44",
+      "name": "Cafe::createForNewPlayer",
+      "file": "000c1b44_Cafe__createForNewPlayer.c"
+    },
+    {
+      "address": "000c2ad0",
+      "name": "Cafe::deserialize",
+      "file": "000c2ad0_Cafe__deserialize.c"
+    },
+    {
+      "address": "000c6dac",
+      "name": "Character::~Character",
+      "file": "000c6dac_Character___Character.c"
+    },
+    {
+      "address": "000c74b0",
+      "name": "CharacterInstance::groan",
+      "file": "000c74b0_CharacterInstance__groan.c"
+    },
+    {
+      "address": "000c7904",
+      "name": "CharacterInstance::draw",
+      "file": "000c7904_CharacterInstance__draw.c"
+    },
+    {
+      "address": "000c8a7c",
+      "name": "CharacterInstance::getCurrentStateText",
+      "file": "000c8a7c_CharacterInstance__getCurrentStateText.c"
+    },
+    {
+      "address": "000c8c4a",
+      "name": "Vector<ToonAnimation::ReplacementImage>::removeElementAt",
+      "file": "000c8c4a_Vector_ToonAnimation__ReplacementImage___removeElementAt.c"
+    },
+    {
+      "address": "000cb138",
+      "name": "CharacterCommandBar::healConfirmed",
+      "file": "000cb138_CharacterCommandBar__healConfirmed.c"
+    },
+    {
+      "address": "000cc4e4",
+      "name": "CharacterCommandBar::enableButton",
+      "file": "000cc4e4_CharacterCommandBar__enableButton.c"
+    },
+    {
+      "address": "000cf9e4",
+      "name": "CharacterDetails::postZombieStory",
+      "file": "000cf9e4_CharacterDetails__postZombieStory.c"
+    },
+    {
+      "address": "000d0848",
+      "name": "FUN_000d0848",
+      "file": "000d0848_FUN_000d0848.c"
+    },
+    {
+      "address": "000d085c",
+      "name": "FUN_000d085c",
+      "file": "000d085c_FUN_000d085c.c"
+    },
+    {
+      "address": "000d086c",
+      "name": "FUN_000d086c",
+      "file": "000d086c_FUN_000d086c.c"
+    },
+    {
+      "address": "000d08b8",
+      "name": "CharacterDetails::setCharacter",
+      "file": "000d08b8_CharacterDetails__setCharacter.c"
+    },
+    {
+      "address": "000d191c",
+      "name": "FUN_000d191c",
+      "file": "000d191c_FUN_000d191c.c"
+    },
+    {
+      "address": "000d2f52",
+      "name": "FUN_000d2f52",
+      "file": "000d2f52_FUN_000d2f52.c"
+    },
+    {
+      "address": "000d30c4",
+      "name": "CharacterDetails::CharacterDetails",
+      "file": "000d30c4_CharacterDetails__CharacterDetails.c"
+    },
+    {
+      "address": "000d47ac",
+      "name": "CharacterDetails::~CharacterDetails",
+      "file": "000d47ac_CharacterDetails___CharacterDetails.c"
+    },
+    {
+      "address": "000d76f0",
+      "name": "CharacterEvolution::CharacterEvolution",
+      "file": "000d76f0_CharacterEvolution__CharacterEvolution.c"
+    },
+    {
+      "address": "000d80a4",
+      "name": "CharacterEvolution::~CharacterEvolution",
+      "file": "000d80a4_CharacterEvolution___CharacterEvolution.c"
+    },
+    {
+      "address": "000ddc94",
+      "name": "CleanupTask::tick",
+      "file": "000ddc94_CleanupTask__tick.c"
+    },
+    {
+      "address": "000dfee2",
+      "name": "FUN_000dfee2",
+      "file": "000dfee2_FUN_000dfee2.c"
+    },
+    {
+      "address": "000e0088",
+      "name": "ColosseumRewardScreen::ColosseumRewardScreen",
+      "file": "000e0088_ColosseumRewardScreen__ColosseumRewardScreen.c"
+    },
+    {
+      "address": "000e0944",
+      "name": "ColosseumRewardScreen::~ColosseumRewardScreen",
+      "file": "000e0944_ColosseumRewardScreen___ColosseumRewardScreen.c"
+    },
+    {
+      "address": "000e2af4",
+      "name": "Constants::load",
+      "file": "000e2af4_Constants__load.c"
+    },
+    {
+      "address": "000e72a0",
+      "name": "CookCommandBar::finishDish",
+      "file": "000e72a0_CookCommandBar__finishDish.c"
+    },
+    {
+      "address": "000e7f10",
+      "name": "CookCommandBar::tick",
+      "file": "000e7f10_CookCommandBar__tick.c"
+    },
+    {
+      "address": "000e7f40",
+      "name": "FUN_000e7f40",
+      "file": "000e7f40_FUN_000e7f40.c"
+    },
+    {
+      "address": "000e8736",
+      "name": "FUN_000e8736",
+      "file": "000e8736_FUN_000e8736.c"
+    },
+    {
+      "address": "000e9ec0",
+      "name": "CookTask::tick",
+      "file": "000e9ec0_CookTask__tick.c"
+    },
+    {
+      "address": "000ed174",
+      "name": "DishToCounterTask::stopImmediately",
+      "file": "000ed174_DishToCounterTask__stopImmediately.c"
+    },
+    {
+      "address": "000ed2cc",
+      "name": "DishToCounterTask::tick",
+      "file": "000ed2cc_DishToCounterTask__tick.c"
+    },
+    {
+      "address": "000ef3b4",
+      "name": "EatTask::tick",
+      "file": "000ef3b4_EatTask__tick.c"
+    },
+    {
+      "address": "000f499e",
+      "name": "FUN_000f499e",
+      "file": "000f499e_FUN_000f499e.c"
+    },
+    {
+      "address": "000f7a30",
+      "name": "FontManager::dbgPrintFontArr",
+      "file": "000f7a30_FontManager__dbgPrintFontArr.c"
+    },
+    {
+      "address": "000fc5cc",
+      "name": "FridgeDialog::FridgeDialog",
+      "file": "000fc5cc_FridgeDialog__FridgeDialog.c"
+    },
+    {
+      "address": "000fd994",
+      "name": "FridgeDialog::~FridgeDialog",
+      "file": "000fd994_FridgeDialog___FridgeDialog.c"
+    },
+    {
+      "address": "000fff58",
+      "name": "FriendCafeHudElement::FriendCafeHudElement",
+      "file": "000fff58_FriendCafeHudElement__FriendCafeHudElement.c"
+    },
+    {
+      "address": "001011a0",
+      "name": "FriendCafeHudElement::~FriendCafeHudElement",
+      "file": "001011a0_FriendCafeHudElement___FriendCafeHudElement.c"
+    },
+    {
+      "address": "001016cc",
+      "name": "FriendMenuElement::setRecipe",
+      "file": "001016cc_FriendMenuElement__setRecipe.c"
+    },
+    {
+      "address": "00102554",
+      "name": "FriendMenuDialog::tick",
+      "file": "00102554_FriendMenuDialog__tick.c"
+    },
+    {
+      "address": "001032e8",
+      "name": "Furniture::contains",
+      "file": "001032e8_Furniture__contains.c"
+    },
+    {
+      "address": "001038ac",
+      "name": "Furniture::draw",
+      "file": "001038ac_Furniture__draw.c"
+    },
+    {
+      "address": "00104518",
+      "name": "FurnitureDialog::FurnitureDialog",
+      "file": "00104518_FurnitureDialog__FurnitureDialog.c"
+    },
+    {
+      "address": "001049d0",
+      "name": "FurnitureDialog::~FurnitureDialog",
+      "file": "001049d0_FurnitureDialog___FurnitureDialog.c"
+    },
+    {
+      "address": "00105168",
+      "name": "EquipInfoDialog::~EquipInfoDialog",
+      "file": "00105168_EquipInfoDialog___EquipInfoDialog.c"
+    },
+    {
+      "address": "0010538c",
+      "name": "EquipInfoDialog::show",
+      "file": "0010538c_EquipInfoDialog__show.c"
+    },
+    {
+      "address": "00105a64",
+      "name": "EventRaidRewardScreen::EventRaidRewardScreen",
+      "file": "00105a64_EventRaidRewardScreen__EventRaidRewardScreen.c"
+    },
+    {
+      "address": "00106ad8",
+      "name": "EventRaidRewardScreen::~EventRaidRewardScreen",
+      "file": "00106ad8_EventRaidRewardScreen___EventRaidRewardScreen.c"
+    },
+    {
+      "address": "001082f0",
+      "name": "EventRaid2RewardScreen::EventRaid2RewardScreen",
+      "file": "001082f0_EventRaid2RewardScreen__EventRaid2RewardScreen.c"
+    },
+    {
+      "address": "00108f40",
+      "name": "EventRaid2RewardScreen::~EventRaid2RewardScreen",
+      "file": "00108f40_EventRaid2RewardScreen___EventRaid2RewardScreen.c"
+    },
+    {
+      "address": "0010a870",
+      "name": "EventRaid3RewardScreen::EventRaid3RewardScreen",
+      "file": "0010a870_EventRaid3RewardScreen__EventRaid3RewardScreen.c"
+    },
+    {
+      "address": "0010b438",
+      "name": "EventRaid3RewardScreen::~EventRaid3RewardScreen",
+      "file": "0010b438_EventRaid3RewardScreen___EventRaid3RewardScreen.c"
+    },
+    {
+      "address": "0010cf70",
+      "name": "CharacterData::~CharacterData",
+      "file": "0010cf70_CharacterData___CharacterData.c"
+    },
+    {
+      "address": "0010d61c",
+      "name": "GameStateAmpouleRaid::sendMalta",
+      "file": "0010d61c_GameStateAmpouleRaid__sendMalta.c"
+    },
+    {
+      "address": "0010d72c",
+      "name": "GameStateAmpouleRaid::onHealConfirmed",
+      "file": "0010d72c_GameStateAmpouleRaid__onHealConfirmed.c"
+    },
+    {
+      "address": "0010d8f4",
+      "name": "GameStateAmpouleRaid::continueYes",
+      "file": "0010d8f4_GameStateAmpouleRaid__continueYes.c"
+    },
+    {
+      "address": "0010dac0",
+      "name": "GameStateAmpouleRaid::makeAmpouleRaidCafe2",
+      "file": "0010dac0_GameStateAmpouleRaid__makeAmpouleRaidCafe2.c"
+    },
+    {
+      "address": "0010ddec",
+      "name": "GameStateAmpouleRaid::sendAmpouleRaidResult",
+      "file": "0010ddec_GameStateAmpouleRaid__sendAmpouleRaidResult.c"
+    },
+    {
+      "address": "0010e500",
+      "name": "GameStateAmpouleRaid::onHudButtonPress",
+      "file": "0010e500_GameStateAmpouleRaid__onHudButtonPress.c"
+    },
+    {
+      "address": "0010e84e",
+      "name": "GameStateAmpouleRaid::chooseFurniture",
+      "file": "0010e84e_GameStateAmpouleRaid__chooseFurniture.c"
+    },
+    {
+      "address": "00112d94",
+      "name": "GameStateAmpouleRaidMenu::setExplanationWebWindow",
+      "file": "00112d94_GameStateAmpouleRaidMenu__setExplanationWebWindow.c"
+    },
+    {
+      "address": "00112e38",
+      "name": "GameStateAmpouleRaidMenu::sendAmpouleRaidReopenLog",
+      "file": "00112e38_GameStateAmpouleRaidMenu__sendAmpouleRaidReopenLog.c"
+    },
+    {
+      "address": "00113cec",
+      "name": "GameStateAmpouleRaidMenu::init",
+      "file": "00113cec_GameStateAmpouleRaidMenu__init.c"
+    },
+    {
+      "address": "00114828",
+      "name": "GameStateAmpouleRaidMenu::uninit",
+      "file": "00114828_GameStateAmpouleRaidMenu__uninit.c"
+    },
+    {
+      "address": "00118d38",
+      "name": "GameStateCafe::onHealConfirmed",
+      "file": "00118d38_GameStateCafe__onHealConfirmed.c"
+    },
+    {
+      "address": "00119048",
+      "name": "GameStateCafe::onStoreButtonPressed",
+      "file": "00119048_GameStateCafe__onStoreButtonPressed.c"
+    },
+    {
+      "address": "0011ac20",
+      "name": "GameStateCafe::saveServerData",
+      "file": "0011ac20_GameStateCafe__saveServerData.c"
+    },
+    {
+      "address": "0011b1f4",
+      "name": "GameStateCafe::sendTutorialLog",
+      "file": "0011b1f4_GameStateCafe__sendTutorialLog.c"
+    },
+    {
+      "address": "0011b30c",
+      "name": "GameStateCafe::sendCookingBonusLog",
+      "file": "0011b30c_GameStateCafe__sendCookingBonusLog.c"
+    },
+    {
+      "address": "0011b430",
+      "name": "GameStateCafe::frequentFryerServerResponse",
+      "file": "0011b430_GameStateCafe__frequentFryerServerResponse.c"
+    },
+    {
+      "address": "0011bbd8",
+      "name": "GameStateCafe::sendFlowerZomibeStartLog",
+      "file": "0011bbd8_GameStateCafe__sendFlowerZomibeStartLog.c"
+    },
+    {
+      "address": "0011bd2c",
+      "name": "GameStateCafe::getEventValue",
+      "file": "0011bd2c_GameStateCafe__getEventValue.c"
+    },
+    {
+      "address": "0011c024",
+      "name": "GameStateCafe::onReviveConfirmed",
+      "file": "0011c024_GameStateCafe__onReviveConfirmed.c"
+    },
+    {
+      "address": "0011c2c0",
+      "name": "GameStateCafe::advanceCharacter",
+      "file": "0011c2c0_GameStateCafe__advanceCharacter.c"
+    },
+    {
+      "address": "0011c7fc",
+      "name": "GameStateCafe::gotEventValue",
+      "file": "0011c7fc_GameStateCafe__gotEventValue.c"
+    },
+    {
+      "address": "0011c8e0",
+      "name": "GameStateCafe::sendMalta",
+      "file": "0011c8e0_GameStateCafe__sendMalta.c"
+    },
+    {
+      "address": "0011ce4c",
+      "name": "GameStateCafe::uploadSuccess",
+      "file": "0011ce4c_GameStateCafe__uploadSuccess.c"
+    },
+    {
+      "address": "0011de90",
+      "name": "GameStateCafe::onPullMenuButtonPress",
+      "file": "0011de90_GameStateCafe__onPullMenuButtonPress.c"
+    },
+    {
+      "address": "0011fa20",
+      "name": "GameStateCafe::cancelAllEdits",
+      "file": "0011fa20_GameStateCafe__cancelAllEdits.c"
+    },
+    {
+      "address": "00120b00",
+      "name": "GameStateCafe::onHudButtonPress",
+      "file": "00120b00_GameStateCafe__onHudButtonPress.c"
+    },
+    {
+      "address": "00120b56",
+      "name": "FUN_00120b56",
+      "file": "00120b56_FUN_00120b56.c"
+    },
+    {
+      "address": "00121ffc",
+      "name": "GameStateCafe::checkForFridgeClose",
+      "file": "00121ffc_GameStateCafe__checkForFridgeClose.c"
+    },
+    {
+      "address": "00123710",
+      "name": "GameStateCafe::completeStorePurchase",
+      "file": "00123710_GameStateCafe__completeStorePurchase.c"
+    },
+    {
+      "address": "0012418a",
+      "name": "FUN_0012418a",
+      "file": "0012418a_FUN_0012418a.c"
+    },
+    {
+      "address": "001241a4",
+      "name": "GameStateCafe::tickEditModes",
+      "file": "001241a4_GameStateCafe__tickEditModes.c"
+    },
+    {
+      "address": "001250e8",
+      "name": "FUN_001250e8",
+      "file": "001250e8_FUN_001250e8.c"
+    },
+    {
+      "address": "00125dd8",
+      "name": "FUN_00125dd8",
+      "file": "00125dd8_FUN_00125dd8.c"
+    },
+    {
+      "address": "00125de8",
+      "name": "FUN_00125de8",
+      "file": "00125de8_FUN_00125de8.c"
+    },
+    {
+      "address": "001271cc",
+      "name": "GameStateCafe::checkUpdateBonus",
+      "file": "001271cc_GameStateCafe__checkUpdateBonus.c"
+    },
+    {
+      "address": "001273e4",
+      "name": "GameStateCafe::checkBeginerBonus",
+      "file": "001273e4_GameStateCafe__checkBeginerBonus.c"
+    },
+    {
+      "address": "00127e84",
+      "name": "GameStateCafe::CheckPicGiftBoxAndShowDialog",
+      "file": "00127e84_GameStateCafe__CheckPicGiftBoxAndShowDialog.c"
+    },
+    {
+      "address": "00128b20",
+      "name": "GameStateCafe::shouldCompleteTutorialStep",
+      "file": "00128b20_GameStateCafe__shouldCompleteTutorialStep.c"
+    },
+    {
+      "address": "00129702",
+      "name": "FUN_00129702",
+      "file": "00129702_FUN_00129702.c"
+    },
+    {
+      "address": "00129ea0",
+      "name": "GameStateCafe::init",
+      "file": "00129ea0_GameStateCafe__init.c"
+    },
+    {
+      "address": "0012a132",
+      "name": "FUN_0012a132",
+      "file": "0012a132_FUN_0012a132.c"
+    },
+    {
+      "address": "0012b9e6",
+      "name": "FUN_0012b9e6",
+      "file": "0012b9e6_FUN_0012b9e6.c"
+    },
+    {
+      "address": "0012bb7e",
+      "name": "FUN_0012bb7e",
+      "file": "0012bb7e_FUN_0012bb7e.c"
+    },
+    {
+      "address": "0012bba0",
+      "name": "GameStateCafe::completeInfectPurchase",
+      "file": "0012bba0_GameStateCafe__completeInfectPurchase.c"
+    },
+    {
+      "address": "0012c6c0",
+      "name": "GameStateCafe::checkForLevelUp",
+      "file": "0012c6c0_GameStateCafe__checkForLevelUp.c"
+    },
+    {
+      "address": "0012cdb4",
+      "name": "GameStateCafe::tick",
+      "file": "0012cdb4_GameStateCafe__tick.c"
+    },
+    {
+      "address": "0012d0be",
+      "name": "FUN_0012d0be",
+      "file": "0012d0be_FUN_0012d0be.c"
+    },
+    {
+      "address": "0012d0ca",
+      "name": "FUN_0012d0ca",
+      "file": "0012d0ca_FUN_0012d0ca.c"
+    },
+    {
+      "address": "0012d0d6",
+      "name": "FUN_0012d0d6",
+      "file": "0012d0d6_FUN_0012d0d6.c"
+    },
+    {
+      "address": "0012d150",
+      "name": "FUN_0012d150",
+      "file": "0012d150_FUN_0012d150.c"
+    },
+    {
+      "address": "0012d24a",
+      "name": "FUN_0012d24a",
+      "file": "0012d24a_FUN_0012d24a.c"
+    },
+    {
+      "address": "0012d276",
+      "name": "FUN_0012d276",
+      "file": "0012d276_FUN_0012d276.c"
+    },
+    {
+      "address": "0012d28e",
+      "name": "FUN_0012d28e",
+      "file": "0012d28e_FUN_0012d28e.c"
+    },
+    {
+      "address": "0012de7a",
+      "name": "FUN_0012de7a",
+      "file": "0012de7a_FUN_0012de7a.c"
+    },
+    {
+      "address": "0012e2f4",
+      "name": "FUN_0012e2f4",
+      "file": "0012e2f4_FUN_0012e2f4.c"
+    },
+    {
+      "address": "0012e6da",
+      "name": "FUN_0012e6da",
+      "file": "0012e6da_FUN_0012e6da.c"
+    },
+    {
+      "address": "0012e832",
+      "name": "FUN_0012e832",
+      "file": "0012e832_FUN_0012e832.c"
+    },
+    {
+      "address": "0012e88c",
+      "name": "FUN_0012e88c",
+      "file": "0012e88c_FUN_0012e88c.c"
+    },
+    {
+      "address": "0012e8fe",
+      "name": "FUN_0012e8fe",
+      "file": "0012e8fe_FUN_0012e8fe.c"
+    },
+    {
+      "address": "0012ff22",
+      "name": "FUN_0012ff22",
+      "file": "0012ff22_FUN_0012ff22.c"
+    },
+    {
+      "address": "00131f10",
+      "name": "GameStateChooseChef::buyConfirmed",
+      "file": "00131f10_GameStateChooseChef__buyConfirmed.c"
+    },
+    {
+      "address": "00132574",
+      "name": "GameStateChooseChef::init",
+      "file": "00132574_GameStateChooseChef__init.c"
+    },
+    {
+      "address": "00133aba",
+      "name": "FUN_00133aba",
+      "file": "00133aba_FUN_00133aba.c"
+    },
+    {
+      "address": "00134688",
+      "name": "GameStateChooseChef::uninit",
+      "file": "00134688_GameStateChooseChef__uninit.c"
+    },
+    {
+      "address": "0013685c",
+      "name": "GameStateColosseum::sendResult",
+      "file": "0013685c_GameStateColosseum__sendResult.c"
+    },
+    {
+      "address": "00136984",
+      "name": "GameStateColosseum::sendMalta",
+      "file": "00136984_GameStateColosseum__sendMalta.c"
+    },
+    {
+      "address": "00136a78",
+      "name": "GameStateColosseum::onHealConfirmed",
+      "file": "00136a78_GameStateColosseum__onHealConfirmed.c"
+    },
+    {
+      "address": "00136c40",
+      "name": "GameStateColosseum::continueYes",
+      "file": "00136c40_GameStateColosseum__continueYes.c"
+    },
+    {
+      "address": "0013729c",
+      "name": "GameStateColosseum::onHudButtonPress",
+      "file": "0013729c_GameStateColosseum__onHudButtonPress.c"
+    },
+    {
+      "address": "00139612",
+      "name": "FUN_00139612",
+      "file": "00139612_FUN_00139612.c"
+    },
+    {
+      "address": "0013961c",
+      "name": "FUN_0013961c",
+      "file": "0013961c_FUN_0013961c.c"
+    },
+    {
+      "address": "00139672",
+      "name": "FUN_00139672",
+      "file": "00139672_FUN_00139672.c"
+    },
+    {
+      "address": "0013989c",
+      "name": "GameStateColosseum::init",
+      "file": "0013989c_GameStateColosseum__init.c"
+    },
+    {
+      "address": "0013c134",
+      "name": "FUN_0013c134",
+      "file": "0013c134_FUN_0013c134.c"
+    },
+    {
+      "address": "0013e208",
+      "name": "GameStateFriendCafe::onFridgeExit",
+      "file": "0013e208_GameStateFriendCafe__onFridgeExit.c"
+    },
+    {
+      "address": "0013e2b2",
+      "name": "FUN_0013e2b2",
+      "file": "0013e2b2_FUN_0013e2b2.c"
+    },
+    {
+      "address": "0013e2fc",
+      "name": "FUN_0013e2fc",
+      "file": "0013e2fc_FUN_0013e2fc.c"
+    },
+    {
+      "address": "0013e346",
+      "name": "FUN_0013e346",
+      "file": "0013e346_FUN_0013e346.c"
+    },
+    {
+      "address": "0013e390",
+      "name": "FUN_0013e390",
+      "file": "0013e390_FUN_0013e390.c"
+    },
+    {
+      "address": "0013e3da",
+      "name": "FUN_0013e3da",
+      "file": "0013e3da_FUN_0013e3da.c"
+    },
+    {
+      "address": "0013e424",
+      "name": "FUN_0013e424",
+      "file": "0013e424_FUN_0013e424.c"
+    },
+    {
+      "address": "0013e46e",
+      "name": "FUN_0013e46e",
+      "file": "0013e46e_FUN_0013e46e.c"
+    },
+    {
+      "address": "0013e4b8",
+      "name": "FUN_0013e4b8",
+      "file": "0013e4b8_FUN_0013e4b8.c"
+    },
+    {
+      "address": "0013e502",
+      "name": "FUN_0013e502",
+      "file": "0013e502_FUN_0013e502.c"
+    },
+    {
+      "address": "0013e54c",
+      "name": "FUN_0013e54c",
+      "file": "0013e54c_FUN_0013e54c.c"
+    },
+    {
+      "address": "0013f8d2",
+      "name": "FUN_0013f8d2",
+      "file": "0013f8d2_FUN_0013f8d2.c"
+    },
+    {
+      "address": "0013f8da",
+      "name": "FUN_0013f8da",
+      "file": "0013f8da_FUN_0013f8da.c"
+    },
+    {
+      "address": "0013f90e",
+      "name": "FUN_0013f90e",
+      "file": "0013f90e_FUN_0013f90e.c"
+    },
+    {
+      "address": "00140004",
+      "name": "GameStateFriendCafe::initRaidRewards",
+      "file": "00140004_GameStateFriendCafe__initRaidRewards.c"
+    },
+    {
+      "address": "0014174c",
+      "name": "GameStateFriendCafe::init",
+      "file": "0014174c_GameStateFriendCafe__init.c"
+    },
+    {
+      "address": "001418d8",
+      "name": "FUN_001418d8",
+      "file": "001418d8_FUN_001418d8.c"
+    },
+    {
+      "address": "00142378",
+      "name": "FUN_00142378",
+      "file": "00142378_FUN_00142378.c"
+    },
+    {
+      "address": "001423d8",
+      "name": "FUN_001423d8",
+      "file": "001423d8_FUN_001423d8.c"
+    },
+    {
+      "address": "0014255c",
+      "name": "GameStateFriendCafe::tickAttackMode",
+      "file": "0014255c_GameStateFriendCafe__tickAttackMode.c"
+    },
+    {
+      "address": "001426e2",
+      "name": "FUN_001426e2",
+      "file": "001426e2_FUN_001426e2.c"
+    },
+    {
+      "address": "0014276a",
+      "name": "FUN_0014276a",
+      "file": "0014276a_FUN_0014276a.c"
+    },
+    {
+      "address": "001427ae",
+      "name": "FUN_001427ae",
+      "file": "001427ae_FUN_001427ae.c"
+    },
+    {
+      "address": "001427ea",
+      "name": "FUN_001427ea",
+      "file": "001427ea_FUN_001427ea.c"
+    },
+    {
+      "address": "00142b06",
+      "name": "FUN_00142b06",
+      "file": "00142b06_FUN_00142b06.c"
+    },
+    {
+      "address": "00142c84",
+      "name": "FUN_00142c84",
+      "file": "00142c84_FUN_00142c84.c"
+    },
+    {
+      "address": "00142c9e",
+      "name": "FUN_00142c9e",
+      "file": "00142c9e_FUN_00142c9e.c"
+    },
+    {
+      "address": "001435d8",
+      "name": "GameStateFriendCafe::tick",
+      "file": "001435d8_GameStateFriendCafe__tick.c"
+    },
+    {
+      "address": "00143e20",
+      "name": "GameStateFriendCafe::onHudButtonPress",
+      "file": "00143e20_GameStateFriendCafe__onHudButtonPress.c"
+    },
+    {
+      "address": "0014476e",
+      "name": "FUN_0014476e",
+      "file": "0014476e_FUN_0014476e.c"
+    },
+    {
+      "address": "00145ebc",
+      "name": "GameStateFriends::dismissSMSWarning",
+      "file": "00145ebc_GameStateFriends__dismissSMSWarning.c"
+    },
+    {
+      "address": "00146478",
+      "name": "GameStateFriends::emailBodySuccessCb",
+      "file": "00146478_GameStateFriends__emailBodySuccessCb.c"
+    },
+    {
+      "address": "00146540",
+      "name": "GameStateFriends::emailBodyFailCb",
+      "file": "00146540_GameStateFriends__emailBodyFailCb.c"
+    },
+    {
+      "address": "00146624",
+      "name": "GameStateFriends::verifyReferralCodeSuccessCb",
+      "file": "00146624_GameStateFriends__verifyReferralCodeSuccessCb.c"
+    },
+    {
+      "address": "00146740",
+      "name": "GameStateFriends::postInviteStory",
+      "file": "00146740_GameStateFriends__postInviteStory.c"
+    },
+    {
+      "address": "00146a9c",
+      "name": "GameStateFriends::uninit",
+      "file": "00146a9c_GameStateFriends__uninit.c"
+    },
+    {
+      "address": "00146edc",
+      "name": "GameStateFriends::updateList",
+      "file": "00146edc_GameStateFriends__updateList.c"
+    },
+    {
+      "address": "0014ac84",
+      "name": "GameStateGatya::initEffectScreen",
+      "file": "0014ac84_GameStateGatya__initEffectScreen.c"
+    },
+    {
+      "address": "0014bd5e",
+      "name": "FUN_0014bd5e",
+      "file": "0014bd5e_FUN_0014bd5e.c"
+    },
+    {
+      "address": "0014d8b8",
+      "name": "FUN_0014d8b8",
+      "file": "0014d8b8_FUN_0014d8b8.c"
+    },
+    {
+      "address": "0015300c",
+      "name": "GameStateGatya::setLineupWebWindow",
+      "file": "0015300c_GameStateGatya__setLineupWebWindow.c"
+    },
+    {
+      "address": "001539d8",
+      "name": "GameStateGatya::sendMaltaLog",
+      "file": "001539d8_GameStateGatya__sendMaltaLog.c"
+    },
+    {
+      "address": "00155a24",
+      "name": "GameStateGatya::uninitSelectScreen",
+      "file": "00155a24_GameStateGatya__uninitSelectScreen.c"
+    },
+    {
+      "address": "00156fa4",
+      "name": "GameStateGatya::tickStepEffect",
+      "file": "00156fa4_GameStateGatya__tickStepEffect.c"
+    },
+    {
+      "address": "0015708c",
+      "name": "FUN_0015708c",
+      "file": "0015708c_FUN_0015708c.c"
+    },
+    {
+      "address": "00157ff8",
+      "name": "GameStateGatya::unSelectCharacter",
+      "file": "00157ff8_GameStateGatya__unSelectCharacter.c"
+    },
+    {
+      "address": "00158d36",
+      "name": "FUN_00158d36",
+      "file": "00158d36_FUN_00158d36.c"
+    },
+    {
+      "address": "001590f4",
+      "name": "GameStateGatya::uninit",
+      "file": "001590f4_GameStateGatya__uninit.c"
+    },
+    {
+      "address": "0015ab98",
+      "name": "GameStateGatya::tickStepSelect",
+      "file": "0015ab98_GameStateGatya__tickStepSelect.c"
+    },
+    {
+      "address": "0015ad34",
+      "name": "FUN_0015ad34",
+      "file": "0015ad34_FUN_0015ad34.c"
+    },
+    {
+      "address": "0015adb2",
+      "name": "FUN_0015adb2",
+      "file": "0015adb2_FUN_0015adb2.c"
+    },
+    {
+      "address": "0015b076",
+      "name": "FUN_0015b076",
+      "file": "0015b076_FUN_0015b076.c"
+    },
+    {
+      "address": "0015b0ba",
+      "name": "FUN_0015b0ba",
+      "file": "0015b0ba_FUN_0015b0ba.c"
+    },
+    {
+      "address": "0015b384",
+      "name": "FUN_0015b384",
+      "file": "0015b384_FUN_0015b384.c"
+    },
+    {
+      "address": "0015b3be",
+      "name": "FUN_0015b3be",
+      "file": "0015b3be_FUN_0015b3be.c"
+    },
+    {
+      "address": "0015b3fe",
+      "name": "FUN_0015b3fe",
+      "file": "0015b3fe_FUN_0015b3fe.c"
+    },
+    {
+      "address": "0015b50a",
+      "name": "FUN_0015b50a",
+      "file": "0015b50a_FUN_0015b50a.c"
+    },
+    {
+      "address": "0015cb28",
+      "name": "FUN_0015cb28",
+      "file": "0015cb28_FUN_0015cb28.c"
+    },
+    {
+      "address": "0015cb38",
+      "name": "FUN_0015cb38",
+      "file": "0015cb38_FUN_0015cb38.c"
+    },
+    {
+      "address": "0015cb4a",
+      "name": "FUN_0015cb4a",
+      "file": "0015cb4a_FUN_0015cb4a.c"
+    },
+    {
+      "address": "0015cb5c",
+      "name": "FUN_0015cb5c",
+      "file": "0015cb5c_FUN_0015cb5c.c"
+    },
+    {
+      "address": "0015cd2a",
+      "name": "FUN_0015cd2a",
+      "file": "0015cd2a_FUN_0015cd2a.c"
+    },
+    {
+      "address": "0015cd82",
+      "name": "FUN_0015cd82",
+      "file": "0015cd82_FUN_0015cd82.c"
+    },
+    {
+      "address": "0015cd8a",
+      "name": "FUN_0015cd8a",
+      "file": "0015cd8a_FUN_0015cd8a.c"
+    },
+    {
+      "address": "0015e7b8",
+      "name": "GameStateHelp::init",
+      "file": "0015e7b8_GameStateHelp__init.c"
+    },
+    {
+      "address": "001607cc",
+      "name": "GameStateLoading::layout",
+      "file": "001607cc_GameStateLoading__layout.c"
+    },
+    {
+      "address": "001608c0",
+      "name": "GameStateLoading::init",
+      "file": "001608c0_GameStateLoading__init.c"
+    },
+    {
+      "address": "001609e8",
+      "name": "GameStateLoading::uninit",
+      "file": "001609e8_GameStateLoading__uninit.c"
+    },
+    {
+      "address": "0016156c",
+      "name": "GameStateMainMenu::L_GetGameStateSuccess",
+      "file": "0016156c_GameStateMainMenu__L_GetGameStateSuccess.c"
+    },
+    {
+      "address": "001617e8",
+      "name": "GameStateMainMenu::L_GetGameStateFailed",
+      "file": "001617e8_GameStateMainMenu__L_GetGameStateFailed.c"
+    },
+    {
+      "address": "001618bc",
+      "name": "L_UploadAndroidAnalytics",
+      "file": "001618bc_L_UploadAndroidAnalytics.c"
+    },
+    {
+      "address": "00161af8",
+      "name": "GameStateMainMenu::init",
+      "file": "00161af8_GameStateMainMenu__init.c"
+    },
+    {
+      "address": "00162848",
+      "name": "GameStateMainMenu::sendDAU",
+      "file": "00162848_GameStateMainMenu__sendDAU.c"
+    },
+    {
+      "address": "00162980",
+      "name": "GameStateMainMenu::tick",
+      "file": "00162980_GameStateMainMenu__tick.c"
+    },
+    {
+      "address": "00163a1a",
+      "name": "FUN_00163a1a",
+      "file": "00163a1a_FUN_00163a1a.c"
+    },
+    {
+      "address": "00165130",
+      "name": "GameStateMap::dismissSMSWarning",
+      "file": "00165130_GameStateMap__dismissSMSWarning.c"
+    },
+    {
+      "address": "001660fc",
+      "name": "GameStateMap::clearEnemyData",
+      "file": "001660fc_GameStateMap__clearEnemyData.c"
+    },
+    {
+      "address": "001662b8",
+      "name": "GameStateMap::emailBodySuccessCb",
+      "file": "001662b8_GameStateMap__emailBodySuccessCb.c"
+    },
+    {
+      "address": "00166394",
+      "name": "GameStateMap::emailBodyFailCb",
+      "file": "00166394_GameStateMap__emailBodyFailCb.c"
+    },
+    {
+      "address": "00166b74",
+      "name": "GameStateMap::onReOpenHero",
+      "file": "00166b74_GameStateMap__onReOpenHero.c"
+    },
+    {
+      "address": "00166e9c",
+      "name": "GameStateMap::postInviteStory",
+      "file": "00166e9c_GameStateMap__postInviteStory.c"
+    },
+    {
+      "address": "00167504",
+      "name": "GameStateMap::onReOpen",
+      "file": "00167504_GameStateMap__onReOpen.c"
+    },
+    {
+      "address": "001682c0",
+      "name": "GameStateMap::tick",
+      "file": "001682c0_GameStateMap__tick.c"
+    },
+    {
+      "address": "001683c0",
+      "name": "FUN_001683c0",
+      "file": "001683c0_FUN_001683c0.c"
+    },
+    {
+      "address": "00168408",
+      "name": "FUN_00168408",
+      "file": "00168408_FUN_00168408.c"
+    },
+    {
+      "address": "0016915a",
+      "name": "FUN_0016915a",
+      "file": "0016915a_FUN_0016915a.c"
+    },
+    {
+      "address": "00169208",
+      "name": "FUN_00169208",
+      "file": "00169208_FUN_00169208.c"
+    },
+    {
+      "address": "00169aca",
+      "name": "FUN_00169aca",
+      "file": "00169aca_FUN_00169aca.c"
+    },
+    {
+      "address": "00169adc",
+      "name": "FUN_00169adc",
+      "file": "00169adc_FUN_00169adc.c"
+    },
+    {
+      "address": "00169aea",
+      "name": "FUN_00169aea",
+      "file": "00169aea_FUN_00169aea.c"
+    },
+    {
+      "address": "00169b04",
+      "name": "FUN_00169b04",
+      "file": "00169b04_FUN_00169b04.c"
+    },
+    {
+      "address": "00169de4",
+      "name": "GameStateMap::addWeekRaidShop",
+      "file": "00169de4_GameStateMap__addWeekRaidShop.c"
+    },
+    {
+      "address": "0016a038",
+      "name": "GameStateMap::addAmpouleRaidShop",
+      "file": "0016a038_GameStateMap__addAmpouleRaidShop.c"
+    },
+    {
+      "address": "0016a32c",
+      "name": "GameStateMap::addEventRaid2Shop",
+      "file": "0016a32c_GameStateMap__addEventRaid2Shop.c"
+    },
+    {
+      "address": "0016b340",
+      "name": "FUN_0016b340",
+      "file": "0016b340_FUN_0016b340.c"
+    },
+    {
+      "address": "0016b368",
+      "name": "GameStateMap::addColosseum",
+      "file": "0016b368_GameStateMap__addColosseum.c"
+    },
+    {
+      "address": "0016b604",
+      "name": "GameStateMap::updateList",
+      "file": "0016b604_GameStateMap__updateList.c"
+    },
+    {
+      "address": "0016bd18",
+      "name": "GameStateMap::init",
+      "file": "0016bd18_GameStateMap__init.c"
+    },
+    {
+      "address": "0016c350",
+      "name": "FUN_0016c350",
+      "file": "0016c350_FUN_0016c350.c"
+    },
+    {
+      "address": "0016d4c6",
+      "name": "FUN_0016d4c6",
+      "file": "0016d4c6_FUN_0016d4c6.c"
+    },
+    {
+      "address": "0016d4dc",
+      "name": "FUN_0016d4dc",
+      "file": "0016d4dc_FUN_0016d4dc.c"
+    },
+    {
+      "address": "0016d540",
+      "name": "GameStateMap::delWeekRaidShop",
+      "file": "0016d540_GameStateMap__delWeekRaidShop.c"
+    },
+    {
+      "address": "0016d5ec",
+      "name": "GameStateMap::delAmpouleRaidShop",
+      "file": "0016d5ec_GameStateMap__delAmpouleRaidShop.c"
+    },
+    {
+      "address": "0016d698",
+      "name": "GameStateMap::delEventRaid2Shop",
+      "file": "0016d698_GameStateMap__delEventRaid2Shop.c"
+    },
+    {
+      "address": "0016d734",
+      "name": "GameStateMap::delEventRaidShop",
+      "file": "0016d734_GameStateMap__delEventRaidShop.c"
+    },
+    {
+      "address": "0016d800",
+      "name": "GameStateMap::delHeroShop",
+      "file": "0016d800_GameStateMap__delHeroShop.c"
+    },
+    {
+      "address": "0016d8c0",
+      "name": "GameStateMap::delColosseum",
+      "file": "0016d8c0_GameStateMap__delColosseum.c"
+    },
+    {
+      "address": "0016d96c",
+      "name": "GameStateMap::uninit",
+      "file": "0016d96c_GameStateMap__uninit.c"
+    },
+    {
+      "address": "0016f9b0",
+      "name": "GameStateMeetLocker::layout",
+      "file": "0016f9b0_GameStateMeetLocker__layout.c"
+    },
+    {
+      "address": "001702f8",
+      "name": "GameStateMeetLocker::buyConfirmed",
+      "file": "001702f8_GameStateMeetLocker__buyConfirmed.c"
+    },
+    {
+      "address": "001706f0",
+      "name": "GameStateMeetLocker::init",
+      "file": "001706f0_GameStateMeetLocker__init.c"
+    },
+    {
+      "address": "001712b4",
+      "name": "GameStateMeetLocker::unSelectCharacter",
+      "file": "001712b4_GameStateMeetLocker__unSelectCharacter.c"
+    },
+    {
+      "address": "001715c4",
+      "name": "GameStateMeetLocker::selectCharacter",
+      "file": "001715c4_GameStateMeetLocker__selectCharacter.c"
+    },
+    {
+      "address": "00176178",
+      "name": "GameStateOptions::FacebookEventHandler",
+      "file": "00176178_GameStateOptions__FacebookEventHandler.c"
+    },
+    {
+      "address": "0017827c",
+      "name": "GameStatePowerup::sendSacrificeLog",
+      "file": "0017827c_GameStatePowerup__sendSacrificeLog.c"
+    },
+    {
+      "address": "00179f0c",
+      "name": "GameStatePowerup::init",
+      "file": "00179f0c_GameStatePowerup__init.c"
+    },
+    {
+      "address": "0017abf4",
+      "name": "GameStatePowerup::unSelectCharacter",
+      "file": "0017abf4_GameStatePowerup__unSelectCharacter.c"
+    },
+    {
+      "address": "0017b0f4",
+      "name": "GameStatePowerup::selectCharacter",
+      "file": "0017b0f4_GameStatePowerup__selectCharacter.c"
+    },
+    {
+      "address": "0017c3dc",
+      "name": "GameStatePowerup::tick",
+      "file": "0017c3dc_GameStatePowerup__tick.c"
+    },
+    {
+      "address": "0017c794",
+      "name": "GameStatePowerup::uninit",
+      "file": "0017c794_GameStatePowerup__uninit.c"
+    },
+    {
+      "address": "0017ec7c",
+      "name": "GameStateRaid::onHealConfirmed",
+      "file": "0017ec7c_GameStateRaid__onHealConfirmed.c"
+    },
+    {
+      "address": "0017eef8",
+      "name": "GameStateRaid::continueYes",
+      "file": "0017eef8_GameStateRaid__continueYes.c"
+    },
+    {
+      "address": "0017f5a0",
+      "name": "GameStateRaid::saveData",
+      "file": "0017f5a0_GameStateRaid__saveData.c"
+    },
+    {
+      "address": "0017fa64",
+      "name": "GameStateRaid::sendPresentGift",
+      "file": "0017fa64_GameStateRaid__sendPresentGift.c"
+    },
+    {
+      "address": "00180014",
+      "name": "GameStateRaid::onHudButtonPress",
+      "file": "00180014_GameStateRaid__onHudButtonPress.c"
+    },
+    {
+      "address": "00180cc4",
+      "name": "GameStateRaid::chooseFurniture",
+      "file": "00180cc4_GameStateRaid__chooseFurniture.c"
+    },
+    {
+      "address": "00181038",
+      "name": "GameStateRaid::GameStateRaid",
+      "file": "00181038_GameStateRaid__GameStateRaid.c"
+    },
+    {
+      "address": "00181830",
+      "name": "GameStateRaid::getRandomFurnitureIndex",
+      "file": "00181830_GameStateRaid__getRandomFurnitureIndex.c"
+    },
+    {
+      "address": "00181ef8",
+      "name": "GameStateRaid::init",
+      "file": "00181ef8_GameStateRaid__init.c"
+    },
+    {
+      "address": "00182f36",
+      "name": "FUN_00182f36",
+      "file": "00182f36_FUN_00182f36.c"
+    },
+    {
+      "address": "00183818",
+      "name": "FUN_00183818",
+      "file": "00183818_FUN_00183818.c"
+    },
+    {
+      "address": "00183820",
+      "name": "FUN_00183820",
+      "file": "00183820_FUN_00183820.c"
+    },
+    {
+      "address": "0018383a",
+      "name": "FUN_0018383a",
+      "file": "0018383a_FUN_0018383a.c"
+    },
+    {
+      "address": "0018395c",
+      "name": "FUN_0018395c",
+      "file": "0018395c_FUN_0018395c.c"
+    },
+    {
+      "address": "00183ade",
+      "name": "FUN_00183ade",
+      "file": "00183ade_FUN_00183ade.c"
+    },
+    {
+      "address": "00183ae6",
+      "name": "FUN_00183ae6",
+      "file": "00183ae6_FUN_00183ae6.c"
+    },
+    {
+      "address": "001843b8",
+      "name": "FUN_001843b8",
+      "file": "001843b8_FUN_001843b8.c"
+    },
+    {
+      "address": "001843ce",
+      "name": "FUN_001843ce",
+      "file": "001843ce_FUN_001843ce.c"
+    },
+    {
+      "address": "001843e0",
+      "name": "FUN_001843e0",
+      "file": "001843e0_FUN_001843e0.c"
+    },
+    {
+      "address": "00184424",
+      "name": "FUN_00184424",
+      "file": "00184424_FUN_00184424.c"
+    },
+    {
+      "address": "001845dc",
+      "name": "GameStateRaid::layoutState",
+      "file": "001845dc_GameStateRaid__layoutState.c"
+    },
+    {
+      "address": "00185256",
+      "name": "FUN_00185256",
+      "file": "00185256_FUN_00185256.c"
+    },
+    {
+      "address": "0018548c",
+      "name": "GameStateRaid::tick",
+      "file": "0018548c_GameStateRaid__tick.c"
+    },
+    {
+      "address": "0018562a",
+      "name": "FUN_0018562a",
+      "file": "0018562a_FUN_0018562a.c"
+    },
+    {
+      "address": "0018564c",
+      "name": "FUN_0018564c",
+      "file": "0018564c_FUN_0018564c.c"
+    },
+    {
+      "address": "00185b20",
+      "name": "FUN_00185b20",
+      "file": "00185b20_FUN_00185b20.c"
+    },
+    {
+      "address": "00185ce0",
+      "name": "FUN_00185ce0",
+      "file": "00185ce0_FUN_00185ce0.c"
+    },
+    {
+      "address": "00185cfa",
+      "name": "FUN_00185cfa",
+      "file": "00185cfa_FUN_00185cfa.c"
+    },
+    {
+      "address": "0018807c",
+      "name": "GameStateRoulette::layout",
+      "file": "0018807c_GameStateRoulette__layout.c"
+    },
+    {
+      "address": "00188868",
+      "name": "GameStateRoulette::GameStateRoulette",
+      "file": "00188868_GameStateRoulette__GameStateRoulette.c"
+    },
+    {
+      "address": "0018a258",
+      "name": "GameStateRoulette::unSelectFurniture",
+      "file": "0018a258_GameStateRoulette__unSelectFurniture.c"
+    },
+    {
+      "address": "0018a360",
+      "name": "GameStateRoulette::selectFurniture",
+      "file": "0018a360_GameStateRoulette__selectFurniture.c"
+    },
+    {
+      "address": "0018a890",
+      "name": "GameStateRoulette::unSelectCharacter",
+      "file": "0018a890_GameStateRoulette__unSelectCharacter.c"
+    },
+    {
+      "address": "0018b61e",
+      "name": "FUN_0018b61e",
+      "file": "0018b61e_FUN_0018b61e.c"
+    },
+    {
+      "address": "0018b934",
+      "name": "GameStateRoulette::init",
+      "file": "0018b934_GameStateRoulette__init.c"
+    },
+    {
+      "address": "0018c4e0",
+      "name": "GameStateRoulette::uninit",
+      "file": "0018c4e0_GameStateRoulette__uninit.c"
+    },
+    {
+      "address": "0018c8dc",
+      "name": "GameStateRoulette::buyConfirmed",
+      "file": "0018c8dc_GameStateRoulette__buyConfirmed.c"
+    },
+    {
+      "address": "0018d168",
+      "name": "GameStateRoulette::tick",
+      "file": "0018d168_GameStateRoulette__tick.c"
+    },
+    {
+      "address": "0018f1d0",
+      "name": "GameStateSurvivalMenu::loadSurvivalInfo",
+      "file": "0018f1d0_GameStateSurvivalMenu__loadSurvivalInfo.c"
+    },
+    {
+      "address": "0018f270",
+      "name": "GameStateSurvivalMenu::loadSurvivalGiftInfo",
+      "file": "0018f270_GameStateSurvivalMenu__loadSurvivalGiftInfo.c"
+    },
+    {
+      "address": "0018f304",
+      "name": "GameStateSurvivalMenu::requestGetGift",
+      "file": "0018f304_GameStateSurvivalMenu__requestGetGift.c"
+    },
+    {
+      "address": "0018f39c",
+      "name": "GameStateSurvivalMenu::requestGotGift",
+      "file": "0018f39c_GameStateSurvivalMenu__requestGotGift.c"
+    },
+    {
+      "address": "0018f484",
+      "name": "GameStateSurvivalMenu::setRankingWebWindow",
+      "file": "0018f484_GameStateSurvivalMenu__setRankingWebWindow.c"
+    },
+    {
+      "address": "0018f51c",
+      "name": "GameStateSurvivalMenu::setExplanationWebWindow",
+      "file": "0018f51c_GameStateSurvivalMenu__setExplanationWebWindow.c"
+    },
+    {
+      "address": "0018f6a4",
+      "name": "GameStateSurvivalMenu::sendSurvivalReopenLog",
+      "file": "0018f6a4_GameStateSurvivalMenu__sendSurvivalReopenLog.c"
+    },
+    {
+      "address": "00190038",
+      "name": "GameStateSurvivalMenu::init",
+      "file": "00190038_GameStateSurvivalMenu__init.c"
+    },
+    {
+      "address": "00190162",
+      "name": "FUN_00190162",
+      "file": "00190162_FUN_00190162.c"
+    },
+    {
+      "address": "00190324",
+      "name": "FUN_00190324",
+      "file": "00190324_FUN_00190324.c"
+    },
+    {
+      "address": "00190b20",
+      "name": "FUN_00190b20",
+      "file": "00190b20_FUN_00190b20.c"
+    },
+    {
+      "address": "00190ba8",
+      "name": "GameStateSurvivalMenu::uninit",
+      "file": "00190ba8_GameStateSurvivalMenu__uninit.c"
+    },
+    {
+      "address": "001941b4",
+      "name": "GameStateDoJo::buyConfirmed",
+      "file": "001941b4_GameStateDoJo__buyConfirmed.c"
+    },
+    {
+      "address": "00194c2c",
+      "name": "GameStateDoJo::unSelectCharacter",
+      "file": "00194c2c_GameStateDoJo__unSelectCharacter.c"
+    },
+    {
+      "address": "00194fa8",
+      "name": "GameStateDoJo::selectCharacter",
+      "file": "00194fa8_GameStateDoJo__selectCharacter.c"
+    },
+    {
+      "address": "00195e2c",
+      "name": "FUN_00195e2c",
+      "file": "00195e2c_FUN_00195e2c.c"
+    },
+    {
+      "address": "00196500",
+      "name": "GameStateDoJo::init",
+      "file": "00196500_GameStateDoJo__init.c"
+    },
+    {
+      "address": "00197578",
+      "name": "GameStateDoJo::tick",
+      "file": "00197578_GameStateDoJo__tick.c"
+    },
+    {
+      "address": "00197b50",
+      "name": "GameStateDoJo::uninit",
+      "file": "00197b50_GameStateDoJo__uninit.c"
+    },
+    {
+      "address": "0019965c",
+      "name": "GameStateEarlyBird::earlyBirdDataSuccess",
+      "file": "0019965c_GameStateEarlyBird__earlyBirdDataSuccess.c"
+    },
+    {
+      "address": "0019a4d8",
+      "name": "GameStateEarlyBird::buyEarlyBird",
+      "file": "0019a4d8_GameStateEarlyBird__buyEarlyBird.c"
+    },
+    {
+      "address": "0019a7e4",
+      "name": "GameStateEarlyBird::init",
+      "file": "0019a7e4_GameStateEarlyBird__init.c"
+    },
+    {
+      "address": "0019b234",
+      "name": "GameStateEarlyBird::unSelectCharacter",
+      "file": "0019b234_GameStateEarlyBird__unSelectCharacter.c"
+    },
+    {
+      "address": "0019b420",
+      "name": "GameStateEarlyBird::selectCharacter",
+      "file": "0019b420_GameStateEarlyBird__selectCharacter.c"
+    },
+    {
+      "address": "0019be48",
+      "name": "FUN_0019be48",
+      "file": "0019be48_FUN_0019be48.c"
+    },
+    {
+      "address": "0019ca08",
+      "name": "GameStateEarlyBird::uninit",
+      "file": "0019ca08_GameStateEarlyBird__uninit.c"
+    },
+    {
+      "address": "0019ceac",
+      "name": "GameStateEarlyBird::earlyBirdBuySuccess",
+      "file": "0019ceac_GameStateEarlyBird__earlyBirdBuySuccess.c"
+    },
+    {
+      "address": "0019ef88",
+      "name": "GameStateEventRaid::sendMalta",
+      "file": "0019ef88_GameStateEventRaid__sendMalta.c"
+    },
+    {
+      "address": "0019f098",
+      "name": "GameStateEventRaid::onHealConfirmed",
+      "file": "0019f098_GameStateEventRaid__onHealConfirmed.c"
+    },
+    {
+      "address": "0019f260",
+      "name": "GameStateEventRaid::continueYes2",
+      "file": "0019f260_GameStateEventRaid__continueYes2.c"
+    },
+    {
+      "address": "0019f380",
+      "name": "GameStateEventRaid::continueYes",
+      "file": "0019f380_GameStateEventRaid__continueYes.c"
+    },
+    {
+      "address": "0019faf4",
+      "name": "GameStateEventRaid::sendEventRaidResult",
+      "file": "0019faf4_GameStateEventRaid__sendEventRaidResult.c"
+    },
+    {
+      "address": "001a03f0",
+      "name": "GameStateEventRaid::onHudButtonPress",
+      "file": "001a03f0_GameStateEventRaid__onHudButtonPress.c"
+    },
+    {
+      "address": "001a5010",
+      "name": "GameStateEventRaidMenu::setExplanationWebWindow",
+      "file": "001a5010_GameStateEventRaidMenu__setExplanationWebWindow.c"
+    },
+    {
+      "address": "001a523c",
+      "name": "GameStateEventRaidMenu::sendEventRaidReopenLog",
+      "file": "001a523c_GameStateEventRaidMenu__sendEventRaidReopenLog.c"
+    },
+    {
+      "address": "001a5450",
+      "name": "GameStateEventRaidMenu::sendMaltaLog_CafeMember",
+      "file": "001a5450_GameStateEventRaidMenu__sendMaltaLog_CafeMember.c"
+    },
+    {
+      "address": "001a6bb8",
+      "name": "GameStateEventRaidMenu::init",
+      "file": "001a6bb8_GameStateEventRaidMenu__init.c"
+    },
+    {
+      "address": "001a6d90",
+      "name": "FUN_001a6d90",
+      "file": "001a6d90_FUN_001a6d90.c"
+    },
+    {
+      "address": "001a7b34",
+      "name": "FUN_001a7b34",
+      "file": "001a7b34_FUN_001a7b34.c"
+    },
+    {
+      "address": "001a7b78",
+      "name": "GameStateEventRaidMenu::uninit",
+      "file": "001a7b78_GameStateEventRaidMenu__uninit.c"
+    },
+    {
+      "address": "001aa214",
+      "name": "GameStateEventRaid2::sendMalta",
+      "file": "001aa214_GameStateEventRaid2__sendMalta.c"
+    },
+    {
+      "address": "001aa324",
+      "name": "GameStateEventRaid2::eventRaid2_continueYes",
+      "file": "001aa324_GameStateEventRaid2__eventRaid2_continueYes.c"
+    },
+    {
+      "address": "001aa5f0",
+      "name": "GameStateEventRaid2::onHudButtonPress",
+      "file": "001aa5f0_GameStateEventRaid2__onHudButtonPress.c"
+    },
+    {
+      "address": "001abf64",
+      "name": "GameStateEventRaid2::tick",
+      "file": "001abf64_GameStateEventRaid2__tick.c"
+    },
+    {
+      "address": "001ac07e",
+      "name": "FUN_001ac07e",
+      "file": "001ac07e_FUN_001ac07e.c"
+    },
+    {
+      "address": "001ac0ae",
+      "name": "FUN_001ac0ae",
+      "file": "001ac0ae_FUN_001ac0ae.c"
+    },
+    {
+      "address": "001ac0ce",
+      "name": "FUN_001ac0ce",
+      "file": "001ac0ce_FUN_001ac0ce.c"
+    },
+    {
+      "address": "001aca78",
+      "name": "FUN_001aca78",
+      "file": "001aca78_FUN_001aca78.c"
+    },
+    {
+      "address": "001aca82",
+      "name": "FUN_001aca82",
+      "file": "001aca82_FUN_001aca82.c"
+    },
+    {
+      "address": "001acab4",
+      "name": "FUN_001acab4",
+      "file": "001acab4_FUN_001acab4.c"
+    },
+    {
+      "address": "001acad4",
+      "name": "FUN_001acad4",
+      "file": "001acad4_FUN_001acad4.c"
+    },
+    {
+      "address": "001acafe",
+      "name": "FUN_001acafe",
+      "file": "001acafe_FUN_001acafe.c"
+    },
+    {
+      "address": "001aed2c",
+      "name": "GameStateEventRaid2Menu::sendEventRaid2ReopenLog",
+      "file": "001aed2c_GameStateEventRaid2Menu__sendEventRaid2ReopenLog.c"
+    },
+    {
+      "address": "001af7d4",
+      "name": "GameStateEventRaid2Menu::layout",
+      "file": "001af7d4_GameStateEventRaid2Menu__layout.c"
+    },
+    {
+      "address": "001b02e4",
+      "name": "GameStateEventRaid2Menu::sendMaltaLog_CafeMember",
+      "file": "001b02e4_GameStateEventRaid2Menu__sendMaltaLog_CafeMember.c"
+    },
+    {
+      "address": "001b0e30",
+      "name": "GameStateEventRaid2Menu::init",
+      "file": "001b0e30_GameStateEventRaid2Menu__init.c"
+    },
+    {
+      "address": "001b221c",
+      "name": "GameStateEventRaid2Menu::uninit",
+      "file": "001b221c_GameStateEventRaid2Menu__uninit.c"
+    },
+    {
+      "address": "001b5b2c",
+      "name": "GameStateEventRaid3::sendResult",
+      "file": "001b5b2c_GameStateEventRaid3__sendResult.c"
+    },
+    {
+      "address": "001b5c80",
+      "name": "GameStateEventRaid3::sendMalta",
+      "file": "001b5c80_GameStateEventRaid3__sendMalta.c"
+    },
+    {
+      "address": "001b5d90",
+      "name": "GameStateEventRaid3::eventRaid3_continueYes",
+      "file": "001b5d90_GameStateEventRaid3__eventRaid3_continueYes.c"
+    },
+    {
+      "address": "001b60bc",
+      "name": "GameStateEventRaid3::onHudButtonPress",
+      "file": "001b60bc_GameStateEventRaid3__onHudButtonPress.c"
+    },
+    {
+      "address": "001b8862",
+      "name": "FUN_001b8862",
+      "file": "001b8862_FUN_001b8862.c"
+    },
+    {
+      "address": "001bb048",
+      "name": "GameStateEventRaid3Menu::setRankingWebWindow",
+      "file": "001bb048_GameStateEventRaid3Menu__setRankingWebWindow.c"
+    },
+    {
+      "address": "001bb0d0",
+      "name": "GameStateEventRaid3Menu::setExplanationWebWindow",
+      "file": "001bb0d0_GameStateEventRaid3Menu__setExplanationWebWindow.c"
+    },
+    {
+      "address": "001bb174",
+      "name": "GameStateEventRaid3Menu::sendEventRaid3ReopenLog",
+      "file": "001bb174_GameStateEventRaid3Menu__sendEventRaid3ReopenLog.c"
+    },
+    {
+      "address": "001bb898",
+      "name": "GameStateEventRaid3Menu::loadInfo",
+      "file": "001bb898_GameStateEventRaid3Menu__loadInfo.c"
+    },
+    {
+      "address": "001bc28c",
+      "name": "GameStateEventRaid3Menu::Layout_Default",
+      "file": "001bc28c_GameStateEventRaid3Menu__Layout_Default.c"
+    },
+    {
+      "address": "001bca38",
+      "name": "GameStateEventRaid3Menu::init",
+      "file": "001bca38_GameStateEventRaid3Menu__init.c"
+    },
+    {
+      "address": "001bce28",
+      "name": "FUN_001bce28",
+      "file": "001bce28_FUN_001bce28.c"
+    },
+    {
+      "address": "001bdb04",
+      "name": "FUN_001bdb04",
+      "file": "001bdb04_FUN_001bdb04.c"
+    },
+    {
+      "address": "001bdb54",
+      "name": "GameStateEventRaid3Menu::uninit",
+      "file": "001bdb54_GameStateEventRaid3Menu__uninit.c"
+    },
+    {
+      "address": "001c0690",
+      "name": "GameStateWeekRaidMenu::layout",
+      "file": "001c0690_GameStateWeekRaidMenu__layout.c"
+    },
+    {
+      "address": "001c0d7c",
+      "name": "GameStateWeekRaidMenu::setExplanationWebWindow",
+      "file": "001c0d7c_GameStateWeekRaidMenu__setExplanationWebWindow.c"
+    },
+    {
+      "address": "001c0e44",
+      "name": "GameStateWeekRaidMenu::sendWeekRaidReopenLog",
+      "file": "001c0e44_GameStateWeekRaidMenu__sendWeekRaidReopenLog.c"
+    },
+    {
+      "address": "001c18fc",
+      "name": "GameStateWeekRaidMenu::sendMaltaLog_CafeMember",
+      "file": "001c18fc_GameStateWeekRaidMenu__sendMaltaLog_CafeMember.c"
+    },
+    {
+      "address": "001c231c",
+      "name": "GameStateWeekRaidMenu::init",
+      "file": "001c231c_GameStateWeekRaidMenu__init.c"
+    },
+    {
+      "address": "001c3028",
+      "name": "GameStateWeekRaidMenu::uninit",
+      "file": "001c3028_GameStateWeekRaidMenu__uninit.c"
+    },
+    {
+      "address": "001c53c0",
+      "name": "GameStatePrizeMenu::sendMaltaLog_PEX",
+      "file": "001c53c0_GameStatePrizeMenu__sendMaltaLog_PEX.c"
+    },
+    {
+      "address": "001c5bc8",
+      "name": "GameStatePrizeMenu::GetPrizeProcess",
+      "file": "001c5bc8_GameStatePrizeMenu__GetPrizeProcess.c"
+    },
+    {
+      "address": "001c86a8",
+      "name": "GameStateZukan::releaseSelectCharacter",
+      "file": "001c86a8_GameStateZukan__releaseSelectCharacter.c"
+    },
+    {
+      "address": "001c96e6",
+      "name": "FUN_001c96e6",
+      "file": "001c96e6_FUN_001c96e6.c"
+    },
+    {
+      "address": "001cd788",
+      "name": "GameStateChangeHard::setTransferInfo",
+      "file": "001cd788_GameStateChangeHard__setTransferInfo.c"
+    },
+    {
+      "address": "001cd820",
+      "name": "GameStateChangeHard::getTransferInfo",
+      "file": "001cd820_GameStateChangeHard__getTransferInfo.c"
+    },
+    {
+      "address": "001cd990",
+      "name": "GameStateChangeHard::gotTransferInfo",
+      "file": "001cd990_GameStateChangeHard__gotTransferInfo.c"
+    },
+    {
+      "address": "001cda30",
+      "name": "GameStateChangeHard::clearTransferInfo",
+      "file": "001cda30_GameStateChangeHard__clearTransferInfo.c"
+    },
+    {
+      "address": "001cdc8c",
+      "name": "GameStateChangeHard::logTransferInfo",
+      "file": "001cdc8c_GameStateChangeHard__logTransferInfo.c"
+    },
+    {
+      "address": "001ce750",
+      "name": "GameStateChangeHard::init",
+      "file": "001ce750_GameStateChangeHard__init.c"
+    },
+    {
+      "address": "001cf15c",
+      "name": "GameStateChangeHard::uninit",
+      "file": "001cf15c_GameStateChangeHard__uninit.c"
+    },
+    {
+      "address": "001d11e0",
+      "name": "Quest::checkQuestClear",
+      "file": "001d11e0_Quest__checkQuestClear.c"
+    },
+    {
+      "address": "001d4ae4",
+      "name": "QuestRecordItem::QuestRecordItem",
+      "file": "001d4ae4_QuestRecordItem__QuestRecordItem.c"
+    },
+    {
+      "address": "001d5314",
+      "name": "QuestOrder::QuestOrder",
+      "file": "001d5314_QuestOrder__QuestOrder.c"
+    },
+    {
+      "address": "001d64e8",
+      "name": "QuestRecordItem::~QuestRecordItem",
+      "file": "001d64e8_QuestRecordItem___QuestRecordItem.c"
+    },
+    {
+      "address": "001d65ac",
+      "name": "QuestOrder::~QuestOrder",
+      "file": "001d65ac_QuestOrder___QuestOrder.c"
+    },
+    {
+      "address": "001d7e5c",
+      "name": "GetZombilityDialog::~GetZombilityDialog",
+      "file": "001d7e5c_GetZombilityDialog___GetZombilityDialog.c"
+    },
+    {
+      "address": "001d7fe0",
+      "name": "GetZombilityDialog::GetZombilityDialog",
+      "file": "001d7fe0_GetZombilityDialog__GetZombilityDialog.c"
+    },
+    {
+      "address": "001d9934",
+      "name": "getUpdateBonusClass::getUpdateBonusFail",
+      "file": "001d9934_getUpdateBonusClass__getUpdateBonusFail.c"
+    },
+    {
+      "address": "001d99e8",
+      "name": "getUpdateBonusClass::set_UpdateBonusFlag",
+      "file": "001d99e8_getUpdateBonusClass__set_UpdateBonusFlag.c"
+    },
+    {
+      "address": "001d9c1c",
+      "name": "FUN_001d9c1c",
+      "file": "001d9c1c_FUN_001d9c1c.c"
+    },
+    {
+      "address": "001d9dd8",
+      "name": "L_ParseRestOfNormalGift",
+      "file": "001d9dd8_L_ParseRestOfNormalGift.c"
+    },
+    {
+      "address": "001d9f28",
+      "name": "L_ParseRestOfOrder",
+      "file": "001d9f28_L_ParseRestOfOrder.c"
+    },
+    {
+      "address": "001da3a8",
+      "name": "L_ParseRestOfUpdateNotice",
+      "file": "001da3a8_L_ParseRestOfUpdateNotice.c"
+    },
+    {
+      "address": "001da428",
+      "name": "L_ParseGiftData",
+      "file": "001da428_L_ParseGiftData.c"
+    },
+    {
+      "address": "001da5a8",
+      "name": "GiftManager::PopGift",
+      "file": "001da5a8_GiftManager__PopGift.c"
+    },
+    {
+      "address": "001da750",
+      "name": "GiftManager::GiveGift",
+      "file": "001da750_GiftManager__GiveGift.c"
+    },
+    {
+      "address": "001da7e0",
+      "name": "GiftManager::SendOrder",
+      "file": "001da7e0_GiftManager__SendOrder.c"
+    },
+    {
+      "address": "001da85c",
+      "name": "GiftManager::FillOrder",
+      "file": "001da85c_GiftManager__FillOrder.c"
+    },
+    {
+      "address": "001da8e4",
+      "name": "GiftManager::SendAttackerWin",
+      "file": "001da8e4_GiftManager__SendAttackerWin.c"
+    },
+    {
+      "address": "001da954",
+      "name": "GiftManager::SendDefenderWin",
+      "file": "001da954_GiftManager__SendDefenderWin.c"
+    },
+    {
+      "address": "001daa94",
+      "name": "GiftManager::deleteGiftFile",
+      "file": "001daa94_GiftManager__deleteGiftFile.c"
+    },
+    {
+      "address": "001dd350",
+      "name": "HudElement::tick",
+      "file": "001dd350_HudElement__tick.c"
+    },
+    {
+      "address": "001dd4b6",
+      "name": "FUN_001dd4b6",
+      "file": "001dd4b6_FUN_001dd4b6.c"
+    },
+    {
+      "address": "001dd50a",
+      "name": "FUN_001dd50a",
+      "file": "001dd50a_FUN_001dd50a.c"
+    },
+    {
+      "address": "001dde7c",
+      "name": "FUN_001dde7c",
+      "file": "001dde7c_FUN_001dde7c.c"
+    },
+    {
+      "address": "001dde8c",
+      "name": "FUN_001dde8c",
+      "file": "001dde8c_FUN_001dde8c.c"
+    },
+    {
+      "address": "001e2fa4",
+      "name": "LevelUpDialog::postLevelUpStory",
+      "file": "001e2fa4_LevelUpDialog__postLevelUpStory.c"
+    },
+    {
+      "address": "001e34f8",
+      "name": "LevelUpDialog::tick",
+      "file": "001e34f8_LevelUpDialog__tick.c"
+    },
+    {
+      "address": "001e63f0",
+      "name": "LotteryDialog::LotteryDialog",
+      "file": "001e63f0_LotteryDialog__LotteryDialog.c"
+    },
+    {
+      "address": "001e736c",
+      "name": "LotteryDialog::recordCram",
+      "file": "001e736c_LotteryDialog__recordCram.c"
+    },
+    {
+      "address": "001e75d8",
+      "name": "LotteryDialog::getSpecialString",
+      "file": "001e75d8_LotteryDialog__getSpecialString.c"
+    },
+    {
+      "address": "001e7f38",
+      "name": "LotteryDialog::birthNewCharacterAndZombie",
+      "file": "001e7f38_LotteryDialog__birthNewCharacterAndZombie.c"
+    },
+    {
+      "address": "001ea114",
+      "name": "LotteryFeaturedDialog::LotteryFeaturedDialog",
+      "file": "001ea114_LotteryFeaturedDialog__LotteryFeaturedDialog.c"
+    },
+    {
+      "address": "001ea6fc",
+      "name": "LotteryFeaturedDialog::~LotteryFeaturedDialog",
+      "file": "001ea6fc_LotteryFeaturedDialog___LotteryFeaturedDialog.c"
+    },
+    {
+      "address": "001ecb80",
+      "name": "PicGiftDialog::show",
+      "file": "001ecb80_PicGiftDialog__show.c"
+    },
+    {
+      "address": "001ed2e0",
+      "name": "PicGiftDialog::PicGiftDialog",
+      "file": "001ed2e0_PicGiftDialog__PicGiftDialog.c"
+    },
+    {
+      "address": "001ed778",
+      "name": "PicGiftDialog::~PicGiftDialog",
+      "file": "001ed778_PicGiftDialog___PicGiftDialog.c"
+    },
+    {
+      "address": "001ef594",
+      "name": "PrizeMenuOrder::PrizeMenuOrder",
+      "file": "001ef594_PrizeMenuOrder__PrizeMenuOrder.c"
+    },
+    {
+      "address": "001f0a5e",
+      "name": "FUN_001f0a5e",
+      "file": "001f0a5e_FUN_001f0a5e.c"
+    },
+    {
+      "address": "001f17e8",
+      "name": "FUN_001f17e8",
+      "file": "001f17e8_FUN_001f17e8.c"
+    },
+    {
+      "address": "001f1810",
+      "name": "PrizeMenuDialog::~PrizeMenuDialog",
+      "file": "001f1810_PrizeMenuDialog___PrizeMenuDialog.c"
+    },
+    {
+      "address": "001f19f8",
+      "name": "PrizeMenuOrder::~PrizeMenuOrder",
+      "file": "001f19f8_PrizeMenuOrder___PrizeMenuOrder.c"
+    },
+    {
+      "address": "001f1cdc",
+      "name": "PrizeMenuDialog::PrizeMenuDialog",
+      "file": "001f1cdc_PrizeMenuDialog__PrizeMenuDialog.c"
+    },
+    {
+      "address": "001f2400",
+      "name": "PrizeMenuOrder::tick",
+      "file": "001f2400_PrizeMenuOrder__tick.c"
+    },
+    {
+      "address": "001f4f38",
+      "name": "MessageElement::MessageElement",
+      "file": "001f4f38_MessageElement__MessageElement.c"
+    },
+    {
+      "address": "001f53b0",
+      "name": "MessageElement::~MessageElement",
+      "file": "001f53b0_MessageElement___MessageElement.c"
+    },
+    {
+      "address": "001fc5bc",
+      "name": "FUN_001fc5bc",
+      "file": "001fc5bc_FUN_001fc5bc.c"
+    },
+    {
+      "address": "001fc5e4",
+      "name": "ObjectiveDialog::ObjectiveDialog",
+      "file": "001fc5e4_ObjectiveDialog__ObjectiveDialog.c"
+    },
+    {
+      "address": "001fdea4",
+      "name": "ObjectiveSystem::completeObjective",
+      "file": "001fdea4_ObjectiveSystem__completeObjective.c"
+    },
+    {
+      "address": "001fdf78",
+      "name": "ObjectiveSystem::completeSetProgress",
+      "file": "001fdf78_ObjectiveSystem__completeSetProgress.c"
+    },
+    {
+      "address": "001fe5f4",
+      "name": "ObjectiveSystem::checkForCompletion",
+      "file": "001fe5f4_ObjectiveSystem__checkForCompletion.c"
+    },
+    {
+      "address": "001feb04",
+      "name": "ObjectiveSystem::completeSet",
+      "file": "001feb04_ObjectiveSystem__completeSet.c"
+    },
+    {
+      "address": "00201c80",
+      "name": "CompleteOrder::tick",
+      "file": "00201c80_CompleteOrder__tick.c"
+    },
+    {
+      "address": "00202254",
+      "name": "CookingOrder::finish",
+      "file": "00202254_CookingOrder__finish.c"
+    },
+    {
+      "address": "002024c0",
+      "name": "CompleteOrder::serve",
+      "file": "002024c0_CompleteOrder__serve.c"
+    },
+    {
+      "address": "00209a88",
+      "name": "PUResultDialog::PUResultDialog",
+      "file": "00209a88_PUResultDialog__PUResultDialog.c"
+    },
+    {
+      "address": "0020a29c",
+      "name": "PUResultDialog::~PUResultDialog",
+      "file": "0020a29c_PUResultDialog___PUResultDialog.c"
+    },
+    {
+      "address": "0020bc08",
+      "name": "RaidRewardScreen::postFriendCafeRaidVictoryStory",
+      "file": "0020bc08_RaidRewardScreen__postFriendCafeRaidVictoryStory.c"
+    },
+    {
+      "address": "0020bffc",
+      "name": "RaidRewardScreen::postRaidVictoryStory",
+      "file": "0020bffc_RaidRewardScreen__postRaidVictoryStory.c"
+    },
+    {
+      "address": "0020db80",
+      "name": "RaidRewardScreen::~RaidRewardScreen",
+      "file": "0020db80_RaidRewardScreen___RaidRewardScreen.c"
+    },
+    {
+      "address": "002126a2",
+      "name": "Recipe::getCost",
+      "file": "002126a2_Recipe__getCost.c"
+    },
+    {
+      "address": "00212764",
+      "name": "Recipe::getFullName",
+      "file": "00212764_Recipe__getFullName.c"
+    },
+    {
+      "address": "00213bb0",
+      "name": "RecipeBook::setVariant",
+      "file": "00213bb0_RecipeBook__setVariant.c"
+    },
+    {
+      "address": "002154b8",
+      "name": "RecipeBook::RecipeBook",
+      "file": "002154b8_RecipeBook__RecipeBook.c"
+    },
+    {
+      "address": "0021b138",
+      "name": "RecipeUnlockedDialog::postLevelUpStory",
+      "file": "0021b138_RecipeUnlockedDialog__postLevelUpStory.c"
+    },
+    {
+      "address": "002258f8",
+      "name": "ServeTask::tick",
+      "file": "002258f8_ServeTask__tick.c"
+    },
+    {
+      "address": "00229854",
+      "name": "StatusNote::StatusNote",
+      "file": "00229854_StatusNote__StatusNote.c"
+    },
+    {
+      "address": "0022cd96",
+      "name": "FUN_0022cd96",
+      "file": "0022cd96_FUN_0022cd96.c"
+    },
+    {
+      "address": "0022cd9c",
+      "name": "FUN_0022cd9c",
+      "file": "0022cd9c_FUN_0022cd9c.c"
+    },
+    {
+      "address": "002303cc",
+      "name": "TutorialSystem::deserialize",
+      "file": "002303cc_TutorialSystem__deserialize.c"
+    },
+    {
+      "address": "00234a90",
+      "name": "UpdateGame::paint",
+      "file": "00234a90_UpdateGame__paint.c"
+    },
+    {
+      "address": "00234fbc",
+      "name": "UserRankDialog::UserRankDialog",
+      "file": "00234fbc_UserRankDialog__UserRankDialog.c"
+    },
+    {
+      "address": "002386e0",
+      "name": "zc_pf_is_first",
+      "file": "002386e0_zc_pf_is_first.c"
+    },
+    {
+      "address": "00238d5c",
+      "name": "ZombieCafe::pointerReleased",
+      "file": "00238d5c_ZombieCafe__pointerReleased.c"
+    },
+    {
+      "address": "00238fcc",
+      "name": "ZombieCafe::FriendsUpdatedCallback",
+      "file": "00238fcc_ZombieCafe__FriendsUpdatedCallback.c"
+    },
+    {
+      "address": "002390a0",
+      "name": "ZombieCafe::QueryFriendMetaDataFinished",
+      "file": "002390a0_ZombieCafe__QueryFriendMetaDataFinished.c"
+    },
+    {
+      "address": "002390b4",
+      "name": "SmDev",
+      "file": "002390b4_SmDev.c"
+    },
+    {
+      "address": "00239204",
+      "name": "ZombieCafe::paint",
+      "file": "00239204_ZombieCafe__paint.c"
+    },
+    {
+      "address": "002395d4",
+      "name": "ZombieCafe::saveGameState",
+      "file": "002395d4_ZombieCafe__saveGameState.c"
+    },
+    {
+      "address": "0023a4b8",
+      "name": "ZombieCafe::L_GotServerTimeForHoover",
+      "file": "0023a4b8_ZombieCafe__L_GotServerTimeForHoover.c"
+    },
+    {
+      "address": "0023a590",
+      "name": "ZombieCafe::L_GotServerTime",
+      "file": "0023a590_ZombieCafe__L_GotServerTime.c"
+    },
+    {
+      "address": "0023a8b4",
+      "name": "ZombieCafe::CreateAndroidOffsets",
+      "file": "0023a8b4_ZombieCafe__CreateAndroidOffsets.c"
+    },
+    {
+      "address": "0023c228",
+      "name": "ZombieCafe::reloadFont",
+      "file": "0023c228_ZombieCafe__reloadFont.c"
+    },
+    {
+      "address": "0023c2a0",
+      "name": "ZombieCafe::ReloadTextures",
+      "file": "0023c2a0_ZombieCafe__ReloadTextures.c"
+    },
+    {
+      "address": "0023c584",
+      "name": "ZombieCafe::ServerTimeSuccess",
+      "file": "0023c584_ZombieCafe__ServerTimeSuccess.c"
+    },
+    {
+      "address": "0023c780",
+      "name": "ZombieCafe::getBossName",
+      "file": "0023c780_ZombieCafe__getBossName.c"
+    },
+    {
+      "address": "0023d1f4",
+      "name": "ZombieCafe::loadlottery",
+      "file": "0023d1f4_ZombieCafe__loadlottery.c"
+    },
+    {
+      "address": "0023d320",
+      "name": "ZombieCafe::loadMenuImages",
+      "file": "0023d320_ZombieCafe__loadMenuImages.c"
+    },
+    {
+      "address": "0023d4d8",
+      "name": "ZombieCafe::unloadMenuImages",
+      "file": "0023d4d8_ZombieCafe__unloadMenuImages.c"
+    },
+    {
+      "address": "0023d6b8",
+      "name": "ZombieCafe::loadDialogImages",
+      "file": "0023d6b8_ZombieCafe__loadDialogImages.c"
+    },
+    {
+      "address": "0023d780",
+      "name": "ZombieCafe::loadInGameImages",
+      "file": "0023d780_ZombieCafe__loadInGameImages.c"
+    },
+    {
+      "address": "0023d850",
+      "name": "ZombieCafe::unloadDialogImages",
+      "file": "0023d850_ZombieCafe__unloadDialogImages.c"
+    },
+    {
+      "address": "0023d8e4",
+      "name": "ZombieCafe::unloadInGameImages",
+      "file": "0023d8e4_ZombieCafe__unloadInGameImages.c"
+    },
+    {
+      "address": "0023d980",
+      "name": "ZombieCafe::loadZombieCollectionImages",
+      "file": "0023d980_ZombieCafe__loadZombieCollectionImages.c"
+    },
+    {
+      "address": "0023da48",
+      "name": "ZombieCafe::unloadZombieCollectionImages",
+      "file": "0023da48_ZombieCafe__unloadZombieCollectionImages.c"
+    },
+    {
+      "address": "0023dc94",
+      "name": "ZombieCafe::loadShopImages",
+      "file": "0023dc94_ZombieCafe__loadShopImages.c"
+    },
+    {
+      "address": "0023dd5c",
+      "name": "ZombieCafe::unloadShopImages",
+      "file": "0023dd5c_ZombieCafe__unloadShopImages.c"
+    },
+    {
+      "address": "0023ddf0",
+      "name": "ZombieCafe::loadFurnitureImages",
+      "file": "0023ddf0_ZombieCafe__loadFurnitureImages.c"
+    },
+    {
+      "address": "0023e128",
+      "name": "ZombieCafe::unloadFurnitureImages",
+      "file": "0023e128_ZombieCafe__unloadFurnitureImages.c"
+    },
+    {
+      "address": "0023e2d4",
+      "name": "ZombieCafe::loadRecipeImages",
+      "file": "0023e2d4_ZombieCafe__loadRecipeImages.c"
+    },
+    {
+      "address": "0023e404",
+      "name": "ZombieCafe::unloadRecipeImages",
+      "file": "0023e404_ZombieCafe__unloadRecipeImages.c"
+    },
+    {
+      "address": "0023e498",
+      "name": "ZombieCafe::loadMapImages",
+      "file": "0023e498_ZombieCafe__loadMapImages.c"
+    },
+    {
+      "address": "0023e560",
+      "name": "ZombieCafe::unloadMapImages",
+      "file": "0023e560_ZombieCafe__unloadMapImages.c"
+    },
+    {
+      "address": "0023e5f4",
+      "name": "ZombieCafe::setServerNickName",
+      "file": "0023e5f4_ZombieCafe__setServerNickName.c"
+    },
+    {
+      "address": "0023e6c0",
+      "name": "ZombieCafe::checkNickNameEntry",
+      "file": "0023e6c0_ZombieCafe__checkNickNameEntry.c"
+    },
+    {
+      "address": "0023e958",
+      "name": "ZombieCafe::frequentFryerLevelAdd",
+      "file": "0023e958_ZombieCafe__frequentFryerLevelAdd.c"
+    },
+    {
+      "address": "0023ec14",
+      "name": "ZombieCafe::sendPlaySecLog",
+      "file": "0023ec14_ZombieCafe__sendPlaySecLog.c"
+    },
+    {
+      "address": "00240214",
+      "name": "ZombieCafe::eventRaid2_setExplanationWebWindow",
+      "file": "00240214_ZombieCafe__eventRaid2_setExplanationWebWindow.c"
+    },
+    {
+      "address": "002407e0",
+      "name": "ZombieCafe::sendToxinCheat",
+      "file": "002407e0_ZombieCafe__sendToxinCheat.c"
+    },
+    {
+      "address": "002408cc",
+      "name": "ZombieCafe::loadGetEntryInfo",
+      "file": "002408cc_ZombieCafe__loadGetEntryInfo.c"
+    },
+    {
+      "address": "00240980",
+      "name": "ZombieCafe::getGameInfo",
+      "file": "00240980_ZombieCafe__getGameInfo.c"
+    },
+    {
+      "address": "00240a20",
+      "name": "ZombieCafe::setPurchasingFlag",
+      "file": "00240a20_ZombieCafe__setPurchasingFlag.c"
+    },
+    {
+      "address": "00240a90",
+      "name": "ZombieCafe::getPurchasingFlag",
+      "file": "00240a90_ZombieCafe__getPurchasingFlag.c"
+    },
+    {
+      "address": "00240b00",
+      "name": "ZombieCafe::setOpenPurchaceScreenFlag",
+      "file": "00240b00_ZombieCafe__setOpenPurchaceScreenFlag.c"
+    },
+    {
+      "address": "00240b70",
+      "name": "ZombieCafe::getOpenPurchaceScreenFlag",
+      "file": "00240b70_ZombieCafe__getOpenPurchaceScreenFlag.c"
+    },
+    {
+      "address": "0024121c",
+      "name": "ZombieCafe::GetLotteryRandom",
+      "file": "0024121c_ZombieCafe__GetLotteryRandom.c"
+    },
+    {
+      "address": "00241610",
+      "name": "FUN_00241610",
+      "file": "00241610_FUN_00241610.c"
+    },
+    {
+      "address": "0024457c",
+      "name": "FUN_0024457c",
+      "file": "0024457c_FUN_0024457c.c"
+    },
+    {
+      "address": "0024458c",
+      "name": "FUN_0024458c",
+      "file": "0024458c_FUN_0024458c.c"
+    },
+    {
+      "address": "002447b8",
+      "name": "ZombieCafe::L_PurchaseDBSetComplete",
+      "file": "002447b8_ZombieCafe__L_PurchaseDBSetComplete.c"
+    },
+    {
+      "address": "00245b00",
+      "name": "ZombieCafe::serialize",
+      "file": "00245b00_ZombieCafe__serialize.c"
+    },
+    {
+      "address": "002468fc",
+      "name": "ZombieCafe::changeHard_UploadData",
+      "file": "002468fc_ZombieCafe__changeHard_UploadData.c"
+    },
+    {
+      "address": "00246c30",
+      "name": "ZombieCafe::saveServerData",
+      "file": "00246c30_ZombieCafe__saveServerData.c"
+    },
+    {
+      "address": "00246d48",
+      "name": "ZombieCafe::backup",
+      "file": "00246d48_ZombieCafe__backup.c"
+    },
+    {
+      "address": "002472fc",
+      "name": "L_DlcPurchaseSuccess",
+      "file": "002472fc_L_DlcPurchaseSuccess.c"
+    },
+    {
+      "address": "00247b5c",
+      "name": "ZombieCafe::orderFood",
+      "file": "00247b5c_ZombieCafe__orderFood.c"
+    },
+    {
+      "address": "002485a0",
+      "name": "ZombieCafe::CreateIAProducts",
+      "file": "002485a0_ZombieCafe__CreateIAProducts.c"
+    },
+    {
+      "address": "0024a334",
+      "name": "L_DlcRequestSuccessCallback",
+      "file": "0024a334_L_DlcRequestSuccessCallback.c"
+    },
+    {
+      "address": "0024aaa4",
+      "name": "ZombieCafe::endLoadOrders",
+      "file": "0024aaa4_ZombieCafe__endLoadOrders.c"
+    },
+    {
+      "address": "0024aace",
+      "name": "FUN_0024aace",
+      "file": "0024aace_FUN_0024aace.c"
+    },
+    {
+      "address": "0024b542",
+      "name": "FUN_0024b542",
+      "file": "0024b542_FUN_0024b542.c"
+    },
+    {
+      "address": "0024b7f4",
+      "name": "ZombieCafe::beginLoadOrders",
+      "file": "0024b7f4_ZombieCafe__beginLoadOrders.c"
+    },
+    {
+      "address": "0024b9a0",
+      "name": "ZombieCafe::resetSaveData",
+      "file": "0024b9a0_ZombieCafe__resetSaveData.c"
+    },
+    {
+      "address": "0024c4bc",
+      "name": "ZombieCafe::deserialize",
+      "file": "0024c4bc_ZombieCafe__deserialize.c"
+    },
+    {
+      "address": "0024ea54",
+      "name": "FUN_0024ea54",
+      "file": "0024ea54_FUN_0024ea54.c"
+    },
+    {
+      "address": "0024eb80",
+      "name": "ZombieCafe::loadGlobalData",
+      "file": "0024eb80_ZombieCafe__loadGlobalData.c"
+    },
+    {
+      "address": "0024f88c",
+      "name": "ZombieCafe::GiveBoughtHCO",
+      "file": "0024f88c_ZombieCafe__GiveBoughtHCO.c"
+    },
+    {
+      "address": "0024fbe8",
+      "name": "ZombieCafe::GiveBoughtToxin",
+      "file": "0024fbe8_ZombieCafe__GiveBoughtToxin.c"
+    },
+    {
+      "address": "0024fff8",
+      "name": "ZombieCafe::simulateTimers",
+      "file": "0024fff8_ZombieCafe__simulateTimers.c"
+    },
+    {
+      "address": "00250500",
+      "name": "ZombieCafe::resume",
+      "file": "00250500_ZombieCafe__resume.c"
+    },
+    {
+      "address": "00250550",
+      "name": "ZombieCafe::tick",
+      "file": "00250550_ZombieCafe__tick.c"
+    },
+    {
+      "address": "00250d28",
+      "name": "FUN_00250d28",
+      "file": "00250d28_FUN_00250d28.c"
+    },
+    {
+      "address": "00251570",
+      "name": "std::priv::_Rb_tree<std::string,std::less<std::string>,std::pair<std::string_const,int>,std::priv::_Select1st<std::pair<std::string_const,int>>,std::priv::_MapTraitsT<std::pair<std::string_const,int>>,std::allocator<std::pair<std::string_const,int>>>::_M_find<char*>",
+      "file": "00251570_std__priv___Rb_tree_std__string_std__less_std__string__std__pair_std__string_const_int__std__priv___Select1st_std__pair_std__string_const_int___std__priv___MapTraitsT_std_.c"
+    },
+    {
+      "address": "002515f4",
+      "name": "ZombieCafe::getImageSubpack",
+      "file": "002515f4_ZombieCafe__getImageSubpack.c"
+    },
+    {
+      "address": "002516a8",
+      "name": "ZombieCafe::loadImagePack",
+      "file": "002516a8_ZombieCafe__loadImagePack.c"
+    },
+    {
+      "address": "00251b70",
+      "name": "ZombieCafe::cacheImageSubpack",
+      "file": "00251b70_ZombieCafe__cacheImageSubpack.c"
+    },
+    {
+      "address": "00251e20",
+      "name": "ZombieCafe::doInitDataInternal",
+      "file": "00251e20_ZombieCafe__doInitDataInternal.c"
+    },
+    {
+      "address": "0025371c",
+      "name": "FUN_0025371c",
+      "file": "0025371c_FUN_0025371c.c"
+    },
+    {
+      "address": "002550ec",
+      "name": "ZombieCafeGameState::sendMessage",
+      "file": "002550ec_ZombieCafeGameState__sendMessage.c"
+    },
+    {
+      "address": "00256128",
+      "name": "TombstoneCommandBar::rechargeTombstone",
+      "file": "00256128_TombstoneCommandBar__rechargeTombstone.c"
+    },
+    {
+      "address": "0025b268",
+      "name": "FUN_0025b268",
+      "file": "0025b268_FUN_0025b268.c"
+    },
+    {
+      "address": "0025c4a8",
+      "name": "FUN_0025c4a8",
+      "file": "0025c4a8_FUN_0025c4a8.c"
+    },
+    {
+      "address": "0025e068",
+      "name": "FUN_0025e068",
+      "file": "0025e068_FUN_0025e068.c"
+    },
+    {
+      "address": "0025e49c",
+      "name": "FUN_0025e49c",
+      "file": "0025e49c_FUN_0025e49c.c"
+    },
+    {
+      "address": "00260960",
+      "name": "FUN_00260960",
+      "file": "00260960_FUN_00260960.c"
+    },
+    {
+      "address": "002609e4",
+      "name": "FUN_002609e4",
+      "file": "002609e4_FUN_002609e4.c"
+    },
+    {
+      "address": "002615ac",
+      "name": "FUN_002615ac",
+      "file": "002615ac_FUN_002615ac.c"
+    },
+    {
+      "address": "00263054",
+      "name": "sqlite3_db_config",
+      "file": "00263054_sqlite3_db_config.c"
+    },
+    {
+      "address": "0026350c",
+      "name": "FUN_0026350c",
+      "file": "0026350c_FUN_0026350c.c"
+    },
+    {
+      "address": "0026376e",
+      "name": "FUN_0026376e",
+      "file": "0026376e_FUN_0026376e.c"
+    },
+    {
+      "address": "00263cfc",
+      "name": "sqlite3_db_status",
+      "file": "00263cfc_sqlite3_db_status.c"
+    },
+    {
+      "address": "00263fd8",
+      "name": "FUN_00263fd8",
+      "file": "00263fd8_FUN_00263fd8.c"
+    },
+    {
+      "address": "00264ad0",
+      "name": "sqlite3_config",
+      "file": "00264ad0_sqlite3_config.c"
+    },
+    {
+      "address": "00265968",
+      "name": "FUN_00265968",
+      "file": "00265968_FUN_00265968.c"
+    },
+    {
+      "address": "00265aac",
+      "name": "FUN_00265aac",
+      "file": "00265aac_FUN_00265aac.c"
+    },
+    {
+      "address": "0026613c",
+      "name": "FUN_0026613c",
+      "file": "0026613c_FUN_0026613c.c"
+    },
+    {
+      "address": "0026699e",
+      "name": "FUN_0026699e",
+      "file": "0026699e_FUN_0026699e.c"
+    },
+    {
+      "address": "002675a8",
+      "name": "FUN_002675a8",
+      "file": "002675a8_FUN_002675a8.c"
+    },
+    {
+      "address": "002675c6",
+      "name": "FUN_002675c6",
+      "file": "002675c6_FUN_002675c6.c"
+    },
+    {
+      "address": "00268152",
+      "name": "FUN_00268152",
+      "file": "00268152_FUN_00268152.c"
+    },
+    {
+      "address": "0026815a",
+      "name": "FUN_0026815a",
+      "file": "0026815a_FUN_0026815a.c"
+    },
+    {
+      "address": "00268160",
+      "name": "FUN_00268160",
+      "file": "00268160_FUN_00268160.c"
+    },
+    {
+      "address": "00268514",
+      "name": "FUN_00268514",
+      "file": "00268514_FUN_00268514.c"
+    },
+    {
+      "address": "0026ad74",
+      "name": "sqlite3_log",
+      "file": "0026ad74_sqlite3_log.c"
+    },
+    {
+      "address": "0026c0e6",
+      "name": "sqlite3_bind_value",
+      "file": "0026c0e6_sqlite3_bind_value.c"
+    },
+    {
+      "address": "0026f8e4",
+      "name": "FUN_0026f8e4",
+      "file": "0026f8e4_FUN_0026f8e4.c"
+    },
+    {
+      "address": "0026f8f4",
+      "name": "FUN_0026f8f4",
+      "file": "0026f8f4_FUN_0026f8f4.c"
+    },
+    {
+      "address": "0027022a",
+      "name": "FUN_0027022a",
+      "file": "0027022a_FUN_0027022a.c"
+    },
+    {
+      "address": "00270ad0",
+      "name": "FUN_00270ad0",
+      "file": "00270ad0_FUN_00270ad0.c"
+    },
+    {
+      "address": "00271058",
+      "name": "FUN_00271058",
+      "file": "00271058_FUN_00271058.c"
+    },
+    {
+      "address": "002711c8",
+      "name": "FUN_002711c8",
+      "file": "002711c8_FUN_002711c8.c"
+    },
+    {
+      "address": "002712f4",
+      "name": "FUN_002712f4",
+      "file": "002712f4_FUN_002712f4.c"
+    },
+    {
+      "address": "002720ac",
+      "name": "sqlite3_vmprintf",
+      "file": "002720ac_sqlite3_vmprintf.c"
+    },
+    {
+      "address": "00272288",
+      "name": "FUN_00272288",
+      "file": "00272288_FUN_00272288.c"
+    },
+    {
+      "address": "00272c6c",
+      "name": "sqlite3_randomness",
+      "file": "00272c6c_sqlite3_randomness.c"
+    },
+    {
+      "address": "00272d70",
+      "name": "sqlite3_test_control",
+      "file": "00272d70_sqlite3_test_control.c"
+    },
+    {
+      "address": "0027350c",
+      "name": "FUN_0027350c",
+      "file": "0027350c_FUN_0027350c.c"
+    },
+    {
+      "address": "0027366c",
+      "name": "FUN_0027366c",
+      "file": "0027366c_FUN_0027366c.c"
+    },
+    {
+      "address": "00274084",
+      "name": "FUN_00274084",
+      "file": "00274084_FUN_00274084.c"
+    },
+    {
+      "address": "002751b8",
+      "name": "FUN_002751b8",
+      "file": "002751b8_FUN_002751b8.c"
+    },
+    {
+      "address": "00275720",
+      "name": "FUN_00275720",
+      "file": "00275720_FUN_00275720.c"
+    },
+    {
+      "address": "00276118",
+      "name": "FUN_00276118",
+      "file": "00276118_FUN_00276118.c"
+    },
+    {
+      "address": "00276690",
+      "name": "FUN_00276690",
+      "file": "00276690_FUN_00276690.c"
+    },
+    {
+      "address": "00276702",
+      "name": "FUN_00276702",
+      "file": "00276702_FUN_00276702.c"
+    },
+    {
+      "address": "00277442",
+      "name": "FUN_00277442",
+      "file": "00277442_FUN_00277442.c"
+    },
+    {
+      "address": "00277444",
+      "name": "FUN_00277444",
+      "file": "00277444_FUN_00277444.c"
+    },
+    {
+      "address": "0027747a",
+      "name": "FUN_0027747a",
+      "file": "0027747a_FUN_0027747a.c"
+    },
+    {
+      "address": "00277486",
+      "name": "FUN_00277486",
+      "file": "00277486_FUN_00277486.c"
+    },
+    {
+      "address": "00278436",
+      "name": "FUN_00278436",
+      "file": "00278436_FUN_00278436.c"
+    },
+    {
+      "address": "0027b24a",
+      "name": "FUN_0027b24a",
+      "file": "0027b24a_FUN_0027b24a.c"
+    },
+    {
+      "address": "0027b258",
+      "name": "FUN_0027b258",
+      "file": "0027b258_FUN_0027b258.c"
+    },
+    {
+      "address": "0027b26c",
+      "name": "FUN_0027b26c",
+      "file": "0027b26c_FUN_0027b26c.c"
+    },
+    {
+      "address": "0027c9d8",
+      "name": "FUN_0027c9d8",
+      "file": "0027c9d8_FUN_0027c9d8.c"
+    },
+    {
+      "address": "0027cf9c",
+      "name": "FUN_0027cf9c",
+      "file": "0027cf9c_FUN_0027cf9c.c"
+    },
+    {
+      "address": "0027ea30",
+      "name": "FUN_0027ea30",
+      "file": "0027ea30_FUN_0027ea30.c"
+    },
+    {
+      "address": "0027ea54",
+      "name": "FUN_0027ea54",
+      "file": "0027ea54_FUN_0027ea54.c"
+    },
+    {
+      "address": "0027f5c8",
+      "name": "FUN_0027f5c8",
+      "file": "0027f5c8_FUN_0027f5c8.c"
+    },
+    {
+      "address": "0027f5d8",
+      "name": "FUN_0027f5d8",
+      "file": "0027f5d8_FUN_0027f5d8.c"
+    },
+    {
+      "address": "0027f5f4",
+      "name": "FUN_0027f5f4",
+      "file": "0027f5f4_FUN_0027f5f4.c"
+    },
+    {
+      "address": "0027fe18",
+      "name": "FUN_0027fe18",
+      "file": "0027fe18_FUN_0027fe18.c"
+    },
+    {
+      "address": "00280540",
+      "name": "sqlite3_backup_step",
+      "file": "00280540_sqlite3_backup_step.c"
+    },
+    {
+      "address": "0028172c",
+      "name": "FUN_0028172c",
+      "file": "0028172c_FUN_0028172c.c"
+    },
+    {
+      "address": "00281f08",
+      "name": "FUN_00281f08",
+      "file": "00281f08_FUN_00281f08.c"
+    },
+    {
+      "address": "00281fb2",
+      "name": "FUN_00281fb2",
+      "file": "00281fb2_FUN_00281fb2.c"
+    },
+    {
+      "address": "00281fba",
+      "name": "FUN_00281fba",
+      "file": "00281fba_FUN_00281fba.c"
+    },
+    {
+      "address": "00282126",
+      "name": "FUN_00282126",
+      "file": "00282126_FUN_00282126.c"
+    },
+    {
+      "address": "002822e0",
+      "name": "FUN_002822e0",
+      "file": "002822e0_FUN_002822e0.c"
+    },
+    {
+      "address": "0028319c",
+      "name": "FUN_0028319c",
+      "file": "0028319c_FUN_0028319c.c"
+    },
+    {
+      "address": "002831d0",
+      "name": "FUN_002831d0",
+      "file": "002831d0_FUN_002831d0.c"
+    },
+    {
+      "address": "00285af0",
+      "name": "FUN_00285af0",
+      "file": "00285af0_FUN_00285af0.c"
+    },
+    {
+      "address": "00285f98",
+      "name": "FUN_00285f98",
+      "file": "00285f98_FUN_00285f98.c"
+    },
+    {
+      "address": "00286d28",
+      "name": "sqlite3_step",
+      "file": "00286d28_sqlite3_step.c"
+    },
+    {
+      "address": "00288b78",
+      "name": "FUN_00288b78",
+      "file": "00288b78_FUN_00288b78.c"
+    },
+    {
+      "address": "0028a7e0",
+      "name": "FUN_0028a7e0",
+      "file": "0028a7e0_FUN_0028a7e0.c"
+    },
+    {
+      "address": "0028d4b0",
+      "name": "FUN_0028d4b0",
+      "file": "0028d4b0_FUN_0028d4b0.c"
+    },
+    {
+      "address": "0028d528",
+      "name": "FUN_0028d528",
+      "file": "0028d528_FUN_0028d528.c"
+    },
+    {
+      "address": "00292802",
+      "name": "FUN_00292802",
+      "file": "00292802_FUN_00292802.c"
+    },
+    {
+      "address": "00292812",
+      "name": "FUN_00292812",
+      "file": "00292812_FUN_00292812.c"
+    },
+    {
+      "address": "0029288c",
+      "name": "FUN_0029288c",
+      "file": "0029288c_FUN_0029288c.c"
+    },
+    {
+      "address": "00292890",
+      "name": "FUN_00292890",
+      "file": "00292890_FUN_00292890.c"
+    },
+    {
+      "address": "002928da",
+      "name": "FUN_002928da",
+      "file": "002928da_FUN_002928da.c"
+    },
+    {
+      "address": "00292dac",
+      "name": "FUN_00292dac",
+      "file": "00292dac_FUN_00292dac.c"
+    },
+    {
+      "address": "0029358c",
+      "name": "HCOManager::checkHCOStart",
+      "file": "0029358c_HCOManager__checkHCOStart.c"
+    },
+    {
+      "address": "002936b8",
+      "name": "HCOManager::loadHCOItemInfo",
+      "file": "002936b8_HCOManager__loadHCOItemInfo.c"
+    },
+    {
+      "address": "00293830",
+      "name": "HCOManager::saveHCOItemInfo",
+      "file": "00293830_HCOManager__saveHCOItemInfo.c"
+    },
+    {
+      "address": "00294758",
+      "name": "GameStateSpecialSale::sendMalta",
+      "file": "00294758_GameStateSpecialSale__sendMalta.c"
+    },
+    {
+      "address": "00294988",
+      "name": "GameStateSpecialSale::init",
+      "file": "00294988_GameStateSpecialSale__init.c"
+    },
+    {
+      "address": "00295624",
+      "name": "GameStateSpecialSale::unSelectInstance",
+      "file": "00295624_GameStateSpecialSale__unSelectInstance.c"
+    },
+    {
+      "address": "002958c0",
+      "name": "GameStateSpecialSale::selectInstance",
+      "file": "002958c0_GameStateSpecialSale__selectInstance.c"
+    },
+    {
+      "address": "0029628e",
+      "name": "FUN_0029628e",
+      "file": "0029628e_FUN_0029628e.c"
+    },
+    {
+      "address": "0029691c",
+      "name": "GameStateSpecialSale::tick",
+      "file": "0029691c_GameStateSpecialSale__tick.c"
+    },
+    {
+      "address": "00296d50",
+      "name": "GameStateSpecialSale::uninit",
+      "file": "00296d50_GameStateSpecialSale__uninit.c"
+    },
+    {
+      "address": "00298970",
+      "name": "InfoBarClass::start_infobar",
+      "file": "00298970_InfoBarClass__start_infobar.c"
+    },
+    {
+      "address": "002989d4",
+      "name": "InfoBarClass::start_infobarOpen",
+      "file": "002989d4_InfoBarClass__start_infobarOpen.c"
+    },
+    {
+      "address": "00298a60",
+      "name": "SSFJPEventForm::start_infobar",
+      "file": "00298a60_SSFJPEventForm__start_infobar.c"
+    },
+    {
+      "address": "0029932c",
+      "name": "CapcomGame::tick",
+      "file": "0029932c_CapcomGame__tick.c"
+    },
+    {
+      "address": "002993f8",
+      "name": "CapcomGame::CapcomGame",
+      "file": "002993f8_CapcomGame__CapcomGame.c"
+    },
+    {
+      "address": "0029c984",
+      "name": "FUN_0029c984",
+      "file": "0029c984_FUN_0029c984.c"
+    },
+    {
+      "address": "0029cbbc",
+      "name": "CFTexture::FreeTextureRef",
+      "file": "0029cbbc_CFTexture__FreeTextureRef.c"
+    },
+    {
+      "address": "0029cc24",
+      "name": "CFTexture::changeTexture",
+      "file": "0029cc24_CFTexture__changeTexture.c"
+    },
+    {
+      "address": "0029d484",
+      "name": "CImage::createImageFromDownloadImage",
+      "file": "0029d484_CImage__createImageFromDownloadImage.c"
+    },
+    {
+      "address": "0029d534",
+      "name": "CImage::createImage",
+      "file": "0029d534_CImage__createImage.c"
+    },
+    {
+      "address": "0029d6a4",
+      "name": "CImage::createImage",
+      "file": "0029d6a4_CImage__createImage.c"
+    },
+    {
+      "address": "0029d84c",
+      "name": "CImage::recreateCCTexture2DForOnResume",
+      "file": "0029d84c_CImage__recreateCCTexture2DForOnResume.c"
+    },
+    {
+      "address": "0029dea8",
+      "name": "XWBNoFree",
+      "file": "0029dea8_XWBNoFree.c"
+    },
+    {
+      "address": "0029dfc8",
+      "name": "XWBReportFinal",
+      "file": "0029dfc8_XWBReportFinal.c"
+    },
+    {
+      "address": "0029e2a4",
+      "name": "DataInputStream::readUTF",
+      "file": "0029e2a4_DataInputStream__readUTF.c"
+    },
+    {
+      "address": "0029e650",
+      "name": "GameLoader::tick",
+      "file": "0029e650_GameLoader__tick.c"
+    },
+    {
+      "address": "0029e948",
+      "name": "GameLoader::paint",
+      "file": "0029e948_GameLoader__paint.c"
+    },
+    {
+      "address": "0029edf4",
+      "name": "LoadingGameState::layoutChanged",
+      "file": "0029edf4_LoadingGameState__layoutChanged.c"
+    },
+    {
+      "address": "0029eec4",
+      "name": "LoadingGameState::tick",
+      "file": "0029eec4_LoadingGameState__tick.c"
+    },
+    {
+      "address": "0029f304",
+      "name": "PackedImage::recreateCCTexture2DForOnResume",
+      "file": "0029f304_PackedImage__recreateCCTexture2DForOnResume.c"
+    },
+    {
+      "address": "0029f508",
+      "name": "PackedImage::PackedImage",
+      "file": "0029f508_PackedImage__PackedImage.c"
+    },
+    {
+      "address": "0029f6c8",
+      "name": "PackedImage::createPackedImage",
+      "file": "0029f6c8_PackedImage__createPackedImage.c"
+    },
+    {
+      "address": "0029f9e8",
+      "name": "PackedImage::createPackedImage",
+      "file": "0029f9e8_PackedImage__createPackedImage.c"
+    },
+    {
+      "address": "0029fda0",
+      "name": "Platform::getFormattedDate",
+      "file": "0029fda0_Platform__getFormattedDate.c"
+    },
+    {
+      "address": "0029ff48",
+      "name": "ResourceManager::Resource::getSize",
+      "file": "0029ff48_ResourceManager__Resource__getSize.c"
+    },
+    {
+      "address": "0029ff88",
+      "name": "ResourceManager::Resource::load",
+      "file": "0029ff88_ResourceManager__Resource__load.c"
+    },
+    {
+      "address": "002a001c",
+      "name": "ResourceManager::Resource::load",
+      "file": "002a001c_ResourceManager__Resource__load.c"
+    },
+    {
+      "address": "002a0134",
+      "name": "ResourceManager::ImageResource::load",
+      "file": "002a0134_ResourceManager__ImageResource__load.c"
+    },
+    {
+      "address": "002a0694",
+      "name": "ResourceManager::load",
+      "file": "002a0694_ResourceManager__load.c"
+    },
+    {
+      "address": "002a096c",
+      "name": "SaveDataInputStream::SaveDataInputStream",
+      "file": "002a096c_SaveDataInputStream__SaveDataInputStream.c"
+    },
+    {
+      "address": "002a0a08",
+      "name": "SaveDataInputStream::open",
+      "file": "002a0a08_SaveDataInputStream__open.c"
+    },
+    {
+      "address": "002a0b44",
+      "name": "SaveDataOutputStream::SaveDataOutputStream",
+      "file": "002a0b44_SaveDataOutputStream__SaveDataOutputStream.c"
+    },
+    {
+      "address": "002a0bf0",
+      "name": "ScreenshotTaker::takeScreenshot",
+      "file": "002a0bf0_ScreenshotTaker__takeScreenshot.c"
+    },
+    {
+      "address": "002a0c64",
+      "name": "ScreenshotTaker::uploadLastScreenshot",
+      "file": "002a0c64_ScreenshotTaker__uploadLastScreenshot.c"
+    },
+    {
+      "address": "002a1e3c",
+      "name": "StringUtil::stringFromUtf8",
+      "file": "002a1e3c_StringUtil__stringFromUtf8.c"
+    },
+    {
+      "address": "002a20c4",
+      "name": "StringUtil::parseInt",
+      "file": "002a20c4_StringUtil__parseInt.c"
+    },
+    {
+      "address": "002a21ac",
+      "name": "StringUtil::appendTime",
+      "file": "002a21ac_StringUtil__appendTime.c"
+    },
+    {
+      "address": "002a2374",
+      "name": "StringUtil::createTimeString",
+      "file": "002a2374_StringUtil__createTimeString.c"
+    },
+    {
+      "address": "002a2514",
+      "name": "StringUtil::splitString",
+      "file": "002a2514_StringUtil__splitString.c"
+    },
+    {
+      "address": "002a5538",
+      "name": "Scrollbar::Scrollbar",
+      "file": "002a5538_Scrollbar__Scrollbar.c"
+    },
+    {
+      "address": "002a8248",
+      "name": "BuildDevicePath",
+      "file": "002a8248_BuildDevicePath.c"
+    },
+    {
+      "address": "002a82c4",
+      "name": "UseAndroidScale",
+      "file": "002a82c4_UseAndroidScale.c"
+    },
+    {
+      "address": "002a82d4",
+      "name": "L_AttachCurrentThread",
+      "file": "002a82d4_L_AttachCurrentThread.c"
+    },
+    {
+      "address": "002a936c",
+      "name": "javaGetDeviceID",
+      "file": "002a936c_javaGetDeviceID.c"
+    },
+    {
+      "address": "002a9454",
+      "name": "javaGetProductID",
+      "file": "002a9454_javaGetProductID.c"
+    },
+    {
+      "address": "002a94e8",
+      "name": "javaGetCountryCode",
+      "file": "002a94e8_javaGetCountryCode.c"
+    },
+    {
+      "address": "002aa490",
+      "name": "javaLaunchURL",
+      "file": "002aa490_javaLaunchURL.c"
+    },
+    {
+      "address": "002aa4b8",
+      "name": "javaWebControlShow",
+      "file": "002aa4b8_javaWebControlShow.c"
+    },
+    {
+      "address": "002aa4e0",
+      "name": "javaWebControlHide",
+      "file": "002aa4e0_javaWebControlHide.c"
+    },
+    {
+      "address": "002aa724",
+      "name": "javaFile_Copy",
+      "file": "002aa724_javaFile_Copy.c"
+    },
+    {
+      "address": "002aa888",
+      "name": "javaLoadTexture",
+      "file": "002aa888_javaLoadTexture.c"
+    },
+    {
+      "address": "002aaabc",
+      "name": "CCReplaceStringOccurences",
+      "file": "002aaabc_CCReplaceStringOccurences.c"
+    },
+    {
+      "address": "002aac50",
+      "name": "CCReplaceStringOccurencesFB",
+      "file": "002aac50_CCReplaceStringOccurencesFB.c"
+    },
+    {
+      "address": "002ab638",
+      "name": "CCFormatCurrency",
+      "file": "002ab638_CCFormatCurrency.c"
+    },
+    {
+      "address": "002ab6c8",
+      "name": "CCGetMicroseconds",
+      "file": "002ab6c8_CCGetMicroseconds.c"
+    },
+    {
+      "address": "002ab6e2",
+      "name": "CCGetTimeMS",
+      "file": "002ab6e2_CCGetTimeMS.c"
+    },
+    {
+      "address": "002ab70a",
+      "name": "CCGetTimeOfDay",
+      "file": "002ab70a_CCGetTimeOfDay.c"
+    },
+    {
+      "address": "002ab74c",
+      "name": "CCSecondsSince1970",
+      "file": "002ab74c_CCSecondsSince1970.c"
+    },
+    {
+      "address": "002ab798",
+      "name": "CCGetBaseUrl",
+      "file": "002ab798_CCGetBaseUrl.c"
+    },
+    {
+      "address": "002ab7f8",
+      "name": "CCGetDeviceID2",
+      "file": "002ab7f8_CCGetDeviceID2.c"
+    },
+    {
+      "address": "002ab804",
+      "name": "CCGetVendorID",
+      "file": "002ab804_CCGetVendorID.c"
+    },
+    {
+      "address": "002ab810",
+      "name": "CCGetOpenUDID",
+      "file": "002ab810_CCGetOpenUDID.c"
+    },
+    {
+      "address": "002ab81c",
+      "name": "CCGetAdID",
+      "file": "002ab81c_CCGetAdID.c"
+    },
+    {
+      "address": "002ab828",
+      "name": "CCGetOpenUDIDQuery",
+      "file": "002ab828_CCGetOpenUDIDQuery.c"
+    },
+    {
+      "address": "002abc04",
+      "name": "CCFile::Close",
+      "file": "002abc04_CCFile__Close.c"
+    },
+    {
+      "address": "002abc58",
+      "name": "CCFile::Read",
+      "file": "002abc58_CCFile__Read.c"
+    },
+    {
+      "address": "002abc66",
+      "name": "CCFile::ReadLine",
+      "file": "002abc66_CCFile__ReadLine.c"
+    },
+    {
+      "address": "002abcb2",
+      "name": "CCFile::ReadALine",
+      "file": "002abcb2_CCFile__ReadALine.c"
+    },
+    {
+      "address": "002abce2",
+      "name": "CCFile::Write",
+      "file": "002abce2_CCFile__Write.c"
+    },
+    {
+      "address": "002abcf6",
+      "name": "CCFile::Seek",
+      "file": "002abcf6_CCFile__Seek.c"
+    },
+    {
+      "address": "002abd02",
+      "name": "CCFile::GetSize",
+      "file": "002abd02_CCFile__GetSize.c"
+    },
+    {
+      "address": "002abd2e",
+      "name": "CCFile::IsEOF",
+      "file": "002abd2e_CCFile__IsEOF.c"
+    },
+    {
+      "address": "002abf6c",
+      "name": "FUN_002abf6c",
+      "file": "002abf6c_FUN_002abf6c.c"
+    },
+    {
+      "address": "002abfbc",
+      "name": "FUN_002abfbc",
+      "file": "002abfbc_FUN_002abfbc.c"
+    },
+    {
+      "address": "002ac134",
+      "name": "CCAssetManager::fileSize",
+      "file": "002ac134_CCAssetManager__fileSize.c"
+    },
+    {
+      "address": "002ac248",
+      "name": "CCAssetManager::doesFileExist",
+      "file": "002ac248_CCAssetManager__doesFileExist.c"
+    },
+    {
+      "address": "002ac2c8",
+      "name": "CCAssetManager::readFile",
+      "file": "002ac2c8_CCAssetManager__readFile.c"
+    },
+    {
+      "address": "002ac3e4",
+      "name": "CCAssetManager::writeFile",
+      "file": "002ac3e4_CCAssetManager__writeFile.c"
+    },
+    {
+      "address": "002ac4d0",
+      "name": "CCAssetManager::appendFile",
+      "file": "002ac4d0_CCAssetManager__appendFile.c"
+    },
+    {
+      "address": "002ac5c0",
+      "name": "CCAssetManager::deleteFile",
+      "file": "002ac5c0_CCAssetManager__deleteFile.c"
+    },
+    {
+      "address": "002ac670",
+      "name": "CCAssetManager::copyFile",
+      "file": "002ac670_CCAssetManager__copyFile.c"
+    },
+    {
+      "address": "002ac7b4",
+      "name": "CCAssetManager::renameFile",
+      "file": "002ac7b4_CCAssetManager__renameFile.c"
+    },
+    {
+      "address": "002ae7bc",
+      "name": "CCGFX::LoadShader",
+      "file": "002ae7bc_CCGFX__LoadShader.c"
+    },
+    {
+      "address": "002af490",
+      "name": "CCMaterial::SetupGenericShader",
+      "file": "002af490_CCMaterial__SetupGenericShader.c"
+    },
+    {
+      "address": "002afd28",
+      "name": "CCMaterial::Activate",
+      "file": "002afd28_CCMaterial__Activate.c"
+    },
+    {
+      "address": "002b0884",
+      "name": "CCMaterial::Deactivate",
+      "file": "002b0884_CCMaterial__Deactivate.c"
+    },
+    {
+      "address": "002b2b7c",
+      "name": "CCTexture2D::LoadFromData",
+      "file": "002b2b7c_CCTexture2D__LoadFromData.c"
+    },
+    {
+      "address": "002b3058",
+      "name": "ccTexture_pngLoad",
+      "file": "002b3058_ccTexture_pngLoad.c"
+    },
+    {
+      "address": "002b3304",
+      "name": "ccTexture_jpgLoad",
+      "file": "002b3304_ccTexture_jpgLoad.c"
+    },
+    {
+      "address": "002b34b4",
+      "name": "my_error_exit",
+      "file": "002b34b4_my_error_exit.c"
+    },
+    {
+      "address": "002b34c8",
+      "name": "ccTexture_loadJPGFromFile",
+      "file": "002b34c8_ccTexture_loadJPGFromFile.c"
+    },
+    {
+      "address": "002b3cf8",
+      "name": "CCRandom::ShuffleArray",
+      "file": "002b3cf8_CCRandom__ShuffleArray.c"
+    },
+    {
+      "address": "002b3fe4",
+      "name": "CCGetDeviceID",
+      "file": "002b3fe4_CCGetDeviceID.c"
+    },
+    {
+      "address": "002b3fec",
+      "name": "CCGetAndroidID",
+      "file": "002b3fec_CCGetAndroidID.c"
+    },
+    {
+      "address": "002b4178",
+      "name": "FUN_002b4178",
+      "file": "002b4178_FUN_002b4178.c"
+    },
+    {
+      "address": "002b43e0",
+      "name": "CCFileMd5",
+      "file": "002b43e0_CCFileMd5.c"
+    },
+    {
+      "address": "002b443c",
+      "name": "CCGetAppVersion",
+      "file": "002b443c_CCGetAppVersion.c"
+    },
+    {
+      "address": "002b4ba0",
+      "name": "CCServer::SetPushToken",
+      "file": "002b4ba0_CCServer__SetPushToken.c"
+    },
+    {
+      "address": "002b4e04",
+      "name": "CCServer::SaveMyLinkedGameState",
+      "file": "002b4e04_CCServer__SaveMyLinkedGameState.c"
+    },
+    {
+      "address": "002b5024",
+      "name": "CCServer::SaveBadGameState",
+      "file": "002b5024_CCServer__SaveBadGameState.c"
+    },
+    {
+      "address": "002b5180",
+      "name": "CCServer::SaveMyGameState",
+      "file": "002b5180_CCServer__SaveMyGameState.c"
+    },
+    {
+      "address": "002b5478",
+      "name": "CCServer::SendGiftByUniqueId2",
+      "file": "002b5478_CCServer__SendGiftByUniqueId2.c"
+    },
+    {
+      "address": "002b5610",
+      "name": "CCServer::SendGiftByUniqueId",
+      "file": "002b5610_CCServer__SendGiftByUniqueId.c"
+    },
+    {
+      "address": "002b5800",
+      "name": "L_AddToBanFile",
+      "file": "002b5800_L_AddToBanFile.c"
+    },
+    {
+      "address": "002b59b0",
+      "name": "L_RemoveFromBanFile",
+      "file": "002b59b0_L_RemoveFromBanFile.c"
+    },
+    {
+      "address": "002b5bc4",
+      "name": "CCServer::ClearBanList",
+      "file": "002b5bc4_CCServer__ClearBanList.c"
+    },
+    {
+      "address": "002b5c40",
+      "name": "CCServer::IsFriendBanned",
+      "file": "002b5c40_CCServer__IsFriendBanned.c"
+    },
+    {
+      "address": "002b5c94",
+      "name": "CCServer::IsFriendBanned",
+      "file": "002b5c94_CCServer__IsFriendBanned.c"
+    },
+    {
+      "address": "002b5cd4",
+      "name": "CCServer::GetMyName",
+      "file": "002b5cd4_CCServer__GetMyName.c"
+    },
+    {
+      "address": "002b5cf4",
+      "name": "CCServer::GetMyFirstName",
+      "file": "002b5cf4_CCServer__GetMyFirstName.c"
+    },
+    {
+      "address": "002b5d14",
+      "name": "CCServer::GetMyLastName",
+      "file": "002b5d14_CCServer__GetMyLastName.c"
+    },
+    {
+      "address": "002b5d74",
+      "name": "CCServer::SetFriendBanned",
+      "file": "002b5d74_CCServer__SetFriendBanned.c"
+    },
+    {
+      "address": "002b5e64",
+      "name": "CCServer::SetFriendBanned",
+      "file": "002b5e64_CCServer__SetFriendBanned.c"
+    },
+    {
+      "address": "002b5eb8",
+      "name": "CCServer::RetrieveMyPic",
+      "file": "002b5eb8_CCServer__RetrieveMyPic.c"
+    },
+    {
+      "address": "002b5ed8",
+      "name": "CCServer::GetMyPicUrl",
+      "file": "002b5ed8_CCServer__GetMyPicUrl.c"
+    },
+    {
+      "address": "002b5f10",
+      "name": "L_GetMetaDataSuccess",
+      "file": "002b5f10_L_GetMetaDataSuccess.c"
+    },
+    {
+      "address": "002b6098",
+      "name": "L_GetGameStateSuccess",
+      "file": "002b6098_L_GetGameStateSuccess.c"
+    },
+    {
+      "address": "002b61c8",
+      "name": "CCServer::Connect",
+      "file": "002b61c8_CCServer__Connect.c"
+    },
+    {
+      "address": "002b61d4",
+      "name": "CCServer::VersionCheck",
+      "file": "002b61d4_CCServer__VersionCheck.c"
+    },
+    {
+      "address": "002b6284",
+      "name": "CCServer::RetrieveMetaDataForFriends",
+      "file": "002b6284_CCServer__RetrieveMetaDataForFriends.c"
+    },
+    {
+      "address": "002b63d0",
+      "name": "CCServer::RetrieveSpecialMetaData",
+      "file": "002b63d0_CCServer__RetrieveSpecialMetaData.c"
+    },
+    {
+      "address": "002b6504",
+      "name": "CCServer::RetrieveMetaDataForUniqueId",
+      "file": "002b6504_CCServer__RetrieveMetaDataForUniqueId.c"
+    },
+    {
+      "address": "002b65d8",
+      "name": "L_GetLinkedStateInfoSuccess",
+      "file": "002b65d8_L_GetLinkedStateInfoSuccess.c"
+    },
+    {
+      "address": "002b676c",
+      "name": "CCServer::GetLinkedGamestateInfo",
+      "file": "002b676c_CCServer__GetLinkedGamestateInfo.c"
+    },
+    {
+      "address": "002b6848",
+      "name": "CCServer::RetrieveSpecialGamestate",
+      "file": "002b6848_CCServer__RetrieveSpecialGamestate.c"
+    },
+    {
+      "address": "002b6914",
+      "name": "CCServer::RetrieveGameStateForUniqueId",
+      "file": "002b6914_CCServer__RetrieveGameStateForUniqueId.c"
+    },
+    {
+      "address": "002b6a60",
+      "name": "CCServer::RetrieveRandomGameState",
+      "file": "002b6a60_CCServer__RetrieveRandomGameState.c"
+    },
+    {
+      "address": "002b6cd0",
+      "name": "CCServer::RetrieveMyGifts",
+      "file": "002b6cd0_CCServer__RetrieveMyGifts.c"
+    },
+    {
+      "address": "002b6fd4",
+      "name": "CCServer::ServerTest",
+      "file": "002b6fd4_CCServer__ServerTest.c"
+    },
+    {
+      "address": "002b7030",
+      "name": "CCServer::AddToBanList",
+      "file": "002b7030_CCServer__AddToBanList.c"
+    },
+    {
+      "address": "002b7084",
+      "name": "CCServer::RemoveFromBanList",
+      "file": "002b7084_CCServer__RemoveFromBanList.c"
+    },
+    {
+      "address": "002b7108",
+      "name": "CCServer::RetrieveGameStateForHiveid",
+      "file": "002b7108_CCServer__RetrieveGameStateForHiveid.c"
+    },
+    {
+      "address": "002b71ec",
+      "name": "CCServer::RetrieveMyGameState",
+      "file": "002b71ec_CCServer__RetrieveMyGameState.c"
+    },
+    {
+      "address": "002b72b8",
+      "name": "CCServer::GetBuyToxin",
+      "file": "002b72b8_CCServer__GetBuyToxin.c"
+    },
+    {
+      "address": "002b735c",
+      "name": "CCServer::BootCheck",
+      "file": "002b735c_CCServer__BootCheck.c"
+    },
+    {
+      "address": "002b740c",
+      "name": "CCServer::GetWebViewSetting",
+      "file": "002b740c_CCServer__GetWebViewSetting.c"
+    },
+    {
+      "address": "002b74b8",
+      "name": "CCServer::UserRank",
+      "file": "002b74b8_CCServer__UserRank.c"
+    },
+    {
+      "address": "002b76dc",
+      "name": "L_ValidateResponse",
+      "file": "002b76dc_L_ValidateResponse.c"
+    },
+    {
+      "address": "002b7944",
+      "name": "L_NickNameSuccess",
+      "file": "002b7944_L_NickNameSuccess.c"
+    },
+    {
+      "address": "002b7e94",
+      "name": "CCServer::GetNickName",
+      "file": "002b7e94_CCServer__GetNickName.c"
+    },
+    {
+      "address": "002b8510",
+      "name": "L_GetEventGiftDataSuccessSub",
+      "file": "002b8510_L_GetEventGiftDataSuccessSub.c"
+    },
+    {
+      "address": "002b86d0",
+      "name": "CCServer::requestGetEventGifts",
+      "file": "002b86d0_CCServer__requestGetEventGifts.c"
+    },
+    {
+      "address": "002b87c4",
+      "name": "L_GetRankingGiftDataSuccessSub",
+      "file": "002b87c4_L_GetRankingGiftDataSuccessSub.c"
+    },
+    {
+      "address": "002b8a18",
+      "name": "CCServer::Android_ServerCallback",
+      "file": "002b8a18_CCServer__Android_ServerCallback.c"
+    },
+    {
+      "address": "002ba046",
+      "name": "FUN_002ba046",
+      "file": "002ba046_FUN_002ba046.c"
+    },
+    {
+      "address": "002ba0fc",
+      "name": "CCServer::GetServerTime",
+      "file": "002ba0fc_CCServer__GetServerTime.c"
+    },
+    {
+      "address": "002ba1ec",
+      "name": "CCServer::requestGetRankingGifts",
+      "file": "002ba1ec_CCServer__requestGetRankingGifts.c"
+    },
+    {
+      "address": "002ba658",
+      "name": "CCServer::LoadImageFromURL",
+      "file": "002ba658_CCServer__LoadImageFromURL.c"
+    },
+    {
+      "address": "002bab28",
+      "name": "CCServer::ChangeHardSaveMyGameState",
+      "file": "002bab28_CCServer__ChangeHardSaveMyGameState.c"
+    },
+    {
+      "address": "002bb3b4",
+      "name": "CCSpinner::ClosestIndex",
+      "file": "002bb3b4_CCSpinner__ClosestIndex.c"
+    },
+    {
+      "address": "002bb3d6",
+      "name": "CCSpinner::NormalizeIndex",
+      "file": "002bb3d6_CCSpinner__NormalizeIndex.c"
+    },
+    {
+      "address": "002bbb90",
+      "name": "CCTextRenderer::ReloadBMPFontFileForOnResume",
+      "file": "002bbb90_CCTextRenderer__ReloadBMPFontFileForOnResume.c"
+    },
+    {
+      "address": "002bc28c",
+      "name": "CCTextRenderer::AddText",
+      "file": "002bc28c_CCTextRenderer__AddText.c"
+    },
+    {
+      "address": "002bc444",
+      "name": "CCTextRenderer::DrawWordWrappedTextUsingCallback",
+      "file": "002bc444_CCTextRenderer__DrawWordWrappedTextUsingCallback.c"
+    },
+    {
+      "address": "002bc650",
+      "name": "CCTextRenderer::AddText",
+      "file": "002bc650_CCTextRenderer__AddText.c"
+    },
+    {
+      "address": "002bc700",
+      "name": "CCTextRenderer::AddText",
+      "file": "002bc700_CCTextRenderer__AddText.c"
+    },
+    {
+      "address": "002bc954",
+      "name": "CCTextRenderer::AddShadowedText",
+      "file": "002bc954_CCTextRenderer__AddShadowedText.c"
+    },
+    {
+      "address": "002bca62",
+      "name": "CCTextRenderer::AddShadowedText",
+      "file": "002bca62_CCTextRenderer__AddShadowedText.c"
+    },
+    {
+      "address": "002bcc0e",
+      "name": "CCTextRenderer::AddShadowedText",
+      "file": "002bcc0e_CCTextRenderer__AddShadowedText.c"
+    },
+    {
+      "address": "002bcdd8",
+      "name": "CCTextRenderer::Init",
+      "file": "002bcdd8_CCTextRenderer__Init.c"
+    },
+    {
+      "address": "002bd758",
+      "name": "CCTextRenderer::AddWordWrappedShadowedText",
+      "file": "002bd758_CCTextRenderer__AddWordWrappedShadowedText.c"
+    },
+    {
+      "address": "002bd9c4",
+      "name": "CCTextRenderer::AddWordWrappedRightText",
+      "file": "002bd9c4_CCTextRenderer__AddWordWrappedRightText.c"
+    },
+    {
+      "address": "002bdb88",
+      "name": "CCTextRenderer::AddWordWrappedText",
+      "file": "002bdb88_CCTextRenderer__AddWordWrappedText.c"
+    },
+    {
+      "address": "002bddb8",
+      "name": "CCTextRenderer::dispText",
+      "file": "002bddb8_CCTextRenderer__dispText.c"
+    },
+    {
+      "address": "002be0bc",
+      "name": "CCTextRenderer::AddCenteredText",
+      "file": "002be0bc_CCTextRenderer__AddCenteredText.c"
+    },
+    {
+      "address": "002becf8",
+      "name": "CCBitField::IsAllBitsSet",
+      "file": "002becf8_CCBitField__IsAllBitsSet.c"
+    },
+    {
+      "address": "002bed4c",
+      "name": "CCBitField::DebugPrint",
+      "file": "002bed4c_CCBitField__DebugPrint.c"
+    },
+    {
+      "address": "002bf984",
+      "name": "CCSound::IsEnabled",
+      "file": "002bf984_CCSound__IsEnabled.c"
+    },
+    {
+      "address": "002c0188",
+      "name": "CCPackFile::ExtractPackFile",
+      "file": "002c0188_CCPackFile__ExtractPackFile.c"
+    },
+    {
+      "address": "002c040c",
+      "name": "CCPackFile::RemoveUnPackedFiles",
+      "file": "002c040c_CCPackFile__RemoveUnPackedFiles.c"
+    },
+    {
+      "address": "002c049c",
+      "name": "CCPackFile::ValidateUnPackedFiles",
+      "file": "002c049c_CCPackFile__ValidateUnPackedFiles.c"
+    },
+    {
+      "address": "002c0534",
+      "name": "CCPackFile::ExtractPackFileToDataArray",
+      "file": "002c0534_CCPackFile__ExtractPackFileToDataArray.c"
+    },
+    {
+      "address": "002c0790",
+      "name": "CCPathFinding::ClearNodes",
+      "file": "002c0790_CCPathFinding__ClearNodes.c"
+    },
+    {
+      "address": "002c0888",
+      "name": "CCPathFinding::PathFind",
+      "file": "002c0888_CCPathFinding__PathFind.c"
+    },
+    {
+      "address": "002c0b0c",
+      "name": "CCCapcomLoad::Init",
+      "file": "002c0b0c_CCCapcomLoad__Init.c"
+    },
+    {
+      "address": "002c1060",
+      "name": "CCAnalytics_RecordAnalyticsEventWithTextAndCustomTimestamp",
+      "file": "002c1060_CCAnalytics_RecordAnalyticsEventWithTextAndCustomTimestamp.c"
+    },
+    {
+      "address": "002c1184",
+      "name": "CCAnalytics_PurgeEventLog",
+      "file": "002c1184_CCAnalytics_PurgeEventLog.c"
+    },
+    {
+      "address": "002c11c0",
+      "name": "CCAnalytics_AddLaunches",
+      "file": "002c11c0_CCAnalytics_AddLaunches.c"
+    },
+    {
+      "address": "002c1234",
+      "name": "CCAnalytics_AddRunTime",
+      "file": "002c1234_CCAnalytics_AddRunTime.c"
+    },
+    {
+      "address": "002c12ac",
+      "name": "CCMarketing_PopAppMessage",
+      "file": "002c12ac_CCMarketing_PopAppMessage.c"
+    },
+    {
+      "address": "002c1310",
+      "name": "L_SendAnalyticsDataNew",
+      "file": "002c1310_L_SendAnalyticsDataNew.c"
+    },
+    {
+      "address": "002c15a4",
+      "name": "L_LogSession",
+      "file": "002c15a4_L_LogSession.c"
+    },
+    {
+      "address": "002c16a0",
+      "name": "L_HaveCheckedToday",
+      "file": "002c16a0_L_HaveCheckedToday.c"
+    },
+    {
+      "address": "002c1728",
+      "name": "L_GetCachedHash",
+      "file": "002c1728_L_GetCachedHash.c"
+    },
+    {
+      "address": "002c17c0",
+      "name": "L_CreateRequestString",
+      "file": "002c17c0_L_CreateRequestString.c"
+    },
+    {
+      "address": "002c187c",
+      "name": "FUN_002c187c",
+      "file": "002c187c_FUN_002c187c.c"
+    },
+    {
+      "address": "002c18f8",
+      "name": "L_ResetIncrementCount",
+      "file": "002c18f8_L_ResetIncrementCount.c"
+    },
+    {
+      "address": "002c1934",
+      "name": "L_IncrementViewCount",
+      "file": "002c1934_L_IncrementViewCount.c"
+    },
+    {
+      "address": "002c19c8",
+      "name": "L_LogLastSession",
+      "file": "002c19c8_L_LogLastSession.c"
+    },
+    {
+      "address": "002c1cf0",
+      "name": "CCMarketing_WriteCache",
+      "file": "002c1cf0_CCMarketing_WriteCache.c"
+    },
+    {
+      "address": "002c1d34",
+      "name": "FUN_002c1d34",
+      "file": "002c1d34_FUN_002c1d34.c"
+    },
+    {
+      "address": "002c1f78",
+      "name": "L_SetIntFlag",
+      "file": "002c1f78_L_SetIntFlag.c"
+    },
+    {
+      "address": "002c1fd0",
+      "name": "L_EvalFlagLogic",
+      "file": "002c1fd0_L_EvalFlagLogic.c"
+    },
+    {
+      "address": "002c205c",
+      "name": "L_RecordAppMessage",
+      "file": "002c205c_L_RecordAppMessage.c"
+    },
+    {
+      "address": "002c2094",
+      "name": "CCMarketingView_ShowPage",
+      "file": "002c2094_CCMarketingView_ShowPage.c"
+    },
+    {
+      "address": "002c213c",
+      "name": "L_GetNextRealPage",
+      "file": "002c213c_L_GetNextRealPage.c"
+    },
+    {
+      "address": "002c2350",
+      "name": "CCMarketingView_ProcessAction",
+      "file": "002c2350_CCMarketingView_ProcessAction.c"
+    },
+    {
+      "address": "002c2528",
+      "name": "L_SetupScreenForSimpleImage",
+      "file": "002c2528_L_SetupScreenForSimpleImage.c"
+    },
+    {
+      "address": "002c2610",
+      "name": "drawView",
+      "file": "002c2610_drawView.c"
+    },
+    {
+      "address": "002c26bc",
+      "name": "L_TranslateClickToImageSpace",
+      "file": "002c26bc_L_TranslateClickToImageSpace.c"
+    },
+    {
+      "address": "002c2902",
+      "name": "CCLocalNotifications::Schedule",
+      "file": "002c2902_CCLocalNotifications__Schedule.c"
+    },
+    {
+      "address": "002c2914",
+      "name": "CCLocalNotifications::Schedule",
+      "file": "002c2914_CCLocalNotifications__Schedule.c"
+    },
+    {
+      "address": "002c5b98",
+      "name": "jpeg_consume_input",
+      "file": "002c5b98_jpeg_consume_input.c"
+    },
+    {
+      "address": "002c6e40",
+      "name": "FUN_002c6e40",
+      "file": "002c6e40_FUN_002c6e40.c"
+    },
+    {
+      "address": "002c72e8",
+      "name": "FUN_002c72e8",
+      "file": "002c72e8_FUN_002c72e8.c"
+    },
+    {
+      "address": "002c8600",
+      "name": "jpeg_calc_output_dimensions",
+      "file": "002c8600_jpeg_calc_output_dimensions.c"
+    },
+    {
+      "address": "002c9fcc",
+      "name": "FUN_002c9fcc",
+      "file": "002c9fcc_FUN_002c9fcc.c"
+    },
+    {
+      "address": "002cd168",
+      "name": "jinit_color_deconverter",
+      "file": "002cd168_jinit_color_deconverter.c"
+    },
+    {
+      "address": "002ce7cc",
+      "name": "FUN_002ce7cc",
+      "file": "002ce7cc_FUN_002ce7cc.c"
+    },
+    {
+      "address": "002d5844",
+      "name": "FUN_002d5844",
+      "file": "002d5844_FUN_002d5844.c"
+    },
+    {
+      "address": "002d59dc",
+      "name": "png_sig_cmp",
+      "file": "002d59dc_png_sig_cmp.c"
+    },
+    {
+      "address": "002d6074",
+      "name": "png_user_version_check",
+      "file": "002d6074_png_user_version_check.c"
+    },
+    {
+      "address": "002d6184",
+      "name": "png_create_png_struct",
+      "file": "002d6184_png_create_png_struct.c"
+    },
+    {
+      "address": "002d635c",
+      "name": "png_zstream_error",
+      "file": "002d635c_png_zstream_error.c"
+    },
+    {
+      "address": "002d6a98",
+      "name": "png_ascii_from_fp",
+      "file": "002d6a98_png_ascii_from_fp.c"
+    },
+    {
+      "address": "002d6e70",
+      "name": "png_ascii_from_fixed",
+      "file": "002d6e70_png_ascii_from_fixed.c"
+    },
+    {
+      "address": "002d83c8",
+      "name": "png_format_number",
+      "file": "002d83c8_png_format_number.c"
+    },
+    {
+      "address": "002d8538",
+      "name": "png_warning_parameter_unsigned",
+      "file": "002d8538_png_warning_parameter_unsigned.c"
+    },
+    {
+      "address": "002d8570",
+      "name": "png_warning_parameter_signed",
+      "file": "002d8570_png_warning_parameter_signed.c"
+    },
+    {
+      "address": "002d85c0",
+      "name": "png_formatted_warning",
+      "file": "002d85c0_png_formatted_warning.c"
+    },
+    {
+      "address": "002d8664",
+      "name": "png_chunk_warning",
+      "file": "002d8664_png_chunk_warning.c"
+    },
+    {
+      "address": "002d86f4",
+      "name": "png_longjmp",
+      "file": "002d86f4_png_longjmp.c"
+    },
+    {
+      "address": "002d87d0",
+      "name": "png_fixed_error",
+      "file": "002d87d0_png_fixed_error.c"
+    },
+    {
+      "address": "002d8914",
+      "name": "png_safe_error",
+      "file": "002d8914_png_safe_error.c"
+    },
+    {
+      "address": "002d9774",
+      "name": "png_destroy_png_struct",
+      "file": "002d9774_png_destroy_png_struct.c"
+    },
+    {
+      "address": "002da836",
+      "name": "FUN_002da836",
+      "file": "002da836_FUN_002da836.c"
+    },
+    {
+      "address": "002da8a0",
+      "name": "FUN_002da8a0",
+      "file": "002da8a0_FUN_002da8a0.c"
+    },
+    {
+      "address": "002da932",
+      "name": "FUN_002da932",
+      "file": "002da932_FUN_002da932.c"
+    },
+    {
+      "address": "002dad24",
+      "name": "png_read_row",
+      "file": "002dad24_png_read_row.c"
+    },
+    {
+      "address": "002dba08",
+      "name": "FUN_002dba08",
+      "file": "002dba08_FUN_002dba08.c"
+    },
+    {
+      "address": "002dbb64",
+      "name": "FUN_002dbb64",
+      "file": "002dbb64_FUN_002dbb64.c"
+    },
+    {
+      "address": "002dcd30",
+      "name": "png_set_crc_action",
+      "file": "002dcd30_png_set_crc_action.c"
+    },
+    {
+      "address": "002dcedc",
+      "name": "png_set_alpha_mode_fixed",
+      "file": "002dcedc_png_set_alpha_mode_fixed.c"
+    },
+    {
+      "address": "002de354",
+      "name": "png_do_read_transformations",
+      "file": "002de354_png_do_read_transformations.c"
+    },
+    {
+      "address": "002de382",
+      "name": "FUN_002de382",
+      "file": "002de382_FUN_002de382.c"
+    },
+    {
+      "address": "002df53e",
+      "name": "FUN_002df53e",
+      "file": "002df53e_FUN_002df53e.c"
+    },
+    {
+      "address": "002e0358",
+      "name": "FUN_002e0358",
+      "file": "002e0358_FUN_002e0358.c"
+    },
+    {
+      "address": "002e0494",
+      "name": "FUN_002e0494",
+      "file": "002e0494_FUN_002e0494.c"
+    },
+    {
+      "address": "002e0910",
+      "name": "png_crc_finish",
+      "file": "002e0910_png_crc_finish.c"
+    },
+    {
+      "address": "002e0a74",
+      "name": "png_handle_IHDR",
+      "file": "002e0a74_png_handle_IHDR.c"
+    },
+    {
+      "address": "002e0ee4",
+      "name": "png_handle_cHRM",
+      "file": "002e0ee4_png_handle_cHRM.c"
+    },
+    {
+      "address": "002e10e4",
+      "name": "png_handle_iCCP",
+      "file": "002e10e4_png_handle_iCCP.c"
+    },
+    {
+      "address": "002e1628",
+      "name": "png_handle_tRNS",
+      "file": "002e1628_png_handle_tRNS.c"
+    },
+    {
+      "address": "002e19c8",
+      "name": "png_handle_pHYs",
+      "file": "002e19c8_png_handle_pHYs.c"
+    },
+    {
+      "address": "002e1a98",
+      "name": "png_handle_oFFs",
+      "file": "002e1a98_png_handle_oFFs.c"
+    },
+    {
+      "address": "002e2440",
+      "name": "png_read_chunk_header",
+      "file": "002e2440_png_read_chunk_header.c"
+    },
+    {
+      "address": "002e282c",
+      "name": "png_do_read_interlace",
+      "file": "002e282c_png_do_read_interlace.c"
+    },
+    {
+      "address": "002e2ba4",
+      "name": "png_read_IDAT_data",
+      "file": "002e2ba4_png_read_IDAT_data.c"
+    },
+    {
+      "address": "002e3770",
+      "name": "png_set_sCAL",
+      "file": "002e3770_png_set_sCAL.c"
+    },
+    {
+      "address": "002e3820",
+      "name": "png_set_sCAL_fixed",
+      "file": "002e3820_png_set_sCAL_fixed.c"
+    },
+    {
+      "address": "002e46b8",
+      "name": "png_do_check_palette_indexes",
+      "file": "002e46b8_png_do_check_palette_indexes.c"
+    },
+    {
+      "address": "002e483c",
+      "name": "png_default_write_data",
+      "file": "002e483c_png_default_write_data.c"
+    },
+    {
+      "address": "002e4994",
+      "name": "FUN_002e4994",
+      "file": "002e4994_FUN_002e4994.c"
+    },
+    {
+      "address": "002e5290",
+      "name": "png_write_row",
+      "file": "002e5290_png_write_row.c"
+    },
+    {
+      "address": "002e58ec",
+      "name": "png_set_filter",
+      "file": "002e58ec_png_set_filter.c"
+    },
+    {
+      "address": "002e69d0",
+      "name": "FUN_002e69d0",
+      "file": "002e69d0_FUN_002e69d0.c"
+    },
+    {
+      "address": "002e6d18",
+      "name": "FUN_002e6d18",
+      "file": "002e6d18_FUN_002e6d18.c"
+    },
+    {
+      "address": "002e6d88",
+      "name": "png_write_sig",
+      "file": "002e6d88_png_write_sig.c"
+    },
+    {
+      "address": "002e6f14",
+      "name": "png_write_IHDR",
+      "file": "002e6f14_png_write_IHDR.c"
+    },
+    {
+      "address": "002e7400",
+      "name": "png_write_iCCP",
+      "file": "002e7400_png_write_iCCP.c"
+    },
+    {
+      "address": "002e74fc",
+      "name": "png_write_sPLT",
+      "file": "002e74fc_png_write_sPLT.c"
+    },
+    {
+      "address": "002e7684",
+      "name": "png_write_cHRM_fixed",
+      "file": "002e7684_png_write_cHRM_fixed.c"
+    },
+    {
+      "address": "002e78cc",
+      "name": "png_write_tEXt",
+      "file": "002e78cc_png_write_tEXt.c"
+    },
+    {
+      "address": "002e796c",
+      "name": "png_write_zTXt",
+      "file": "002e796c_png_write_zTXt.c"
+    },
+    {
+      "address": "002e7a50",
+      "name": "png_write_iTXt",
+      "file": "002e7a50_png_write_iTXt.c"
+    },
+    {
+      "address": "002e7bf0",
+      "name": "png_write_oFFs",
+      "file": "002e7bf0_png_write_oFFs.c"
+    },
+    {
+      "address": "002e7c50",
+      "name": "png_write_pCAL",
+      "file": "002e7c50_png_write_pCAL.c"
+    },
+    {
+      "address": "002e7d80",
+      "name": "png_write_sCAL_s",
+      "file": "002e7d80_png_write_sCAL_s.c"
+    },
+    {
+      "address": "002e7e08",
+      "name": "png_write_pHYs",
+      "file": "002e7e08_png_write_pHYs.c"
+    },
+    {
+      "address": "002e8c20",
+      "name": "FUN_002e8c20",
+      "file": "002e8c20_FUN_002e8c20.c"
+    },
+    {
+      "address": "002e8c48",
+      "name": "__cxa_end_cleanup",
+      "file": "002e8c48___cxa_end_cleanup.c"
+    },
+    {
+      "address": "002e8d04",
+      "name": "FUN_002e8d04",
+      "file": "002e8d04_FUN_002e8d04.c"
+    },
+    {
+      "address": "002e8d48",
+      "name": "__cxa_call_unexpected",
+      "file": "002e8d48___cxa_call_unexpected.c"
+    },
+    {
+      "address": "002e9020",
+      "name": "FUN_002e9020",
+      "file": "002e9020_FUN_002e9020.c"
+    },
+    {
+      "address": "002e9164",
+      "name": "FUN_002e9164",
+      "file": "002e9164_FUN_002e9164.c"
+    },
+    {
+      "address": "002e91e0",
+      "name": "FUN_002e91e0",
+      "file": "002e91e0_FUN_002e91e0.c"
+    },
+    {
+      "address": "002e9210",
+      "name": "FUN_002e9210",
+      "file": "002e9210_FUN_002e9210.c"
+    },
+    {
+      "address": "002e9254",
+      "name": "FUN_002e9254",
+      "file": "002e9254_FUN_002e9254.c"
+    },
+    {
+      "address": "002e92c4",
+      "name": "FUN_002e92c4",
+      "file": "002e92c4_FUN_002e92c4.c"
+    },
+    {
+      "address": "002e9394",
+      "name": "_INIT_95",
+      "file": "002e9394__INIT_95.c"
+    },
+    {
+      "address": "002ea0d0",
+      "name": "FUN_002ea0d0",
+      "file": "002ea0d0_FUN_002ea0d0.c"
+    },
+    {
+      "address": "002ea18c",
+      "name": "FUN_002ea18c",
+      "file": "002ea18c_FUN_002ea18c.c"
+    },
+    {
+      "address": "002ea19c",
+      "name": "FUN_002ea19c",
+      "file": "002ea19c_FUN_002ea19c.c"
+    },
+    {
+      "address": "002ea82c",
+      "name": "std::__stl_throw_runtime_error",
+      "file": "002ea82c_std____stl_throw_runtime_error.c"
+    },
+    {
+      "address": "002ea88c",
+      "name": "std::__stl_throw_range_error",
+      "file": "002ea88c_std____stl_throw_range_error.c"
+    },
+    {
+      "address": "002ea8ec",
+      "name": "std::__stl_throw_out_of_range",
+      "file": "002ea8ec_std____stl_throw_out_of_range.c"
+    },
+    {
+      "address": "002ea94c",
+      "name": "std::__stl_throw_length_error",
+      "file": "002ea94c_std____stl_throw_length_error.c"
+    },
+    {
+      "address": "002ea9ac",
+      "name": "std::__stl_throw_invalid_argument",
+      "file": "002ea9ac_std____stl_throw_invalid_argument.c"
+    },
+    {
+      "address": "002eaa0c",
+      "name": "std::__stl_throw_overflow_error",
+      "file": "002eaa0c_std____stl_throw_overflow_error.c"
+    },
+    {
+      "address": "002eade8",
+      "name": "FUN_002eade8",
+      "file": "002eade8_FUN_002eade8.c"
+    },
+    {
+      "address": "002eb21c",
+      "name": "FUN_002eb21c",
+      "file": "002eb21c_FUN_002eb21c.c"
+    },
+    {
+      "address": "002eb490",
+      "name": "__gnu_thumb1_case_uqi",
+      "file": "002eb490___gnu_thumb1_case_uqi.c"
+    },
+    {
+      "address": "002eb4a4",
+      "name": "__gnu_thumb1_case_shi",
+      "file": "002eb4a4___gnu_thumb1_case_shi.c"
+    },
+    {
+      "address": "002eb4b8",
+      "name": "__gnu_thumb1_case_uhi",
+      "file": "002eb4b8___gnu_thumb1_case_uhi.c"
+    },
+    {
+      "address": "002eb4cc",
+      "name": "__gnu_thumb1_case_si",
+      "file": "002eb4cc___gnu_thumb1_case_si.c"
+    },
+    {
+      "address": "002edda4",
+      "name": "FUN_002edda4",
+      "file": "002edda4_FUN_002edda4.c"
+    },
+    {
+      "address": "002ee26c",
+      "name": "__aeabi_unwind_cpp_pr2",
+      "file": "002ee26c___aeabi_unwind_cpp_pr2.c"
+    },
+    {
+      "address": "002ee274",
+      "name": "__aeabi_unwind_cpp_pr1",
+      "file": "002ee274___aeabi_unwind_cpp_pr1.c"
+    },
+    {
+      "address": "002ee27c",
+      "name": "__aeabi_unwind_cpp_pr0",
+      "file": "002ee27c___aeabi_unwind_cpp_pr0.c"
+    },
+    {
+      "address": "002ee6a4",
+      "name": "__gnu_Unwind_Resume",
+      "file": "002ee6a4___gnu_Unwind_Resume.c"
+    },
+    {
+      "address": "002eee4c",
+      "name": "_Unwind_GetDataRelBase",
+      "file": "002eee4c__Unwind_GetDataRelBase.c"
+    },
+    {
+      "address": "002eee54",
+      "name": "_Unwind_GetTextRelBase",
+      "file": "002eee54__Unwind_GetTextRelBase.c"
+    },
+    {
+      "address": "00523000",
+      "name": "<EXTERNAL>::__cxa_finalize",
+      "file": "00523000__EXTERNAL_____cxa_finalize.c"
+    },
+    {
+      "address": "00523004",
+      "name": "<EXTERNAL>::__cxa_atexit",
+      "file": "00523004__EXTERNAL_____cxa_atexit.c"
+    },
+    {
+      "address": "00523008",
+      "name": "<EXTERNAL>::clock_gettime",
+      "file": "00523008__EXTERNAL___clock_gettime.c"
+    },
+    {
+      "address": "0052300c",
+      "name": "<EXTERNAL>::glGetError",
+      "file": "0052300c__EXTERNAL___glGetError.c"
+    },
+    {
+      "address": "00523010",
+      "name": "<EXTERNAL>::__aeabi_atexit",
+      "file": "00523010__EXTERNAL_____aeabi_atexit.c"
+    },
+    {
+      "address": "00523014",
+      "name": "<EXTERNAL>::__android_log_print",
+      "file": "00523014__EXTERNAL_____android_log_print.c"
+    },
+    {
+      "address": "00523018",
+      "name": "<EXTERNAL>::malloc",
+      "file": "00523018__EXTERNAL___malloc.c"
+    },
+    {
+      "address": "0052301c",
+      "name": "<EXTERNAL>::free",
+      "file": "0052301c__EXTERNAL___free.c"
+    },
+    {
+      "address": "00523020",
+      "name": "<EXTERNAL>::sprintf",
+      "file": "00523020__EXTERNAL___sprintf.c"
+    },
+    {
+      "address": "00523024",
+      "name": "<EXTERNAL>::__stack_chk_fail",
+      "file": "00523024__EXTERNAL_____stack_chk_fail.c"
+    },
+    {
+      "address": "0052302c",
+      "name": "<EXTERNAL>::memset",
+      "file": "0052302c__EXTERNAL___memset.c"
+    },
+    {
+      "address": "00523030",
+      "name": "<EXTERNAL>::memcpy",
+      "file": "00523030__EXTERNAL___memcpy.c"
+    },
+    {
+      "address": "00523034",
+      "name": "<EXTERNAL>::snprintf",
+      "file": "00523034__EXTERNAL___snprintf.c"
+    },
+    {
+      "address": "00523038",
+      "name": "<EXTERNAL>::strtok",
+      "file": "00523038__EXTERNAL___strtok.c"
+    },
+    {
+      "address": "0052303c",
+      "name": "<EXTERNAL>::strncpy",
+      "file": "0052303c__EXTERNAL___strncpy.c"
+    },
+    {
+      "address": "00523040",
+      "name": "<EXTERNAL>::strcpy",
+      "file": "00523040__EXTERNAL___strcpy.c"
+    },
+    {
+      "address": "00523044",
+      "name": "<EXTERNAL>::strncmp",
+      "file": "00523044__EXTERNAL___strncmp.c"
+    },
+    {
+      "address": "00523048",
+      "name": "<EXTERNAL>::strcmp",
+      "file": "00523048__EXTERNAL___strcmp.c"
+    },
+    {
+      "address": "0052304c",
+      "name": "<EXTERNAL>::roundf",
+      "file": "0052304c__EXTERNAL___roundf.c"
+    },
+    {
+      "address": "00523050",
+      "name": "<EXTERNAL>::arc4random",
+      "file": "00523050__EXTERNAL___arc4random.c"
+    },
+    {
+      "address": "00523054",
+      "name": "<EXTERNAL>::memmove",
+      "file": "00523054__EXTERNAL___memmove.c"
+    },
+    {
+      "address": "00523058",
+      "name": "<EXTERNAL>::floorf",
+      "file": "00523058__EXTERNAL___floorf.c"
+    },
+    {
+      "address": "0052305c",
+      "name": "<EXTERNAL>::sqrtf",
+      "file": "0052305c__EXTERNAL___sqrtf.c"
+    },
+    {
+      "address": "00523060",
+      "name": "<EXTERNAL>::printf",
+      "file": "00523060__EXTERNAL___printf.c"
+    },
+    {
+      "address": "00523064",
+      "name": "<EXTERNAL>::lrand48",
+      "file": "00523064__EXTERNAL___lrand48.c"
+    },
+    {
+      "address": "00523068",
+      "name": "<EXTERNAL>::puts",
+      "file": "00523068__EXTERNAL___puts.c"
+    },
+    {
+      "address": "0052306c",
+      "name": "<EXTERNAL>::glPushMatrix",
+      "file": "0052306c__EXTERNAL___glPushMatrix.c"
+    },
+    {
+      "address": "00523070",
+      "name": "<EXTERNAL>::glScalef",
+      "file": "00523070__EXTERNAL___glScalef.c"
+    },
+    {
+      "address": "00523074",
+      "name": "<EXTERNAL>::glPopMatrix",
+      "file": "00523074__EXTERNAL___glPopMatrix.c"
+    },
+    {
+      "address": "00523078",
+      "name": "<EXTERNAL>::ceilf",
+      "file": "00523078__EXTERNAL___ceilf.c"
+    },
+    {
+      "address": "0052307c",
+      "name": "<EXTERNAL>::strtod",
+      "file": "0052307c__EXTERNAL___strtod.c"
+    },
+    {
+      "address": "00523080",
+      "name": "<EXTERNAL>::powf",
+      "file": "00523080__EXTERNAL___powf.c"
+    },
+    {
+      "address": "00523084",
+      "name": "<EXTERNAL>::strcat",
+      "file": "00523084__EXTERNAL___strcat.c"
+    },
+    {
+      "address": "00523088",
+      "name": "<EXTERNAL>::strlen",
+      "file": "00523088__EXTERNAL___strlen.c"
+    },
+    {
+      "address": "0052308c",
+      "name": "<EXTERNAL>::calloc",
+      "file": "0052308c__EXTERNAL___calloc.c"
+    },
+    {
+      "address": "00523090",
+      "name": "<EXTERNAL>::pthread_mutex_destroy",
+      "file": "00523090__EXTERNAL___pthread_mutex_destroy.c"
+    },
+    {
+      "address": "00523094",
+      "name": "<EXTERNAL>::pthread_cond_destroy",
+      "file": "00523094__EXTERNAL___pthread_cond_destroy.c"
+    },
+    {
+      "address": "00523098",
+      "name": "<EXTERNAL>::pthread_mutex_lock",
+      "file": "00523098__EXTERNAL___pthread_mutex_lock.c"
+    },
+    {
+      "address": "0052309c",
+      "name": "<EXTERNAL>::pthread_cond_signal",
+      "file": "0052309c__EXTERNAL___pthread_cond_signal.c"
+    },
+    {
+      "address": "005230a0",
+      "name": "<EXTERNAL>::pthread_mutex_unlock",
+      "file": "005230a0__EXTERNAL___pthread_mutex_unlock.c"
+    },
+    {
+      "address": "005230a4",
+      "name": "<EXTERNAL>::pthread_cond_wait",
+      "file": "005230a4__EXTERNAL___pthread_cond_wait.c"
+    },
+    {
+      "address": "005230a8",
+      "name": "<EXTERNAL>::pthread_cond_timedwait",
+      "file": "005230a8__EXTERNAL___pthread_cond_timedwait.c"
+    },
+    {
+      "address": "005230ac",
+      "name": "<EXTERNAL>::pthread_mutex_init",
+      "file": "005230ac__EXTERNAL___pthread_mutex_init.c"
+    },
+    {
+      "address": "005230b0",
+      "name": "<EXTERNAL>::pthread_cond_init",
+      "file": "005230b0__EXTERNAL___pthread_cond_init.c"
+    },
+    {
+      "address": "005230b4",
+      "name": "<EXTERNAL>::strncat",
+      "file": "005230b4__EXTERNAL___strncat.c"
+    },
+    {
+      "address": "005230b8",
+      "name": "<EXTERNAL>::strstr",
+      "file": "005230b8__EXTERNAL___strstr.c"
+    },
+    {
+      "address": "005230bc",
+      "name": "<EXTERNAL>::strchr",
+      "file": "005230bc__EXTERNAL___strchr.c"
+    },
+    {
+      "address": "005230c0",
+      "name": "<EXTERNAL>::atoi",
+      "file": "005230c0__EXTERNAL___atoi.c"
+    },
+    {
+      "address": "005230c4",
+      "name": "<EXTERNAL>::glEnable",
+      "file": "005230c4__EXTERNAL___glEnable.c"
+    },
+    {
+      "address": "005230c8",
+      "name": "<EXTERNAL>::vsnprintf",
+      "file": "005230c8__EXTERNAL___vsnprintf.c"
+    },
+    {
+      "address": "005230cc",
+      "name": "<EXTERNAL>::strtol",
+      "file": "005230cc__EXTERNAL___strtol.c"
+    },
+    {
+      "address": "005230d0",
+      "name": "<EXTERNAL>::__errno",
+      "file": "005230d0__EXTERNAL_____errno.c"
+    },
+    {
+      "address": "005230d4",
+      "name": "<EXTERNAL>::memcmp",
+      "file": "005230d4__EXTERNAL___memcmp.c"
+    },
+    {
+      "address": "005230d8",
+      "name": "<EXTERNAL>::dlsym",
+      "file": "005230d8__EXTERNAL___dlsym.c"
+    },
+    {
+      "address": "005230dc",
+      "name": "<EXTERNAL>::pthread_mutex_trylock",
+      "file": "005230dc__EXTERNAL___pthread_mutex_trylock.c"
+    },
+    {
+      "address": "005230e0",
+      "name": "<EXTERNAL>::geteuid",
+      "file": "005230e0__EXTERNAL___geteuid.c"
+    },
+    {
+      "address": "005230e4",
+      "name": "<EXTERNAL>::fchown",
+      "file": "005230e4__EXTERNAL___fchown.c"
+    },
+    {
+      "address": "005230e8",
+      "name": "<EXTERNAL>::open",
+      "file": "005230e8__EXTERNAL___open.c"
+    },
+    {
+      "address": "005230ec",
+      "name": "<EXTERNAL>::lseek",
+      "file": "005230ec__EXTERNAL___lseek.c"
+    },
+    {
+      "address": "005230f0",
+      "name": "<EXTERNAL>::gettimeofday",
+      "file": "005230f0__EXTERNAL___gettimeofday.c"
+    },
+    {
+      "address": "005230f4",
+      "name": "<EXTERNAL>::sleep",
+      "file": "005230f4__EXTERNAL___sleep.c"
+    },
+    {
+      "address": "005230f8",
+      "name": "<EXTERNAL>::dlclose",
+      "file": "005230f8__EXTERNAL___dlclose.c"
+    },
+    {
+      "address": "005230fc",
+      "name": "<EXTERNAL>::dlopen",
+      "file": "005230fc__EXTERNAL___dlopen.c"
+    },
+    {
+      "address": "00523100",
+      "name": "<EXTERNAL>::pthread_mutexattr_init",
+      "file": "00523100__EXTERNAL___pthread_mutexattr_init.c"
+    },
+    {
+      "address": "00523104",
+      "name": "<EXTERNAL>::pthread_mutexattr_settype",
+      "file": "00523104__EXTERNAL___pthread_mutexattr_settype.c"
+    },
+    {
+      "address": "00523108",
+      "name": "<EXTERNAL>::pthread_mutexattr_destroy",
+      "file": "00523108__EXTERNAL___pthread_mutexattr_destroy.c"
+    },
+    {
+      "address": "0052310c",
+      "name": "<EXTERNAL>::utimes",
+      "file": "0052310c__EXTERNAL___utimes.c"
+    },
+    {
+      "address": "00523110",
+      "name": "<EXTERNAL>::localtime",
+      "file": "00523110__EXTERNAL___localtime.c"
+    },
+    {
+      "address": "00523114",
+      "name": "<EXTERNAL>::realloc",
+      "file": "00523114__EXTERNAL___realloc.c"
+    },
+    {
+      "address": "00523118",
+      "name": "<EXTERNAL>::munmap",
+      "file": "00523118__EXTERNAL___munmap.c"
+    },
+    {
+      "address": "0052311c",
+      "name": "<EXTERNAL>::time",
+      "file": "0052311c__EXTERNAL___time.c"
+    },
+    {
+      "address": "00523120",
+      "name": "<EXTERNAL>::getpid",
+      "file": "00523120__EXTERNAL___getpid.c"
+    },
+    {
+      "address": "00523124",
+      "name": "<EXTERNAL>::fsync",
+      "file": "00523124__EXTERNAL___fsync.c"
+    },
+    {
+      "address": "00523128",
+      "name": "<EXTERNAL>::dlerror",
+      "file": "00523128__EXTERNAL___dlerror.c"
+    },
+    {
+      "address": "0052312c",
+      "name": "<EXTERNAL>::mmap",
+      "file": "0052312c__EXTERNAL___mmap.c"
+    },
+    {
+      "address": "00523130",
+      "name": "<EXTERNAL>::getenv",
+      "file": "00523130__EXTERNAL___getenv.c"
+    },
+    {
+      "address": "00523134",
+      "name": "<EXTERNAL>::close",
+      "file": "00523134__EXTERNAL___close.c"
+    },
+    {
+      "address": "00523138",
+      "name": "<EXTERNAL>::access",
+      "file": "00523138__EXTERNAL___access.c"
+    },
+    {
+      "address": "0052313c",
+      "name": "<EXTERNAL>::getcwd",
+      "file": "0052313c__EXTERNAL___getcwd.c"
+    },
+    {
+      "address": "00523140",
+      "name": "<EXTERNAL>::stat",
+      "file": "00523140__EXTERNAL___stat.c"
+    },
+    {
+      "address": "00523144",
+      "name": "<EXTERNAL>::fstat",
+      "file": "00523144__EXTERNAL___fstat.c"
+    },
+    {
+      "address": "00523148",
+      "name": "<EXTERNAL>::ftruncate",
+      "file": "00523148__EXTERNAL___ftruncate.c"
+    },
+    {
+      "address": "0052314c",
+      "name": "<EXTERNAL>::fcntl",
+      "file": "0052314c__EXTERNAL___fcntl.c"
+    },
+    {
+      "address": "00523150",
+      "name": "<EXTERNAL>::read",
+      "file": "00523150__EXTERNAL___read.c"
+    },
+    {
+      "address": "00523154",
+      "name": "<EXTERNAL>::write",
+      "file": "00523154__EXTERNAL___write.c"
+    },
+    {
+      "address": "00523158",
+      "name": "<EXTERNAL>::unlink",
+      "file": "00523158__EXTERNAL___unlink.c"
+    },
+    {
+      "address": "0052315c",
+      "name": "<EXTERNAL>::mkdir",
+      "file": "0052315c__EXTERNAL___mkdir.c"
+    },
+    {
+      "address": "00523160",
+      "name": "<EXTERNAL>::rmdir",
+      "file": "00523160__EXTERNAL___rmdir.c"
+    },
+    {
+      "address": "00523164",
+      "name": "<EXTERNAL>::umask",
+      "file": "00523164__EXTERNAL___umask.c"
+    },
+    {
+      "address": "00523168",
+      "name": "<EXTERNAL>::glColor4ub",
+      "file": "00523168__EXTERNAL___glColor4ub.c"
+    },
+    {
+      "address": "0052316c",
+      "name": "<EXTERNAL>::glTranslatef",
+      "file": "0052316c__EXTERNAL___glTranslatef.c"
+    },
+    {
+      "address": "00523170",
+      "name": "<EXTERNAL>::glDisable",
+      "file": "00523170__EXTERNAL___glDisable.c"
+    },
+    {
+      "address": "00523174",
+      "name": "<EXTERNAL>::glGetFloatv",
+      "file": "00523174__EXTERNAL___glGetFloatv.c"
+    },
+    {
+      "address": "00523178",
+      "name": "<EXTERNAL>::glScissor",
+      "file": "00523178__EXTERNAL___glScissor.c"
+    },
+    {
+      "address": "0052317c",
+      "name": "<EXTERNAL>::glBindFramebufferOES",
+      "file": "0052317c__EXTERNAL___glBindFramebufferOES.c"
+    },
+    {
+      "address": "00523180",
+      "name": "<EXTERNAL>::glBindTexture",
+      "file": "00523180__EXTERNAL___glBindTexture.c"
+    },
+    {
+      "address": "00523184",
+      "name": "<EXTERNAL>::glTexEnvi",
+      "file": "00523184__EXTERNAL___glTexEnvi.c"
+    },
+    {
+      "address": "00523188",
+      "name": "<EXTERNAL>::glEnableClientState",
+      "file": "00523188__EXTERNAL___glEnableClientState.c"
+    },
+    {
+      "address": "0052318c",
+      "name": "<EXTERNAL>::glDisableClientState",
+      "file": "0052318c__EXTERNAL___glDisableClientState.c"
+    },
+    {
+      "address": "00523190",
+      "name": "<EXTERNAL>::glTexCoordPointer",
+      "file": "00523190__EXTERNAL___glTexCoordPointer.c"
+    },
+    {
+      "address": "00523194",
+      "name": "<EXTERNAL>::glVertexPointer",
+      "file": "00523194__EXTERNAL___glVertexPointer.c"
+    },
+    {
+      "address": "00523198",
+      "name": "<EXTERNAL>::glDrawElements",
+      "file": "00523198__EXTERNAL___glDrawElements.c"
+    },
+    {
+      "address": "0052319c",
+      "name": "<EXTERNAL>::glColorPointer",
+      "file": "0052319c__EXTERNAL___glColorPointer.c"
+    },
+    {
+      "address": "005231a0",
+      "name": "<EXTERNAL>::sinf",
+      "file": "005231a0__EXTERNAL___sinf.c"
+    },
+    {
+      "address": "005231a4",
+      "name": "<EXTERNAL>::cosf",
+      "file": "005231a4__EXTERNAL___cosf.c"
+    },
+    {
+      "address": "005231a8",
+      "name": "<EXTERNAL>::glLineWidth",
+      "file": "005231a8__EXTERNAL___glLineWidth.c"
+    },
+    {
+      "address": "005231ac",
+      "name": "<EXTERNAL>::AndroidBitmap_getInfo",
+      "file": "005231ac__EXTERNAL___AndroidBitmap_getInfo.c"
+    },
+    {
+      "address": "005231b0",
+      "name": "<EXTERNAL>::AndroidBitmap_lockPixels",
+      "file": "005231b0__EXTERNAL___AndroidBitmap_lockPixels.c"
+    },
+    {
+      "address": "005231b4",
+      "name": "<EXTERNAL>::AndroidBitmap_unlockPixels",
+      "file": "005231b4__EXTERNAL___AndroidBitmap_unlockPixels.c"
+    },
+    {
+      "address": "005231b8",
+      "name": "<EXTERNAL>::strftime",
+      "file": "005231b8__EXTERNAL___strftime.c"
+    },
+    {
+      "address": "005231bc",
+      "name": "<EXTERNAL>::glMatrixMode",
+      "file": "005231bc__EXTERNAL___glMatrixMode.c"
+    },
+    {
+      "address": "005231c0",
+      "name": "<EXTERNAL>::cos",
+      "file": "005231c0__EXTERNAL___cos.c"
+    },
+    {
+      "address": "005231c4",
+      "name": "<EXTERNAL>::sin",
+      "file": "005231c4__EXTERNAL___sin.c"
+    },
+    {
+      "address": "005231c8",
+      "name": "<EXTERNAL>::strdup",
+      "file": "005231c8__EXTERNAL___strdup.c"
+    },
+    {
+      "address": "005231cc",
+      "name": "<EXTERNAL>::fprintf",
+      "file": "005231cc__EXTERNAL___fprintf.c"
+    },
+    {
+      "address": "005231d4",
+      "name": "<EXTERNAL>::qsort",
+      "file": "005231d4__EXTERNAL___qsort.c"
+    },
+    {
+      "address": "005231d8",
+      "name": "<EXTERNAL>::fclose",
+      "file": "005231d8__EXTERNAL___fclose.c"
+    },
+    {
+      "address": "005231dc",
+      "name": "<EXTERNAL>::fopen",
+      "file": "005231dc__EXTERNAL___fopen.c"
+    },
+    {
+      "address": "005231e0",
+      "name": "<EXTERNAL>::fread",
+      "file": "005231e0__EXTERNAL___fread.c"
+    },
+    {
+      "address": "005231e4",
+      "name": "<EXTERNAL>::getc",
+      "file": "005231e4__EXTERNAL___getc.c"
+    },
+    {
+      "address": "005231e8",
+      "name": "<EXTERNAL>::fwrite",
+      "file": "005231e8__EXTERNAL___fwrite.c"
+    },
+    {
+      "address": "005231ec",
+      "name": "<EXTERNAL>::fseek",
+      "file": "005231ec__EXTERNAL___fseek.c"
+    },
+    {
+      "address": "005231f0",
+      "name": "<EXTERNAL>::ftell",
+      "file": "005231f0__EXTERNAL___ftell.c"
+    },
+    {
+      "address": "005231f4",
+      "name": "<EXTERNAL>::remove",
+      "file": "005231f4__EXTERNAL___remove.c"
+    },
+    {
+      "address": "005231f8",
+      "name": "<EXTERNAL>::rename",
+      "file": "005231f8__EXTERNAL___rename.c"
+    },
+    {
+      "address": "005231fc",
+      "name": "<EXTERNAL>::exit",
+      "file": "005231fc__EXTERNAL___exit.c"
+    },
+    {
+      "address": "00523200",
+      "name": "<EXTERNAL>::AAssetManager_fromJava",
+      "file": "00523200__EXTERNAL___AAssetManager_fromJava.c"
+    },
+    {
+      "address": "00523204",
+      "name": "<EXTERNAL>::AAssetManager_open",
+      "file": "00523204__EXTERNAL___AAssetManager_open.c"
+    },
+    {
+      "address": "00523208",
+      "name": "<EXTERNAL>::AAsset_getLength",
+      "file": "00523208__EXTERNAL___AAsset_getLength.c"
+    },
+    {
+      "address": "0052320c",
+      "name": "<EXTERNAL>::AAsset_close",
+      "file": "0052320c__EXTERNAL___AAsset_close.c"
+    },
+    {
+      "address": "00523210",
+      "name": "<EXTERNAL>::AAsset_read",
+      "file": "00523210__EXTERNAL___AAsset_read.c"
+    },
+    {
+      "address": "00523214",
+      "name": "<EXTERNAL>::sqrt",
+      "file": "00523214__EXTERNAL___sqrt.c"
+    },
+    {
+      "address": "00523218",
+      "name": "<EXTERNAL>::tan",
+      "file": "00523218__EXTERNAL___tan.c"
+    },
+    {
+      "address": "0052321c",
+      "name": "<EXTERNAL>::glLoadIdentity",
+      "file": "0052321c__EXTERNAL___glLoadIdentity.c"
+    },
+    {
+      "address": "00523220",
+      "name": "<EXTERNAL>::glLoadMatrixf",
+      "file": "00523220__EXTERNAL___glLoadMatrixf.c"
+    },
+    {
+      "address": "00523224",
+      "name": "<EXTERNAL>::glRotatef",
+      "file": "00523224__EXTERNAL___glRotatef.c"
+    },
+    {
+      "address": "00523228",
+      "name": "<EXTERNAL>::glOrthof",
+      "file": "00523228__EXTERNAL___glOrthof.c"
+    },
+    {
+      "address": "0052322c",
+      "name": "<EXTERNAL>::glCreateShader",
+      "file": "0052322c__EXTERNAL___glCreateShader.c"
+    },
+    {
+      "address": "00523230",
+      "name": "<EXTERNAL>::glShaderSource",
+      "file": "00523230__EXTERNAL___glShaderSource.c"
+    },
+    {
+      "address": "00523234",
+      "name": "<EXTERNAL>::glCompileShader",
+      "file": "00523234__EXTERNAL___glCompileShader.c"
+    },
+    {
+      "address": "00523238",
+      "name": "<EXTERNAL>::glGetShaderiv",
+      "file": "00523238__EXTERNAL___glGetShaderiv.c"
+    },
+    {
+      "address": "0052323c",
+      "name": "<EXTERNAL>::glDeleteShader",
+      "file": "0052323c__EXTERNAL___glDeleteShader.c"
+    },
+    {
+      "address": "00523240",
+      "name": "<EXTERNAL>::glLinkProgram",
+      "file": "00523240__EXTERNAL___glLinkProgram.c"
+    },
+    {
+      "address": "00523244",
+      "name": "<EXTERNAL>::glGetProgramiv",
+      "file": "00523244__EXTERNAL___glGetProgramiv.c"
+    },
+    {
+      "address": "00523248",
+      "name": "<EXTERNAL>::glDeleteProgram",
+      "file": "00523248__EXTERNAL___glDeleteProgram.c"
+    },
+    {
+      "address": "0052324c",
+      "name": "<EXTERNAL>::glCreateProgram",
+      "file": "0052324c__EXTERNAL___glCreateProgram.c"
+    },
+    {
+      "address": "00523250",
+      "name": "<EXTERNAL>::glAttachShader",
+      "file": "00523250__EXTERNAL___glAttachShader.c"
+    },
+    {
+      "address": "00523254",
+      "name": "<EXTERNAL>::glBindAttribLocation",
+      "file": "00523254__EXTERNAL___glBindAttribLocation.c"
+    },
+    {
+      "address": "00523258",
+      "name": "<EXTERNAL>::glLightfv",
+      "file": "00523258__EXTERNAL___glLightfv.c"
+    },
+    {
+      "address": "0052325c",
+      "name": "<EXTERNAL>::glColor4f",
+      "file": "0052325c__EXTERNAL___glColor4f.c"
+    },
+    {
+      "address": "00523260",
+      "name": "<EXTERNAL>::glClearColor",
+      "file": "00523260__EXTERNAL___glClearColor.c"
+    },
+    {
+      "address": "00523264",
+      "name": "<EXTERNAL>::glClear",
+      "file": "00523264__EXTERNAL___glClear.c"
+    },
+    {
+      "address": "00523268",
+      "name": "<EXTERNAL>::glTexParameterf",
+      "file": "00523268__EXTERNAL___glTexParameterf.c"
+    },
+    {
+      "address": "0052326c",
+      "name": "<EXTERNAL>::glClientActiveTexture",
+      "file": "0052326c__EXTERNAL___glClientActiveTexture.c"
+    },
+    {
+      "address": "00523270",
+      "name": "<EXTERNAL>::glUniformMatrix4fv",
+      "file": "00523270__EXTERNAL___glUniformMatrix4fv.c"
+    },
+    {
+      "address": "00523274",
+      "name": "<EXTERNAL>::glVertexAttribPointer",
+      "file": "00523274__EXTERNAL___glVertexAttribPointer.c"
+    },
+    {
+      "address": "00523278",
+      "name": "<EXTERNAL>::glEnableVertexAttribArray",
+      "file": "00523278__EXTERNAL___glEnableVertexAttribArray.c"
+    },
+    {
+      "address": "0052327c",
+      "name": "<EXTERNAL>::glVertexAttrib4f",
+      "file": "0052327c__EXTERNAL___glVertexAttrib4f.c"
+    },
+    {
+      "address": "00523280",
+      "name": "<EXTERNAL>::glDisableVertexAttribArray",
+      "file": "00523280__EXTERNAL___glDisableVertexAttribArray.c"
+    },
+    {
+      "address": "00523284",
+      "name": "<EXTERNAL>::glDrawArrays",
+      "file": "00523284__EXTERNAL___glDrawArrays.c"
+    },
+    {
+      "address": "00523288",
+      "name": "<EXTERNAL>::glBlendFunc",
+      "file": "00523288__EXTERNAL___glBlendFunc.c"
+    },
+    {
+      "address": "0052328c",
+      "name": "<EXTERNAL>::glGetUniformLocation",
+      "file": "0052328c__EXTERNAL___glGetUniformLocation.c"
+    },
+    {
+      "address": "00523290",
+      "name": "<EXTERNAL>::glUseProgram",
+      "file": "00523290__EXTERNAL___glUseProgram.c"
+    },
+    {
+      "address": "00523294",
+      "name": "<EXTERNAL>::glUniform1f",
+      "file": "00523294__EXTERNAL___glUniform1f.c"
+    },
+    {
+      "address": "00523298",
+      "name": "<EXTERNAL>::glUniform2fv",
+      "file": "00523298__EXTERNAL___glUniform2fv.c"
+    },
+    {
+      "address": "0052329c",
+      "name": "<EXTERNAL>::glUniform3fv",
+      "file": "0052329c__EXTERNAL___glUniform3fv.c"
+    },
+    {
+      "address": "005232a0",
+      "name": "<EXTERNAL>::glUniform4fv",
+      "file": "005232a0__EXTERNAL___glUniform4fv.c"
+    },
+    {
+      "address": "005232a4",
+      "name": "<EXTERNAL>::glUniformMatrix2fv",
+      "file": "005232a4__EXTERNAL___glUniformMatrix2fv.c"
+    },
+    {
+      "address": "005232a8",
+      "name": "<EXTERNAL>::glUniformMatrix3fv",
+      "file": "005232a8__EXTERNAL___glUniformMatrix3fv.c"
+    },
+    {
+      "address": "005232ac",
+      "name": "<EXTERNAL>::glTexParameteri",
+      "file": "005232ac__EXTERNAL___glTexParameteri.c"
+    },
+    {
+      "address": "005232b0",
+      "name": "<EXTERNAL>::glActiveTexture",
+      "file": "005232b0__EXTERNAL___glActiveTexture.c"
+    },
+    {
+      "address": "005232b4",
+      "name": "<EXTERNAL>::glUniform1i",
+      "file": "005232b4__EXTERNAL___glUniform1i.c"
+    },
+    {
+      "address": "005232b8",
+      "name": "<EXTERNAL>::glUniform4f",
+      "file": "005232b8__EXTERNAL___glUniform4f.c"
+    },
+    {
+      "address": "005232bc",
+      "name": "<EXTERNAL>::glUniform3f",
+      "file": "005232bc__EXTERNAL___glUniform3f.c"
+    },
+    {
+      "address": "005232c0",
+      "name": "<EXTERNAL>::glReadPixels",
+      "file": "005232c0__EXTERNAL___glReadPixels.c"
+    },
+    {
+      "address": "005232c4",
+      "name": "<EXTERNAL>::setjmp",
+      "file": "005232c4__EXTERNAL___setjmp.c"
+    },
+    {
+      "address": "005232c8",
+      "name": "<EXTERNAL>::longjmp",
+      "file": "005232c8__EXTERNAL___longjmp.c"
+    },
+    {
+      "address": "005232cc",
+      "name": "<EXTERNAL>::glGetIntegerv",
+      "file": "005232cc__EXTERNAL___glGetIntegerv.c"
+    },
+    {
+      "address": "005232d0",
+      "name": "<EXTERNAL>::glIsTexture",
+      "file": "005232d0__EXTERNAL___glIsTexture.c"
+    },
+    {
+      "address": "005232d4",
+      "name": "<EXTERNAL>::glDeleteTextures",
+      "file": "005232d4__EXTERNAL___glDeleteTextures.c"
+    },
+    {
+      "address": "005232d8",
+      "name": "<EXTERNAL>::glGenTextures",
+      "file": "005232d8__EXTERNAL___glGenTextures.c"
+    },
+    {
+      "address": "005232dc",
+      "name": "<EXTERNAL>::glCompressedTexImage2D",
+      "file": "005232dc__EXTERNAL___glCompressedTexImage2D.c"
+    },
+    {
+      "address": "005232e0",
+      "name": "<EXTERNAL>::glTexImage2D",
+      "file": "005232e0__EXTERNAL___glTexImage2D.c"
+    },
+    {
+      "address": "005232e4",
+      "name": "<EXTERNAL>::inflateInit_",
+      "file": "005232e4__EXTERNAL___inflateInit_.c"
+    },
+    {
+      "address": "005232e8",
+      "name": "<EXTERNAL>::inflate",
+      "file": "005232e8__EXTERNAL___inflate.c"
+    },
+    {
+      "address": "005232ec",
+      "name": "<EXTERNAL>::inflateEnd",
+      "file": "005232ec__EXTERNAL___inflateEnd.c"
+    },
+    {
+      "address": "005232f0",
+      "name": "<EXTERNAL>::acos",
+      "file": "005232f0__EXTERNAL___acos.c"
+    },
+    {
+      "address": "005232f4",
+      "name": "<EXTERNAL>::srand48",
+      "file": "005232f4__EXTERNAL___srand48.c"
+    },
+    {
+      "address": "005232f8",
+      "name": "<EXTERNAL>::putchar",
+      "file": "005232f8__EXTERNAL___putchar.c"
+    },
+    {
+      "address": "005232fc",
+      "name": "<EXTERNAL>::pow",
+      "file": "005232fc__EXTERNAL___pow.c"
+    },
+    {
+      "address": "00523300",
+      "name": "<EXTERNAL>::glNormalPointer",
+      "file": "00523300__EXTERNAL___glNormalPointer.c"
+    },
+    {
+      "address": "00523304",
+      "name": "<EXTERNAL>::sscanf",
+      "file": "00523304__EXTERNAL___sscanf.c"
+    },
+    {
+      "address": "00523308",
+      "name": "<EXTERNAL>::mktemp",
+      "file": "00523308__EXTERNAL___mktemp.c"
+    },
+    {
+      "address": "0052330c",
+      "name": "<EXTERNAL>::crc32",
+      "file": "0052330c__EXTERNAL___crc32.c"
+    },
+    {
+      "address": "00523310",
+      "name": "<EXTERNAL>::inflateReset",
+      "file": "00523310__EXTERNAL___inflateReset.c"
+    },
+    {
+      "address": "00523314",
+      "name": "<EXTERNAL>::frexp",
+      "file": "00523314__EXTERNAL___frexp.c"
+    },
+    {
+      "address": "00523318",
+      "name": "<EXTERNAL>::modf",
+      "file": "00523318__EXTERNAL___modf.c"
+    },
+    {
+      "address": "0052331c",
+      "name": "<EXTERNAL>::floor",
+      "file": "0052331c__EXTERNAL___floor.c"
+    },
+    {
+      "address": "00523320",
+      "name": "<EXTERNAL>::adler32",
+      "file": "00523320__EXTERNAL___adler32.c"
+    },
+    {
+      "address": "00523324",
+      "name": "<EXTERNAL>::fputc",
+      "file": "00523324__EXTERNAL___fputc.c"
+    },
+    {
+      "address": "00523328",
+      "name": "<EXTERNAL>::abort",
+      "file": "00523328__EXTERNAL___abort.c"
+    },
+    {
+      "address": "0052332c",
+      "name": "<EXTERNAL>::strerror",
+      "file": "0052332c__EXTERNAL___strerror.c"
+    },
+    {
+      "address": "00523330",
+      "name": "<EXTERNAL>::fflush",
+      "file": "00523330__EXTERNAL___fflush.c"
+    },
+    {
+      "address": "00523334",
+      "name": "<EXTERNAL>::gmtime",
+      "file": "00523334__EXTERNAL___gmtime.c"
+    },
+    {
+      "address": "00523338",
+      "name": "<EXTERNAL>::deflateEnd",
+      "file": "00523338__EXTERNAL___deflateEnd.c"
+    },
+    {
+      "address": "0052333c",
+      "name": "<EXTERNAL>::deflateReset",
+      "file": "0052333c__EXTERNAL___deflateReset.c"
+    },
+    {
+      "address": "00523340",
+      "name": "<EXTERNAL>::deflateInit2_",
+      "file": "00523340__EXTERNAL___deflateInit2_.c"
+    },
+    {
+      "address": "00523344",
+      "name": "<EXTERNAL>::deflate",
+      "file": "00523344__EXTERNAL___deflate.c"
+    },
+    {
+      "address": "00523348",
+      "name": "<EXTERNAL>::pthread_key_delete",
+      "file": "00523348__EXTERNAL___pthread_key_delete.c"
+    },
+    {
+      "address": "0052334c",
+      "name": "<EXTERNAL>::pthread_getspecific",
+      "file": "0052334c__EXTERNAL___pthread_getspecific.c"
+    },
+    {
+      "address": "00523350",
+      "name": "<EXTERNAL>::pthread_setspecific",
+      "file": "00523350__EXTERNAL___pthread_setspecific.c"
+    },
+    {
+      "address": "00523354",
+      "name": "<EXTERNAL>::pthread_key_create",
+      "file": "00523354__EXTERNAL___pthread_key_create.c"
+    },
+    {
+      "address": "00523358",
+      "name": "<EXTERNAL>::__assert2",
+      "file": "00523358__EXTERNAL_____assert2.c"
+    },
+    {
+      "address": "0052335c",
+      "name": "<EXTERNAL>::pthread_cond_broadcast",
+      "file": "0052335c__EXTERNAL___pthread_cond_broadcast.c"
+    },
+    {
+      "address": "00523360",
+      "name": "<EXTERNAL>::raise",
+      "file": "00523360__EXTERNAL___raise.c"
+    },
+    {
+      "address": "00523364",
+      "name": "<EXTERNAL>::__gnu_Unwind_Find_exidx",
+      "file": "00523364__EXTERNAL_____gnu_Unwind_Find_exidx.c"
+    }
+  ],
+  "classes": {
+    "ZombieCafe": 448,
+    "<EXTERNAL>": 430,
+    "GameStateCafe": 232,
+    "CCServer": 102,
+    "Cafe": 80,
+    "GameStateEventRaid": 75,
+    "GameStateFriendCafe": 72,
+    "GameStateGatya": 69,
+    "GameStateMap": 66,
+    "GameStateRaid": 66,
+    "GameStateEventRaid3": 66,
+    "GameStateAmpouleRaid": 65,
+    "GameStateColosseum": 65,
+    "GameStateEventRaid2": 59,
+    "CCTextRenderer": 54,
+    "CapcomGraphics": 52,
+    "CharacterInstance": 50,
+    "GameStateChangeHard": 46,
+    "GameStateEventRaid2Menu": 46,
+    "Quest": 45,
+    "GameStateSurvivalMenu": 44,
+    "Character": 43,
+    "String": 42,
+    "CCSound": 42,
+    "ObjectiveSystem": 41,
+    "GameStateRoulette": 40,
+    "GameStatePowerup": 39,
+    "GameStateEventRaid3Menu": 39,
+    "CharacterCommandBar": 37,
+    "GameStateDoJo": 36,
+    "CCGFX": 35,
+    "ScreenElement": 33,
+    "CImage": 33,
+    "CCBoundingTest": 33,
+    "CapcomSound": 32,
+    "GameStateEarlyBird": 30,
+    "CharacterDetails": 28,
+    "GameStateEventRaidMenu": 28,
+    "CRAMHoover": 28,
+    "CCMaterial": 28,
+    "GameStateWeekRaidMenu": 26,
+    "GameStateSpecialSale": 26,
+    "DataInputStream": 26,
+    "GameStateFriends": 24,
+    "GameStateMeetLocker": 24,
+    "CCFacebook": 24,
+    "CCBatchRenderer": 23,
+    "GameStateChooseChef": 22,
+    "LotteryDialog": 22,
+    "CapcomApp": 22,
+    "MALTAHoover": 21,
+    "FridgeDialog": 21,
+    "GameStatePrizeMenu": 21,
+    "CapcomFile": 21,
+    "CapcomPoint": 21,
+    "CCSpinner": 21,
+    "CapcomDate": 21,
+    "CFTexture": 20,
+    "CFPathFinder": 19,
+    "GameStateMainMenu": 19,
+    "CCMeshRenderer": 19,
+    "ZombieCafeGameState": 18,
+    "GameStateAmpouleRaidMenu": 18,
+    "ResourceManager": 18,
+    "RecipeBook": 18,
+    "Storage": 18,
+    "CCCarousel": 18,
+    "BuyToxinDialog": 17,
+    "GameStateZukan": 17,
+    "Store": 17,
+    "Task": 16,
+    "CafeObject": 16,
+    "Stove": 16,
+    "ImageElement": 16,
+    "PendingOrderDialog": 16,
+    "StringBuffer": 16,
+    "Menu": 16,
+    "CCGameCenter": 16,
+    "JSONTakeOverData": 15,
+    "GameState": 15,
+    "GameStateOptions": 15,
+    "GiftManager": 15,
+    "HudElement": 15,
+    "PicGiftDialog": 15,
+    "TutorialArrow": 15,
+    "PackedImage": 15,
+    "GatyaEftImageElement": 15,
+    "_JNIEnv": 14,
+    "HCOManager": 14,
+    "UpdateGame": 14,
+    "CapcomTrueTypeFont": 14,
+    "DataOutputStream": 14,
+    "StringUtil": 14,
+    "TextElement": 14,
+    "CCOptions": 14,
+    "CookTask": 13,
+    "Furniture": 13,
+    "FriendCafeHudElement": 13,
+    "BitmapTextElement": 13,
+    "getUpdateBonusClass": 13,
+    "ServingCounter": 13,
+    "CapcomGame": 13,
+    "SaveDataInputStream": 13,
+    "ImageAnimation": 13,
+    "CCFile": 13,
+    "CCMat3x4": 13,
+    "CookCommandBar": 12,
+    "DishToCounterTask": 12,
+    "TrueTypeTextElement": 12,
+    "QuestDialog": 12,
+    "PullMenuElement": 12,
+    "CapcomTrueTypeFontRef": 12,
+    "CCScrollList": 12,
+    "ZCImageButton": 11,
+    "FoodStack": 11,
+    "ConfirmDialog": 11,
+    "FriendMenuDialog": 11,
+    "GameStateHelp": 11,
+    "InviteDialog": 11,
+    "ObjectiveDialog": 11,
+    "TombstoneCommandBar": 11,
+    "InputStream": 11,
+    "ResourceManager::Resource": 11,
+    "TextMenuItem": 11,
+    "AttackTask": 10,
+    "ImageMap": 10,
+    "CafeWall": 10,
+    "CharacterData": 10,
+    "ImageButton": 10,
+    "CharacterEvolution": 10,
+    "EatTask": 10,
+    "MoveTask": 10,
+    "FrequentFryerDialog": 10,
+    "FurnitureDialog": 10,
+    "GameStateBackupSelection": 10,
+    "Recipe": 10,
+    "GuardTask": 10,
+    "NoticeDialog": 10,
+    "RecipeUnlockedDialog": 10,
+    "ServeTask": 10,
+    "ByteArrayInputStream": 10,
+    "ByteArrayOutputStream": 10,
+    "CapcomRectangleFont": 10,
+    "ToonAnimation": 10,
+    "CCTexture2D": 10,
+    "CCBitField": 10,
+    "CleanupTask": 9,
+    "FindSeatTask": 9,
+    "FollowTask": 9,
+    "PlantCommandBar": 9,
+    "PUResultDialog": 9,
+    "ReferralCodeDialog": 9,
+    "TutorialSystem": 9,
+    "WaitDialog": 9,
+    "InfoBarClass": 9,
+    "LoadingGameState": 9,
+    "Animation": 9,
+    "ComponentAnimation": 9,
+    "PathTween": 9,
+    "CCMat4x4": 9,
+    "CapcomOrderableList<CafeObject*>": 8,
+    "GameStateBusy": 8,
+    "CapcomMath": 8,
+    "Vector<CharacterInstance*>": 8,
+    "Vector<int>": 8,
+    "CensoredSign": 8,
+    "FacebookNagDialog": 8,
+    "InviteContactList": 8,
+    "LotteryFeaturedDialog": 8,
+    "PrizeMenuDialog": 8,
+    "MessageElement": 8,
+    "ObjectiveCompleteDialog": 8,
+    "RaidRewardScreen": 8,
+    "RestTask": 8,
+    "StealFoodTask": 8,
+    "SSFJPEventForm": 8,
+    "SaveDataOutputStream": 8,
+    "MenuItem": 8,
+    "FrameAnimation": 8,
+    "CCAssetManager": 8,
+    "MultiByteString": 8,
+    "Tween": 7,
+    "Vector<FoodStack*>": 7,
+    "EnemyCafeDialog": 7,
+    "FeaturedItemDialog": 7,
+    "EquipInfoDialog": 7,
+    "GameStateLoading": 7,
+    "Vector<float>": 7,
+    "Vector<Character*>": 7,
+    "Vector<GameStateMap::MapCafe>": 7,
+    "InfectTask": 7,
+    "LevelUpDialog": 7,
+    "MagicFridgeDialog": 7,
+    "NotificationOptions": 7,
+    "Vector<Order*>": 7,
+    "ProgressBar": 7,
+    "RatingBar": 7,
+    "ReanimateTask": 7,
+    "SaveDataConfirmDialog": 7,
+    "StatusNote": 7,
+    "UserRankDialog": 7,
+    "GameLoader": 7,
+    "CCCapcomLoad": 7,
+    "SSFJPEventFunction": 6,
+    "AmpouleRaidRewardScreen": 6,
+    "CapcomLinkedList<String>": 6,
+    "BonePile": 6,
+    "Vector<ToonAnimation::ReplacementImage>": 6,
+    "CharacterPortrait": 6,
+    "ChefHeadButton": 6,
+    "ColosseumRewardScreen": 6,
+    "DaydreamTask": 6,
+    "WaitTask": 6,
+    "FontManager": 6,
+    "Food": 6,
+    "Vector<ZCImageButton*>": 6,
+    "EventRaidRewardScreen": 6,
+    "EventRaid2RewardScreen": 6,
+    "EventRaid3RewardScreen": 6,
+    "Vector<ImageElement*>": 6,
+    "GameStateMarketingIntro": 6,
+    "Vector<FriendData>": 6,
+    "ActiveQuest": 6,
+    "Vector<ActiveQuest*>": 6,
+    "GetZombilityDialog": 6,
+    "Vector<BitmapTextElement*>": 6,
+    "CookingOrder": 6,
+    "RecipeSortDialog": 6,
+    "SaveDataInfo": 6,
+    "SpawnTask": 6,
+    "FurnitureStorageButton": 6,
+    "OutputStream": 6,
+    "CapcomOrderableList<ScreenElement*>": 6,
+    "CCPackFile": 6,
+    "CCPictureTaker": 6,
+    "CCLocalNotifications": 6,
+    "CCBoundingRect": 6,
+    "std::__Named_exception": 6,
+    "std": 6,
+    "std::priv::_Pthread_alloc": 6,
+    "JSONGetGameInfo": 5,
+    "Vector<Furniture*>": 5,
+    "CafeObject::DummyCafeObject": 5,
+    "GatyaEftCharacterInstance": 5,
+    "Vector<String>": 5,
+    "FeastTask": 5,
+    "Vector<bool>": 5,
+    "FurnitureButton": 5,
+    "QuestData": 5,
+    "FriendData": 5,
+    "Vector<GatyaLotteryData>": 5,
+    "QuestState": 5,
+    "PrizeMenuOrder": 5,
+    "CompleteOrder": 5,
+    "Vector<RaidNotification*>": 5,
+    "ProgressBarAttachment": 5,
+    "ZukanHeadButton": 5,
+    "Slider": 5,
+    "RaidNotification": 5,
+    "Order": 5,
+    "std::priv::_Rb_tree<std::string,std::less<std::string>,std::pair<std::string_const,int>,std::priv::_Select1st<std::pair<std::string_const,int>>,std::priv::_MapTraitsT<std::pair<std::string_const,int>>,std::allocator<std::pair<std::string_const,int>>>": 5,
+    "PackagedData": 5,
+    "ResourceManager::UserResource": 5,
+    "ResourceManager::ImageResource": 5,
+    "Vector<ResourceManager::Resource*>": 5,
+    "ScreenshotTaker": 5,
+    "Scrollbar": 5,
+    "MoveTween": 5,
+    "CCColor": 5,
+    "CCTextureLocator": 5,
+    "CCQuaternion": 5,
+    "CCRandom": 5,
+    "CCHud": 5,
+    "CCPathFinding": 5,
+    "CCDialog": 5,
+    "Vector<TrueTypeTextElement*>": 4,
+    "CafeTile": 4,
+    "Vector<CafeWall*>": 4,
+    "Vector<long>": 4,
+    "CafeUIElement": 4,
+    "EnemyItems": 4,
+    "CFPoint": 4,
+    "FriendMenuElement": 4,
+    "Vector<RecipeAndVariant>": 4,
+    "Vector<MessageWithToxin*>": 4,
+    "Vector<PicGiftBoxInfo*>": 4,
+    "Vector<CapcomDate>": 4,
+    "Vector<GatyaEftImageElement*>": 4,
+    "Vector<GatyaEftCharacterInstance*>": 4,
+    "Vector<CImage*>": 4,
+    "ColorModBg": 4,
+    "QuestRecordItem": 4,
+    "QuestOrder": 4,
+    "Vector<HudElement::NewIndicator>": 4,
+    "Vector<ProgressBar*>": 4,
+    "Vector<Objective*>": 4,
+    "PendingRaidNotification": 4,
+    "PendingOrder": 4,
+    "RandomCafeElement": 4,
+    "Vector<ZombieCafe::ZombieDlcEntry>": 4,
+    "SpecialSaleBg": 4,
+    "CapcomDebug": 4,
+    "Vector<unsigned_short>": 4,
+    "GatyaEftFallImageElement": 4,
+    "ToonAnimation::Data": 4,
+    "CCSpline": 4,
+    "CCTileRenderer": 4,
+    "CCToon": 4,
+    "CCClampedBSpline": 4,
+    "CCUrlConnection": 4,
+    "CapcomOrderableList<Furniture*>": 3,
+    "CapcomOrderableList<CharacterInstance*>": 3,
+    "CFRectangle": 3,
+    "Vector<CharacterData::ReplacementImageWithForm>": 3,
+    "CapcomLinkedList<Task*>": 3,
+    "colosseumItems::Data": 3,
+    "colosseumItems": 3,
+    "colosseumLayouts": 3,
+    "Constants": 3,
+    "EnemyItems::Data": 3,
+    "EnemyLayouts": 3,
+    "Vector<FriendCafeHudElement::NewIndicator>": 3,
+    "CapcomOrderableList<RecipeAndVariants*>": 3,
+    "MessageWithToxin": 3,
+    "CapcomLinkedList<short>": 3,
+    "CapcomOrderableList<CharacterData*>": 3,
+    "Vector<CharacterData*>": 3,
+    "Vector<GameStateFriends::FriendItem>": 3,
+    "Vector<EftKeyData>": 3,
+    "CEvent": 3,
+    "GameStateMap::MapCafe": 3,
+    "Vector<EarlyBirdSaleBuyTimer*>": 3,
+    "QuestData::Data": 3,
+    "QuestItem": 3,
+    "ItemButton": 3,
+    "PrizeMenuItem": 3,
+    "Vector<PrizeMenuItem*>": 3,
+    "PendingItem": 3,
+    "CapcomLinkedList<PendingItem*>": 3,
+    "Vector<TutorialQueueItem*>": 3,
+    "Vector<NamedPackedImages>": 3,
+    "std::priv::_Rb_global<bool>": 3,
+    "CFColor": 3,
+    "Platform": 3,
+    "Vector<CFTexture*>": 3,
+    "CapcomLinkedList<Task::TaskListener*>": 2,
+    "Vector<BuyToxinDialog::BuyToxinListEntry>": 2,
+    "CapcomLinkedList<CafeUIElement*>": 2,
+    "CapcomOrderableList<ServingCounter*>": 2,
+    "Vector<CommandButton*>": 2,
+    "ConfirmDialog::QueueMessage": 2,
+    "EquipInfoDialog::QueueMessage": 2,
+    "CapcomLinkedList<EquipInfoDialog::QueueMessage*>": 2,
+    "CapcomLinkedList<CharacterInstance*>": 2,
+    "Vector<PrizeItemStatus>": 2,
+    "Vector<unsigned_char>": 2,
+    "Vector<QuestState*>": 2,
+    "Vector<FriendContact*>": 2,
+    "CapcomOrderableList<FurnitureData*>": 2,
+    "WaitDialog::QueueMessage": 2,
+    "std::string": 2,
+    "CFTextureRef": 2,
+    "CCMat3x3": 2,
+    "CCPath": 2,
+    "CCBoundingCircle": 2,
+    "CCBoundingSphere": 2,
+    "std::runtime_error": 2,
+    "std::underflow_error": 2,
+    "std::overflow_error": 2,
+    "std::range_error": 2,
+    "std::logic_error": 2,
+    "std::out_of_range": 2,
+    "std::length_error": 2,
+    "std::invalid_argument": 2,
+    "std::domain_error": 2,
+    "std::__malloc_alloc": 2,
+    "std::__node_alloc": 2,
+    "FurnitureData": 1,
+    "CapcomLinkedList<CharacterData*>": 1,
+    "CapcomLinkedList<CafeObject::ListenerAndData*>": 1,
+    "CommandButton": 1,
+    "CapcomLinkedList<CImage*>": 1,
+    "CapcomLinkedList<ScreenElement*>": 1,
+    "Vector<ActionElement*>": 1,
+    "colosseumLayouts::Data": 1,
+    "CapcomLinkedList<ConfirmDialog::QueueMessage*>": 1,
+    "EnemyLayouts::Data": 1,
+    "FurnitureDialog::QueueMessage": 1,
+    "CapcomLinkedList<FurnitureDialog::QueueMessage*>": 1,
+    "GameFactory": 1,
+    "CapcomLinkedList<UndoData*>": 1,
+    "CapcomLinkedList<QuestItem*>": 1,
+    "NoticeDialog::QueueMessage": 1,
+    "CapcomLinkedList<NoticeDialog::QueueMessage*>": 1,
+    "Objective": 1,
+    "TutorialStep": 1,
+    "CapcomLinkedList<WaitDialog::QueueMessage*>": 1,
+    "CLock": 1,
+    "NamedPackedImages": 1,
+    "CapcomLinkedList<unsigned_int>": 1,
+    "std::allocator<std::priv::_Rb_tree_node<std::pair<std::string_const,int>>>": 1,
+    "CapcomTrueTypeFont_Sig": 1,
+    "_JavaVM": 1,
+    "javaObjectWrapper": 1,
+    "CapcomFontEffect": 1,
+    "StringRef": 1,
+    "ComponentAnimation::ComponentAnimationData": 1
+  },
+  "note": "Successful export means the decompiler produced pseudocode; it does not guarantee correct or compilable code. Ghidra addresses include a 0x10000 relocation relative to original ELF symbols."
+}

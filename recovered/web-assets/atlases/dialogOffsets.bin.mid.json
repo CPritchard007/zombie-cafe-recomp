@@ -1,0 +1,106 @@
+{
+  "source": "assets/images/dialogOffsets.bin.mid",
+  "version": 1,
+  "count": 14,
+  "entries": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "width": 512,
+      "height": 384
+    },
+    {
+      "index": 1,
+      "x": 759,
+      "y": 331,
+      "width": 512,
+      "height": 86
+    },
+    {
+      "index": 2,
+      "x": 875,
+      "y": 167,
+      "width": 243,
+      "height": 164
+    },
+    {
+      "index": 3,
+      "x": 875,
+      "y": 0,
+      "width": 246,
+      "height": 167
+    },
+    {
+      "index": 4,
+      "x": 1122,
+      "y": 0,
+      "width": 212,
+      "height": 108
+    },
+    {
+      "index": 5,
+      "x": 513,
+      "y": 246,
+      "width": 245,
+      "height": 120
+    },
+    {
+      "index": 6,
+      "x": 513,
+      "y": 0,
+      "width": 361,
+      "height": 246
+    },
+    {
+      "index": 7,
+      "x": 1186,
+      "y": 108,
+      "width": 49,
+      "height": 42
+    },
+    {
+      "index": 8,
+      "x": 1236,
+      "y": 108,
+      "width": 49,
+      "height": 42
+    },
+    {
+      "index": 9,
+      "x": 1286,
+      "y": 108,
+      "width": 49,
+      "height": 42
+    },
+    {
+      "index": 10,
+      "x": 1186,
+      "y": 150,
+      "width": 49,
+      "height": 42
+    },
+    {
+      "index": 11,
+      "x": 1236,
+      "y": 150,
+      "width": 49,
+      "height": 42
+    },
+    {
+      "index": 12,
+      "x": 0,
+      "y": 384,
+      "width": 638,
+      "height": 75
+    },
+    {
+      "index": 13,
+      "x": 1122,
+      "y": 108,
+      "width": 63,
+      "height": 63
+    }
+  ],
+  "note": "extra fields are preserved signed shorts; see native atlas loader for semantics."
+}

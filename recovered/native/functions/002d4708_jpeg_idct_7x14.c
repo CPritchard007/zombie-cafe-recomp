@@ -1,0 +1,144 @@
+/* Decompiled reference pseudocode. Not original or buildable C++. */
+/* 002d4708 jpeg_idct_7x14 */
+
+void jpeg_idct_7x14(int param_1,int param_2,short *param_3,int *param_4,int param_5)
+
+{
+  short *psVar1;
+  short *psVar2;
+  int iVar3;
+  int *piVar4;
+  undefined1 *puVar5;
+  int iVar6;
+  int *piVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  int iVar11;
+  int iVar12;
+  int iVar13;
+  int iVar14;
+  int iVar15;
+  int iVar16;
+  int iVar17;
+  int iVar18;
+  int *piVar19;
+  int iVar20;
+  int iVar21;
+  int iVar22;
+  int iVar23;
+  int iVar24;
+  int iVar25;
+  int local_1a0 [7];
+  int local_184 [7];
+  int local_168 [7];
+  int local_14c [7];
+  int local_130 [7];
+  int local_114 [7];
+  int local_f8 [7];
+  int local_dc [7];
+  int local_c0 [7];
+  int local_a4 [7];
+  int local_88 [7];
+  int local_6c [7];
+  int local_50 [7];
+  int local_34 [7];
+  int iStack_18;
+  
+  piVar4 = *(int **)(param_2 + 0x54);
+  iVar6 = *(int *)(param_1 + 0x150) + 0x80;
+  psVar2 = param_3 + 7;
+  piVar7 = local_1a0;
+  do {
+    iVar3 = *piVar4 * (int)*param_3 * 0x2000 + 0x400;
+    iVar12 = (int)param_3[0x20] * piVar4[0x20];
+    iVar17 = iVar3 + iVar12 * DAT_002d4ab0;
+    iVar13 = iVar3 + iVar12 * DAT_002d4aac;
+    iVar14 = iVar3 + iVar12 * -0x1c37;
+    iVar3 = iVar3 + (iVar12 * DAT_002d4aac + iVar12 * DAT_002d4ab0 + iVar12 * -0x1c37) * -2 >> 0xb;
+    iVar8 = (int)param_3[0x10] * piVar4[0x10];
+    iVar12 = piVar4[0x30] * (int)param_3[0x30];
+    iVar18 = DAT_002d4ab4 * (iVar8 + iVar12);
+    iVar10 = iVar18 + iVar8 * DAT_002d4ab8;
+    iVar18 = iVar18 + iVar12 * DAT_002d4abc;
+    iVar9 = DAT_002d4ac0 * iVar8 + DAT_002d4ac4 * iVar12;
+    iVar12 = iVar13 + iVar10;
+    iVar13 = iVar13 - iVar10;
+    iVar8 = iVar17 + iVar18;
+    iVar17 = iVar17 - iVar18;
+    iVar15 = iVar14 + iVar9;
+    iVar14 = iVar14 - iVar9;
+    iVar11 = (int)param_3[8] * piVar4[8];
+    iVar10 = (int)param_3[0x18] * piVar4[0x18];
+    iVar9 = piVar4[0x28] * (int)param_3[0x28];
+    psVar1 = param_3 + 0x38;
+    param_3 = param_3 + 1;
+    piVar19 = piVar4 + 0x38;
+    piVar4 = piVar4 + 1;
+    iVar16 = *piVar19 * (int)*psVar1;
+    iVar20 = (iVar11 + iVar10) * DAT_002d4ac8;
+    iVar21 = (iVar11 + iVar9) * DAT_002d4acc;
+    iVar22 = iVar11 * DAT_002d4ad4 + iVar20 + iVar21 + iVar16 * 0x2000;
+    iVar23 = (iVar11 + iVar9) * DAT_002d4ad0;
+    iVar18 = (iVar11 - iVar10) * 0xef2 + iVar16 * -0x2000;
+    iVar24 = iVar23 + iVar11 * DAT_002d4ad8 + iVar18;
+    iVar25 = (iVar10 + iVar9) * DAT_002d4adc + iVar16 * -0x2000;
+    iVar20 = iVar20 + iVar10 * DAT_002d4ae0 + iVar25;
+    iVar21 = iVar21 + iVar25 + iVar9 * DAT_002d4ae4;
+    iVar25 = (iVar9 - iVar10) * DAT_002d4ae8;
+    iVar23 = iVar23 + iVar16 * 0x2000 + iVar25 + iVar9 * DAT_002d4aec;
+    iVar18 = iVar18 + iVar25 + iVar10 * DAT_002d4af0;
+    iVar9 = ((iVar11 - iVar10) + iVar16) - iVar9;
+    *piVar7 = iVar12 + iVar22 >> 0xb;
+    piVar7[0x5b] = iVar12 - iVar22 >> 0xb;
+    piVar7[7] = iVar8 + iVar20 >> 0xb;
+    piVar7[0x54] = iVar8 - iVar20 >> 0xb;
+    piVar7[0xe] = iVar15 + iVar21 >> 0xb;
+    piVar7[0x4d] = iVar15 - iVar21 >> 0xb;
+    piVar7[0x15] = iVar3 + iVar9 * 4;
+    piVar7[0x46] = iVar3 + iVar9 * -4;
+    piVar7[0x1c] = iVar14 + iVar23 >> 0xb;
+    piVar7[0x3f] = iVar14 - iVar23 >> 0xb;
+    piVar7[0x23] = iVar17 + iVar18 >> 0xb;
+    piVar7[0x38] = iVar17 - iVar18 >> 0xb;
+    piVar7[0x2a] = iVar13 + iVar24 >> 0xb;
+    piVar7[0x31] = iVar13 - iVar24 >> 0xb;
+    piVar7 = piVar7 + 1;
+  } while (param_3 != psVar2);
+  piVar7 = local_1a0;
+  do {
+    iVar3 = *param_4;
+    param_4 = param_4 + 1;
+    puVar5 = (undefined1 *)(iVar3 + param_5);
+    iVar14 = (*piVar7 + 0x10) * 0x2000;
+    iVar12 = (piVar7[4] - piVar7[6]) * 0x1c37;
+    iVar18 = DAT_002d4ab0 * (piVar7[2] - piVar7[4]);
+    iVar13 = piVar7[4] * DAT_002d4af4 + iVar14 + iVar12 + iVar18;
+    iVar10 = piVar7[2] + piVar7[6];
+    iVar3 = iVar14 + iVar10 * DAT_002d4aac;
+    iVar12 = iVar12 + iVar3 + DAT_002d4af8 * piVar7[6];
+    iVar8 = piVar7[1];
+    iVar11 = piVar7[3];
+    iVar18 = iVar18 + iVar3 + DAT_002d4afc * piVar7[2];
+    iVar3 = (iVar8 + iVar11) * 0x1def;
+    iVar15 = DAT_002d4ac4 * (iVar11 + piVar7[5]);
+    iVar16 = iVar3 + (iVar8 - iVar11) * 0x573 + iVar15;
+    iVar9 = DAT_002d4ac0 * (iVar8 + piVar7[5]);
+    iVar3 = iVar3 + (iVar8 - iVar11) * -0x573 + iVar9;
+    iVar15 = iVar15 + iVar9 + DAT_002d4b00 * piVar7[5];
+    *puVar5 = *(undefined1 *)(iVar6 + ((uint)((iVar12 + iVar3) * 0x10) >> 0x16));
+    puVar5[6] = *(undefined1 *)(iVar6 + ((uint)((iVar12 - iVar3) * 0x10) >> 0x16));
+    puVar5[1] = *(undefined1 *)(iVar6 + ((uint)((iVar13 + iVar16) * 0x10) >> 0x16));
+    puVar5[5] = *(undefined1 *)(iVar6 + ((uint)((iVar13 - iVar16) * 0x10) >> 0x16));
+    puVar5[2] = *(undefined1 *)(iVar6 + ((uint)((iVar18 + iVar15) * 0x10) >> 0x16));
+    iVar3 = DAT_002d4b04;
+    iVar12 = piVar7[4];
+    puVar5[4] = *(undefined1 *)(iVar6 + ((uint)((iVar18 - iVar15) * 0x10) >> 0x16));
+    piVar7 = piVar7 + 7;
+    puVar5[3] = *(undefined1 *)
+                 (iVar6 + ((uint)((iVar14 + iVar3 * (iVar12 - iVar10)) * 0x10) >> 0x16));
+  } while (piVar7 != &iStack_18);
+  return;
+}
+
+

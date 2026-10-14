@@ -1,0 +1,9 @@
+.tools/
+recovered/android/build/
+recovered/android/dist/
+recovered/native/project.rep/
+recovered/native/project.gpr
+recovered/*.apk
+recovered/*.idsig
+__pycache__/
+.DS_Store
